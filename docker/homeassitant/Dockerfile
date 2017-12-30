@@ -6,20 +6,22 @@ RUN apk --update add --no-cache \
     musl-dev \
     shadow
 
-RUN useradd -rm homeassitant
+RUN useradd -rm homeassistant
 
 WORKDIR /usr/src/app
 
-RUN mkdir homeassitant && \
-    chown homeassitant:homeassitant homeassitant
+RUN mkdir homeassistant && \
+    chown homeassistant:homeassistant homeassistant
 
 COPY requirements.txt ./
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-USER homeassitant
+USER homeassistant
 
 EXPOSE 8123
+
+VOLUME ["/home/homeassistant/.homeassistant"]
 
 ENTRYPOINT [ "hass" ]
 
