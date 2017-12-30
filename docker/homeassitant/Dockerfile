@@ -19,6 +19,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 USER homeassitant
 
+EXPOSE 8123
+
 ENTRYPOINT [ "hass" ]
 
 CMD [ "--open-ui" ]
