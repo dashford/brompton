@@ -38,7 +38,10 @@ WORKDIR /usr/src
 
 RUN wget https://www.python.org/ftp/python/3.6.4/Python-3.6.4.tgz && \
     tar xzf Python-3.6.4.tgz && \
-    rm Python-3.6.4.tgz
+    rm Python-3.6.4.tgz && \
+    cd Python-3.6.4 && \
+    bash configure && \
+    make altinstall
 
 COPY requirements.txt ./
 
@@ -46,9 +49,9 @@ COPY requirements.txt ./
 VOLUME /config
 
 # Start Home Assistant
-CMD [ "python3", "-m", "homeassistant", "--config", "/config" ]
+#CMD [ "python3.6", "-m", "homeassistant", "--config", "/config" ]
 
 # Install Home Assistant
-RUN pip3 install -r requirements.txt
+#RUN pip3 install -r requirements.txt
 
 EXPOSE 8123
