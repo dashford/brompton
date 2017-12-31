@@ -1,4 +1,6 @@
 version: '3.1'
 services:
   homeassistant:
-    image: lroguet/rpi-home-assistant:0.60.0
+    build: docker/homeassistant
+    ports:
+      - 8123:8123
