@@ -8,4 +8,4 @@ services:
     restart: always
     network_mode: host
     ports:
-      - 8123:8123
+      - 3001:8123

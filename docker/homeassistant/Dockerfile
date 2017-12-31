@@ -28,5 +28,10 @@ RUN pip3 install wheel
 RUN pip3 install sqlalchemy==1.1.15
 RUN pip3 install user-agents==1.1.0
 RUN pip3 install aiohttp_cors==0.5.3
+RUN pip3 install netdisco==1.2.3
+RUN pip3 install mutagen==1.39
+RUN pip3 install warrant==0.6.1
 RUN pip3 install home-assistant-frontend==20171216.0
 RUN pip3 install homeassistant==0.60
+
+EXPOSE 8123
