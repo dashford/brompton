@@ -18,9 +18,6 @@ RUN apt-get update && \
       libc6-dev \
       libbz2-dev \
       wget \
-#      python3-dev \
-#      python3-pip \
-#      python3-setuptools \
       libcups2-dev \
       libffi-dev \
       libpython-dev \
@@ -49,9 +46,9 @@ COPY requirements.txt ./
 VOLUME /config
 
 # Start Home Assistant
-#CMD [ "python3.6", "-m", "homeassistant", "--config", "/config" ]
+CMD [ "python3.6", "-m", "homeassistant", "--config", "/config" ]
 
 # Install Home Assistant
-#RUN pip3 install -r requirements.txt
+RUN pip3.6 install -r requirements.txt
 
 EXPOSE 8123
