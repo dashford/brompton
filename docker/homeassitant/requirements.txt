@@ -1,7 +1,0 @@
-homeassistant==0.60.0
-home-assistant-frontend==20171216.0
-netdisco==1.2.3
-sqlalchemy==1.2.0
-warrant==0.6.1
-xmltodict==0.11.0
-user_agents==1.1.0
