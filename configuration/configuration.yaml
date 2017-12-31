@@ -66,6 +66,9 @@ tts:
 # Cloud
 cloud:
 
+media_player:
+  - platform: cast
+
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
