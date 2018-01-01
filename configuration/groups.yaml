@@ -1,5 +1,12 @@
-kitchen:
-  view: yes
-  icon: mdi:home
+Kitchen:
   entities:
     - sensor.kitchen_nest_protect_co_status
+Living Room:
+  entities:
+    - sensor.living_room_nest_protect_co_status
+Rooms:
+  view: yes
+  name: Rooms
+  entities:
+    - group.living_room
+    - group.kitchen
