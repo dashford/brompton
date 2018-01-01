@@ -67,6 +67,11 @@ sensor:
       - snow
       - humidity
 
+# Nest
+nest:
+  client_id: !secret nest_client_id
+  client_secret: !secret nest_client_secret
+
 # Text to speech
 tts:
   - platform: google

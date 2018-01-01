@@ -9,3 +9,4 @@ home-assistant-frontend==20171216.0
 homeassistant==0.60
 distro==1.1.0
 xmltodict==0.11.0
+pyowm==2.7.1
