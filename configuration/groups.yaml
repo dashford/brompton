@@ -1,6 +1,5 @@
-group:
-  kitchen:
-    view: yes
-    icon: mdi:home
-    entities:
-      - sensor.kitchen_nest_protect_co_status
+kitchen:
+  view: yes
+  icon: mdi:home
+  entities:
+    - sensor.kitchen_nest_protect_co_status
