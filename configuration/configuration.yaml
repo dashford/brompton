@@ -54,19 +54,17 @@ sun:
 
 # Weather prediction
 sensor:
-  - platform: metoffice
-    api_key: !secret metoffice_api_key
+  - platform: openweathermap
+    api_key: !secret openweathermap_api_key
     monitored_conditions:
       - weather
       - temperature
-      - feels_like_temperature
       - wind_speed
-      - wind_direction
-      - wind_gust
-      - visibility
-      - visibility_distance
-      - uv
-      - precipitation
+      - wind_bearing
+      - pressure
+      - clouds
+      - rain
+      - snow
       - humidity
 
 # Text to speech
