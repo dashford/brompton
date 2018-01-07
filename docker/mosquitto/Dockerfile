@@ -13,16 +13,19 @@ RUN apt-get update && \
     libc-ares-dev \
     uuid-dev
 
-RUN mkdir -p /usr/local/src
-RUN cd /usr/local/src && \
-    wget http://mosquitto.org/files/source/mosquitto-${MOSQUITTO_VERSION}.tar.gz && \
+WORKDIR /usr/local/src
+
+#RUN mkdir -p /usr/local/src
+#RUN cd /usr/local/src && \
+RUN wget http://mosquitto.org/files/source/mosquitto-${MOSQUITTO_VERSION}.tar.gz && \
     tar xvzf ./mosquitto-${MOSQUITTO_VERSION}.tar.gz && \
-    cd /usr/local/src/mosquitto-${MOSQUITTO_VERSION} && \
+    rm mosquitto-${MOSQUITTO_VERSION}.tar.gz && \
+    cd mosquitto-${MOSQUITTO_VERSION} && \
     make && \
     make install
 
-RUN cd /usr/local/src && rm mosquitto-${MOSQUITTO_VERSION}.tar.gz && \
-    apt-get autoremove -y wget \
+#RUN cd /usr/local/src && rm mosquitto-${MOSQUITTO_VERSION}.tar.gz && \
+RUN apt-get autoremove -y wget \
     build-essential \
     libwrap0-dev \
     libssl-dev \
