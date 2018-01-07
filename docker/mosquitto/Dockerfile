@@ -18,10 +18,10 @@ RUN cd /usr/local/src && \
     wget http://mosquitto.org/files/source/mosquitto-${MOSQUITTO_VERSION}.tar.gz && \
     tar xvzf ./mosquitto-${MOSQUITTO_VERSION}.tar.gz && \
     cd /usr/local/src/mosquitto-${MOSQUITTO_VERSION} && \
-    make && make install && \
-    cd /usr/local/src && \
+    make && \
+    make install
 
-RUN rm mosquitto-${MOSQUITTO_VERSION}.tar.gz && \
+RUN cd /usr/local/src && rm mosquitto-${MOSQUITTO_VERSION}.tar.gz && \
     apt-get autoremove -y wget \
     build-essential \
     libwrap0-dev \
