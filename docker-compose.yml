@@ -12,5 +12,7 @@ services:
 
   mosquitto:
     build: docker/mosquitto
+    volumes:
+      - ./docker/mosquitto/configuration:/config
     ports:
       - 1883:1883
