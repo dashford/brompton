@@ -39,5 +39,5 @@ RUN adduser --system --disabled-password --disabled-login mosquitto
 
 EXPOSE 1883
 
-CMD ["/usr/local/sbin/mosquitto"]
-ENTRYPOINT ["--config-file", "/config.mosquitto.conf"]
+ENTRYPOINT ["/usr/local/sbin/mosquitto"]
+CMD ["--config-file", "/config.mosquitto.conf"]
