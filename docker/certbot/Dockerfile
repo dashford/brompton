@@ -2,7 +2,11 @@ FROM resin/rpi-raspbian:jessie
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN "deb http://ftp.debian.org/debian jessie-backports main" >> /etc/apt/sources.list
+WORKDIR /usr/local/bin
+RUN wget https://dl.eff.org/certbot-auto && \
+    chmod a+x certbot-auto
 
-RUN apt-get update && \
-    apt-get install -y --force-yes certbot -t jessie-backports
+ENTRYPOINT ["/usr/local/bin/certbot-auto"]
+CMD ["--help"]
+
+#RUN apt-get update
