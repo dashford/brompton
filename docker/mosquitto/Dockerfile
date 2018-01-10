@@ -15,8 +15,6 @@ RUN apt-get update && \
 
 WORKDIR /usr/local/src
 
-#RUN mkdir -p /usr/local/src
-#RUN cd /usr/local/src && \
 RUN wget http://mosquitto.org/files/source/mosquitto-${MOSQUITTO_VERSION}.tar.gz && \
     tar xvzf ./mosquitto-${MOSQUITTO_VERSION}.tar.gz && \
     rm mosquitto-${MOSQUITTO_VERSION}.tar.gz && \
@@ -24,7 +22,6 @@ RUN wget http://mosquitto.org/files/source/mosquitto-${MOSQUITTO_VERSION}.tar.gz
     make && \
     make install
 
-#RUN cd /usr/local/src && rm mosquitto-${MOSQUITTO_VERSION}.tar.gz && \
 RUN apt-get autoremove -y wget \
     build-essential \
     libwrap0-dev \
