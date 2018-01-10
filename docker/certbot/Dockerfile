@@ -11,9 +11,9 @@ RUN wget https://dl.eff.org/certbot-auto && \
 
 ENTRYPOINT ["/usr/local/bin/certbot-auto"]
 CMD [
-    "certonly",
-    "--standalone",
-    "--preferred-challenges http-01",
-    "--email david@dashford.io",
-    "-d pandora.dashford.io"
+"certonly",
+"--standalone",
+"--preferred-challenges http-01",
+"--email david@dashford.io",
+"-d pandora.dashford.io"
 ]
