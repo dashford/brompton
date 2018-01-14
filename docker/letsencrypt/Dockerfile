@@ -1,6 +1,7 @@
 FROM resin/raspberry-pi-python:3.6
 
 # Scripts in /scripts are required to be in the PATH to run properly as certbot's hooks
+RUN mkdir /scripts
 ENV PATH /scripts:$PATH
 
 # Versioning
