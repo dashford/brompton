@@ -34,6 +34,7 @@ RUN apt-get -y update && \
       docker \
       python-dev \
       build-essential \
+      cron \
       git && \
     apt-get -y clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
