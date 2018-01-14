@@ -13,7 +13,7 @@ services:
     volumes:
       - ./docker/letsencrypt/domains.conf:/etc/letsencrypt/domains.conf
       - certificates:/etc/letsencrypt
-      - docker-sock:/var/run/docker.sock
+      - /var/run/docker.sock:/var/run/docker.sock
 
 #  homeassistant:
 #    build: docker/homeassistant
@@ -32,7 +32,7 @@ services:
     volumes:
       - ./docker/mosquitto/configuration:/config
       - certificates:/etc/letsencrypt
-      - docker-sock:/var/run/docker.sock
+      - /var/run/docker.sock:/var/run/docker.sock
     ports:
       - 1883:1883
 
