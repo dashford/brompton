@@ -13,6 +13,7 @@ services:
     volumes:
       - ./docker/letsencrypt/domains.conf:/etc/letsencrypt/domains.conf
       - ./docker/letsencrypt/container:/etc/letsencrypt
+      - /var/run/docker.sock:/var/run/docker.sock
 
 #  homeassistant:
 #    build: docker/homeassistant
@@ -25,12 +26,12 @@ services:
 #    network_mode: host
 #    ports:
 #      - 8123:8123
-#
-#  mosquitto:
-#    build: docker/mosquitto
-#    volumes:
-#      - ./docker/mosquitto/configuration:/config
-#    volumes_from:
-#      - letsencrypt
-#    ports:
-#      - 1883:1883
+
+  mosquitto:
+    build: docker/mosquitto
+    volumes:
+      - ./docker/mosquitto/configuration:/config
+    volumes_from:
+      - letsencrypt
+    ports:
+      - 1883:1883
