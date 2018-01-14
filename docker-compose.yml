@@ -1,12 +1,13 @@
 version: '3.1'
 services:
   letsencrypt:
-    image: adferrand/letsencrypt-dns
+    build: docker/letsencrypt
     environment:
       - LETSENCRYPT_USER_MAIL=${LETSENCRYPT_USER_MAIL}
       - LEXICON_PROVIDER=cloudflare
       - LEXICON_CLOUDFLARE_USERNAME=${LEXICON_CLOUDFLARE_USERNAME}
       - LEXICON_CLOUDFLARE_TOKEN=${LEXICON_CLOUDFLARE_TOKEN}
+      - LETSENCRYPT_STAGING=true
       - CERTS_DIRS_MODE=0755
       - CERTS_FILES_MODE=0644
     volumes:
