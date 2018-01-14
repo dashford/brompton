@@ -34,7 +34,8 @@ services:
       - certificates:/etc/letsencrypt
       - /var/run/docker.sock:/var/run/docker.sock
     ports:
-      - 1883:8883
+      - 1883:1883
+      - 8883:8883
 
 volumes:
   certificates:

@@ -34,8 +34,7 @@ VOLUME /config
 
 RUN adduser --system --disabled-password --disabled-login mosquitto
 
-EXPOSE 1883
-EXPOSE 8883
+EXPOSE 1883 8883
 
 ENTRYPOINT ["/usr/local/sbin/mosquitto"]
 CMD ["--config-file", "/config/mosquitto.conf"]
