@@ -28,7 +28,7 @@ RUN apt-get -y update && \
       rsyslog \
       openssl \
       libssl-dev \
-      libffi-6 \
+      libffi6 \
       libffi-dev \
       supervisor \
       docker \
