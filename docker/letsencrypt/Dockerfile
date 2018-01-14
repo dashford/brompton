@@ -27,13 +27,13 @@ RUN apt-get -y update && \
     apt-get -y install --no-install-recommends \
       rsyslog \
       openssl \
-      openssl-dev \
-      libffi \
+      libssl-dev \
+      libffi-6 \
       libffi-dev \
       supervisor \
       docker \
       python-dev \
-      build-base \
+      build-essential \
       git && \
     apt-get -y clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
