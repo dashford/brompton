@@ -33,8 +33,6 @@ services:
       - ./docker/mosquitto/configuration:/config
       - certificates:/etc/letsencrypt
       - docker-sock:/var/run/docker.sock
-    volumes_from:
-      - letsencrypt
     ports:
       - 1883:1883
 
