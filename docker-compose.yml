@@ -1,21 +1,35 @@
 version: '3.1'
 services:
-  certbot:
-    build: docker/certbot
-
-  homeassistant:
-    build: docker/homeassistant
+  letsencrypt:
+    image: adferrand/letsencrypt-dns
+    environment:
+      - LETSENCRYPT_USER_MAIL=${LETSENCRYPT_USER_MAIL}
+      - LEXICON_PROVIDER=cloudflare
+      - LEXICON_CLOUDFLARE_USERNAME=${LEXICON_CLOUDFLARE_USERNAME}
+      - LEXICON_CLOUDFLARE_TOKEN=${LEXICON_CLOUDFLARE_TOKEN}
+      - CERTS_DIRS_MODE=0755
+      - CERTS_FILES_MODE=0644
     volumes:
-      - ./configuration:/config
-      - /etc/localtime:/etc/localtime:ro
-    restart: always
-    network_mode: host
-    ports:
-      - 8123:8123
+      - ./docker/letsencrypt/domains.conf:/etc/letsencrypt/domains.conf
+      - ./docker/letsencrypt/container:/etc/letsencrypt
 
-  mosquitto:
-    build: docker/mosquitto
-    volumes:
-      - ./docker/mosquitto/configuration:/config
-    ports:
-      - 1883:1883
+#  homeassistant:
+#    build: docker/homeassistant
+#    volumes:
+#      - ./configuration:/config
+#      - /etc/localtime:/etc/localtime:ro
+#    volumes_from:
+#      - letsencrypt
+#    restart: always
+#    network_mode: host
+#    ports:
+#      - 8123:8123
+#
+#  mosquitto:
+#    build: docker/mosquitto
+#    volumes:
+#      - ./docker/mosquitto/configuration:/config
+#    volumes_from:
+#      - letsencrypt
+#    ports:
+#      - 1883:1883

@@ -8,3 +8,7 @@ configuration/.uuid
 configuration/home-assistant.log
 configuration/home-assistant_v2.db
 configuration/nest.conf
+
+.env
+
+docker/letsencrypt/container/
