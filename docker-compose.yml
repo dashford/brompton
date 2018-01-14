@@ -12,8 +12,8 @@ services:
       - CERTS_FILES_MODE=0644
     volumes:
       - ./docker/letsencrypt/domains.conf:/etc/letsencrypt/domains.conf
-      - ./docker/letsencrypt/container:/etc/letsencrypt
-      - /var/run/docker.sock:/var/run/docker.sock
+      - certificates:/etc/letsencrypt
+      - docker-sock:/var/run/docker.sock
 
 #  homeassistant:
 #    build: docker/homeassistant
@@ -31,7 +31,15 @@ services:
     build: docker/mosquitto
     volumes:
       - ./docker/mosquitto/configuration:/config
+      - certificates:/etc/letsencrypt
+      - docker-sock:/var/run/docker.sock
     volumes_from:
       - letsencrypt
     ports:
       - 1883:1883
+
+volumes:
+  certificates:
+    driver: local
+  docker-sock:
+    driver: local
