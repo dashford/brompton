@@ -39,5 +39,3 @@ services:
 volumes:
   certificates:
     driver: local
-  docker-sock:
-    driver: local
