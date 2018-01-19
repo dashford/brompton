@@ -15,16 +15,16 @@ services:
       - certificates:/etc/letsencrypt
       - /var/run/docker.sock:/var/run/docker.sock
 
-#  homeassistant:
-#    build: docker/homeassistant
-#    volumes:
-#      - ./configuration:/config
-#      - /etc/localtime:/etc/localtime:ro
-#      - /var/run/docker.sock:/var/run/docker.sock
-#    restart: always
-#    network_mode: host
-#    ports:
-#      - 8123:8123
+  homeassistant:
+    build: docker/homeassistant
+    volumes:
+      - ./configuration:/config
+      - /etc/localtime:/etc/localtime:ro
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: always
+    network_mode: host
+    ports:
+      - 8123:8123
 
   mosquitto:
     build: docker/mosquitto
