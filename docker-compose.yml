@@ -7,6 +7,7 @@ services:
       - 443:443
     volumes:
       - ./docker/nginx/config:/etc/nginx/conf.d:ro
+      - ./docker/nginx/ssl:/etc/nginx/ssl:ro
       - ./docker/nginx/html:/var/www/html
       - certificates:/etc/letsencrypt
 
