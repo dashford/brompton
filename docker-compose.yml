@@ -1,30 +1,40 @@
 version: '3.1'
 services:
-  letsencrypt:
-    build: docker/letsencrypt
-    environment:
-      - LETSENCRYPT_USER_MAIL=${LETSENCRYPT_USER_MAIL}
-      - LEXICON_PROVIDER=cloudflare
-      - LEXICON_CLOUDFLARE_USERNAME=${LEXICON_CLOUDFLARE_USERNAME}
-      - LEXICON_CLOUDFLARE_TOKEN=${LEXICON_CLOUDFLARE_TOKEN}
-      - LETSENCRYPT_STAGING=false
-      - CERTS_DIRS_MODE=0755
-      - CERTS_FILES_MODE=0644
-    volumes:
-      - ./docker/letsencrypt/domains.conf:/etc/letsencrypt/domains.conf
-      - certificates:/etc/letsencrypt
-      - /var/run/docker.sock:/var/run/docker.sock
-
-  homeassistant:
-    build: docker/homeassistant
-    volumes:
-      - ./configuration:/config
-      - /etc/localtime:/etc/localtime:ro
-      - /var/run/docker.sock:/var/run/docker.sock
-    restart: always
-    network_mode: host
+  nginx:
+    image: tobi312/rpi-nginx:alpine
     ports:
-      - 8123:8123
+      - 80:80
+      - 443:443
+    volumes:
+      - ./docker/nginx/config:/etc/nginx/conf.d:ro
+      - ./docker/nginx/html:/var/www/html
+      - certificates:/etc/nginx/ssl:ro
+
+#  letsencrypt:
+#    build: docker/letsencrypt
+#    environment:
+#      - LETSENCRYPT_USER_MAIL=${LETSENCRYPT_USER_MAIL}
+#      - LEXICON_PROVIDER=cloudflare
+#      - LEXICON_CLOUDFLARE_USERNAME=${LEXICON_CLOUDFLARE_USERNAME}
+#      - LEXICON_CLOUDFLARE_TOKEN=${LEXICON_CLOUDFLARE_TOKEN}
+#      - LETSENCRYPT_STAGING=false
+#      - CERTS_DIRS_MODE=0755
+#      - CERTS_FILES_MODE=0644
+#    volumes:
+#      - ./docker/letsencrypt/domains.conf:/etc/letsencrypt/domains.conf
+#      - certificates:/etc/letsencrypt
+#      - /var/run/docker.sock:/var/run/docker.sock
+
+#  homeassistant:
+#    build: docker/homeassistant
+#    volumes:
+#      - ./configuration:/config
+#      - /etc/localtime:/etc/localtime:ro
+#      - /var/run/docker.sock:/var/run/docker.sock
+#    restart: always
+#    network_mode: host
+#    ports:
+#      - 8123:8123
 
   mosquitto:
     build: docker/mosquitto
