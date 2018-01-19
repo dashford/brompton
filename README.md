@@ -9,3 +9,4 @@ certificates available to other services.
 - mqtt set up acl_file
 - mqtt add persistence file
 - misc images: move to rpi-alpine base image
+- nginx go through ssl configuration

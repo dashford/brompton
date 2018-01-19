@@ -8,7 +8,7 @@ services:
     volumes:
       - ./docker/nginx/config:/etc/nginx/conf.d:ro
       - ./docker/nginx/html:/var/www/html
-      - certificates:/etc/nginx/ssl:ro
+      - certificates:/etc/letsencrypt
 
 #  letsencrypt:
 #    build: docker/letsencrypt
