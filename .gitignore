@@ -1,13 +1,4 @@
-configuration/secrets.yaml
-configuration/.cloud
-configuration/deps
-configuration/tts
-configuration/.HA_VERSION
-configuration/.tradfri_psk.conf
-configuration/.uuid
-configuration/home-assistant.log
-configuration/home-assistant_v2.db
-configuration/nest.conf
+docker/homeassistant/configuration/secrets.yaml
 
 .env
 
