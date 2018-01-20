@@ -11,20 +11,20 @@ services:
       - ./docker/nginx/html:/var/www/html
       - certificates:/etc/letsencrypt
 
-#  letsencrypt:
-#    build: docker/letsencrypt
-#    environment:
-#      - LETSENCRYPT_USER_MAIL=${LETSENCRYPT_USER_MAIL}
-#      - LEXICON_PROVIDER=cloudflare
-#      - LEXICON_CLOUDFLARE_USERNAME=${LEXICON_CLOUDFLARE_USERNAME}
-#      - LEXICON_CLOUDFLARE_TOKEN=${LEXICON_CLOUDFLARE_TOKEN}
-#      - LETSENCRYPT_STAGING=false
-#      - CERTS_DIRS_MODE=0755
-#      - CERTS_FILES_MODE=0644
-#    volumes:
-#      - ./docker/letsencrypt/domains.conf:/etc/letsencrypt/domains.conf
-#      - certificates:/etc/letsencrypt
-#      - /var/run/docker.sock:/var/run/docker.sock
+  letsencrypt:
+    build: docker/letsencrypt
+    environment:
+      - LETSENCRYPT_USER_MAIL=${LETSENCRYPT_USER_MAIL}
+      - LEXICON_PROVIDER=cloudflare
+      - LEXICON_CLOUDFLARE_USERNAME=${LEXICON_CLOUDFLARE_USERNAME}
+      - LEXICON_CLOUDFLARE_TOKEN=${LEXICON_CLOUDFLARE_TOKEN}
+      - LETSENCRYPT_STAGING=false
+      - CERTS_DIRS_MODE=0755
+      - CERTS_FILES_MODE=0644
+    volumes:
+      - ./docker/letsencrypt/domains.conf:/etc/letsencrypt/domains.conf
+      - certificates:/etc/letsencrypt
+      - /var/run/docker.sock:/var/run/docker.sock
 
 #  homeassistant:
 #    build: docker/homeassistant
