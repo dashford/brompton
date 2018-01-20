@@ -71,10 +71,6 @@ device_tracker:
   - platform: owntracks
     waypoints: true
 
-Family:
-  entities:
-    - device_tracker:mqtt_david_phone
-
 # Track the sun
 sun:
 
