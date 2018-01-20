@@ -1,5 +1,3 @@
 docker/homeassistant/configuration/secrets.yaml
 
 .env
-
-docker/letsencrypt/container/
