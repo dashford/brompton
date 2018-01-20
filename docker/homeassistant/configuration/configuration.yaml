@@ -49,6 +49,22 @@ logbook:
 # Enables a map showing the location of tracked devices
 map:
 
+zone:
+  - name: Home
+    latitude: !secret zone_home_latitude
+    longitude: !secret zone_home_longitude
+    radius: 150
+    icon: mdi:home
+  - name: David Work
+    latitude: !secret zone_david_work_latitude
+    longitude: !secret zone_david_work_longitude
+    radius: 150
+    icon: mdi:briefcase
+
+device_tracker:
+  - platform: owntracks
+    waypoints: true
+
 # Track the sun
 sun:
 
