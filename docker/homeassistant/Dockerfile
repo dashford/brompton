@@ -40,15 +40,14 @@ RUN wget https://www.python.org/ftp/python/3.6.4/Python-3.6.4.tgz && \
     bash configure && \
     make altinstall
 
-COPY requirements.txt ./
+# Install Home Assistant
+ADD requirements.txt ./
+RUN pip3.6 install -r requirements.txt
 
 # Mouting point for the user's configuration
 VOLUME /config
 
 # Start Home Assistant
 CMD [ "python3.6", "-m", "homeassistant", "--config", "/config" ]
-
-# Install Home Assistant
-RUN pip3.6 install -r requirements.txt
 
 EXPOSE 8123

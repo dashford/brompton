@@ -11,3 +11,5 @@ certificates available to other services.
 - misc images: move to rpi-alpine base image
 - nginx go through ssl configuration (protocols and ciphers)
 - nginx add https 301 redirect
+- homeassistant: remove requirements versions or handle proper updating between versions
+- homeassistant: double check command start
