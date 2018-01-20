@@ -1,3 +1,10 @@
 sensor.kitchen_nest_protect_co_status:
   entity_picture: https://brompton.dashford.io/static/icons/favicon-192x192.png
   friendly_name: Carbon Monoxide
+
+light.kitchen_lamp:
+  entity_picture: mdi:airplane
+  friendly_name: Kitchen Lamp
+
+sun.sun:
+  hidden: true

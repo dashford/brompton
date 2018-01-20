@@ -4,6 +4,7 @@
 
 - mqtt: set up acl_file
 - mqtt: set up different users / client IDs with restrictions
+- mqtt: username that phone connects with is the user taken by owntracks and displayed by homeassistant
 - mqtt: add persistence file
 - mqtt: add users and passwords as part of build step in ENV
 - misc images: move to rpi-alpine base image

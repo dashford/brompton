@@ -1,6 +1,7 @@
 Kitchen:
   entities:
     - sensor.kitchen_nest_protect_co_status
+    - light.kitchen_lamp
 Living Room:
   entities:
     - sensor.living_room_nest_protect_co_status
