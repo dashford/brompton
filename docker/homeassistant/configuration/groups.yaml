@@ -1,13 +1,24 @@
 Kitchen:
   entities:
     - sensor.kitchen_nest_protect_co_status
+    - sensor.kitchen_nest_protect_smoke_status
     - light.kitchen_lamp
 Living Room:
   entities:
     - sensor.living_room_nest_protect_co_status
+    - sensor.living_room_nest_protect_smoke_status
+Upstairs:
+  entities:
+    - sensor.upstairs_nest_protect_co_status
+    - sensor.upstairs_nest_protect_smoke_status
+Hallway:
+  entities:
+    - light.hallway_lamp
 Rooms:
   view: yes
   name: Rooms
   entities:
     - group.living_room
     - group.kitchen
+    - group.upstairs
+    - group.hallway
