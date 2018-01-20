@@ -69,7 +69,7 @@ zone:
 
 device_tracker:
   - platform: owntracks
-    waypoints: true
+    waypoints: True
 
 # Track the sun
 sun:
