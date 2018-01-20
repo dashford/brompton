@@ -1,15 +1,13 @@
-# homeassistant
-
-- nginx reverse proxy running with 
-certbot installed. Expose volume with
-certificates available to other services.
+# home-assistant
 
 ## TODO
 
-- mqtt set up acl_file
-- mqtt add persistence file
+- mqtt: set up acl_file
+- mqtt: set up different users / client IDs with restrictions
+- mqtt: add persistence file
+- mqtt: add users and passwords as part of build step in ENV
 - misc images: move to rpi-alpine base image
-- nginx go through ssl configuration (protocols and ciphers)
-- nginx add https 301 redirect
+- nginx: go through ssl configuration (protocols and ciphers)
+- nginx: add https 301 redirect
 - homeassistant: remove requirements versions or handle proper updating between versions
 - homeassistant: double check command start
