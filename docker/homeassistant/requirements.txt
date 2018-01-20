@@ -12,3 +12,5 @@ xmltodict==0.11.0
 pyowm==2.8.0
 pytradfri[async]==4.1.0
 fuzzywuzzy==0.16.0
+pychromecast==1.0.3
+python-nest==3.1.0
