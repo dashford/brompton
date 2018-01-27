@@ -1,0 +1,52 @@
+version: '3.1'
+services:
+  nginx:
+    image: tobi312/rpi-nginx:alpine
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./docker/arm32v7/nginx/config:/etc/nginx/conf.d:ro
+      - ./docker/arm32v7/nginx/ssl:/etc/nginx/ssl:ro
+      - ./docker/arm32v7/nginx/html:/var/www/html
+      - certificates:/etc/letsencrypt
+
+#  letsencrypt:
+#    build: docker/arm32v7/letsencrypt
+#    environment:
+#      - LETSENCRYPT_USER_MAIL=${LETSENCRYPT_USER_MAIL}
+#      - LEXICON_PROVIDER=cloudflare
+#      - LEXICON_CLOUDFLARE_USERNAME=${LEXICON_CLOUDFLARE_USERNAME}
+#      - LEXICON_CLOUDFLARE_TOKEN=${LEXICON_CLOUDFLARE_TOKEN}
+#      - LETSENCRYPT_STAGING=false
+#      - CERTS_DIRS_MODE=0755
+#      - CERTS_FILES_MODE=0644
+#    volumes:
+#      - ./docker/arm32v7/letsencrypt/domains.conf:/etc/letsencrypt/domains.conf
+#      - certificates:/etc/letsencrypt
+#      - /var/run/docker.sock:/var/run/docker.sock
+
+  homeassistant:
+    build: docker/arm32v7/homeassistant
+    volumes:
+      - ./docker/arm32v7/homeassistant/configuration:/config
+      - /etc/localtime:/etc/localtime:ro
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: always
+    network_mode: host
+    ports:
+      - 8123:8123
+
+  mosquitto:
+    build: docker/arm32v7/mosquitto
+    volumes:
+      - ./docker/arm32v7/mosquitto/configuration:/config
+      - certificates:/etc/letsencrypt
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - 1883:1883
+      - 8883:8883
+
+volumes:
+  certificates:
+    driver: local
