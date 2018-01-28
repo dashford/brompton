@@ -1,16 +1,1 @@
-wheel==0.30.0
-sqlalchemy==1.2.0
-user-agents==1.1.0
-aiohttp_cors==0.6.0
-netdisco==1.2.3
-mutagen==1.39
-warrant==0.6.1
-home-assistant-frontend==20180112.0
-homeassistant==0.61.1
-distro==1.2.0
-xmltodict==0.11.0
-pyowm==2.8.0
-pytradfri[async]==4.1.0
-fuzzywuzzy==0.16.0
-pychromecast==1.0.3
-python-nest==3.1.0
+homeassistant==0.62.0

@@ -1,31 +1,5 @@
 version: '3.1'
 services:
-#  nginx:
-#    image: nginx:1.12-alpine
-#    ports:
-#      - 80:80
-#      - 443:443
-#    volumes:
-#      - ./docker/amd64/nginx/config:/etc/nginx:ro
-#      - ./docker/amd64/nginx/ssl:/etc/nginx/ssl:ro
-#      - ./docker/amd64/nginx/html:/usr/share/nginx/html
-#      - certificates:/etc/letsencrypt
-#
-#  letsencrypt:
-#    build: docker/amd64/letsencrypt
-#    environment:
-#      - LETSENCRYPT_USER_MAIL=${LETSENCRYPT_USER_MAIL}
-#      - LEXICON_PROVIDER=cloudflare
-#      - LEXICON_CLOUDFLARE_USERNAME=${LEXICON_CLOUDFLARE_USERNAME}
-#      - LEXICON_CLOUDFLARE_TOKEN=${LEXICON_CLOUDFLARE_TOKEN}
-#      - LETSENCRYPT_STAGING=true
-#      - CERTS_DIRS_MODE=0755
-#      - CERTS_FILES_MODE=0644
-#    volumes:
-#      - ./docker/letsencrypt/domains.conf:/etc/letsencrypt/domains.conf
-#      - certificates:/etc/letsencrypt
-#      - /var/run/docker.sock:/var/run/docker.sock
-
   homeassistant:
     build: docker/amd64/homeassistant
     volumes:
@@ -37,18 +11,6 @@ services:
     ports:
       - 8123:8123
 
-#  mosquitto:
-#    build: docker/amd64/mosquitto
-#    volumes:
-#      - ./docker/mosquitto/configuration:/config
-#      - certificates:/etc/letsencrypt
-#      - /var/run/docker.sock:/var/run/docker.sock
-#    ports:
-#      - 1883:1883
-#      - 8883:8883
-
 volumes:
-  certificates:
-    driver: local
   ha:
     driver: local
