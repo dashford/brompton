@@ -44,10 +44,12 @@ RUN wget https://www.python.org/ftp/python/3.6.4/Python-3.6.4.tgz && \
 ADD requirements.txt ./
 RUN pip3.6 install -r requirements.txt
 
-# Mouting point for the user's configuration
-VOLUME /config
+# Mounting point for HA's instance files
+VOLUME /ha-installation
 
 # Start Home Assistant
-CMD [ "python3.6", "-m", "homeassistant", "--config", "/config" ]
+ADD run.sh ./
+RUN chmod +x run.sh
+ENTRYPOINT [ "./run.sh" ]
 
 EXPOSE 8123
