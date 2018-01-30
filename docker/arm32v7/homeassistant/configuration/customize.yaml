@@ -41,13 +41,21 @@ sensor.owm_wind_bearing:
 sensor.owm_wind_speed:
   friendly_name: Wind Speed
   icon: mdi:weather-windy
+sensor.kitchen_nest_protect_battery_health:
+  friendly_name: Kitchen Nest Protect Battery
+sensor.living_room_nest_protect_battery_health:
+  friendly_name: Living Room Nest Protect Battery
+sensor.upstairs_nest_protect_battery_health:
+  friendly_name: Upstairs Nest Protect Battery
+sensor.tradfri_remote_control:
+  friendly_name: Light Remote Control
 
 binary_sensor.kitchen_nest_protect_online:
-  friendly_name: Nest Online
+  friendly_name: Kitchen Nest Protect Online
 binary_sensor.living_room_nest_protect_online:
-  friendly_name: Nest Online
+  friendly_name: Living Room Nest Protect Online
 binary_sensor.upstairs_nest_protect_online:
-  friendly_name: Nest Online
+  friendly_name: Upstairs Nest Protect Online
 
 light.kitchen_lamp:
   friendly_name: Kitchen Lamp

@@ -29,6 +29,15 @@ Outside:
 David:
   entities:
     - device_tracker.mqtt_david_phone
+Devices:
+  entities:
+    - binary_sensor.kitchen_nest_protect_online
+    - binary_sensor.living_room_nest_protect_online
+    - binary_sensor.upstairs_nest_protect_online
+    - sensor.kitchen_nest_protect_battery_health
+    - sensor.living_room_nest_protect_battery_health
+    - sensor.upstairs_nest_protect_battery_health
+    - sensor.tradfri_remote_control
 
 Spaces:
   view: yes
@@ -44,3 +53,8 @@ Family:
   name: Family
   entities:
     - group.david
+Devices:
+  view: yes
+  name: Devices
+  entities:
+    - group. devices
