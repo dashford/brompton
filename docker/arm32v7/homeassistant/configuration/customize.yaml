@@ -16,6 +16,24 @@ sensor.living_room_nest_protect_smoke_status:
   friendly_name: Smoke Status
 sensor.upstairs_nest_protect_smoke_status:
   friendly_name: Smoke Status
+sensor.owm_cloud_coverage:
+  friendly_name: Cloud Coverage
+sensor.owm_condition:
+  friendly_name: Current Weather Condition
+sensor.owm_humidity:
+  friendly_name: Humidity
+sensor.owm_pressure:
+  friendly_name: Pressure
+sensor.owm_rain:
+  friendly_name: Rain Volume
+sensor.owm_snow:
+  friendly_name: Snow Volume
+sensor.owm_temperature:
+  friendly_name: Temperature
+sensor.owm_wind_bearing:
+  friendly_name: Wind Bearing
+sensor.owm_wind_speed:
+  friendly_name: Wind Speed
 
 binary_sensor.kitchen_nest_protect_online:
   friendly_name: Nest Online

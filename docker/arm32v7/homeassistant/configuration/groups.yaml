@@ -14,12 +14,24 @@ Upstairs:
 Hallway:
   entities:
     - light.hallway_lamp
+Outside:
+  entities:
+    - sensor.owm_cloud_coverage
+    - sensor.owm_condition
+    - sensor.owm_humidity
+    - sensor.owm_pressure
+    - sensor.owm_rain
+    - sensor.owm_snow
+    - sensor.owm_temperature
+    - sensor.owm_wind_bearing
+    - sensor.owm_wind_speed
 
 Rooms:
   view: yes
-  name: Rooms
+  name: Spaces
   entities:
     - group.living_room
     - group.kitchen
     - group.upstairs
     - group.hallway
+    - group.outside
