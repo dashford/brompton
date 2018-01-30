@@ -26,7 +26,7 @@ Outside:
     - sensor.owm_wind_bearing
     - sensor.owm_wind_speed
 
-Rooms:
+Spaces:
   view: yes
   name: Spaces
   entities:

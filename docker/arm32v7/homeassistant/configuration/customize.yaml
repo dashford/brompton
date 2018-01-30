@@ -18,22 +18,29 @@ sensor.upstairs_nest_protect_smoke_status:
   friendly_name: Smoke Status
 sensor.owm_cloud_coverage:
   friendly_name: Cloud Coverage
+  icon: mdi:weather-cloudy
 sensor.owm_condition:
   friendly_name: Current Weather Condition
 sensor.owm_humidity:
   friendly_name: Humidity
+  icon: mdi:water-percent
 sensor.owm_pressure:
   friendly_name: Pressure
+  icon: mdi:blur
 sensor.owm_rain:
-  friendly_name: Rain Volume
+  friendly_name: Rain
+  icon: mdi:weather-rainy
 sensor.owm_snow:
-  friendly_name: Snow Volume
+  friendly_name: Snow
+  icon: mdi:weather-snowy
 sensor.owm_temperature:
   friendly_name: Temperature
 sensor.owm_wind_bearing:
   friendly_name: Wind Bearing
+  icon: mdi:sign-direction
 sensor.owm_wind_speed:
   friendly_name: Wind Speed
+  icon: mdi:weather-windy
 
 binary_sensor.kitchen_nest_protect_online:
   friendly_name: Nest Online
