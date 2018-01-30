@@ -7,6 +7,7 @@ Living Room:
   entities:
     - sensor.living_room_nest_protect_co_status
     - sensor.living_room_nest_protect_smoke_status
+    - media_player.chromey
 Upstairs:
   entities:
     - sensor.upstairs_nest_protect_co_status
