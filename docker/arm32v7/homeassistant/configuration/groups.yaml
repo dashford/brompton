@@ -26,6 +26,9 @@ Outside:
     - sensor.owm_temperature
     - sensor.owm_wind_bearing
     - sensor.owm_wind_speed
+David:
+  entities:
+    - device_tracker.mqtt_david_phone
 
 Spaces:
   view: yes
@@ -36,3 +39,8 @@ Spaces:
     - group.upstairs
     - group.hallway
     - group.outside
+Family:
+  view: yes
+  name: Family
+  entities:
+    - group.david

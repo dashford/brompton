@@ -52,8 +52,10 @@ binary_sensor.upstairs_nest_protect_online:
 light.kitchen_lamp:
   friendly_name: Kitchen Lamp
 light.hallway_lamp:
-#  icon: mdi:lightbulb
   friendly_name: Hallway Lamp
 
 sun.sun:
   hidden: true
+
+device_tracker.mqtt_david_phone:
+  friendly_name: David's Phone
