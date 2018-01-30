@@ -57,5 +57,8 @@ light.hallway_lamp:
 sun.sun:
   hidden: true
 
+light.tradfri_group:
+  hidden: true
+
 device_tracker.mqtt_david_phone:
   friendly_name: David's Phone
