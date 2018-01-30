@@ -29,7 +29,7 @@ Outside:
 David:
   entities:
     - device_tracker.mqtt_david_phone
-Devices:
+Connected Devices:
   entities:
     - binary_sensor.kitchen_nest_protect_online
     - binary_sensor.living_room_nest_protect_online
@@ -57,4 +57,4 @@ Devices:
   view: yes
   name: Devices
   entities:
-    - group. devices
+    - group.connected_devices
