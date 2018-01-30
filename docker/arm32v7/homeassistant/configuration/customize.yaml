@@ -5,11 +5,11 @@ sensor.living_room_nest_protect_co_status:
 sensor.upstairs_nest_protect_co_status:
   friendly_name: Carbon Monoxide Status
 sensor.kitchen_nest_protect_battery_health:
-  friendly_name: Nest Battery
+  friendly_name: Kitchen Nest Protect Battery
 sensor.living_room_nest_protect_battery_health:
-  friendly_name: Nest Battery
+  friendly_name: Living Room Nest Protect Battery
 sensor.upstairs_nest_protect_battery_health:
-  friendly_name: Nest Battery
+  friendly_name: Upstairs Nest Protect Battery
 sensor.kitchen_nest_protect_smoke_status:
   friendly_name: Smoke Status
 sensor.living_room_nest_protect_smoke_status:
@@ -41,12 +41,6 @@ sensor.owm_wind_bearing:
 sensor.owm_wind_speed:
   friendly_name: Wind Speed
   icon: mdi:weather-windy
-sensor.kitchen_nest_protect_battery_health:
-  friendly_name: Kitchen Nest Protect Battery
-sensor.living_room_nest_protect_battery_health:
-  friendly_name: Living Room Nest Protect Battery
-sensor.upstairs_nest_protect_battery_health:
-  friendly_name: Upstairs Nest Protect Battery
 sensor.tradfri_remote_control:
   friendly_name: Light Remote Control
 
