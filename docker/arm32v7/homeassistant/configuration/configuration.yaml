@@ -105,9 +105,19 @@ tts:
 # Cloud
 cloud:
 
+# Chromecast
 media_player:
   - platform: cast
     host: 192.168.1.153
+
+# Test Sensors
+# Move into sensor.yaml eventually
+sensor:
+  - platform: mqtt
+    state_topic: 'test/sensor1'
+    name: 'Temperature'
+    unit_of_measurement: '°C'
+    value_template: '{{ value_json.temperature }}'
 
 group: !include groups.yaml
 automation: !include automations.yaml
