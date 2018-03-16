@@ -92,7 +92,7 @@ sensor:
     state_topic: 'test/sensor1'
     name: 'Test Temperature'
     unit_of_measurement: '°C'
-    value_template: '{{ value_json.temperature }}
+    value_template: '{{ value_json.temperature }}'
 
 # Nest
 nest:
