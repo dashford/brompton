@@ -95,10 +95,10 @@ sensor:
     unit_of_measurement: '°C'
     value_template: '{{ value_json.temperature }}'
   - platform: mqtt
-      state_topic: 'test/sensor2'
-      name: 'Test Temperature 2'
-      unit_of_measurement: '°C'
-      value_template: '{{ value_json.temperature }}'
+    state_topic: 'test/sensor2'
+    name: 'Test Temperature 2'
+    unit_of_measurement: '°C'
+    value_template: '{{ value_json.temperature }}'
 
 # Nest
 nest:
