@@ -115,7 +115,7 @@ media_player:
 sensor:
   - platform: mqtt
     state_topic: 'test/sensor1'
-    name: 'Temperature'
+    name: 'Test Temperature'
     unit_of_measurement: '°C'
     value_template: '{{ value_json.temperature }}'
 
