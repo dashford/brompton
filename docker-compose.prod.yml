@@ -73,6 +73,11 @@ services:
       - ./docker/arm32v7/grafana:/etc/grafana
     ports:
       - 3000:3000
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=change-me-later
+#      - GF_AUTH_DISABLE_LOGIN_FORM=true
+#      - GF_AUTH_GITHUB_ENABLED=true
 
 volumes:
   certificates:
