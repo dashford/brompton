@@ -6,7 +6,7 @@ services:
       - 80:80
       - 443:443
     volumes:
-      - ./docker/arm32v7/nginx/config:/etc/nginx/nginx.conf.:ro
+      - ./docker/arm32v7/nginx/config:/etc/nginx/nginx.conf:ro
       - ./docker/arm32v7/nginx/sites-enabled:/etc/nginx/sites-enabled:ro
       - ./docker/arm32v7/nginx/ssl:/etc/nginx/ssl:ro
       - ./docker/arm32v7/nginx/html:/var/www/html
