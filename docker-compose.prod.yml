@@ -78,7 +78,6 @@ services:
     environment:
       - GF_SERVER_DOMAIN=grafana.dashford.io
       - GF_SERVER_ROOT_URL=grafana.dashford.io
-      - GF_SERVER_PROTOCOL=https
 #      - GF_USERS_ALLOW_SIGN_UP=
       - GF_SECURITY_ADMIN_USER=admin
       - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_ADMIN_PASSWORD}
