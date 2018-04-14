@@ -77,8 +77,6 @@ services:
       - 3000:3000
     environment:
       - GF_SERVER_DOMAIN=grafana.dashford.io
-      - GF_SERVER_ROOT_URL=grafana.dashford.io
-#      - GF_USERS_ALLOW_SIGN_UP=
       - GF_SECURITY_ADMIN_USER=admin
       - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_ADMIN_PASSWORD}
       - GF_AUTH_DISABLE_LOGIN_FORM=true
