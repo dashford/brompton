@@ -88,7 +88,7 @@ services:
     image: arm32v7/telegraf:1.5.3
     volumes:
       - ./docker/arm32v7/telegraf/telegraf.conf:/etc/telegraf/telegraf.conf:ro
-    envionment:
+    environment:
       - MQTT_USERNAME=${MQTT_USER}
       - MQTT_PASSWORD=${MQTT_PASSWORD}
 
