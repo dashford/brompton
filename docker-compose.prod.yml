@@ -73,6 +73,7 @@ services:
       - grafana:/data
       - ./docker/arm32v7/grafana:/etc/grafana
       - certificates:/etc/letsencrypt
+#      - ./docker/arm32v7/grafana/provisioning/datasources:/grafana/conf/provisioning/datasources:ro
     ports:
       - 3000:3000
     environment:
@@ -82,15 +83,15 @@ services:
       - GF_SECURITY_ADMIN_USER=admin
       - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_ADMIN_PASSWORD}
       - GF_AUTH_DISABLE_LOGIN_FORM=false
-      - GF_AUTH_GITHUB_ENABLED=true
-      - GF_AUTH_GITHUB_ALLOW_SIGN_UP=true
-      - GF_AUTH_GITHUB_CLIENT_ID=${GRAFANA_AUTH_GITHUB_CLIENT_ID}
-      - GF_AUTH_GITHUB_CLIENT_SECRET=${GRAFANA_AUTH_GITHUB_CLIENT_SECRET}
-      - GF_AUTH_GITHUB_SCOPES=user:email,read:org
-      - GF_AUTH_GITHUB_AUTH_URL=https://github.com/login/oauth/authorize
-      - GF_AUTH_GITHUB_TOKEN_URL=https://github.com/login/oauth/access_token
-      - GF_AUTH_GITHUB_API_URL=https://api.github.com/user
-      - GF_AUTH_GITHUB_ALLOWED_ORGANIZATIONS=distilledmedia
+#      - GF_AUTH_GITHUB_ENABLED=true
+#      - GF_AUTH_GITHUB_ALLOW_SIGN_UP=true
+#      - GF_AUTH_GITHUB_CLIENT_ID=${GRAFANA_AUTH_GITHUB_CLIENT_ID}
+#      - GF_AUTH_GITHUB_CLIENT_SECRET=${GRAFANA_AUTH_GITHUB_CLIENT_SECRET}
+#      - GF_AUTH_GITHUB_SCOPES=user:email,read:org
+#      - GF_AUTH_GITHUB_AUTH_URL=https://github.com/login/oauth/authorize
+#      - GF_AUTH_GITHUB_TOKEN_URL=https://github.com/login/oauth/access_token
+#      - GF_AUTH_GITHUB_API_URL=https://api.github.com/user
+#      - GF_AUTH_GITHUB_ALLOWED_ORGANIZATIONS=distilledmedia
 
 volumes:
   certificates:
