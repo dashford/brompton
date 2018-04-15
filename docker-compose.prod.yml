@@ -95,8 +95,8 @@ services:
 
   telegraf:
     image: arm32v7/telegraf:1.5.3
-    ports:
-      -
+    volumes:
+      - ./docker/arm32v7/telegraf/telegraf.conf:/etc/telegraf/telegraf.conf:ro
 
 volumes:
   certificates:
