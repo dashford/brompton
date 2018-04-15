@@ -50,7 +50,7 @@ services:
       - 8883:8883
 
   influxdb:
-    image: arm32v7/influxdb:1.5.1
+    image: arm32v7/influxdb:1.5.2
     volumes:
       - influxdb:/var/lib/influxdb
     environment:
@@ -92,6 +92,11 @@ services:
 #      - GF_AUTH_GITHUB_TOKEN_URL=https://github.com/login/oauth/access_token
 #      - GF_AUTH_GITHUB_API_URL=https://api.github.com/user
 #      - GF_AUTH_GITHUB_ALLOWED_ORGANIZATIONS=distilledmedia
+
+  telegraf:
+    image: arm32v7/telegraf:1.5.3
+    ports:
+      -
 
 volumes:
   certificates:
