@@ -12,3 +12,4 @@
 - nginx: add https 301 redirect
 - homeassistant: remove requirements versions or handle proper updating between versions
 - homeassistant: double check command start
+- investigate automated deployment options
