@@ -12,3 +12,5 @@
 - nginx: add https 301 redirect
 - homeassistant: remove requirements versions or handle proper updating between versions
 - homeassistant: double check command start
+- investigate automated deployment options (https://docs.gitlab.com/ee/topics/autodevops/)
+- get application and node logs pushed into influxdb for grafana consumption
