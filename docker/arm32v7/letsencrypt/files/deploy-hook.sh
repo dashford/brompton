@@ -1,7 +1,5 @@
 #!/bin/sh
 
-export RENEWED_LINEAGE = /etc/letsencrypt/
-
 # Construct PFX file for new cert if needed
 if [ "$PFX_EXPORT" = "true" ]; then
     openssl pkcs12 -export \

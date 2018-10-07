@@ -22,6 +22,7 @@ ENV CERTS_DIRS_MODE 0750
 ENV CERTS_FILES_MODE 0640
 ENV CERTS_USER_OWNER root
 ENV CERTS_GROUP_OWNER root
+ENV RENEWED_LINEAGE "/etc/letsencrypt/"
 
 # Install dependencies, certbot, lexicon, prepare for first start and clean
 RUN apt-get -y update && \
