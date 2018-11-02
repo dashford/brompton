@@ -67,6 +67,7 @@ services:
       - 8083:8083
 
   grafana:
+    # https://hub.docker.com/r/proxx/grafana-armv7/
     image: zeiot/rpi-grafana:v5.0.0
     volumes:
       - grafana:/data
