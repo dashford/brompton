@@ -1,7 +1,7 @@
 version: '3.1'
 services:
   nginx:
-    image: tobi312/rpi-nginx:alpine
+    image: arm32v7/nginx:1.15.5
     ports:
       - 80:80
       - 443:443
@@ -27,17 +27,16 @@ services:
       - certificates:/etc/letsencrypt
       - /var/run/docker.sock:/var/run/docker.sock
 
-#  homeassistant:
-#    build: docker/arm32v7/homeassistant
-#    volumes:
+  homeassistant:
+    image: homeassistant/raspberrypi2-homeassistant:0.81.0
+    volumes:
 #      - ha:/ha-installation
-#      - ./docker/arm32v7/homeassistant/configuration:/config
-#      - /etc/localtime:/etc/localtime:ro
-#      - /var/run/docker.sock:/var/run/docker.sock
-#    restart: always
-#    network_mode: host
-#    ports:
-#      - 8123:8123
+      - ./docker/arm32v7/homeassistant/configuration:/config
+      - /etc/localtime:/etc/localtime:ro
+    restart: always
+    network_mode: host
+    ports:
+      - 8123:8123
 
   mosquitto:
     build: docker/arm32v7/mosquitto
