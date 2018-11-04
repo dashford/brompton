@@ -1,7 +1,7 @@
 FROM resin/rpi-raspbian:jessie
 
 ENV DEBIAN_FRONTEND noninteractive
-ENV MOSQUITTO_VERSION 1.4.9
+ENV MOSQUITTO_VERSION 1.5.3
 
 RUN apt-get update && \
     apt-get upgrade -y && \
