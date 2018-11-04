@@ -49,7 +49,7 @@ services:
       - 8883:8883
 
   influxdb:
-    image: arm32v7/influxdb:1.5.2
+    image: arm32v7/influxdb:1.6.4
     volumes:
       - influxdb:/var/lib/influxdb
     environment:
@@ -85,7 +85,7 @@ services:
       - GF_AUTH_DISABLE_LOGIN_FORM=false
 
   telegraf:
-    image: arm32v7/telegraf:1.5.3
+    image: arm32v7/telegraf:1.8.3
     volumes:
       - ./docker/arm32v7/telegraf/telegraf.conf:/etc/telegraf/telegraf.conf:ro
     environment:
