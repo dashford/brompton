@@ -13,7 +13,7 @@ services:
       - ./docker/arm32v7/nginx/ssl:/etc/nginx/ssl:ro
       - ./docker/arm32v7/nginx/html:/var/www/html
       - certificates:/etc/letsencrypt
-    command: /bin/bash -c "envsubst < /etc/nginx/sites-enabled/01-brompton.conf > /etc/nginx/sites-enabled/01-brompton.conf && exec nginx -g 'daemon off;'"
+    #command: /bin/bash -c "envsubst < /etc/nginx/sites-enabled/01-brompton.conf > /etc/nginx/sites-enabled/01-brompton.conf && exec nginx -g 'daemon off;'"
 
   letsencrypt:
     build: docker/arm32v7/letsencrypt
