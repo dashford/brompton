@@ -1,6 +1,9 @@
-docker/arm32v7/homeassistant/configuration/secrets.yaml
-docker/amd64/homeassistant/configuration/secrets.yaml
-
 .env
 
 !docker/arm32v7/homeassistant/configuration/*.yaml
+
+docker/arm32v7/homeassistant/configuration/secrets.yaml
+docker/amd64/homeassistant/configuration/secrets.yaml
+
+docker/arm32v7/homeassistant/configuration/known_devices.yaml
+docker/amd64/homeassistant/configuration/known_devices.yaml
