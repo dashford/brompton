@@ -1,3 +1,7 @@
+Front Big Bedroom:
+  entities:
+    - sensor.front_big_bedroom_temperature
+    - sensor.front_big_bedroom_humidity
 Kitchen:
   entities:
     - sensor.kitchen_nest_protect_co_status
@@ -48,6 +52,7 @@ Spaces:
     - group.upstairs
     - group.hallway
     - group.outside
+    - group.front_big_bedroom
 Family:
   view: yes
   name: Family

@@ -1,3 +1,9 @@
+sensor.front_big_bedroom_temperature:
+  friendly_name: Temperature
+  icon: mdi:thermometer
+sensor.front_big_bedroom_humidity:
+  friendly_name: Humidity
+  icon: mdi:water-percent
 sensor.kitchen_nest_protect_co_status:
   friendly_name: Carbon Monoxide Status
 sensor.living_room_nest_protect_co_status:
