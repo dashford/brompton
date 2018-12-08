@@ -91,32 +91,32 @@ sensor:
     state_topic: 'brompton/front-big-bedroom/temperature'
     name: 'Front Big Bedroom Temperature'
     unit_of_measurement: '°C'
-    value_template: '{{ value_json.temperature }}'
+    value_template: '{{ value_json.temperature | round(2) }}'
   - platform: mqtt
     state_topic: 'brompton/front-big-bedroom/humidity'
     name: 'Front Big Bedroom Humidity'
     unit_of_measurement: '%RH'
-    value_template: '{{ value_json.humidity }}'
+    value_template: '{{ value_json.humidity | round(3) }}'
   - platform: mqtt
     state_topic: 'brompton/front-big-bedroom/pressure'
     name: 'Front Big Bedroom Pressure'
     unit_of_measurement: 'hPa'
-    value_template: '{{ value_json.pressure }}'
+    value_template: '{{ value_json.pressure | round(0) }}'
   - platform: mqtt
     state_topic: 'brompton/upstairs-landing/temperature'
     name: 'Upstairs Landing Temperature'
     unit_of_measurement: '°C'
-    value_template: '{{ value_json.temperature }}'
+    value_template: '{{ value_json.temperature | round(2) }}'
   - platform: mqtt
     state_topic: 'brompton/upstairs-landing/humidity'
     name: 'Upstairs Landing Humidity'
     unit_of_measurement: '%RH'
-    value_template: '{{ value_json.humidity }}'
+    value_template: '{{ value_json.humidity | round(3) }}'
   - platform: mqtt
     state_topic: 'brompton/upstairs-landing/pressure'
     name: 'Upstairs Landing Pressure'
     unit_of_measurement: 'hPa'
-    value_template: '{{ value_json.pressure }}'
+    value_template: '{{ value_json.pressure | round(0) }}'
 
 # Nest
 nest:
