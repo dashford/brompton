@@ -2,3 +2,5 @@ docker/arm32v7/homeassistant/configuration/secrets.yaml
 docker/amd64/homeassistant/configuration/secrets.yaml
 
 .env
+
+!docker/arm32v7/homeassistant/configuration/*.yaml
