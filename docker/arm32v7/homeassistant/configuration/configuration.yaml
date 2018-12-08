@@ -21,7 +21,7 @@ config:
 
 http:
   # Secrets are defined in the file secrets.yaml
-  api_password: !secret http_password
+  # api_password: !secret http_password
   # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
   # base_url: example.duckdns.org:8123
 
@@ -96,7 +96,7 @@ sensor:
     value_template: '{{ value_json.temperature }}'
   - platform: mqtt
     state_topic: 'brompton/front-big-bedroom/humidity'
-    name: 'Front Big Bedroom Temperature'
+    name: 'Front Big Bedroom Humidity'
     unit_of_measurement: '%RH'
     value_template: '{{ value_json.humidity }}'
 
