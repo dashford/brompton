@@ -31,9 +31,9 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
 
   homeassistant:
-    image: homeassistant/raspberrypi2-homeassistant:0.83.3
+    build: docker/arm32v7/homeassistant
     volumes:
-#      - ha:/ha-installation
+      - ha:/ha-installation
       - ./docker/arm32v7/homeassistant/configuration:/config
       - /etc/localtime:/etc/localtime:ro
     restart: always
