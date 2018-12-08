@@ -2,20 +2,27 @@ Front Big Bedroom:
   entities:
     - sensor.front_big_bedroom_temperature
     - sensor.front_big_bedroom_humidity
+    - sensor.front_big_bedroom_pressure
 Kitchen:
   entities:
     - sensor.kitchen_nest_protect_co_status
     - sensor.kitchen_nest_protect_smoke_status
+    - sensor.kitchen_nest_protect_color_status
     - light.kitchen_lamp
 Living Room:
   entities:
     - sensor.living_room_nest_protect_co_status
     - sensor.living_room_nest_protect_smoke_status
+    - sensor.living_room_nest_protect_color_status
     - media_player.chromey
 Upstairs:
   entities:
     - sensor.upstairs_nest_protect_co_status
     - sensor.upstairs_nest_protect_smoke_status
+    - sensor.upstairs_nest_protect_color_status
+    - sensor.upstairs_landing_temperature
+    - sensor.upstairs_landing_humidity
+    - sensor.upstairs_landing_pressure
 Hallway:
   entities:
     - light.hallway_lamp
@@ -25,8 +32,6 @@ Outside:
     - sensor.owm_condition
     - sensor.owm_humidity
     - sensor.owm_pressure
-    - sensor.owm_rain
-    - sensor.owm_snow
     - sensor.owm_temperature
     - sensor.owm_wind_bearing
     - sensor.owm_wind_speed
