@@ -101,7 +101,7 @@ sensor:
     state_topic: 'brompton/front-big-bedroom/pressure'
     name: 'Front Big Bedroom Pressure'
     unit_of_measurement: 'hPa'
-    value_template: '{{ value_json.humidity }}'
+    value_template: '{{ value_json.pressure }}'
   - platform: mqtt
     state_topic: 'brompton/upstairs-landing/temperature'
     name: 'Upstairs Landing Temperature'
@@ -116,7 +116,7 @@ sensor:
     state_topic: 'brompton/upstairs-landing/pressure'
     name: 'Upstairs Landing Pressure'
     unit_of_measurement: 'hPa'
-    value_template: '{{ value_json.humidity }}'
+    value_template: '{{ value_json.pressure }}'
 
 # Nest
 nest:
