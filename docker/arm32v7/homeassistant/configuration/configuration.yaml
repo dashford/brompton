@@ -90,15 +90,15 @@ sensor:
       - snow
       - humidity
   - platform: mqtt
-    state_topic: 'test/sensor1'
-    name: 'Test Temperature'
+    state_topic: 'brompton/front-big-bedroom/temperature'
+    name: 'Front Big Bedroom Temperature'
     unit_of_measurement: '°C'
     value_template: '{{ value_json.temperature }}'
   - platform: mqtt
-    state_topic: 'test/sensor2'
-    name: 'Test Temperature 2'
-    unit_of_measurement: '°C'
-    value_template: '{{ value_json.temperature }}'
+    state_topic: 'brompton/front-big-bedroom/humidity'
+    name: 'Front Big Bedroom Temperature'
+    unit_of_measurement: '%RH'
+    value_template: '{{ value_json.humidity }}'
 
 # Nest
 nest:
@@ -117,9 +117,9 @@ tts:
 cloud:
 
 # Chromecast
-media_player:
-  - platform: cast
-    host: 192.168.1.153
+cast:
+  media_player:
+    - host: 192.168.1.153
 
 group: !include groups.yaml
 automation: !include automations.yaml
