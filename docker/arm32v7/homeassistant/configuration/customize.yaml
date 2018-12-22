@@ -9,6 +9,39 @@ sensor.front_big_bedroom_pressure:
   friendly_name: Pressure
   icon: mdi:blur
 
+# Front Small Bedroom
+sensor.front_small_bedroom_temperature:
+  friendly_name: Temperature
+  icon: mdi:thermometer
+sensor.front_small_bedroom_humidity:
+  friendly_name: Humidity
+  icon: mdi:water-percent
+sensor.front_small_bedroom_pressure:
+  friendly_name: Pressure
+  icon: mdi:blur
+
+# Back Big Bedroom
+sensor.back_big_bedroom_temperature:
+  friendly_name: Temperature
+  icon: mdi:thermometer
+sensor.back_big_bedroom_humidity:
+  friendly_name: Humidity
+  icon: mdi:water-percent
+sensor.back_big_bedroom_pressure:
+  friendly_name: Pressure
+  icon: mdi:blur
+
+# Back Small Bedroom
+sensor.back_small_bedroom_temperature:
+  friendly_name: Temperature
+  icon: mdi:thermometer
+sensor.back_small_bedroom_humidity:
+  friendly_name: Humidity
+  icon: mdi:water-percent
+sensor.back_small_bedroom_pressure:
+  friendly_name: Pressure
+  icon: mdi:blur
+
 # Kitchen
 sensor.kitchen_nest_protect_co_status:
   friendly_name: Carbon Monoxide Status

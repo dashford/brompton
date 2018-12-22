@@ -3,6 +3,21 @@ Front Big Bedroom:
     - sensor.front_big_bedroom_temperature
     - sensor.front_big_bedroom_humidity
     - sensor.front_big_bedroom_pressure
+Front Small Bedroom:
+  entities:
+    - sensor.front_small_bedroom_temperature
+    - sensor.front_small_bedroom_humidity
+    - sensor.front_small_bedroom_pressure
+Back Big Bedroom:
+  entities:
+    - sensor.back_big_bedroom_temperature
+    - sensor.back_big_bedroom_humidity
+    - sensor.back_big_bedroom_pressure
+Back Small Bedroom:
+  entities:
+    - sensor.back_small_bedroom_temperature
+    - sensor.back_small_bedroom_humidity
+    - sensor.back_small_bedroom_pressure
 Kitchen:
   entities:
     - sensor.kitchen_nest_protect_co_status
@@ -23,6 +38,11 @@ Upstairs:
     - sensor.upstairs_landing_temperature
     - sensor.upstairs_landing_humidity
     - sensor.upstairs_landing_pressure
+Upstairs Bathroom:
+  entities:
+    - sensor.upstairs_bathroom_temperature
+    - sensor.upstairs_bathroom_humidity
+    - sensor.upstairs_bathroom_pressure
 Hallway:
   entities:
     - light.hallway_lamp
@@ -58,6 +78,10 @@ Spaces:
     - group.hallway
     - group.outside
     - group.front_big_bedroom
+    - group.front_small_bedroom
+    - group.back_big_bedroom
+    - group.back_small_bedroom
+    - group.upstairs_bathroom
 Family:
   view: yes
   name: Family
