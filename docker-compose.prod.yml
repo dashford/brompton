@@ -46,7 +46,6 @@ services:
       - sh.acme.autoload.domain=mqtt.dashford.io
     volumes:
       - ./docker/arm32v7/mosquitto/configuration:/config
-      - /var/run/docker.sock:/var/run/docker.sock
     ports:
       - 1883:1883
       - 8883:8883
