@@ -13,22 +13,21 @@ services:
       - ./docker/arm32v7/nginx/ssl:/etc/nginx/ssl:ro
       - ./docker/arm32v7/nginx/html:/var/www/html
       - certificates:/etc/letsencrypt
-    #command: /bin/bash -c "envsubst < /etc/nginx/sites-enabled/01-brompton.conf > /etc/nginx/sites-enabled/01-brompton.conf && exec nginx -g 'daemon off;'"
 
-  letsencrypt:
-    build: docker/arm32v7/letsencrypt
-    environment:
-      - LETSENCRYPT_USER_MAIL=${LETSENCRYPT_USER_MAIL}
-      - LEXICON_PROVIDER=cloudflare
-      - LEXICON_CLOUDFLARE_USERNAME=${LEXICON_CLOUDFLARE_USERNAME}
-      - LEXICON_CLOUDFLARE_TOKEN=${LEXICON_CLOUDFLARE_TOKEN}
-      - LETSENCRYPT_STAGING=false
-      - CERTS_DIRS_MODE=0755
-      - CERTS_FILES_MODE=0644
-    volumes:
-      - ./docker/arm32v7/letsencrypt/domains.conf:/etc/letsencrypt/domains.conf
-      - certificates:/etc/letsencrypt
-      - /var/run/docker.sock:/var/run/docker.sock
+#  letsencrypt:
+#    build: docker/arm32v7/letsencrypt
+#    environment:
+#      - LETSENCRYPT_USER_MAIL=${LETSENCRYPT_USER_MAIL}
+#      - LEXICON_PROVIDER=cloudflare
+#      - LEXICON_CLOUDFLARE_USERNAME=${LEXICON_CLOUDFLARE_USERNAME}
+#      - LEXICON_CLOUDFLARE_TOKEN=${LEXICON_CLOUDFLARE_TOKEN}
+#      - LETSENCRYPT_STAGING=false
+#      - CERTS_DIRS_MODE=0755
+#      - CERTS_FILES_MODE=0644
+#    volumes:
+#      - ./docker/arm32v7/letsencrypt/domains.conf:/etc/letsencrypt/domains.conf
+#      - certificates:/etc/letsencrypt
+#      - /var/run/docker.sock:/var/run/docker.sock
 
   homeassistant:
     image: homeassistant/raspberrypi2-homeassistant:0.81.0
@@ -51,7 +50,7 @@ services:
       - 8883:8883
 
   mosquitto-acmesh:
-    image: dashford/arm32v7-acme.sh
+    image: dashford/arm32v7-acme.sh:2.8.2
     command: daemon
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
@@ -91,7 +90,6 @@ services:
       - grafana:/data
       - ./docker/arm32v7/grafana:/etc/grafana
       - certificates:/etc/letsencrypt
-#      - ./docker/arm32v7/grafana/provisioning/datasources:/grafana/conf/provisioning/datasources:ro
     ports:
       - 3000:3000
     environment:
