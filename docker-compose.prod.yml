@@ -1,7 +1,9 @@
 version: '3.1'
 services:
-  nginx:
+  nginx-proxy:
     image: arm32v7/nginx:1.15.5
+    labels:
+      - sh.acme.autoload.domain=*.dashford.io
     environment:
       - X_HA_ACCESS=${X_HA_ACCESS}
     ports:
@@ -12,22 +14,22 @@ services:
       - ./docker/arm32v7/nginx/sites-enabled:/etc/nginx/sites-enabled
       - ./docker/arm32v7/nginx/ssl:/etc/nginx/ssl:ro
       - ./docker/arm32v7/nginx/html:/var/www/html
-      - certificates:/etc/letsencrypt
 
-#  letsencrypt:
-#    build: docker/arm32v7/letsencrypt
-#    environment:
-#      - LETSENCRYPT_USER_MAIL=${LETSENCRYPT_USER_MAIL}
-#      - LEXICON_PROVIDER=cloudflare
-#      - LEXICON_CLOUDFLARE_USERNAME=${LEXICON_CLOUDFLARE_USERNAME}
-#      - LEXICON_CLOUDFLARE_TOKEN=${LEXICON_CLOUDFLARE_TOKEN}
-#      - LETSENCRYPT_STAGING=false
-#      - CERTS_DIRS_MODE=0755
-#      - CERTS_FILES_MODE=0644
-#    volumes:
-#      - ./docker/arm32v7/letsencrypt/domains.conf:/etc/letsencrypt/domains.conf
-#      - certificates:/etc/letsencrypt
-#      - /var/run/docker.sock:/var/run/docker.sock
+  nginx-proxy-acmesh:
+    image: dashford/arm32v7-acme.sh:2.8.2
+    command: daemon
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./acmeout:/acme.sh
+    environment:
+      - CF_Account_ID=${CF_Account_ID}
+      - CF_Token=${CF_Token}
+      - DEPLOY_DOCKER_CONTAINER_LABEL=sh.acme.autoload.domain=*.dashford.io
+      - DEPLOY_DOCKER_CONTAINER_KEY_FILE=/etc/acme.sh/ssl/*.dashford.io/key.pem
+      - DEPLOY_DOCKER_CONTAINER_CERT_FILE="/etc/acme.sh/ssl/*.dashford.io/cert.pem"
+      - DEPLOY_DOCKER_CONTAINER_CA_FILE="/etc/acme.sh/ssl/*.dashford.io/ca.pem"
+      - DEPLOY_DOCKER_CONTAINER_FULLCHAIN_FILE="/etc/acme.sh/ssl/*.dashford.io/full.pem"
+      - DEPLOY_DOCKER_CONTAINER_RELOAD_CMD="service nginx force-reload"
 
   homeassistant:
     image: homeassistant/raspberrypi2-homeassistant:0.81.0
@@ -89,7 +91,6 @@ services:
     volumes:
       - grafana:/data
       - ./docker/arm32v7/grafana:/etc/grafana
-      - certificates:/etc/letsencrypt
     ports:
       - 3000:3000
     environment:
@@ -109,8 +110,6 @@ services:
       - MQTT_PASSWORD=${MQTT_PASSWORD}
 
 volumes:
-  certificates:
-    driver: local
   influxdb:
     driver: local
   grafana:
