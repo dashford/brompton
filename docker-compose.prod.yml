@@ -41,14 +41,31 @@ services:
       - 8123:8123
 
   mosquitto:
-    build: docker/arm32v7/mosquitto
+    image: dashford/arm32v7-mosquitto:1.5.3
+    labels:
+      - sh.acme.autoload.domain=mqtt.dashford.io
     volumes:
       - ./docker/arm32v7/mosquitto/configuration:/config
-      - certificates:/etc/letsencrypt
       - /var/run/docker.sock:/var/run/docker.sock
     ports:
       - 1883:1883
       - 8883:8883
+
+  mosquitto-acmesh:
+    image: dashford/arm32v7-acme.sh
+    command: daemon
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./acmeout:/acme.sh
+    environment:
+      - CF_Account_ID=${CF_Account_ID}
+      - CF_Token=${CF_Token}
+      - DEPLOY_DOCKER_CONTAINER_LABEL=sh.acme.autoload.domain=mqtt.dashford.io
+      - DEPLOY_DOCKER_CONTAINER_KEY_FILE=/etc/acme.sh/ssl/mqtt.dashford.io/key.pem
+      - DEPLOY_DOCKER_CONTAINER_CERT_FILE="/etc/acme.sh/ssl/mqtt.dashford.io/cert.pem"
+      - DEPLOY_DOCKER_CONTAINER_CA_FILE="/etc/acme.sh/ssl/mqtt.dashford.io/ca.pem"
+      - DEPLOY_DOCKER_CONTAINER_FULLCHAIN_FILE="/etc/acme.sh/ssl/mqtt.dashford.io/full.pem"
+      - DEPLOY_DOCKER_CONTAINER_RELOAD_CMD="service mosquitto restart"
 
   influxdb:
     image: arm32v7/influxdb:1.6.4
