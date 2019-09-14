@@ -25,7 +25,7 @@ up-telegraf :
 
 up-acmesh :
 	docker-compose -f docker-compose.prod.yml up -d acme.sh
-	docker exec acme.sh --issue -d *.dashford.io --dns dns_cf--force
+	docker exec acme.sh --issue -d *.dashford.io --dns dns_cf --force
 	docker exec acme.sh --install-cert -d *.dashford.io \
         --key-file /etc/acme.sh/ssl/privkey.pem  \
         --fullchain-file /etc/acme.sh/ssl/fullchain.pem \
