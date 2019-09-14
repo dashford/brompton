@@ -1,9 +1,19 @@
 version: '3.1'
 services:
+  acme.sh:
+    image: dashford/arm32v7-acme.sh:2.8.2
+    container_name: acme.sh
+    command: daemon
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - acmesh-certs:/etc/acme.sh/ssl
+    environment:
+      - CF_Account_ID=${CF_Account_ID}
+      - CF_Token=${CF_Token}
+
   nginx-proxy:
     image: arm32v7/nginx:1.15.5
-    labels:
-      - sh.acme.autoload.domain=*.dashford.io
+    container_name: nginx-proxy
     environment:
       - X_HA_ACCESS=${X_HA_ACCESS}
     ports:
@@ -12,27 +22,13 @@ services:
     volumes:
       - ./docker/arm32v7/nginx/config/nginx.conf:/etc/nginx/nginx.conf:ro
       - ./docker/arm32v7/nginx/sites-enabled:/etc/nginx/sites-enabled
-      - ./docker/arm32v7/nginx/ssl:/etc/nginx/ssl:ro
+      - acmesh-certs:/etc/acme.sh/ssl:ro
+      - ./docker/arm32v7/nginx/ssl/dhparam.pem:/etc/nginx/ssl/dhparam.pem:ro
       - ./docker/arm32v7/nginx/html:/var/www/html
-
-  nginx-proxy-acmesh:
-    image: dashford/arm32v7-acme.sh:2.8.2
-    command: daemon
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - ./acmeout:/acme.sh
-    environment:
-      - CF_Account_ID=${CF_Account_ID}
-      - CF_Token=${CF_Token}
-      - DEPLOY_DOCKER_CONTAINER_LABEL=sh.acme.autoload.domain=*.dashford.io
-      - DEPLOY_DOCKER_CONTAINER_KEY_FILE=/etc/acme.sh/ssl/*.dashford.io/key.pem
-      - DEPLOY_DOCKER_CONTAINER_CERT_FILE="/etc/acme.sh/ssl/*.dashford.io/cert.pem"
-      - DEPLOY_DOCKER_CONTAINER_CA_FILE="/etc/acme.sh/ssl/*.dashford.io/ca.pem"
-      - DEPLOY_DOCKER_CONTAINER_FULLCHAIN_FILE="/etc/acme.sh/ssl/*.dashford.io/full.pem"
-      - DEPLOY_DOCKER_CONTAINER_RELOAD_CMD="service nginx force-reload"
 
   homeassistant:
     image: homeassistant/raspberrypi2-homeassistant:0.81.0
+    container_name: homeassistant
     volumes:
       - ./docker/arm32v7/homeassistant/configuration:/config
       - /etc/localtime:/etc/localtime:ro
@@ -43,32 +39,17 @@ services:
 
   mosquitto:
     image: dashford/arm32v7-mosquitto:1.5.3
-    labels:
-      - sh.acme.autoload.domain=mqtt.dashford.io
+    container_name: mosquitto
     volumes:
       - ./docker/arm32v7/mosquitto/configuration:/config
+      - acmesh-certs:/etc/acme.sh/ssl:ro
     ports:
       - 1883:1883
       - 8883:8883
 
-  mosquitto-acmesh:
-    image: dashford/arm32v7-acme.sh:2.8.2
-    command: daemon
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - ./acmeout:/acme.sh
-    environment:
-      - CF_Account_ID=${CF_Account_ID}
-      - CF_Token=${CF_Token}
-      - DEPLOY_DOCKER_CONTAINER_LABEL=sh.acme.autoload.domain=mqtt.dashford.io
-      - DEPLOY_DOCKER_CONTAINER_KEY_FILE=/etc/acme.sh/ssl/mqtt.dashford.io/key.pem
-      - DEPLOY_DOCKER_CONTAINER_CERT_FILE="/etc/acme.sh/ssl/mqtt.dashford.io/cert.pem"
-      - DEPLOY_DOCKER_CONTAINER_CA_FILE="/etc/acme.sh/ssl/mqtt.dashford.io/ca.pem"
-      - DEPLOY_DOCKER_CONTAINER_FULLCHAIN_FILE="/etc/acme.sh/ssl/mqtt.dashford.io/full.pem"
-      - DEPLOY_DOCKER_CONTAINER_RELOAD_CMD="service mosquitto restart"
-
   influxdb:
     image: arm32v7/influxdb:1.6.4
+    container_name: influxdb
     volumes:
       - influxdb:/var/lib/influxdb
     environment:
@@ -88,6 +69,7 @@ services:
   grafana:
     # https://hub.docker.com/r/proxx/grafana-armv7/
     image: zeiot/rpi-grafana:v5.0.0
+    container_name: grafana
     volumes:
       - grafana:/data
       - ./docker/arm32v7/grafana:/etc/grafana
@@ -103,6 +85,7 @@ services:
 
   telegraf:
     image: arm32v7/telegraf:1.8.3
+    container_name: telegraf
     volumes:
       - ./docker/arm32v7/telegraf/telegraf.conf:/etc/telegraf/telegraf.conf:ro
     environment:
@@ -113,4 +96,6 @@ volumes:
   influxdb:
     driver: local
   grafana:
+    driver: local
+  acmesh-certs:
     driver: local
