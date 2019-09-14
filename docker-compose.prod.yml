@@ -38,7 +38,7 @@ services:
       - 8123:8123
 
   mosquitto:
-    image: dashford/arm32v7-mosquitto:1.5.3
+    image: dashford/arm32v7-mosquitto:1.6.3
     container_name: mosquitto
     volumes:
       - ./docker/arm32v7/mosquitto/configuration:/config
