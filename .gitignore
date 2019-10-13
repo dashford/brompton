@@ -1,5 +1,7 @@
 .env
 
+.idea/
+
 docker/arm32v7/homeassistant/configuration/*
 
 !docker/arm32v7/homeassistant/configuration/*.yaml

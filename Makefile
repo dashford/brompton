@@ -1,15 +1,12 @@
 all : up
 
-up : up-nginx up-letsencrypt up-homeassistant up-mosquitto up-influxdb up-grafana up-telegraf
-stop : stop-nginx stop-letsencrypt stop-homeassistant stop-mosquitto stop-influxdb stop-grafana stop-telegraf
+up : up-acmesh up-nginx up-homeassistant up-mosquitto up-influxdb up-grafana up-telegraf
+stop : stop-acmesh stop-nginx stop-homeassistant stop-mosquitto stop-influxdb stop-grafana stop-telegraf
 down : down-all
 
 
 up-nginx :
-	docker-compose -f docker-compose.prod.yml up -d nginx
-
-up-letsencrypt :
-	docker-compose -f docker-compose.prod.yml up -d letsencrypt
+	docker-compose -f docker-compose.prod.yml up -d nginx-proxy
 
 up-homeassistant :
 	docker-compose -f docker-compose.prod.yml up -d homeassistant
@@ -26,27 +23,35 @@ up-grafana :
 up-telegraf :
 	docker-compose -f docker-compose.prod.yml up -d telegraf
 
+up-acmesh :
+	docker-compose -f docker-compose.prod.yml up -d acme.sh
+	docker exec acme.sh --issue -d *.dashford.io --dns dns_cf --force
+	docker exec acme.sh --install-cert -d *.dashford.io \
+        --key-file /etc/acme.sh/ssl/privkey.pem  \
+        --fullchain-file /etc/acme.sh/ssl/fullchain.pem \
+        --ca-file /etc/acme.sh/ssl/chain.pem
+
 
 stop-nginx :
-	docker stop brompton_nginx_1
-
-stop-letsencrypt :
-	docker stop brompton_letsencrypt_1
+	docker stop nginx-proxy
 
 stop-homeassistant :
-	docker stop brompton_homeassistant_1
+	docker stop homeassistant
 
 stop-mosquitto :
-	docker stop brompton_mosquitto_1
+	docker stop mosquitto
 
 stop-influxdb :
-	docker stop brompton_influxdb_1
+	docker stop influxdb
 
 stop-grafana :
-	docker stop brompton_grafana_1
+	docker stop grafana
 
 stop-telegraf :
-	docker stop brompton_telegraf_1
+	docker stop telegraf
+
+stop-acmesh :
+	docker stop acme.sh
 
 
 down-all :
