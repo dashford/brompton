@@ -1,4 +1,4 @@
-FROM homeassistant/raspberrypi2-homeassistant:0.83.3
+FROM homeassistant/raspberrypi2-homeassistant:0.100.1
 
 WORKDIR /usr/src
 
