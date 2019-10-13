@@ -2,6 +2,8 @@
 
 ## TODO
 
+- mqtt: owntracks 883 listener config no longer working
+- set up cron for restarting docker containers
 - mqtt: set up acl_file
 - mqtt: set up different users / client IDs with restrictions
 - mqtt: username that phone connects with is the user taken by owntracks and displayed by homeassistant
