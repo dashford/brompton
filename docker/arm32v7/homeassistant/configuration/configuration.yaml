@@ -178,11 +178,6 @@ sensor:
     unit_of_measurement: 'hPa'
     value_template: '{{ value_json.pressure | round(0) }}'
 
-# Nest
-nest:
-  client_id: !secret nest_client_id
-  client_secret: !secret nest_client_secret
-
 # IKEA Trådfri (Tradfri)
 tradfri:
   host: 192.168.1.171
@@ -198,6 +193,12 @@ cloud:
 cast:
   media_player:
     - host: 192.168.1.153
+
+# Ember
+climate:
+  - platform: ephember
+    username: !secret ephember_username
+    password: !secret ephember_password
 
 group: !include groups.yaml
 automation: !include automations.yaml
