@@ -20,21 +20,12 @@ Back Small Bedroom:
     - sensor.back_small_bedroom_pressure
 Kitchen:
   entities:
-    - sensor.kitchen_nest_protect_co_status
-    - sensor.kitchen_nest_protect_smoke_status
-    - sensor.kitchen_nest_protect_color_status
     - light.kitchen_lamp
 Living Room:
   entities:
-    - sensor.living_room_nest_protect_co_status
-    - sensor.living_room_nest_protect_smoke_status
-    - sensor.living_room_nest_protect_color_status
     - media_player.chromey
 Upstairs:
   entities:
-    - sensor.upstairs_nest_protect_co_status
-    - sensor.upstairs_nest_protect_smoke_status
-    - sensor.upstairs_nest_protect_color_status
     - sensor.upstairs_landing_temperature
     - sensor.upstairs_landing_humidity
     - sensor.upstairs_landing_pressure
@@ -60,12 +51,6 @@ David:
     - device_tracker.mqtt_david_phone
 Connected Devices:
   entities:
-    - binary_sensor.kitchen_nest_protect_online
-    - binary_sensor.living_room_nest_protect_online
-    - binary_sensor.upstairs_nest_protect_online
-    - sensor.kitchen_nest_protect_battery_health
-    - sensor.living_room_nest_protect_battery_health
-    - sensor.upstairs_nest_protect_battery_health
     - sensor.tradfri_remote_control
 
 Spaces:
