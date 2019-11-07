@@ -69,9 +69,8 @@ zone:
     radius: 150
     icon: mdi:briefcase
 
-device_tracker:
-  - platform: owntracks
-    waypoints: true
+owntracks:
+  waypoints: true
 
 # Track the sun
 sun:
