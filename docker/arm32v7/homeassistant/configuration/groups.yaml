@@ -45,6 +45,7 @@ Upstairs Bathroom:
 Hallway:
   entities:
     - light.hallway_lamp
+  control: hidden
 Outside:
   entities:
     - sensor.owm_cloud_coverage
