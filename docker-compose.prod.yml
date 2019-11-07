@@ -40,6 +40,7 @@ services:
   mosquitto:
     image: dashford/arm32v7-mosquitto:1.6.3
     container_name: mosquitto
+    command: ["--config-file", "/config/mosquitto.conf"]
     volumes:
       - ./docker/arm32v7/mosquitto/configuration:/config
       - acmesh-certs:/etc/acme.sh/ssl:ro
