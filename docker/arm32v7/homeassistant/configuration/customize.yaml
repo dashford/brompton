@@ -43,43 +43,14 @@ sensor.back_small_bedroom_pressure:
   icon: mdi:blur
 
 # Kitchen
-sensor.kitchen_nest_protect_co_status:
-  friendly_name: Carbon Monoxide Status
-sensor.kitchen_nest_protect_color_status:
-  friendly_name: Nest Protect Status
-sensor.kitchen_nest_protect_battery_health:
-  friendly_name: Kitchen Nest Protect Battery
-sensor.kitchen_nest_protect_smoke_status:
-  friendly_name: Smoke Status
-binary_sensor.kitchen_nest_protect_online:
-  friendly_name: Kitchen Nest Protect Online
 light.kitchen_lamp:
   friendly_name: Kitchen Lamp
   hidden: true
 
 # Living Room
-sensor.living_room_nest_protect_co_status:
-  friendly_name: Carbon Monoxide Status
-sensor.living_room_nest_protect_color_status:
-  friendly_name: Nest Protect Status
-sensor.living_room_nest_protect_battery_health:
-  friendly_name: Living Room Nest Protect Battery
-sensor.living_room_nest_protect_smoke_status:
-  friendly_name: Smoke Status
-binary_sensor.living_room_nest_protect_online:
-  friendly_name: Living Room Nest Protect Online
+
 
 # Upstairs Landing
-sensor.upstairs_nest_protect_co_status:
-  friendly_name: Carbon Monoxide Status
-sensor.upstairs_nest_protect_color_status:
-  friendly_name: Nest Protect Status
-sensor.upstairs_nest_protect_battery_health:
-  friendly_name: Upstairs Nest Protect Battery
-sensor.upstairs_nest_protect_smoke_status:
-  friendly_name: Smoke Status
-binary_sensor.upstairs_nest_protect_online:
-  friendly_name: Upstairs Nest Protect Online
 sensor.upstairs_landing_temperature:
   friendly_name: Temperature
   icon: mdi:thermometer
