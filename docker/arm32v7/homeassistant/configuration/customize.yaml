@@ -55,6 +55,7 @@ binary_sensor.kitchen_nest_protect_online:
   friendly_name: Kitchen Nest Protect Online
 light.kitchen_lamp:
   friendly_name: Kitchen Lamp
+  hidden: true
 
 # Living Room
 sensor.living_room_nest_protect_co_status:
@@ -92,6 +93,7 @@ sensor.upstairs_landing_pressure:
 # Hallway
 light.hallway_lamp:
   friendly_name: Hallway Lamp
+  hidden: true
 
 sensor.owm_cloud_coverage:
   friendly_name: Cloud Coverage
