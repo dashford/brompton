@@ -3,6 +3,7 @@ Front Big Bedroom:
     - sensor.front_big_bedroom_temperature
     - sensor.front_big_bedroom_humidity
     - sensor.front_big_bedroom_pressure
+  control: hidden
 Front Small Bedroom:
   entities:
     - sensor.front_small_bedroom_temperature
