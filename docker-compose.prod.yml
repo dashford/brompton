@@ -27,7 +27,7 @@ services:
       - ./docker/arm32v7/nginx/html:/var/www/html
 
   homeassistant:
-    image: homeassistant/raspberrypi2-homeassistant:0.100.2
+    image: homeassistant/raspberrypi2-homeassistant:0.102.1
     container_name: homeassistant
     volumes:
       - ./docker/arm32v7/homeassistant/configuration:/config
