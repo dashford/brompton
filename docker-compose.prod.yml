@@ -68,12 +68,12 @@ services:
       - 8083:8083
 
   grafana:
-    # https://hub.docker.com/r/proxx/grafana-armv7/
-    image: zeiot/rpi-grafana:v5.0.0
+    image: grafana/grafana:6.5.1
     container_name: grafana
     volumes:
       - grafana:/data
-      - ./docker/arm32v7/grafana:/etc/grafana
+      - ./docker/arm32v7/grafana/configuration:/etc/grafana
+      - ./docker/arm32v7/grafana/dashboards:/var/lib/grafana/dashboards
     ports:
       - 3000:3000
     environment:
