@@ -1,7 +1,7 @@
 apiVersion: 1
 
 datasources:
-- name: InfluxDB-Test
+- name: InfluxDB
   type: influxdb
   orgId: 1
   url: http://192.168.1.12:8086
