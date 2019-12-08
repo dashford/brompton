@@ -49,7 +49,7 @@ services:
       - 8883:8883
 
   influxdb:
-    image: arm32v7/influxdb:1.6.4
+    image: influxdb:1.7.9-alpine
     container_name: influxdb
     volumes:
       - influxdb:/var/lib/influxdb
