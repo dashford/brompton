@@ -53,7 +53,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_INFLUXDB}",
+      "datasource": "InfluxDB",
       "decimals": 2,
       "fill": 2,
       "gridPos": {
