@@ -85,7 +85,7 @@ services:
       - GF_AUTH_DISABLE_LOGIN_FORM=false
 
   telegraf:
-    image: arm32v7/telegraf:1.8.3
+    image: telegraf:1.12.6
     container_name: telegraf
     volumes:
       - ./docker/arm32v7/telegraf/telegraf.conf:/etc/telegraf/telegraf.conf:ro
