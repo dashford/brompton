@@ -38,9 +38,9 @@ services:
       - 8123:8123
 
   mosquitto:
-    image: eclipse-mosquitto:1.6.8
+    image: dashford/arm32v7-mosquitto:1.6.3
     container_name: mosquitto
-#    command: ["--config-file", "/config/mosquitto.conf"]
+    command: ["--config-file", "/config/mosquitto.conf"]
     volumes:
       - ./docker/arm32v7/mosquitto/configuration:/config
       - acmesh-certs:/etc/acme.sh/ssl:ro
