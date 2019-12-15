@@ -12,7 +12,7 @@ services:
       - CF_Token=${CF_Token}
 
   nginx-proxy:
-    image: arm32v7/nginx:1.15.5
+    image: nginx:1.17.6
     container_name: nginx-proxy
     environment:
       - X_HA_ACCESS=${X_HA_ACCESS}
