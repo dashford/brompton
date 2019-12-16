@@ -1,0 +1,10 @@
+automation:
+  alias: Trigger when downstairs boiler turns on
+  trigger:
+    platform: state
+    entity_id: climate.downstairs
+  action:
+    service: script.notify_mqtt
+    data:
+      target: "ember"
+      message: "{{ trigger }}"
