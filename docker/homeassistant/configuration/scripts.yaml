@@ -2,6 +2,6 @@ notify_mqtt:
   sequence:
     - service: mqtt.publish
       data_template:
-        payload: "{{ message }}"
+        payload_template: "{{ message }}"
         topic: test/"{{ target }}"
         retain: true
