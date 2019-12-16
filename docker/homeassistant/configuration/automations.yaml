@@ -6,4 +6,4 @@ action:
   service: script.notify_mqtt
   data:
     target: "ember"
-    message: "{{ trigger }}"
+    message: "From {{ trigger.from_state.state }} to {{ trigger.to_state.state }}"
