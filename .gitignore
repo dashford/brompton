@@ -2,12 +2,10 @@
 
 .idea/
 
-docker/arm32v7/homeassistant/configuration/*
+docker/homeassistant/configuration/*
 
-!docker/arm32v7/homeassistant/configuration/*.yaml
+!docker/homeassistant/configuration/*.yaml
 
-docker/arm32v7/homeassistant/configuration/secrets.yaml
-docker/amd64/homeassistant/configuration/secrets.yaml
+docker/homeassistant/configuration/secrets.yaml
 
-docker/arm32v7/homeassistant/configuration/known_devices.yaml
-docker/amd64/homeassistant/configuration/known_devices.yaml
+docker/homeassistant/configuration/known_devices.yaml
