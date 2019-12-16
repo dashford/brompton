@@ -78,16 +78,16 @@ sun:
 # Sensors
 # TODO move into own sensor.yaml
 sensor:
-  - platform: openweathermap
-    api_key: !secret openweathermap_api_key
-    monitored_conditions:
-      - weather
-      - temperature
-      - wind_speed
-      - wind_bearing
-      - pressure
-      - clouds
-      - humidity
+#  - platform: openweathermap
+#    api_key: !secret openweathermap_api_key
+#    monitored_conditions:
+#      - weather
+#      - temperature
+#      - wind_speed
+#      - wind_bearing
+#      - pressure
+#      - clouds
+#      - humidity
   - platform: mqtt
     state_topic: 'brompton/front-big-bedroom/temperature'
     name: 'Front Big Bedroom Temperature'
