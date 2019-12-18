@@ -3,7 +3,7 @@ trigger:
   platform: state
   entity_id: climate.downstairs
 action:
-  service: script.notify_mqtt
+  service: script.notify_mqtt_climate
   data_template:
     zone: downstairs
     mode: "{{ trigger.to_state.attributes.hvac_action }}" # heating, idle
