@@ -6,4 +6,4 @@ action:
   service: script.notify_mqtt
   data:
     zone: downstairs
-    mode: {{ state.attributes.hvac_action }} # should be something like heating, idle
+    mode: {{ trigger.platform }} # should be something like heating, idle
