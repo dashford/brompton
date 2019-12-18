@@ -2,5 +2,4 @@ notify_mqtt:
   sequence:
     - service: mqtt.publish
       data_template:
-        payload: "test"
-        topic: brompton/boiler/{{ zone }}/{{ mode }} # brompton/boiler/downstairs/heating
+        topic: brompton/climate/{{ zone }}/{{ mode }} # brompton/climate/downstairs/heating

@@ -1,4 +1,4 @@
-alias: Trigger when downstairs boiler turns on
+alias: Trigger when downstairs boiler changes state
 trigger:
   platform: state
   entity_id: climate.downstairs
@@ -6,4 +6,4 @@ action:
   service: script.notify_mqtt
   data_template:
     zone: downstairs
-    mode: "{{ trigger.to_state.attributes.hvac_action }}" # should be something like heating, idle
+    mode: {{ trigger.to_state.attributes.hvac_action }} # heating, idle
