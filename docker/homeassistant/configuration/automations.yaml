@@ -5,5 +5,5 @@ trigger:
 action:
   service: script.notify_mqtt
   data:
-    target: "ember"
-    message: "From {{ trigger.from_state.state }} to {{ trigger.to_state.state }}"
+    zone: downstairs
+    mode: {{ trigger.attributes.hvac_action }} # should be something like heating, idle
