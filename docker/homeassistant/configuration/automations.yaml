@@ -4,6 +4,6 @@ trigger:
   entity_id: climate.downstairs
 action:
   service: script.notify_mqtt
-  data:
+  data_template:
     zone: downstairs
     mode: "{{ trigger.entity_id }}" # should be something like heating, idle
