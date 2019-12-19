@@ -10,6 +10,7 @@ services:
     environment:
       - CF_Account_ID=${CF_Account_ID}
       - CF_Token=${CF_Token}
+    restart: always
 
   nginx-proxy:
     image: nginx:1.17.6
@@ -25,6 +26,7 @@ services:
       - acmesh-certs:/etc/acme.sh/ssl:ro
       - ./docker/nginx/ssl/dhparam.pem:/etc/nginx/ssl/dhparam.pem:ro
       - ./docker/nginx/html:/var/www/html
+    restart: always
 
   homeassistant:
     image: homeassistant/raspberrypi2-homeassistant:0.102.1
@@ -46,6 +48,7 @@ services:
     ports:
       - 1883:1883
       - 8883:8883
+    restart: always
 
   influxdb:
     image: influxdb:1.7.9
@@ -65,6 +68,7 @@ services:
     ports:
       - 8086:8086
       - 8083:8083
+    restart: always
 
   grafana:
     image: grafana/grafana:6.5.1
@@ -82,6 +86,7 @@ services:
       - GF_SECURITY_ADMIN_USER=admin
       - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_ADMIN_PASSWORD}
       - GF_AUTH_DISABLE_LOGIN_FORM=false
+    restart: always
 
   telegraf:
     image: telegraf:1.12.6
@@ -91,6 +96,7 @@ services:
     environment:
       - MQTT_USERNAME=${MQTT_USER}
       - MQTT_PASSWORD=${MQTT_PASSWORD}
+    restart: always
 
 volumes:
   influxdb:
