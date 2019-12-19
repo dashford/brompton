@@ -1,5 +1,5 @@
-notify_mqtt_climate:
-  sequence:
-    - service: mqtt.publish
-      data_template:
-        topic: brompton/{{ zone }}/climate/{{ mode }} # brompton/downstairs/climate/heating
+#notify_mqtt_climate:
+#  sequence:
+#    - service: mqtt.publish
+#      data_template:
+#        topic: brompton/{{ zone }}/climate/{{ mode }} # brompton/downstairs/climate/heating
