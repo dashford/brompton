@@ -6,7 +6,7 @@
     - service: mqtt.publish
       data_template:
         topic: "brompton/downstairs/climate/{{ trigger.to_state.attributes.hvac_action }}" # brompton/downstairs/climate/heating
-        payload:
+        payload: "test message"
 #    service: script.notify_mqtt_climate
 #    data_template:
 #      zone: downstairs
