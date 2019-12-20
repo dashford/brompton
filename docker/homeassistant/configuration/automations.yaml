@@ -13,4 +13,19 @@
     - service: mqtt.publish
       data_template:
         topic: "brompton/{{ trigger.entity_id.split('.')[1] }}/climate/{{ trigger.to_state.attributes.hvac_action }}" # brompton/downstairs/climate/heating
-        payload_template: "test message"
+
+- alias: Trigger when boiler stops heating
+  trigger:
+    platform: state
+    entity_id: climate.downstairs, climate.upstairs, climate.hot_water
+  condition:
+    condition: and
+    conditions:
+      - condition: template
+        value_template: "{{ trigger.to_state.attributes.hvac_action == 'idle' }}"
+      - condition: template
+        value_template: "{{ trigger.from_state.attributes.hvac_action == 'heating' }}"
+  action:
+    - service: mqtt.publish
+      data_template:
+        topic: "brompton/{{ trigger.entity_id.split('.')[1] }}/climate/{{ trigger.to_state.attributes.hvac_action }}" # brompton/downstairs/climate/heating
