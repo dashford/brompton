@@ -1,12 +1,23 @@
-- alias: Trigger when downstairs boiler changes state
+- alias: Trigger when downstairs boiler stops heating
   trigger:
     platform: state
     entity_id: climate.downstairs
+  condition:
+    condition: and
+    conditions:
+      - condition: template
+        value_template: "{{ trigger.to_state.attributes.hvac_action == heating }}"
+      - condition: template
+        value_template: "{{ trigger.from_state.attributes.hvac_action == idle }}"
   action:
     - service: mqtt.publish
       data_template:
         topic: "brompton/downstairs/climate/{{ trigger.to_state.attributes.hvac_action }}" # brompton/downstairs/climate/heating
         payload: "test message"
+
+
+
+
 #    service: script.notify_mqtt_climate
 #    data_template:
 #      zone: downstairs
