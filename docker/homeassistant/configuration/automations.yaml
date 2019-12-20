@@ -12,7 +12,7 @@
   action:
     - service: mqtt.publish
       data_template:
-        topic: "brompton/{{ entity_id.split('.')[1] }}/climate/{{ trigger.to_state.attributes.hvac_action }}" # brompton/downstairs/climate/heating
+        topic: "brompton/{{ trigger.entity_id.split('.')[1] }}/climate/{{ trigger.to_state.attributes.hvac_action }}" # brompton/downstairs/climate/heating
         payload: "test message"
 
 
