@@ -13,6 +13,7 @@
     - service: mqtt.publish
       data_template:
         topic: "brompton/{{ trigger.entity_id.split('.')[1] }}/climate/{{ trigger.to_state.attributes.hvac_action }}" # brompton/downstairs/climate/heating
+#        payload: "{\"tags\":\"\"}"
 
 - alias: Trigger when boiler stops heating
   trigger:
@@ -28,4 +29,5 @@
   action:
     - service: mqtt.publish
       data_template:
-        topic: "brompton/{{ trigger.entity_id.split('.')[1] }}/climate/{{ trigger.to_state.attributes.hvac_action }}" # brompton/downstairs/climate/heating
+        topic: "brompton/{{ trigger.entity_id.split('.')[1] }}/climate/{{ trigger.to_state.attributes.hvac_action }}" # brompton/downstairs/climate/idle
+#        payload: ""
