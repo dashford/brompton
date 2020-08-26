@@ -1,32 +1,32 @@
 version: '3.8'
 services:
-#  acme.sh:
-#    image: dashford/arm32v7-acme.sh:2.8.2
-#    container_name: acme.sh
-#    command: daemon
-#    volumes:
-#      - /var/run/docker.sock:/var/run/docker.sock
-#      - acmesh-certs:/etc/acme.sh/ssl
-#    environment:
-#      - CF_Account_ID=${CF_Account_ID}
-#      - CF_Token=${CF_Token}
-#    restart: always
-#
-#  nginx-proxy:
-#    image: nginx:1.17.6
-#    container_name: nginx-proxy
-#    environment:
-#      - X_HA_ACCESS=${X_HA_ACCESS}
-#    ports:
-#      - 80:80
-#      - 443:443
-#    volumes:
-#      - ./docker/nginx/config/nginx.conf:/etc/nginx/nginx.conf:ro
-#      - ./docker/nginx/sites-enabled:/etc/nginx/sites-enabled
-#      - acmesh-certs:/etc/acme.sh/ssl:ro
-#      - ./docker/nginx/ssl/dhparam.pem:/etc/nginx/ssl/dhparam.pem:ro
-#      - ./docker/nginx/html:/var/www/html
-#    restart: always
+  acme.sh:
+    image: neilpang/acme.sh:latest
+    container_name: acme.sh
+    command: daemon
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - acmesh-certs:/acme.sh
+    environment:
+      - CF_Account_ID=${CF_Account_ID}
+      - CF_Token=${CF_Token}
+    restart: always
+
+  nginx:
+    image: nginx:1.19.2
+    container_name: nginx
+    environment:
+      - X_HA_ACCESS=${X_HA_ACCESS}
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./docker/nginx/config/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./docker/nginx/sites-enabled:/etc/nginx/sites-enabled
+      - acmesh-certs:/etc/nginx/ssl:rw
+      - ./docker/nginx/ssl/dhparam.pem:/etc/nginx/ssl/dhparam.pem:rw
+      - ./docker/nginx/html:/var/www/html
+    restart: always
 #
 #  homeassistant:
 #    image: homeassistant/raspberrypi2-homeassistant:0.102.1
