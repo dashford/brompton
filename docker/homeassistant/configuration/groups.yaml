@@ -1,72 +1,63 @@
-Front Big Bedroom:
+front_big_bedroom:
+  name: Front Big Bedroom
   entities:
     - sensor.front_big_bedroom_temperature
     - sensor.front_big_bedroom_humidity
     - sensor.front_big_bedroom_pressure
-  control: hidden
+#  control: hidden
 Front Small Bedroom:
   entities:
     - sensor.front_small_bedroom_temperature
     - sensor.front_small_bedroom_humidity
     - sensor.front_small_bedroom_pressure
-  control: hidden
+#  control: hidden
 Back Big Bedroom:
   entities:
     - sensor.back_big_bedroom_temperature
     - sensor.back_big_bedroom_humidity
     - sensor.back_big_bedroom_pressure
-  control: hidden
+#  control: hidden
 Back Small Bedroom:
   entities:
     - sensor.back_small_bedroom_temperature
     - sensor.back_small_bedroom_humidity
     - sensor.back_small_bedroom_pressure
-  control: hidden
+#  control: hidden
 Kitchen:
   entities:
     - light.kitchen_lamp
-  control: hidden
+#  control: hidden
 Living Room:
   entities:
     - media_player.chromey
-  control: hidden
+#  control: hidden
 Upstairs:
   entities:
     - sensor.upstairs_landing_temperature
     - sensor.upstairs_landing_humidity
     - sensor.upstairs_landing_pressure
-  control: hidden
+#  control: hidden
 Upstairs Bathroom:
   entities:
     - sensor.upstairs_bathroom_temperature
     - sensor.upstairs_bathroom_humidity
     - sensor.upstairs_bathroom_pressure
-  control: hidden
+#  control: hidden
 Hallway:
   entities:
     - light.hallway_lamp
-  control: hidden
-Outside:
-  entities:
-    - sensor.owm_cloud_coverage
-    - sensor.owm_condition
-    - sensor.owm_humidity
-    - sensor.owm_pressure
-    - sensor.owm_temperature
-    - sensor.owm_wind_bearing
-    - sensor.owm_wind_speed
-  control: hidden
+#  control: hidden
 David:
   entities:
     - device_tracker.mqtt_david_phone
-  control: hidden
+#  control: hidden
 Connected Devices:
   entities:
     - sensor.tradfri_remote_control
-  control: hidden
+#  control: hidden
 
 Spaces:
-  view: yes
+#  view: yes
   name: Spaces
   entities:
     - group.living_room
@@ -80,12 +71,12 @@ Spaces:
     - group.back_small_bedroom
     - group.upstairs_bathroom
 Family:
-  view: yes
+#  view: yes
   name: Family
   entities:
     - group.david
 Devices:
-  view: yes
+#  view: yes
   name: Devices
   entities:
     - group.connected_devices

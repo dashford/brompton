@@ -1,7 +1,7 @@
 all : up
 
-up : up-acmesh up-nginx up-mosquitto up-influxdb up-grafana up-telegraf
-stop : stop-acmesh stop-nginx stop-mosquitto stop-influxdb stop-grafana stop-telegraf
+up : up-acmesh up-nginx up-mosquitto up-influxdb up-grafana up-telegraf up-homeassistant
+stop : stop-acmesh stop-nginx stop-mosquitto stop-influxdb stop-grafana stop-telegraf stop-homeassistant
 down : down-all
 
 

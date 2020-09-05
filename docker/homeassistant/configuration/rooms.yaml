@@ -1,0 +1,81 @@
+title: Rooms
+views:
+  - path: Rooms
+    title: Rooms
+    cards:
+      - type: entities
+        entities:
+          - sensor.front_big_bedroom_temperature
+          - sensor.front_big_bedroom_humidity
+          - sensor.front_big_bedroom_pressure
+        title: Front Big Bedroom
+        show_header_toggle: false
+      - type: entities
+        entities:
+          - sensor.front_small_bedroom_temperature
+          - sensor.front_small_bedroom_humidity
+          - sensor.front_small_bedroom_pressure
+        title: Front Small Bedroom
+        show_header_toggle: false
+      - type: entities
+        entities:
+          - sensor.back_big_bedroom_temperature
+          - sensor.back_big_bedroom_humidity
+          - sensor.back_big_bedroom_pressure
+        title: Back Big Bedroom
+        show_header_toggle: false
+      - type: entities
+        entities:
+          - sensor.back_small_bedroom_temperature
+          - sensor.back_small_bedroom_humidity
+          - sensor.back_small_bedroom_pressure
+        title: Back Small Bedroom
+        show_header_toggle: false
+      - type: entities
+        entities:
+          - light.lamp
+          - cover.left
+          - cover.centre_left
+          - cover.centre_right
+          - cover.right
+        title: Kitchen
+        show_header_toggle: false
+      - type: entities
+        entities:
+          - media_player.living_room_tv
+        title: Sitting Room
+        show_header_toggle: false
+      - type: entities
+        entities:
+          - sensor.upstairs_landing_temperature
+          - sensor.upstairs_landing_humidity
+          - sensor.upstairs_landing_pressure
+          - entity: climate.upstairs
+            name: Heating
+        title: Upstairs
+        show_header_toggle: false
+      - type: entities
+        entities:
+          - entity: sensor.upstairs_bathroom_temperature
+          - entity: sensor.upstairs_bathroom_humidity
+          - entity: sensor.upstairs_bathroom_pressure
+        title: Upstairs Bathroom
+        show_header_toggle: false
+      - type: entities
+        entities:
+          - entity: light.tradfri_bulb_2
+            name: Lamp
+          - entity: climate.downstairs
+            name: Heating
+        title: Hallway
+        show_header_toggle: false
+      - type: entities
+        entities:
+          - entity: climate.hot_water
+            name: Heating
+          - entity: sensor.top_of_hot_water_tank_temperature
+            name: Top of Tank
+          - entity: sensor.bottom_of_hot_water_tank_temperature
+            name: Bottom of Tank
+        title: Hot Water
+        show_header_toggle: false

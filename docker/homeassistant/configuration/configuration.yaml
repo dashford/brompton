@@ -37,7 +37,7 @@ updater:
   # include_used_components: true
 
 # Discover some devices automatically
-#discovery:
+discovery:
 
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
@@ -49,7 +49,7 @@ history:
 logbook:
 
 mqtt:
-  broker: 192.168.1.12
+  broker: 192.168.1.10
   port: 1883
   username: !secret mqtt_username
   password: !secret mqtt_password
@@ -78,16 +78,6 @@ sun:
 # Sensors
 # TODO move into own sensor.yaml
 sensor:
-#  - platform: openweathermap
-#    api_key: !secret openweathermap_api_key
-#    monitored_conditions:
-#      - weather
-#      - temperature
-#      - wind_speed
-#      - wind_bearing
-#      - pressure
-#      - clouds
-#      - humidity
   - platform: mqtt
     state_topic: 'brompton/front-big-bedroom/temperature'
     name: 'Front Big Bedroom Temperature'
@@ -178,6 +168,16 @@ sensor:
     name: 'Upstairs Bathroom Pressure'
     unit_of_measurement: 'hPa'
     value_template: '{{ value_json.pressure | round(0) }}'
+  - platform: mqtt
+    state_topic: 'brompton/hot-water-tank/top/temperature'
+    name: 'Top of Hot Water Tank Temperature'
+    unit_of_measurement: '°C'
+    value_template: '{{ value_json.temperature | round(2) }}'
+  - platform: mqtt
+    state_topic: 'brompton/hot-water-tank/bottom/temperature'
+    name: 'Bottom of Hot Water Tank Temperature'
+    unit_of_measurement: '°C'
+    value_template: '{{ value_json.temperature | round(2) }}'
 
 # IKEA Trådfri (Tradfri)
 tradfri:
@@ -191,16 +191,21 @@ tts:
 # Cloud
 cloud:
 
-# Chromecast
-cast:
-  media_player:
-    - host: 192.168.1.153
-
 # Ember
 climate:
   - platform: ephember
     username: !secret ephember_username
     password: !secret ephember_password
+
+lovelace:
+  mode: storage
+  dashboards:
+    rooms-yaml:
+      mode: yaml
+      title: Rooms
+      icon: mdi:script
+      show_in_sidebar: true
+      filename: rooms.yaml
 
 group: !include groups.yaml
 automation: !include automations.yaml

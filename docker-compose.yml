@@ -27,18 +27,18 @@ services:
       - ./docker/nginx/ssl/dhparam.pem:/etc/nginx/ssl/dhparam.pem:rw
       - ./docker/nginx/html:/var/www/html
     restart: always
-#
-#  homeassistant:
-#    image: homeassistant/raspberrypi2-homeassistant:0.102.1
-#    container_name: homeassistant
-#    volumes:
-#      - ./docker/homeassistant/configuration:/config
-#      - /etc/localtime:/etc/localtime:ro
-#    restart: always
-#    network_mode: host
-#    ports:
-#      - 8123:8123
-#
+
+  homeassistant:
+    image: homeassistant/home-assistant:0.114.4
+    container_name: homeassistant
+    volumes:
+      - ./docker/homeassistant/configuration:/config
+      - /etc/localtime:/etc/localtime:ro
+    restart: always
+    network_mode: host
+    ports:
+      - 8123:8123
+
   mosquitto:
     build:
       context: ./docker/mosquitto
