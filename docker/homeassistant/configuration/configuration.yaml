@@ -200,12 +200,12 @@ climate:
 lovelace:
   mode: storage
   dashboards:
-    rooms-yaml:
+    brompton-dashboard:
       mode: yaml
-      title: Rooms
+      title: Brompton
       icon: mdi:script
       show_in_sidebar: true
-      filename: rooms.yaml
+      filename: brompton.yaml
 
 group: !include groups.yaml
 automation: !include automations.yaml

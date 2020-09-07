@@ -1,8 +1,13 @@
-title: Rooms
+title: Brompton
 views:
-  - path: Rooms
-    title: Rooms
+  - path: overview
+    title: Overview
     cards:
+      - type: sensor
+        entity: sensor.front_big_bedroom_temperature
+        name: Test
+        graph: line
+        unit: '°C'
       - type: entities
         entities:
           - sensor.front_big_bedroom_temperature
@@ -54,6 +59,14 @@ views:
             name: Heating
         title: Upstairs
         show_header_toggle: false
+      - type: map
+        entities:
+          - entity: device_tracker.mqtt_admin_david_phone
+          - entity: zone.home
+        title: Blah
+        default_zoom: 16
+        hours_to_show: 48
+        show_header_toggle: false
       - type: entities
         entities:
           - entity: sensor.upstairs_bathroom_temperature
@@ -79,3 +92,28 @@ views:
             name: Bottom of Tank
         title: Hot Water
         show_header_toggle: false
+
+  - title: Downstairs
+    path: downstairs
+    cards:
+      - type: light
+        entity: light.tradfri_bulb_2
+
+  - title: Upstairs
+    path: upstairs
+
+  - title: Climate
+    path: climate
+    cards:
+      - type: thermostat
+        entity: climate.downstairs
+        name: Downstairs
+      - type: thermostat
+        entity: climate.upstairs
+        name: Upstairs
+      - type: thermostat
+        entity: climate.hot_water
+        name: Hot Water
+
+  - title: Outside
+    path: outside
