@@ -43,6 +43,7 @@ views:
           - cover.centre_left
           - cover.centre_right
           - cover.right
+          - media_player.kitchen
         title: Kitchen
         show_header_toggle: false
       - type: entities

@@ -197,6 +197,8 @@ climate:
     username: !secret ephember_username
     password: !secret ephember_password
 
+sonos:
+
 lovelace:
   mode: storage
   dashboards:
