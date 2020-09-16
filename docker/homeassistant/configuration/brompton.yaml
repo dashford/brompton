@@ -63,6 +63,7 @@ views:
       - type: map
         entities:
           - entity: device_tracker.mqtt_admin_david_phone
+            name: David
           - entity: zone.home
         title: Blah
         default_zoom: 16
