@@ -106,10 +106,31 @@ services:
       - INFLUXDB_MQTT_HOST=${INFLUXDB_MQTT_HOST}
     restart: always
 
+  deconz:
+    image: marthoc/deconz:stable
+    container_name: deconz
+    network_mode: host
+    restart: always
+    volumes:
+      - deconz:/root/.local/share/dresden-elektronik/deCONZ
+    devices:
+      - /dev/ttyACM0
+    environment:
+      - DECONZ_WEB_PORT=8081
+      - DECONZ_WS_PORT=4431
+      - DEBUG_INFO=1
+      - DEBUG_APS=0
+      - DEBUG_ZCL=0
+      - DEBUG_ZDP=0
+      - DEBUG_OTAU=0
+      - TZ=Europe/Dublin
+
 volumes:
   influxdb:
     driver: local
   grafana:
     driver: local
   acmesh-certs:
+    driver: local
+  deconz:
     driver: local
