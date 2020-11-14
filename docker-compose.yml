@@ -111,7 +111,7 @@ services:
     image: koenkk/zigbee2mqtt:1.16.1
     volumes:
       - zigbee2mqtt:/app/data
-      - ./docker/zigbee2mqtt/configuration.yaml:/app/confirguration.yaml:ro
+      - ./docker/zigbee2mqtt/configuration.yaml:/app/configuration.yaml:ro
       - /run/udev:/run/udev:ro
     devices:
       - /dev/ttyACM0
