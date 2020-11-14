@@ -119,6 +119,7 @@ services:
     network_mode: host
     environment:
       - TZ=Europe/Dublin
+      - TEST=david
 
 volumes:
   influxdb:
