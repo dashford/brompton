@@ -119,6 +119,7 @@ services:
     network_mode: host
     environment:
       - TZ=Europe/Dublin
+      - ZIGBEE2MQTT_DATA=/app
       - ZIGBEE2MQTT_CONFIG_MQTT_USER=${MQTT_USER}
       - ZIGBEE2MQTT_CONFIG_MQTT_PASSWORD=${MQTT_PASSWORD}
 
