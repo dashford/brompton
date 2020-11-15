@@ -10,4 +10,4 @@ docker/homeassistant/configuration/secrets.yaml
 
 docker/homeassistant/configuration/known_devices.yaml
 
-docker/zigbee2mqtt/configuration.yaml
+docker/zigbee2mqtt/secret.yaml
