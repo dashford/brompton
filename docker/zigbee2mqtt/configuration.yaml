@@ -11,8 +11,8 @@ mqtt:
   # MQTT server URL
   server: 'mqtt://mosquitto'
   # MQTT server authentication, uncomment if required:
-  user: 'mqtt_user'
-  password: 'mqtt_password'
+#  user: 'mqtt_user'
+#  password: 'mqtt_password'
 
 # Serial settings
 serial:
