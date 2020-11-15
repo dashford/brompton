@@ -111,7 +111,7 @@ services:
     container_name: zigbee2mqtt
     volumes:
       - zigbee2mqtt:/app/data
-      - ./docker/zigbee2mqtt/configuration.yaml:/app/data/configuration.yaml:rw
+      - ./docker/zigbee2mqtt/configuration.yaml:/app/configuration.yaml:rw
       - /run/udev:/run/udev:ro
     devices:
       - /dev/ttyACM0
