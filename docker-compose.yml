@@ -107,8 +107,13 @@ services:
     restart: always
 
   zigbee2mqtt:
+    build:
+      context: ./docker/zigbee2mqtt
+      args:
+        - USERNAME=${MQTT_USER}
+        - PASSWORD=${MQTT_PASSWORD}
     container_name: zigbee2mqtt
-    image: koenkk/zigbee2mqtt:1.16.1
+#    image: koenkk/zigbee2mqtt:1.16.1
     volumes:
       - zigbee2mqtt:/app/data
       - ./docker/zigbee2mqtt/configuration.yaml:/app/data/configuration.yaml:rw
