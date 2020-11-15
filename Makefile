@@ -1,7 +1,7 @@
 all : up
 
-up : up-acmesh up-nginx up-mosquitto up-influxdb up-grafana up-telegraf up-homeassistant
-stop : stop-acmesh stop-nginx stop-mosquitto stop-influxdb stop-grafana stop-telegraf stop-homeassistant
+up : up-acmesh up-nginx up-mosquitto up-influxdb up-grafana up-telegraf up-homeassistant up-zigbee2mqtt
+stop : stop-acmesh stop-nginx stop-mosquitto stop-influxdb stop-grafana stop-telegraf stop-homeassistant stop-zigbee2mqtt
 down : down-all
 
 
@@ -32,6 +32,9 @@ up-acmesh :
     #    --fullchain-file /acme.sh/*.dashford.io/full.pem \
     #    --ca-file /acme.sh/*.dashford.io/ca.pem
 
+up-zigbee2mqtt :
+	docker-compose up -d zigbee2mqtt
+
 
 stop-nginx :
 	docker stop nginx
@@ -53,6 +56,9 @@ stop-telegraf :
 
 stop-acmesh :
 	docker stop acme.sh
+
+stop-zigbee2mqtt :
+	docker stop zigbee2mqtt
 
 
 down-all :
