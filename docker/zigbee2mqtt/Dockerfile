@@ -7,3 +7,4 @@ ENV USERNAME ${USERNAME}
 ENV PASSWORD ${PASSWORD}
 
 COPY configuration.yaml /app/data/configuration.yaml
+COPY configuration.yaml /app/configuration.yaml
