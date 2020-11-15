@@ -8,3 +8,6 @@ ENV PASSWORD ${PASSWORD}
 
 COPY configuration.yaml /app/data/configuration.yaml
 COPY configuration.yaml /app/configuration.yaml
+
+RUN sed 's/${USERNAME}/${USERNAME}/g' configuration.yaml
+RUN sed 's/${PASSWORD}/${PASSWORD}/g' configuration.yaml
