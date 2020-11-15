@@ -9,7 +9,7 @@ mqtt:
   # MQTT base topic for zigbee2mqtt MQTT messages
   base_topic: zigbee2mqtt
   # MQTT server URL
-  server: 'mqtt://${TEST11}'
+  server: 'mqtt://${USERNAME}'
   # MQTT server authentication, uncomment if required:
   # user: mqtt
   # password: password
