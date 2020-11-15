@@ -10,9 +10,6 @@ mqtt:
   base_topic: zigbee2mqtt
   # MQTT server URL
   server: 'mqtt://mosquitto'
-  # MQTT server authentication, uncomment if required:
-  user: '!secret mqtt_user'
-  password: '!secret mqtt_password'
 
 # Serial settings
 serial:
