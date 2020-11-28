@@ -15,7 +15,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 1,
-  "iteration": 1576679741133,
+  "iteration": 1606567292877,
   "links": [],
   "panels": [
     {
@@ -41,6 +41,12 @@
       ],
       "datasource": "InfluxDB",
       "decimals": 2,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
       "format": "celsius",
       "gauge": {
         "maxValue": 100,
@@ -51,7 +57,7 @@
       },
       "gridPos": {
         "h": 5,
-        "w": 8,
+        "w": 6,
         "x": 0,
         "y": 1
       },
@@ -73,7 +79,6 @@
       "maxDataPoints": 100,
       "nullPointMode": "connected",
       "nullText": null,
-      "options": {},
       "postfix": "",
       "postfixFontSize": "50%",
       "prefix": "",
@@ -161,6 +166,12 @@
       ],
       "datasource": "InfluxDB",
       "decimals": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
       "format": "humidity",
       "gauge": {
         "maxValue": 100,
@@ -171,8 +182,8 @@
       },
       "gridPos": {
         "h": 5,
-        "w": 8,
-        "x": 8,
+        "w": 6,
+        "x": 6,
         "y": 1
       },
       "hideTimeOverride": false,
@@ -193,7 +204,6 @@
       "maxDataPoints": 100,
       "nullPointMode": "connected",
       "nullText": null,
-      "options": {},
       "postfix": "",
       "postfixFontSize": "50%",
       "prefix": "",
@@ -281,6 +291,12 @@
       ],
       "datasource": "InfluxDB",
       "decimals": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
       "format": "pressurehpa",
       "gauge": {
         "maxValue": 100,
@@ -291,8 +307,8 @@
       },
       "gridPos": {
         "h": 5,
-        "w": 8,
-        "x": 16,
+        "w": 6,
+        "x": 12,
         "y": 1
       },
       "hideTimeOverride": false,
@@ -313,7 +329,6 @@
       "maxDataPoints": 100,
       "nullPointMode": "connected",
       "nullText": null,
-      "options": {},
       "postfix": "",
       "postfixFontSize": "50%",
       "prefix": "",
@@ -391,6 +406,111 @@
       "valueName": "current"
     },
     {
+      "datasource": "InfluxDB",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {},
+          "mappings": [
+            {
+              "from": "",
+              "id": 0,
+              "text": "",
+              "to": "",
+              "type": 1
+            }
+          ],
+          "noValue": "N/A",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "red",
+                "value": null
+              },
+              {
+                "color": "orange",
+                "value": 15
+              },
+              {
+                "color": "green",
+                "value": 30
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 18,
+        "y": 1
+      },
+      "id": 16,
+      "options": {
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "mean"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": false
+      },
+      "pluginVersion": "7.1.4",
+      "targets": [
+        {
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "mqtt_consumer",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "battery"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "topic",
+              "operator": "=",
+              "value": "brompton/[[room]]/battery"
+            }
+          ]
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Battery",
+      "type": "gauge"
+    },
+    {
       "collapsed": false,
       "datasource": null,
       "gridPos": {
@@ -411,6 +531,13 @@
       "dashes": false,
       "datasource": "InfluxDB",
       "decimals": 2,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {},
+          "links": []
+        },
+        "overrides": []
+      },
       "fill": 2,
       "fillGradient": 0,
       "gridPos": {
@@ -436,10 +563,8 @@
       "linewidth": 4,
       "links": [],
       "nullPointMode": "connected",
-      "options": {
-        "dataLinks": []
-      },
       "percentage": false,
+      "pluginVersion": "7.1.4",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -541,6 +666,13 @@
       "dashes": false,
       "datasource": "InfluxDB",
       "decimals": 2,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {},
+          "links": []
+        },
+        "overrides": []
+      },
       "fill": 2,
       "fillGradient": 0,
       "gridPos": {
@@ -566,10 +698,8 @@
       "linewidth": 4,
       "links": [],
       "nullPointMode": "connected",
-      "options": {
-        "dataLinks": []
-      },
       "percentage": false,
+      "pluginVersion": "7.1.4",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -676,6 +806,13 @@
       "dashes": false,
       "datasource": "InfluxDB",
       "decimals": 2,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {},
+          "links": []
+        },
+        "overrides": []
+      },
       "fill": 2,
       "fillGradient": 0,
       "gridPos": {
@@ -701,10 +838,8 @@
       "linewidth": 4,
       "links": [],
       "nullPointMode": "connected",
-      "options": {
-        "dataLinks": []
-      },
       "percentage": false,
+      "pluginVersion": "7.1.4",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -806,7 +941,7 @@
     }
   ],
   "refresh": "30s",
-  "schemaVersion": 21,
+  "schemaVersion": 26,
   "style": "dark",
   "tags": [],
   "templating": {
@@ -815,9 +950,8 @@
         "allValue": null,
         "current": {
           "selected": true,
-          "tags": [],
-          "text": "front-small-bedroom",
-          "value": "front-small-bedroom"
+          "text": "front-big-bedroom",
+          "value": "front-big-bedroom"
         },
         "hide": 0,
         "includeAll": false,
@@ -826,12 +960,12 @@
         "name": "room",
         "options": [
           {
-            "selected": false,
+            "selected": true,
             "text": "front-big-bedroom",
             "value": "front-big-bedroom"
           },
           {
-            "selected": true,
+            "selected": false,
             "text": "front-small-bedroom",
             "value": "front-small-bedroom"
           },
@@ -854,9 +988,15 @@
             "selected": false,
             "text": "upstairs-landing",
             "value": "upstairs-landing"
+          },
+          {
+            "selected": false,
+            "text": "sitting-room",
+            "value": "sitting-room"
           }
         ],
-        "query": "front-big-bedroom,front-small-bedroom,back-big-bedroom,back-small-bedroom,upstairs-bathroom,upstairs-landing",
+        "query": "front-big-bedroom,front-small-bedroom,back-big-bedroom,back-small-bedroom,upstairs-bathroom,upstairs-landing,sitting-room",
+        "queryValue": "",
         "skipUrlSync": false,
         "type": "custom"
       }
