@@ -80,7 +80,6 @@ services:
       - grafana:/data
       - ./docker/grafana/configuration:/etc/grafana
       - ./docker/grafana/dashboards:/var/lib/grafana/dashboards
-      - ./docker/grafana/plugins:/data/plugins
     ports:
       - 3000:3000
     environment:
