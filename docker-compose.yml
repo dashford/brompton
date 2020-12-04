@@ -89,6 +89,7 @@ services:
       - GF_SECURITY_ADMIN_USER=admin
       - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_ADMIN_PASSWORD}
       - GF_AUTH_DISABLE_LOGIN_FORM=false
+      - GF_INSTALL_PLUGINS=fetzerch-sunandmoon-datasource
       - INFLUXDB_HOST=${INFLUXDB_HOST}
       - INFLUXDB_READ_USER_PASSWORD=${INFLUXDB_READ_USER_PASSWORD}
     restart: always
