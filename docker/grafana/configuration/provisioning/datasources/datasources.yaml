@@ -6,7 +6,6 @@ datasources:
   orgId: 1
   url: ${INFLUXDB_HOST}
   user: influxdb-read
-#  password: ${INFLUXDB_READ_USER_PASSWORD}
   database: brompton
   withCredentials: true
   isDefault: false
