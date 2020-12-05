@@ -13,7 +13,3 @@ datasources:
   editable: false
   secureJsonData:
     password: ${INFLUXDB_READ_USER_PASSWORD}
-- name: Sun and Moon
-  type: fetzerch-sunandmoon-datasource
-  orgId: 1
-  editable: false
