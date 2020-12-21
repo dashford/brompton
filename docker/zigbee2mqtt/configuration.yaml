@@ -4,20 +4,19 @@ homeassistant: false
 # allow new devices to join
 permit_join: false
 
-# MQTT settings
+advanced:
+  channel: 15
+  network_key: GENERATE
+
 mqtt:
-  # MQTT base topic for zigbee2mqtt MQTT messages
   base_topic: zigbee2mqtt
-  # MQTT server URL
+  client_id: zigbee2mqtt
   server: 'mqtt://localhost'
-  # MQTT server authentication, uncomment if required:
-  #user: 'mqtt_user'
-  #password: 'mqtt_password'
+
 devices:
   '0x00158d00054c2476':
     friendly_name: 'aqara/wsdcgq12lm/sitting-room'
 
-# Serial settings
 serial:
   # Location of CC2531 USB sniffer
   port: /dev/ttyACM0
