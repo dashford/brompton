@@ -112,6 +112,7 @@ services:
     volumes:
       - zigbee2mqtt:/app/data
       - ./docker/zigbee2mqtt/configuration.yaml:/app/data/configuration.yaml:rw
+      - ./docker/zigbee2mqtt/secret.yaml:/app/data/secret.yaml:ro
       - /run/udev:/run/udev:ro
     devices:
       - /dev/ttyACM0

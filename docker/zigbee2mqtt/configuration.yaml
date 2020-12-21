@@ -6,7 +6,7 @@ permit_join: false
 
 advanced:
   channel: 15
-  network_key: GENERATE
+  network_key: '!secret network_key'
 
 mqtt:
   base_topic: zigbee2mqtt
