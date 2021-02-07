@@ -13,7 +13,7 @@ services:
     restart: always
 
   nginx:
-    image: nginx:1.19.2
+    image: nginx:1.19.6
     container_name: nginx
     environment:
       - X_HA_ACCESS=${X_HA_ACCESS}
@@ -29,7 +29,7 @@ services:
     restart: always
 
   homeassistant:
-    image: homeassistant/home-assistant:2021.2.0
+    image: homeassistant/home-assistant:2021.2.1
     container_name: homeassistant
     volumes:
       - ./docker/homeassistant/configuration:/config
@@ -74,7 +74,7 @@ services:
     restart: always
 
   grafana:
-    image: grafana/grafana:7.1.4
+    image: grafana/grafana:7.4.0
     container_name: grafana
     volumes:
       - grafana:/data
@@ -107,7 +107,7 @@ services:
     restart: always
 
   zigbee2mqtt:
-    image: koenkk/zigbee2mqtt:1.17.0
+    image: koenkk/zigbee2mqtt:1.17.1
     container_name: zigbee2mqtt
     volumes:
       - zigbee2mqtt:/app/data
