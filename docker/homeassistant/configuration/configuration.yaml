@@ -101,7 +101,7 @@ sensor:
     state_topic: 'brompton/front-big-bedroom/pressure'
     name: 'Front Big Bedroom Pressure'
     unit_of_measurement: 'hPa'
-    value_template: '{{ value_json.pressure | round(0) }}'
+    value_template: '{{ value_json.pressure | round(2) }}'
   - platform: mqtt
     state_topic: 'brompton/front-small-bedroom/temperature'
     name: 'Front Small Bedroom Temperature'
@@ -116,7 +116,7 @@ sensor:
     state_topic: 'brompton/front-small-bedroom/pressure'
     name: 'Front Small Bedroom Pressure'
     unit_of_measurement: 'hPa'
-    value_template: '{{ value_json.pressure | round(0) }}'
+    value_template: '{{ value_json.pressure | round(2) }}'
   - platform: mqtt
     state_topic: 'brompton/back-big-bedroom/temperature'
     name: 'Back Big Bedroom Temperature'
@@ -131,7 +131,7 @@ sensor:
     state_topic: 'brompton/back-big-bedroom/pressure'
     name: 'Back Big Bedroom Pressure'
     unit_of_measurement: 'hPa'
-    value_template: '{{ value_json.pressure | round(0) }}'
+    value_template: '{{ value_json.pressure | round(2) }}'
   - platform: mqtt
     state_topic: 'brompton/back-small-bedroom/temperature'
     name: 'Back Small Bedroom Temperature'
@@ -146,7 +146,7 @@ sensor:
     state_topic: 'brompton/back-small-bedroom/pressure'
     name: 'Back Small Bedroom Pressure'
     unit_of_measurement: 'hPa'
-    value_template: '{{ value_json.pressure | round(0) }}'
+    value_template: '{{ value_json.pressure | round(2) }}'
   - platform: mqtt
     state_topic: 'brompton/upstairs-landing/temperature'
     name: 'Upstairs Landing Temperature'
@@ -161,7 +161,7 @@ sensor:
     state_topic: 'brompton/upstairs-landing/pressure'
     name: 'Upstairs Landing Pressure'
     unit_of_measurement: 'hPa'
-    value_template: '{{ value_json.pressure | round(0) }}'
+    value_template: '{{ value_json.pressure | round(2) }}'
   - platform: mqtt
     state_topic: 'brompton/upstairs-bathroom/temperature'
     name: 'Upstairs Bathroom Temperature'
@@ -176,7 +176,7 @@ sensor:
     state_topic: 'brompton/upstairs-bathroom/pressure'
     name: 'Upstairs Bathroom Pressure'
     unit_of_measurement: 'hPa'
-    value_template: '{{ value_json.pressure | round(0) }}'
+    value_template: '{{ value_json.pressure | round(2) }}'
   - platform: mqtt
     state_topic: 'brompton/hot-water-tank/top/temperature'
     name: 'Top of Hot Water Tank Temperature'
