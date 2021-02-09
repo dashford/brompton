@@ -23,7 +23,7 @@ system_health:
 
 influxdb:
   api_version: 1
-  host: influxdbha
+  host: 192.168.1.10
   port: 8096
   database: home_assistant
   username: !secret influxdb_username
