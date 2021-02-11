@@ -47,8 +47,10 @@ light.kitchen_lamp:
   friendly_name: Kitchen Lamp
   hidden: true
 
-# Living Room
-
+# Sitting Room
+sensor.sitting_room_humidity:
+  friendly_name: Humidity
+  icon: mdi:water-percent
 
 # Upstairs Landing
 sensor.upstairs_landing_temperature:
