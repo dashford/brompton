@@ -187,6 +187,11 @@ sensor:
     name: 'Bottom of Hot Water Tank Temperature'
     unit_of_measurement: '°C'
     value_template: '{{ value_json.temperature | round(2) }}'
+  - platform: mqtt
+    state_topic: 'zigbee2mqtt/aqara/wsdcgq12lm/sitting-room'
+    name: 'Sitting Room Humidity'
+    unit_of_measurement: 'hPa'
+    value_template: '{{ value_json.humidity | round(3) }}'
 
 # IKEA Trådfri (Tradfri)
 tradfri:

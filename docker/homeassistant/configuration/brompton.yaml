@@ -10,6 +10,11 @@ views:
         unit: '°C'
       - type: entities
         entities:
+          - sensor.sitting_room_humidity
+        title: Sitting Room
+        show_header_toggle: false
+      - type: entities
+        entities:
           - sensor.front_big_bedroom_temperature
           - sensor.front_big_bedroom_humidity
           - sensor.front_big_bedroom_pressure
