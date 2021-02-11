@@ -7,7 +7,7 @@ sensor.front_big_bedroom_humidity:
   icon: mdi:water-percent
 sensor.front_big_bedroom_pressure:
   friendly_name: Pressure
-  icon: mdi:blur
+  icon: mdi:gauge
 
 # Front Small Bedroom
 sensor.front_small_bedroom_temperature:
@@ -18,7 +18,7 @@ sensor.front_small_bedroom_humidity:
   icon: mdi:water-percent
 sensor.front_small_bedroom_pressure:
   friendly_name: Pressure
-  icon: mdi:blur
+  icon: mdi:gauge
 
 # Back Big Bedroom
 sensor.back_big_bedroom_temperature:
@@ -29,7 +29,7 @@ sensor.back_big_bedroom_humidity:
   icon: mdi:water-percent
 sensor.back_big_bedroom_pressure:
   friendly_name: Pressure
-  icon: mdi:blur
+  icon: mdi:gauge
 
 # Back Small Bedroom
 sensor.back_small_bedroom_temperature:
@@ -40,7 +40,7 @@ sensor.back_small_bedroom_humidity:
   icon: mdi:water-percent
 sensor.back_small_bedroom_pressure:
   friendly_name: Pressure
-  icon: mdi:blur
+  icon: mdi:gauge
 
 # Kitchen
 light.kitchen_lamp:
@@ -51,6 +51,18 @@ light.kitchen_lamp:
 sensor.sitting_room_humidity:
   friendly_name: Humidity
   icon: mdi:water-percent
+sensor.sitting_room_temperature:
+  friendly_name: Temperature
+  icon: mdi:thermometer
+sensor.sitting_room_pressure:
+  friendly_name: Pressure
+  icon: mdi:gauge
+sensor.sitting_room_sensor_battery:
+  friendly_name: Battery
+  icon: mdi:battery
+sensor.sitting_room_sensor_voltage:
+  friendly_name: Voltage
+  icon: mdi:flash
 
 # Upstairs Landing
 sensor.upstairs_landing_temperature:
@@ -61,7 +73,7 @@ sensor.upstairs_landing_humidity:
   icon: mdi:water-percent
 sensor.upstairs_landing_pressure:
   friendly_name: Pressure
-  icon: mdi:blur
+  icon: mdi:gauge
 
 # Hallway
 light.hallway_lamp:
@@ -78,7 +90,7 @@ sensor.owm_humidity:
   icon: mdi:water-percent
 sensor.owm_pressure:
   friendly_name: Pressure
-  icon: mdi:blur
+  icon: mdi:gauge
 sensor.owm_temperature:
   friendly_name: Temperature
 sensor.owm_wind_bearing:

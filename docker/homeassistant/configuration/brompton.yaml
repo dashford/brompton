@@ -11,6 +11,8 @@ views:
       - type: entities
         entities:
           - sensor.sitting_room_humidity
+          - sensor.sitting_room_temperature
+          - sensor.sitting_room_pressure
         title: Sitting Room
         show_header_toggle: false
       - type: entities
