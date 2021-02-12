@@ -1,34 +1,4 @@
 {
-  "__inputs": [
-    {
-      "name": "DS_INFLUXDB",
-      "label": "InfluxDB",
-      "description": "",
-      "type": "datasource",
-      "pluginId": "influxdb",
-      "pluginName": "InfluxDB"
-    }
-  ],
-  "__requires": [
-    {
-      "type": "grafana",
-      "id": "grafana",
-      "name": "Grafana",
-      "version": "5.0.0"
-    },
-    {
-      "type": "panel",
-      "id": "graph",
-      "name": "Graph",
-      "version": "5.0.0"
-    },
-    {
-      "type": "datasource",
-      "id": "influxdb",
-      "name": "InfluxDB",
-      "version": "5.0.0"
-    }
-  ],
   "annotations": {
     "list": [
       {
@@ -45,7 +15,6 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": null,
   "links": [],
   "panels": [
     {
@@ -53,15 +22,23 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "InfluxDB",
+      "datasource": "InfluxDB-HA",
       "decimals": 2,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
       "fill": 2,
+      "fillGradient": 0,
       "gridPos": {
         "h": 13,
         "w": 24,
         "x": 0,
         "y": 0
       },
+      "hiddenSeries": false,
       "id": 2,
       "legend": {
         "alignAsTable": true,
@@ -78,7 +55,11 @@
       "linewidth": 4,
       "links": [],
       "nullPointMode": "connected",
+      "options": {
+        "alertThreshold": true
+      },
       "percentage": false,
+      "pluginVersion": "7.4.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -104,7 +85,7 @@
             }
           ],
           "hide": false,
-          "measurement": "mqtt_consumer",
+          "measurement": "°C",
           "orderByTime": "ASC",
           "policy": "default",
           "refId": "A",
@@ -113,7 +94,7 @@
             [
               {
                 "params": [
-                  "temperature"
+                  "value"
                 ],
                 "type": "field"
               },
@@ -125,9 +106,9 @@
           ],
           "tags": [
             {
-              "key": "topic",
+              "key": "entity_id",
               "operator": "=",
-              "value": "brompton/hot-water-tank/top/temperature"
+              "value": "top_of_hot_water_tank_temperature"
             }
           ]
         },
@@ -147,7 +128,7 @@
               "type": "fill"
             }
           ],
-          "measurement": "mqtt_consumer",
+          "measurement": "°C",
           "orderByTime": "ASC",
           "policy": "default",
           "refId": "B",
@@ -156,7 +137,7 @@
             [
               {
                 "params": [
-                  "temperature"
+                  "value"
                 ],
                 "type": "field"
               },
@@ -168,9 +149,9 @@
           ],
           "tags": [
             {
-              "key": "topic",
+              "key": "entity_id",
               "operator": "=",
-              "value": "brompton/hot-water-tank/bottom/temperature"
+              "value": "bottom_of_hot_water_tank_temperature"
             }
           ]
         },
@@ -227,14 +208,17 @@
       ],
       "thresholds": [
         {
+          "$$hashKey": "object:246",
           "colorMode": "ok",
           "fill": true,
           "line": true,
           "op": "gt",
-          "value": 60
+          "value": 60,
+          "yaxis": "left"
         }
       ],
       "timeFrom": null,
+      "timeRegions": [],
       "timeShift": null,
       "title": "Temperature",
       "tooltip": {
@@ -252,6 +236,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:222",
           "decimals": 2,
           "format": "celsius",
           "label": null,
@@ -261,6 +246,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:223",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -268,11 +254,15 @@
           "min": null,
           "show": false
         }
-      ]
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
     }
   ],
   "refresh": "30s",
-  "schemaVersion": 16,
+  "schemaVersion": 27,
   "style": "dark",
   "tags": [],
   "templating": {
