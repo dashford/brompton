@@ -190,7 +190,7 @@ sensor:
   - platform: mqtt
     state_topic: 'zigbee2mqtt/aqara/wsdcgq12lm/sitting-room'
     name: 'Sitting Room Humidity'
-    unit_of_measurement: 'hPa'
+    unit_of_measurement: '%RH'
     value_template: '{{ value_json.humidity | round(3) }}'
   - platform: mqtt
     state_topic: 'zigbee2mqtt/aqara/wsdcgq12lm/sitting-room'
@@ -200,7 +200,7 @@ sensor:
   - platform: mqtt
     state_topic: 'zigbee2mqtt/aqara/wsdcgq12lm/sitting-room'
     name: 'Sitting Room Pressure'
-    unit_of_measurement: '°C'
+    unit_of_measurement: 'hPa'
     value_template: '{{ value_json.pressure | round(2) }}'
   - platform: mqtt
     state_topic: 'zigbee2mqtt/aqara/wsdcgq12lm/sitting-room'
