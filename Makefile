@@ -1,7 +1,7 @@
 all : up
 
-up : up-acmesh up-nginx up-mosquitto up-influxdb up-grafana up-telegraf up-homeassistant up-zigbee2mqtt
-stop : stop-acmesh stop-nginx stop-mosquitto stop-influxdb stop-grafana stop-telegraf stop-homeassistant stop-zigbee2mqtt
+up : up-acmesh up-nginx up-mosquitto up-influxdb up-grafana up-homeassistant up-zigbee2mqtt
+stop : stop-acmesh stop-nginx stop-mosquitto stop-influxdb stop-grafana stop-homeassistant stop-zigbee2mqtt
 down : down-all
 
 
@@ -19,9 +19,6 @@ up-influxdb :
 
 up-grafana :
 	docker-compose up -d grafana
-
-up-telegraf :
-	docker-compose up -d telegraf
 
 up-acmesh :
 	docker-compose up -d acme.sh
@@ -50,9 +47,6 @@ stop-influxdb :
 
 stop-grafana :
 	docker stop grafana
-
-stop-telegraf :
-	docker stop telegraf
 
 stop-acmesh :
 	docker stop acme.sh
