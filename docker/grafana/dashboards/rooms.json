@@ -15,7 +15,8 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 1,
-  "iteration": 1606567292877,
+  "id": 5,
+  "iteration": 1613140398335,
   "links": [],
   "panels": [
     {
@@ -39,7 +40,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "InfluxDB",
+      "datasource": "InfluxDB-HA",
       "decimals": 2,
       "fieldConfig": {
         "defaults": {
@@ -113,7 +114,7 @@
               "type": "fill"
             }
           ],
-          "measurement": "mqtt_consumer",
+          "measurement": "°C",
           "orderByTime": "ASC",
           "policy": "default",
           "refId": "A",
@@ -122,7 +123,7 @@
             [
               {
                 "params": [
-                  "temperature"
+                  "value"
                 ],
                 "type": "field"
               },
@@ -134,9 +135,9 @@
           ],
           "tags": [
             {
-              "key": "topic",
+              "key": "entity_id",
               "operator": "=",
-              "value": "brompton/[[room]]/temperature"
+              "value": "[[room]]_temperature"
             }
           ]
         }
@@ -164,7 +165,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "InfluxDB",
+      "datasource": "InfluxDB-HA",
       "decimals": null,
       "fieldConfig": {
         "defaults": {
@@ -238,7 +239,7 @@
               "type": "fill"
             }
           ],
-          "measurement": "mqtt_consumer",
+          "measurement": "%RH",
           "orderByTime": "ASC",
           "policy": "default",
           "refId": "A",
@@ -247,7 +248,7 @@
             [
               {
                 "params": [
-                  "humidity"
+                  "value"
                 ],
                 "type": "field"
               },
@@ -259,9 +260,9 @@
           ],
           "tags": [
             {
-              "key": "topic",
+              "key": "entity_id",
               "operator": "=",
-              "value": "brompton/[[room]]/humidity"
+              "value": "[[room]]_humidity"
             }
           ]
         }
@@ -289,7 +290,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "InfluxDB",
+      "datasource": "InfluxDB-HA",
       "decimals": null,
       "fieldConfig": {
         "defaults": {
@@ -363,7 +364,7 @@
               "type": "fill"
             }
           ],
-          "measurement": "mqtt_consumer",
+          "measurement": "hPa",
           "orderByTime": "ASC",
           "policy": "default",
           "refId": "A",
@@ -372,7 +373,7 @@
             [
               {
                 "params": [
-                  "pressure"
+                  "value"
                 ],
                 "type": "field"
               },
@@ -384,9 +385,9 @@
           ],
           "tags": [
             {
-              "key": "topic",
+              "key": "entity_id",
               "operator": "=",
-              "value": "brompton/[[room]]/pressure"
+              "value": "[[room]]_pressure"
             }
           ]
         }
@@ -406,9 +407,12 @@
       "valueName": "current"
     },
     {
-      "datasource": "InfluxDB",
+      "datasource": "InfluxDB-HA",
       "fieldConfig": {
         "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
           "custom": {},
           "mappings": [
             {
@@ -458,9 +462,10 @@
           "values": false
         },
         "showThresholdLabels": false,
-        "showThresholdMarkers": false
+        "showThresholdMarkers": false,
+        "text": {}
       },
-      "pluginVersion": "7.1.4",
+      "pluginVersion": "7.4.0",
       "targets": [
         {
           "groupBy": [
@@ -477,7 +482,7 @@
               "type": "fill"
             }
           ],
-          "measurement": "mqtt_consumer",
+          "measurement": "%",
           "orderByTime": "ASC",
           "policy": "default",
           "refId": "A",
@@ -486,7 +491,7 @@
             [
               {
                 "params": [
-                  "battery"
+                  "value"
                 ],
                 "type": "field"
               },
@@ -498,9 +503,9 @@
           ],
           "tags": [
             {
-              "key": "topic",
+              "key": "entity_id",
               "operator": "=",
-              "value": "brompton/[[room]]/battery"
+              "value": "[[room]]_sensor_battery"
             }
           ]
         }
@@ -529,7 +534,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "InfluxDB",
+      "datasource": "InfluxDB-HA",
       "decimals": 2,
       "fieldConfig": {
         "defaults": {
@@ -563,8 +568,11 @@
       "linewidth": 4,
       "links": [],
       "nullPointMode": "connected",
+      "options": {
+        "alertThreshold": true
+      },
       "percentage": false,
-      "pluginVersion": "7.1.4",
+      "pluginVersion": "7.4.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -589,7 +597,7 @@
               "type": "fill"
             }
           ],
-          "measurement": "mqtt_consumer",
+          "measurement": "°C",
           "orderByTime": "ASC",
           "policy": "default",
           "refId": "A",
@@ -598,7 +606,7 @@
             [
               {
                 "params": [
-                  "temperature"
+                  "value"
                 ],
                 "type": "field"
               },
@@ -610,9 +618,9 @@
           ],
           "tags": [
             {
-              "key": "topic",
+              "key": "entity_id",
               "operator": "=",
-              "value": "brompton/[[room]]/temperature"
+              "value": "[[room]]_temperature"
             }
           ]
         }
@@ -664,7 +672,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "InfluxDB",
+      "datasource": "InfluxDB-HA",
       "decimals": 2,
       "fieldConfig": {
         "defaults": {
@@ -698,8 +706,11 @@
       "linewidth": 4,
       "links": [],
       "nullPointMode": "connected",
+      "options": {
+        "alertThreshold": true
+      },
       "percentage": false,
-      "pluginVersion": "7.1.4",
+      "pluginVersion": "7.4.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -729,7 +740,7 @@
               "type": "fill"
             }
           ],
-          "measurement": "mqtt_consumer",
+          "measurement": "%RH",
           "orderByTime": "ASC",
           "policy": "default",
           "refId": "A",
@@ -738,7 +749,7 @@
             [
               {
                 "params": [
-                  "humidity"
+                  "value"
                 ],
                 "type": "field"
               },
@@ -750,9 +761,9 @@
           ],
           "tags": [
             {
-              "key": "topic",
+              "key": "entity_id",
               "operator": "=",
-              "value": "brompton/[[room]]/humidity"
+              "value": "[[room]]_humidity"
             }
           ]
         }
@@ -804,7 +815,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "InfluxDB",
+      "datasource": "InfluxDB-HA",
       "decimals": 2,
       "fieldConfig": {
         "defaults": {
@@ -838,8 +849,11 @@
       "linewidth": 4,
       "links": [],
       "nullPointMode": "connected",
+      "options": {
+        "alertThreshold": true
+      },
       "percentage": false,
-      "pluginVersion": "7.1.4",
+      "pluginVersion": "7.4.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -869,7 +883,7 @@
               "type": "fill"
             }
           ],
-          "measurement": "mqtt_consumer",
+          "measurement": "hPa",
           "orderByTime": "ASC",
           "policy": "default",
           "refId": "A",
@@ -878,7 +892,7 @@
             [
               {
                 "params": [
-                  "pressure"
+                  "value"
                 ],
                 "type": "field"
               },
@@ -890,9 +904,9 @@
           ],
           "tags": [
             {
-              "key": "topic",
+              "key": "entity_id",
               "operator": "=",
-              "value": "brompton/[[room]]/pressure"
+              "value": "[[room]]_pressure"
             }
           ]
         }
@@ -941,7 +955,7 @@
     }
   ],
   "refresh": "30s",
-  "schemaVersion": 26,
+  "schemaVersion": 27,
   "style": "dark",
   "tags": [],
   "templating": {
@@ -950,9 +964,11 @@
         "allValue": null,
         "current": {
           "selected": true,
-          "text": "front-big-bedroom",
-          "value": "front-big-bedroom"
+          "text": "sitting_room",
+          "value": "sitting_room"
         },
+        "description": null,
+        "error": null,
         "hide": 0,
         "includeAll": false,
         "label": "Room",
@@ -960,42 +976,42 @@
         "name": "room",
         "options": [
           {
+            "selected": false,
+            "text": "front_big_bedroom",
+            "value": "front_big_bedroom"
+          },
+          {
+            "selected": false,
+            "text": "front_small_bedroom",
+            "value": "front_small_bedroom"
+          },
+          {
+            "selected": false,
+            "text": "back_big_bedroom",
+            "value": "back_big_bedroom"
+          },
+          {
+            "selected": false,
+            "text": "back_small_bedroom",
+            "value": "back_small_bedroom"
+          },
+          {
+            "selected": false,
+            "text": "upstairs_bathroom",
+            "value": "upstairs_bathroom"
+          },
+          {
+            "selected": false,
+            "text": "upstairs_landing",
+            "value": "upstairs_landing"
+          },
+          {
             "selected": true,
-            "text": "front-big-bedroom",
-            "value": "front-big-bedroom"
-          },
-          {
-            "selected": false,
-            "text": "front-small-bedroom",
-            "value": "front-small-bedroom"
-          },
-          {
-            "selected": false,
-            "text": "back-big-bedroom",
-            "value": "back-big-bedroom"
-          },
-          {
-            "selected": false,
-            "text": "back-small-bedroom",
-            "value": "back-small-bedroom"
-          },
-          {
-            "selected": false,
-            "text": "upstairs-bathroom",
-            "value": "upstairs-bathroom"
-          },
-          {
-            "selected": false,
-            "text": "upstairs-landing",
-            "value": "upstairs-landing"
-          },
-          {
-            "selected": false,
-            "text": "sitting-room",
-            "value": "sitting-room"
+            "text": "sitting_room",
+            "value": "sitting_room"
           }
         ],
-        "query": "front-big-bedroom,front-small-bedroom,back-big-bedroom,back-small-bedroom,upstairs-bathroom,upstairs-landing,sitting-room",
+        "query": "front_big_bedroom,front_small_bedroom,back_big_bedroom,back_small_bedroom,upstairs_bathroom,upstairs_landing,sitting_room",
         "queryValue": "",
         "skipUrlSync": false,
         "type": "custom"
@@ -1033,6 +1049,6 @@
   },
   "timezone": "",
   "title": "Rooms",
-  "uid": "rooms",
-  "version": 1
+  "uid": "a6clmhEMk",
+  "version": 4
 }
