@@ -114,19 +114,6 @@ services:
       - INFLUXDBHA_READ_USER_PASSWORD=${INFLUXDBHA_READ_USER_PASSWORD}
     restart: always
 
-  telegraf:
-    image: telegraf:1.16.2
-    container_name: telegraf
-    volumes:
-      - ./docker/telegraf/telegraf.conf:/etc/telegraf/telegraf.conf:ro
-    environment:
-      - MQTT_USERNAME=${MQTT_USER}
-      - MQTT_PASSWORD=${MQTT_PASSWORD}
-      - INFLUXDB_DB=${INFLUXDB_DB}
-      - INFLUXDB_HOST=${INFLUXDB_HOST}
-      - INFLUXDB_MQTT_HOST=${INFLUXDB_MQTT_HOST}
-    restart: always
-
   zigbee2mqtt:
     image: koenkk/zigbee2mqtt:1.17.1
     container_name: zigbee2mqtt
