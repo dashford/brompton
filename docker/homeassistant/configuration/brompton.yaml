@@ -85,7 +85,7 @@ views:
         show_header_toggle: false
       - type: entities
         entities:
-          - entity: light.hallway_lamp
+          - entity: light.ikea_hallway_lamp
             name: Lamp
           - entity: climate.downstairs
             name: Heating
@@ -106,7 +106,7 @@ views:
     path: downstairs
     cards:
       - type: light
-        entity: light.tradfri_bulb_2
+        entity: light.ikea_hallway_lamp
 
   - title: Upstairs
     path: upstairs
