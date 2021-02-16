@@ -73,6 +73,17 @@ sensor.upstairs_landing_pressure:
   friendly_name: Pressure
   icon: mdi:gauge
 
+# Bathroom
+sensor.upstairs_bathroom_temperature:
+  friendly_name: Temperature
+  icon: mdi:thermometer
+sensor.upstairs_bathroom_humidity:
+  friendly_name: Humidity
+  icon: mdi:water-percent
+sensor.upstairs_bathroom_pressure:
+  friendly_name: Pressure
+  icon: mdi:gauge
+
 # Hallway
 light.hallway_lamp:
   friendly_name: Hallway Lamp
