@@ -48,21 +48,18 @@ light.kitchen_lamp:
   hidden: true
 
 # Sitting Room
-sensor.sitting_room_humidity:
+sensor.aqara_wsdcgq12lm_sitting_room_humidity:
   friendly_name: Humidity
   icon: mdi:water-percent
-sensor.sitting_room_temperature:
+sensor.aqara_wsdcgq12lm_sitting_room_temperature:
   friendly_name: Temperature
   icon: mdi:thermometer
-sensor.sitting_room_pressure:
+sensor.aqara_wsdcgq12lm_sitting_room_pressure:
   friendly_name: Pressure
   icon: mdi:gauge
-sensor.sitting_room_sensor_battery:
+sensor.aqara_wsdcgq12lm_sitting_room_battery:
   friendly_name: Battery
   icon: mdi:battery
-sensor.sitting_room_sensor_voltage:
-  friendly_name: Voltage
-  icon: mdi:flash
 
 # Upstairs Landing
 sensor.upstairs_landing_temperature:

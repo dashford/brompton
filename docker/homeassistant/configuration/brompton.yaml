@@ -10,13 +10,6 @@ views:
         unit: '°C'
       - type: entities
         entities:
-          - sensor.sitting_room_temperature
-          - sensor.sitting_room_humidity
-          - sensor.sitting_room_pressure
-        title: Sitting Room
-        show_header_toggle: false
-      - type: entities
-        entities:
           - sensor.front_big_bedroom_temperature
           - sensor.front_big_bedroom_humidity
           - sensor.front_big_bedroom_pressure
@@ -56,6 +49,9 @@ views:
       - type: entities
         entities:
           - media_player.living_room_tv
+          - sensor.aqara_wsdcgq12lm_sitting_room_humidity
+          - sensor.aqara_wsdcgq12lm_sitting_room_temperature
+          - sensor.aqara_wsdcgq12lm_sitting_room_pressure
         title: Sitting Room
         show_header_toggle: false
       - type: entities
