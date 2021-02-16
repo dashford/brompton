@@ -51,6 +51,7 @@ light.kitchen_lamp:
 sensor.aqara_wsdcgq12lm_sitting_room_humidity:
   friendly_name: Humidity
   icon: mdi:water-percent
+  unit_of_measurement: '%RH'
 sensor.aqara_wsdcgq12lm_sitting_room_temperature:
   friendly_name: Temperature
   icon: mdi:thermometer
