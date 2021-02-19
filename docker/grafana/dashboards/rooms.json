@@ -15,7 +15,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 1,
-  "iteration": 1613506294261,
+  "iteration": 1613742682114,
   "links": [],
   "panels": [
     {
@@ -763,7 +763,7 @@
             {
               "key": "entity_id",
               "operator": "=",
-              "value": "[[room]_humidity"
+              "value": "[[room]]_humidity"
             }
           ]
         }
@@ -1052,5 +1052,5 @@
   "timezone": "",
   "title": "Rooms",
   "uid": "rooms",
-  "version": 2
+  "version": 3
 }
