@@ -1,0 +1,74 @@
+- id: '1613741702888'
+  alias: Trigger after sunrise
+  description: ''
+  trigger:
+  - platform: sun
+    event: sunrise
+    offset: +00:15:00
+  condition:
+  - condition: sun
+    after: sunrise
+  action:
+  - domain: light
+    entity_id: light.ikea_hallway_lamp
+    device_id: ee04d6c564e267e69702eec44f2eb789
+    type: turn_off
+  - domain: light
+    entity_id: light.ikea_kitchen_lamp
+    device_id: 433637c9f1d8bad564b9c2be65ec6128
+    type: turn_off
+  mode: single
+- id: '1613741842726'
+  alias: Trigger at bedtime
+  description: ''
+  trigger:
+  - platform: time
+    at: '22:30'
+  condition: []
+  action:
+  - type: turn_off
+    device_id: ee04d6c564e267e69702eec44f2eb789
+    entity_id: light.ikea_hallway_lamp
+    domain: light
+  - type: turn_off
+    device_id: 433637c9f1d8bad564b9c2be65ec6128
+    entity_id: light.ikea_kitchen_lamp
+    domain: light
+  mode: single
+- id: '1613741995095'
+  alias: Trigger at dusk
+  description: ''
+  trigger:
+  - platform: sun
+    event: sunset
+    offset: -00:15:00
+  condition: []
+  action:
+  - type: turn_on
+    device_id: ee04d6c564e267e69702eec44f2eb789
+    entity_id: light.ikea_hallway_lamp
+    domain: light
+  - type: turn_on
+    device_id: 433637c9f1d8bad564b9c2be65ec6128
+    entity_id: light.ikea_kitchen_lamp
+    domain: light
+  mode: single
+- id: '1613742091259'
+  alias: Trigger at morning
+  description: ''
+  trigger:
+  - platform: time
+    at: 06:50
+  condition:
+  - condition: sun
+    before: sunrise
+  action:
+  - type: turn_on
+    device_id: ee04d6c564e267e69702eec44f2eb789
+    entity_id: light.ikea_hallway_lamp
+    domain: light
+  - type: turn_on
+    device_id: 433637c9f1d8bad564b9c2be65ec6128
+    entity_id: light.ikea_kitchen_lamp
+    domain: light
+  mode: single
