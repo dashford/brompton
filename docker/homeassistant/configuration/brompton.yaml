@@ -38,7 +38,7 @@ views:
         show_header_toggle: false
       - type: entities
         entities:
-          - light.lamp
+          - light.ikea_kitchen_lamp
           - cover.left
           - cover.centre_left
           - cover.centre_right
