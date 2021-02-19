@@ -18,6 +18,8 @@ devices:
     friendly_name: 'aqara/wsdcgq12lm/sitting-room'
   '0x000b57fffe0d96c2':
     friendly_name: 'ikea/hallway-lamp'
+  '0x90fd9ffffe04be6e':
+    friendly_name: 'ikea/kitchen-lamp'
 
 serial:
   # Location of CC2531 USB sniffer
