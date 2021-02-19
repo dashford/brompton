@@ -43,9 +43,8 @@ sensor.back_small_bedroom_pressure:
   icon: mdi:gauge
 
 # Kitchen
-light.kitchen_lamp:
-  friendly_name: Kitchen Lamp
-  hidden: true
+light.ikea_kitchen_lamp:
+  friendly_name: Lamp
 
 # Sitting Room
 sensor.aqara_wsdcgq12lm_sitting_room_humidity:
@@ -85,9 +84,8 @@ sensor.upstairs_bathroom_pressure:
   icon: mdi:gauge
 
 # Hallway
-light.hallway_lamp:
-  friendly_name: Hallway Lamp
-  hidden: true
+light.ikea_hallway_lamp:
+  friendly_name: Lamp
 
 sensor.owm_cloud_coverage:
   friendly_name: Cloud Coverage

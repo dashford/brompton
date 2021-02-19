@@ -38,8 +38,7 @@ views:
         show_header_toggle: false
       - type: entities
         entities:
-          - entity: light.ikea_kitchen_lamp
-            name: Lamp
+          - light.ikea_kitchen_lamp
           - cover.left
           - cover.centre_left
           - cover.centre_right
@@ -82,8 +81,7 @@ views:
         show_header_toggle: false
       - type: entities
         entities:
-          - entity: light.ikea_hallway_lamp
-            name: Lamp
+          - light.ikea_hallway_lamp
           - entity: climate.downstairs
             name: Heating
         title: Hallway
