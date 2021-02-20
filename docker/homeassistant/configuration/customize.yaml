@@ -45,6 +45,16 @@ sensor.back_small_bedroom_pressure:
 # Kitchen
 light.ikea_kitchen_lamp:
   friendly_name: Lamp
+cover.0x680ae2fffe1c5c77:
+  friendly_name: Left
+cover.0x680ae2fffe8c9cf8:
+  friendly_name: Centre Left
+cover.0xec1bbdfffe985ebe:
+  friendly_name: Centre Right
+cover.0x680ae2fffe1c3b8d:
+  friendly_name: Right
+media_player.kitchen:
+  friendly_name: Kitchen Speaker
 
 # Sitting Room
 sensor.aqara_wsdcgq12lm_sitting_room_humidity:
