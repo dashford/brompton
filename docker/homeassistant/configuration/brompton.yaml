@@ -42,7 +42,7 @@ views:
           - cover.0x680ae2fffe1c5c77
           - cover.0x680ae2fffe8c9cf8
           - cover.0xec1bbdfffe985ebe
-            cover.0x680ae2fffe1c3b8d
+          - cover.0x680ae2fffe1c3b8d
           - media_player.kitchen
         title: Kitchen
         show_header_toggle: false
