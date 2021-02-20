@@ -189,10 +189,6 @@ sensor:
     unit_of_measurement: '°C'
     value_template: '{{ value_json.temperature | round(2) }}'
 
-# IKEA Trådfri (Tradfri)
-tradfri:
-  host: 192.168.1.171
-
 # Text to speech
 tts:
   - platform: google_translate
