@@ -23,13 +23,13 @@ devices:
   '0x680ae2fffe129fac':
     friendly_name: 'ikea/kitchen/signal-repeater'
   '0x680ae2fffe1c5c77':
-    friendly_name: 'ikea/kitchen/blind/left'
+    friendly_name: 'ikea/kitchen/blind-left'
   '0x680ae2fffe8c9cf8':
-    friendly_name: 'ikea/kitchen/blind/centre-left'
+    friendly_name: 'ikea/kitchen/blind-centre-left'
   '0xec1bbdfffe985ebe':
-    friendly_name: 'ikea/kitchen/blind/centre-right'
+    friendly_name: 'ikea/kitchen/blind-centre-right'
   '0x680ae2fffe1c3b8d':
-    friendly_name: 'ikea/kitchen/blind/right'
+    friendly_name: 'ikea/kitchen/blind-right'
 
 serial:
   # Location of CC2531 USB sniffer
