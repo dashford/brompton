@@ -79,14 +79,17 @@ zone:
     radius: 150
     icon: mdi:briefcase
 
-owntracks:
-  waypoints: true
-
 device_tracker:
   - platform: luci
     host: 192.168.1.1
     username: !secret router_username
     password: !secret router_password
+
+person:
+  - name: David
+    id: david
+    device_trackers:
+      - device_tracker.12_f6_3c_19_e3_10
 
 # Track the sun
 sun:

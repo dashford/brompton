@@ -65,10 +65,10 @@ views:
         show_header_toggle: false
       - type: map
         entities:
-          - entity: device_tracker.mqtt_admin_david_phone
+          - entity: person.david
             name: David
           - entity: zone.home
-        title: Blah
+        title: Test Map
         default_zoom: 16
         hours_to_show: 48
         show_header_toggle: false
