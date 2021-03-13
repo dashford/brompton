@@ -1,13 +1,11 @@
 - id: '1613741702888'
-  alias: Trigger after sunrise
+  alias: Turn off lights after sunrise and open blinds
   description: ''
   trigger:
   - platform: sun
     event: sunrise
-    offset: +00:15:00
-  condition:
-  - condition: sun
-    after: sunrise
+    offset: +00:20:00
+  condition: []
   action:
   - domain: light
     entity_id: light.ikea_hallway_lamp
@@ -17,9 +15,29 @@
     entity_id: light.ikea_kitchen_lamp
     device_id: 433637c9f1d8bad564b9c2be65ec6128
     type: turn_off
+  - device_id: 26d75c5aab0ee48ff0fb91c994a4f147
+    domain: cover
+    entity_id: cover.0x680ae2fffe8c9cf8
+    type: set_position
+    position: 100
+  - device_id: de7bc37e783453279aa5768585f25c44
+    domain: cover
+    entity_id: cover.0xec1bbdfffe985ebe
+    type: set_position
+    position: 100
+  - device_id: b98ac8202850c420bc8dfaef6c557e09
+    domain: cover
+    entity_id: cover.0x680ae2fffe1c5c77
+    type: set_position
+    position: 100
+  - device_id: 3d9a5c4652add742b19044a019c7142a
+    domain: cover
+    entity_id: cover.0x680ae2fffe1c3b8d
+    type: set_position
+    position: 100
   mode: single
 - id: '1613741842726'
-  alias: Trigger at bedtime
+  alias: Turn off lights at bedtime
   description: ''
   trigger:
   - platform: time
@@ -36,12 +54,12 @@
     domain: light
   mode: single
 - id: '1613741995095'
-  alias: Trigger at dusk
+  alias: Turn on lights and lower blinds at dusk
   description: ''
   trigger:
   - platform: sun
     event: sunset
-    offset: -00:15:00
+    offset: -00:20:00
   condition: []
   action:
   - type: turn_on
@@ -56,25 +74,25 @@
     domain: cover
     entity_id: cover.0x680ae2fffe8c9cf8
     type: set_position
-    position: 50
+    position: 60
   - device_id: de7bc37e783453279aa5768585f25c44
     domain: cover
     entity_id: cover.0xec1bbdfffe985ebe
     type: set_position
-    position: 50
+    position: 60
   - device_id: b98ac8202850c420bc8dfaef6c557e09
     domain: cover
     entity_id: cover.0x680ae2fffe1c5c77
     type: set_position
-    position: 50
+    position: 60
   - device_id: 3d9a5c4652add742b19044a019c7142a
     domain: cover
     entity_id: cover.0x680ae2fffe1c3b8d
     type: set_position
-    position: 50
+    position: 60
   mode: single
 - id: '1613742091259'
-  alias: Trigger at morning
+  alias: Turn on lights in the morning
   description: ''
   trigger:
   - platform: time
@@ -91,4 +109,34 @@
     device_id: 433637c9f1d8bad564b9c2be65ec6128
     entity_id: light.ikea_kitchen_lamp
     domain: light
+  mode: single
+- id: '1614714623032'
+  alias: Close blinds fully after sunset
+  description: ''
+  trigger:
+  - platform: sun
+    event: sunset
+    offset: 00:20:00
+  condition: []
+  action:
+  - device_id: 26d75c5aab0ee48ff0fb91c994a4f147
+    domain: cover
+    entity_id: cover.0x680ae2fffe8c9cf8
+    type: set_position
+    position: 0
+  - device_id: de7bc37e783453279aa5768585f25c44
+    domain: cover
+    entity_id: cover.0xec1bbdfffe985ebe
+    type: set_position
+    position: 0
+  - device_id: b98ac8202850c420bc8dfaef6c557e09
+    domain: cover
+    entity_id: cover.0x680ae2fffe1c5c77
+    type: set_position
+    position: 0
+  - device_id: 3d9a5c4652add742b19044a019c7142a
+    domain: cover
+    entity_id: cover.0x680ae2fffe1c3b8d
+    type: set_position
+    position: 0
   mode: single
