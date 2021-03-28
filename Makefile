@@ -1,7 +1,7 @@
 all : up
 
-up : up-acmesh up-traefik up-mosquitto up-influxdbha up-grafana up-homeassistant up-zigbee2mqtt
-stop : stop-acmesh stop-traefik stop-mosquitto stop-influxdbha stop-grafana stop-homeassistant stop-zigbee2mqtt
+up : up-traefik up-mosquitto up-influxdbha up-grafana up-homeassistant up-zigbee2mqtt
+stop : stop-traefik stop-mosquitto stop-influxdbha stop-grafana stop-homeassistant stop-zigbee2mqtt
 down : down-all
 
 
