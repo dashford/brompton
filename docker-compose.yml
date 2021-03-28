@@ -14,7 +14,7 @@ services:
       - "--certificatesresolvers.myresolver.acme.email=david@dashford.io"
       - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
       # Below just for lets encrypt staging, remove when it's all verified
-      - "--certificatesresolvers.myresolver.acme.caserver=https://acme-staging-v02.api.letsencrypt.org/directory"
+      #- "--certificatesresolvers.myresolver.acme.caserver=https://acme-staging-v02.api.letsencrypt.org/directory"
     ports:
       - 443:443
     environment:
