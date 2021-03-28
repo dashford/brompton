@@ -1,12 +1,12 @@
 all : up
 
-up : up-acmesh up-nginx up-mosquitto up-influxdbha up-grafana up-homeassistant up-zigbee2mqtt
-stop : stop-acmesh stop-nginx stop-mosquitto stop-influxdbha stop-grafana stop-homeassistant stop-zigbee2mqtt
+up : up-acmesh up-traefik up-mosquitto up-influxdbha up-grafana up-homeassistant up-zigbee2mqtt
+stop : stop-acmesh stop-traefik stop-mosquitto stop-influxdbha stop-grafana stop-homeassistant stop-zigbee2mqtt
 down : down-all
 
 
-up-nginx :
-	docker-compose up -d nginx
+up-traefik :
+	docker-compose up -d traefik
 
 up-homeassistant :
 	docker-compose up -d homeassistant
@@ -33,8 +33,8 @@ up-zigbee2mqtt :
 	docker-compose up -d zigbee2mqtt
 
 
-stop-nginx :
-	docker stop nginx
+stop-traefik :
+	docker stop traefik
 
 stop-homeassistant :
 	docker stop homeassistant
