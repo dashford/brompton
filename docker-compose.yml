@@ -24,7 +24,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock:ro
 
   homeassistant:
-    image: homeassistant/home-assistant:2021.2.1
+    image: homeassistant/home-assistant:2021.3.4
     container_name: homeassistant
     volumes:
       - ./docker/homeassistant/configuration:/config
@@ -69,7 +69,7 @@ services:
     restart: always
 
   grafana:
-    image: grafana/grafana:7.4.0
+    image: grafana/grafana:7.5.1
     container_name: grafana
     labels:
       - "traefik.enable=true"
@@ -97,7 +97,7 @@ services:
     restart: always
 
   zigbee2mqtt:
-    image: koenkk/zigbee2mqtt:1.17.1
+    image: koenkk/zigbee2mqtt:1.18.1
     container_name: zigbee2mqtt
     volumes:
       - zigbee2mqtt:/app/data
