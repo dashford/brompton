@@ -26,6 +26,12 @@ services:
   homeassistant:
     image: homeassistant/home-assistant:2021.3.4
     container_name: homeassistant
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.whoami.rule=Host(`home.dashford.io`)"
+      - "traefik.http.routers.whoami.entrypoints=websecure"
+      - "traefik.http.routers.whoami.tls=true"
+      - "traefik.http.routers.whoami.tls.certresolver=myresolver"
     volumes:
       - ./docker/homeassistant/configuration:/config
       - /etc/localtime:/etc/localtime:ro
