@@ -5,7 +5,8 @@ services:
     container_name: traefik
     command:
       - "--log.level=DEBUG"
-      - "--api.insecure=false"
+      - "--api.dashboard=true"
+      - "--api.insecure=true"
       - "--providers.docker=true"
       - "--providers.docker.exposedbydefault=false"
       - "--entrypoints.web.address=:80"
@@ -35,6 +36,7 @@ services:
       - "traefik.http.routers.homeassistant.entrypoints=websecure"
       - "traefik.http.routers.homeassistant.tls=true"
       - "traefik.http.routers.homeassistant.tls.certresolver=leresolver"
+      - "traefik.port=3000"
     volumes:
       - ./docker/homeassistant/configuration:/config
       - /etc/localtime:/etc/localtime:ro
@@ -86,6 +88,7 @@ services:
       - "traefik.http.routers.grafana.entrypoints=websecure"
       - "traefik.http.routers.grafana.tls=true"
       - "traefik.http.routers.grafana.tls.certresolver=leresolver"
+      - "traefik.port=3000"
     volumes:
       - grafana:/data
       - ./docker/grafana/configuration:/etc/grafana
