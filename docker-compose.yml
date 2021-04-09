@@ -36,7 +36,7 @@ services:
       - "traefik.http.routers.homeassistant.entrypoints=websecure"
       - "traefik.http.routers.homeassistant.tls=true"
       - "traefik.http.routers.homeassistant.tls.certresolver=leresolver"
-      - "traefik.port=3000"
+      - "traefik.port=8123"
     volumes:
       - ./docker/homeassistant/configuration:/config
       - /etc/localtime:/etc/localtime:ro
