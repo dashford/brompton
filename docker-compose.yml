@@ -5,8 +5,8 @@ services:
     container_name: traefik
     command:
       - "--log.level=DEBUG"
-      - "--api.dashboard=true"
-      - "--api.insecure=true"
+      - "--api.dashboard=false"
+      - "--api.insecure=false"
       - "--providers.docker=true"
       - "--providers.docker.exposedbydefault=false"
       - "--entrypoints.web.address=:80"
