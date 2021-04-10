@@ -37,7 +37,6 @@ services:
       - "traefik.http.routers.homeassistant.tls=true"
       - "traefik.http.routers.homeassistant.tls.certresolver=leresolver"
       - "traefik.http.services.homeassitant.loadbalancer.server.port=8123"
-      - "traefik.port=8123"
     volumes:
       - ./docker/homeassistant/configuration:/config
       - /etc/localtime:/etc/localtime:ro
@@ -90,7 +89,6 @@ services:
       - "traefik.http.routers.grafana.tls=true"
       - "traefik.http.routers.grafana.tls.certresolver=leresolver"
       - "traefik.http.services.grafana.loadbalancer.server.port=3000"
-      - "traefik.port=3000"
     volumes:
       - grafana:/data
       - ./docker/grafana/configuration:/etc/grafana
