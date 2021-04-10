@@ -32,6 +32,7 @@ services:
     container_name: homeassistant
     labels:
       - "traefik.enable=true"
+      - "traefik.docker.network=host"
       - "traefik.http.routers.homeassistant.rule=Host(`home.dashford.io`)"
       - "traefik.http.routers.homeassistant.entrypoints=websecure"
       - "traefik.http.routers.homeassistant.tls=true"
