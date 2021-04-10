@@ -41,7 +41,6 @@ services:
       - ./docker/homeassistant/configuration:/config
       - /etc/localtime:/etc/localtime:ro
     restart: always
-    network_mode: host
     ports:
       - 8123:8123
 
