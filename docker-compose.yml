@@ -33,7 +33,7 @@ services:
     container_name: homeassistant
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.homeassistant.rule=Host(`home.dashford.io`) && Path(`/api/webhook/[a-z0-9]+`)"
+      - "traefik.http.routers.homeassistant.rule=Host(`home.dashford.io`) && Path(`/api/webhook/[a-z0-9]+`) && Method(`POST`)"
       - "traefik.http.routers.homeassistant.entrypoints=websecure"
       - "traefik.http.routers.homeassistant.tls=true"
       - "traefik.http.routers.homeassistant.tls.certresolver=leresolver"
