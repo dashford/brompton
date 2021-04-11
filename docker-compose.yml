@@ -32,7 +32,7 @@ services:
     image: homeassistant/home-assistant:2021.3.4
     container_name: homeassistant
     labels:
-      - "traefik.enable=false"
+      - "traefik.enable=true"
       - "traefik.http.routers.homeassistant.rule=Host(`home.dashford.io`) && Path(`/api/webhook/[a-z0-9]+`)"
       - "traefik.http.routers.homeassistant.entrypoints=websecure"
       - "traefik.http.routers.homeassistant.tls=true"
