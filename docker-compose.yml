@@ -31,13 +31,13 @@ services:
   homeassistant:
     image: homeassistant/home-assistant:2021.3.4
     container_name: homeassistant
-#    labels:
-#      - "traefik.enable=true"
-#      - "traefik.http.routers.homeassistant.rule=Host(`home.dashford.io`)"
-#      - "traefik.http.routers.homeassistant.entrypoints=websecure"
-#      - "traefik.http.routers.homeassistant.tls=true"
-#      - "traefik.http.routers.homeassistant.tls.certresolver=leresolver"
-#      - "traefik.http.services.homeassitant.loadbalancer.server.port=8123"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.homeassistant.rule=Host(`home.dashford.io`)"
+      - "traefik.http.routers.homeassistant.entrypoints=websecure"
+      - "traefik.http.routers.homeassistant.tls=true"
+      - "traefik.http.routers.homeassistant.tls.certresolver=leresolver"
+      - "traefik.http.services.homeassitant.loadbalancer.server.port=8123"
     network_mode: host
     volumes:
       - ./docker/homeassistant/configuration:/config
