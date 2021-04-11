@@ -21,6 +21,7 @@ services:
       #- "--certificatesresolvers.leresolver.acme.caserver=https://acme-staging-v02.api.letsencrypt.org/directory"
     ports:
       - 443:443
+    network_mode: host
     environment:
       - CF_DNS_API_TOKEN=${CF_DNS_API_TOKEN}
     volumes:
@@ -37,6 +38,7 @@ services:
 #      - "traefik.http.routers.homeassistant.tls=true"
 #      - "traefik.http.routers.homeassistant.tls.certresolver=leresolver"
 #      - "traefik.http.services.homeassitant.loadbalancer.server.port=8123"
+    network_mode: host
     volumes:
       - ./docker/homeassistant/configuration:/config
       - /etc/localtime:/etc/localtime:ro
@@ -92,6 +94,7 @@ services:
       - grafana:/data
       - ./docker/grafana/configuration:/etc/grafana
       - ./docker/grafana/dashboards:/var/lib/grafana/dashboards
+    network_mode: host
     ports:
       - 3000:3000
     environment:
