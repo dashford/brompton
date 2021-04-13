@@ -53,6 +53,7 @@ services:
         - USERNAME=${MQTT_USER}
         - PASSWORD=${MQTT_PASSWORD}
     container_name: mosquitto
+    network_mode: host
     ports:
       - 1883:1883
       - 8883:8883
@@ -64,6 +65,7 @@ services:
   influxdbha:
     image: library/influxdb:1.8.1
     container_name: influxdbha
+    network_mode: host
     volumes:
       - influxdbha:/var/lib/influxdb
     environment:
