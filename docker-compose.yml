@@ -77,7 +77,7 @@ services:
       - INFLUXDB_WRITE_USER=${INFLUXDBHA_WRITE_USER}
       - INFLUXDB_WRITE_USER_PASSWORD=${INFLUXDBHA_WRITE_USER_PASSWORD}
     ports:
-      - 8096:8086
+      - 8086:8086
     restart: always
 
   grafana:
