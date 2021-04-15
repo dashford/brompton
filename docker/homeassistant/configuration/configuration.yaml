@@ -90,6 +90,7 @@ person:
     id: david
     device_trackers:
       - device_tracker.12_f6_3c_19_e3_10
+      - device_tracker.david
 
 # Track the sun
 sun:
