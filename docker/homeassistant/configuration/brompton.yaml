@@ -65,7 +65,7 @@ views:
         show_header_toggle: false
       - type: map
         entities:
-          - entity: person.david
+          - entity: person.person_david
             name: David
           - entity: zone.home
         title: Test Map

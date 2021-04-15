@@ -87,10 +87,10 @@ device_tracker:
 
 person:
   - name: David
-    id: david
+    id: person_david
     device_trackers:
       - device_tracker.12_f6_3c_19_e3_10
-      - device_tracker.david
+      - device_tracker.david_phone
 
 # Track the sun
 sun:
