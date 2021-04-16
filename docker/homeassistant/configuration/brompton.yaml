@@ -94,8 +94,8 @@ views:
           - sensor.0x00158d00068b92eb_temperature
           - sensor.0x00158d00068b92eb_humidity
           - sensor.0x00158d00068b92eb_pressure
-          title: Downstairs Toilet
-          show_header_toggle: false
+        title: Downstairs Toilet
+        show_header_toggle: false
       - type: entities
         entities:
           - entity: climate.hot_water
