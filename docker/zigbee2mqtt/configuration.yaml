@@ -30,6 +30,8 @@ devices:
     friendly_name: 'ikea/kitchen/blind-centre-right'
   '0x680ae2fffe1c3b8d':
     friendly_name: 'ikea/kitchen/blind-right'
+  '0x00158d00068b7170':
+    friendly_name: 'aqara/wsdcgq12lm/hallway'
 
 serial:
   # Location of CC2531 USB sniffer
