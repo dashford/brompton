@@ -104,6 +104,15 @@ sensor.0x00158d00068b7170_humidity:
 sensor.0x00158d00068b7170_pressure:
   friendly_name: Pressure
 
+# Downstairs Toilet
+sensor.0x00158d00068b92eb_temperature:
+  friendly_name: Temperature
+sensor.0x00158d00068b92eb_humidity:
+  friendly_name: Humidity
+  unit_of_measurement: '%RH'
+sensor.0x00158d00068b92eb_pressure:
+  friendly_name: Pressure
+
 sensor.owm_cloud_coverage:
   friendly_name: Cloud Coverage
   icon: mdi:weather-cloudy
