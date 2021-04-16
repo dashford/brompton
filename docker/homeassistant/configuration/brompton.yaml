@@ -98,6 +98,13 @@ views:
         show_header_toggle: false
       - type: entities
         entities:
+          - sensor.0x00158d00067955d5_temperature
+          - sensor.0x00158d00067955d5_humidity
+          - sensor.0x00158d00067955d5_pressure
+        title: Utility Room
+        show_header_toggle: false
+      - type: entities
+        entities:
           - entity: climate.hot_water
             name: Heating
           - entity: sensor.top_of_hot_water_tank_temperature

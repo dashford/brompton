@@ -113,6 +113,15 @@ sensor.0x00158d00068b92eb_humidity:
 sensor.0x00158d00068b92eb_pressure:
   friendly_name: Pressure
 
+# Utility Room
+sensor.0x00158d00067955d5_temperature:
+  friendly_name: Temperature
+sensor.0x00158d00067955d5_humidity:
+  friendly_name: Humidity
+  unit_of_measurement: '%RH'
+sensor.0x00158d00067955d5_pressure:
+  friendly_name: Pressure
+
 sensor.owm_cloud_coverage:
   friendly_name: Cloud Coverage
   icon: mdi:weather-cloudy
