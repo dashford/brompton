@@ -96,6 +96,13 @@ sensor.upstairs_bathroom_pressure:
 # Hallway
 light.ikea_hallway_lamp:
   friendly_name: Lamp
+sensor.0x00158d00068b7170_temperature:
+  friendly_name: Temperature
+sensor.0x00158d00068b7170_humidity:
+  friendly_name: Humidity
+  unit_of_measurement: '%RH'
+sensor.0x00158d00068b7170_pressure:
+  friendly_name: Pressure
 
 sensor.owm_cloud_coverage:
   friendly_name: Cloud Coverage
