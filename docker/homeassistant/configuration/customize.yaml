@@ -76,6 +76,8 @@ sensor.0x00158d000693a944_humidity:
   unit_of_measurement: '%RH'
 sensor.0x00158d000693a944_pressure:
   friendly_name: Snug Pressure
+binary_sensor.0x00158d000693b91b_contact:
+  friendly_name: Main Back Door
 
 # Sitting Room
 sensor.aqara_wsdcgq12lm_sitting_room_humidity:

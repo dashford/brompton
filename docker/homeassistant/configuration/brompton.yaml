@@ -53,6 +53,7 @@ views:
           - sensor.0x00158d000693a944_humidity
           - sensor.0x00158d000693a944_temperature
           - sensor.0x00158d000693a944_pressure
+          - binary_sensor.0x00158d000693b91b_contact
         title: Kitchen
         show_header_toggle: false
       - type: entities
