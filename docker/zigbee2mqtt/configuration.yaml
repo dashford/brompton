@@ -42,6 +42,8 @@ devices:
     friendly_name: 'aqara/wsdcgq12lm/kitchen-main'
   '0x00158d000693a944':
     friendly_name: 'aqara/wsdcgq12lm/kitchen-snug'
+  '0x00158d000693b91b':
+    friendly_name: 'aqara/mccgq11lm/kitchen-main-back-door'
 
 serial:
   # Location of CC2531 USB sniffer
