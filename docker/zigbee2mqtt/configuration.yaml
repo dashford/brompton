@@ -36,6 +36,8 @@ devices:
     friendly_name: 'aqara/wsdcgq12lm/downstairs-toilet'
   '0x00158d00067955d5':
     friendly_name: 'aqara/wsdcgq12lm/utility-room'
+  '0x00158d0006a03a86':
+    friendly_name: 'aqara/wsdcgq12lm/kitchen-extension'
 
 serial:
   # Location of CC2531 USB sniffer

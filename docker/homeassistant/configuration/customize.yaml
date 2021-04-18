@@ -55,6 +55,13 @@ cover.0x680ae2fffe1c3b8d:
   friendly_name: Right
 media_player.kitchen:
   friendly_name: Kitchen Speaker
+sensor.0x00158d0006a03a86_temperature:
+  friendly_name: Temperature
+sensor.0x00158d0006a03a86_humidity:
+  friendly_name: Humidity
+  unit_of_measurement: '%RH'
+sensor.0x00158d0006a03a86_pressure:
+  friendly_name: Pressure
 
 # Sitting Room
 sensor.aqara_wsdcgq12lm_sitting_room_humidity:

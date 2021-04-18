@@ -44,6 +44,9 @@ views:
           - cover.0xec1bbdfffe985ebe
           - cover.0x680ae2fffe1c3b8d
           - media_player.kitchen
+          - sensor.aqara_wsdcgq12lm_kitchen_extension_humidity
+          - sensor.aqara_wsdcgq12lm_kitchen_extension_temperature
+          - sensor.aqara_wsdcgq12lm_kitchen_extension_pressure
         title: Kitchen
         show_header_toggle: false
       - type: entities
