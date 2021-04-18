@@ -144,6 +144,8 @@ sensor.0x00158d00067955d5_humidity:
   unit_of_measurement: '%RH'
 sensor.0x00158d00067955d5_pressure:
   friendly_name: Pressure
+binary_sensor.0x00158d00068b85c8_contact:
+  friendly_name: Garage Door
 
 sensor.owm_cloud_coverage:
   friendly_name: Cloud Coverage

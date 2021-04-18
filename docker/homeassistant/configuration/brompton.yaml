@@ -111,6 +111,7 @@ views:
           - sensor.0x00158d00067955d5_temperature
           - sensor.0x00158d00067955d5_humidity
           - sensor.0x00158d00067955d5_pressure
+          - binary_sensor.0x00158d00068b85c8_contact
         title: Utility Room
         show_header_toggle: false
       - type: entities
