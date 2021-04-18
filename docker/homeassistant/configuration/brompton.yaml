@@ -50,6 +50,9 @@ views:
           - sensor.0x00158d0006a03ae5_humidity
           - sensor.0x00158d0006a03ae5_temperature
           - sensor.0x00158d0006a03ae5_pressure
+          - sensor.0x00158d000693a944_humidity
+          - sensor.0x00158d000693a944_temperature
+          - sensor.0x00158d000693a944_pressure
         title: Kitchen
         show_header_toggle: false
       - type: entities

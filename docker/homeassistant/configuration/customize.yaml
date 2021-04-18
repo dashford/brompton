@@ -69,6 +69,13 @@ sensor.0x00158d0006a03ae5_humidity:
   unit_of_measurement: '%RH'
 sensor.0x00158d0006a03ae5_pressure:
   friendly_name: Main Pressure
+sensor.0x00158d000693a944_temperature:
+  friendly_name: Snug Temperature
+sensor.0x00158d000693a944_humidity:
+  friendly_name: Snug Humidity
+  unit_of_measurement: '%RH'
+sensor.0x00158d000693a944_pressure:
+  friendly_name: Snug Pressure
 
 # Sitting Room
 sensor.aqara_wsdcgq12lm_sitting_room_humidity:
