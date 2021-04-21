@@ -54,6 +54,7 @@ views:
           - sensor.0x00158d000693a944_temperature
           - sensor.0x00158d000693a944_pressure
           - binary_sensor.0x00158d000693b91b_contact
+          - binary_sensor.0x00158d00068b8581_contact
         title: Kitchen
         show_header_toggle: false
       - type: entities
@@ -95,6 +96,7 @@ views:
           - sensor.0x00158d00068b7170_temperature
           - sensor.0x00158d00068b7170_humidity
           - sensor.0x00158d00068b7170_pressure
+          - binary_sensor.0x00158d000693b930_contact
           - entity: climate.downstairs
             name: Heating
         title: Hallway

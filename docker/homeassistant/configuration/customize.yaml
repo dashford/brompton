@@ -78,6 +78,8 @@ sensor.0x00158d000693a944_pressure:
   friendly_name: Snug Pressure
 binary_sensor.0x00158d000693b91b_contact:
   friendly_name: Main Back Door
+binary_sensor.0x00158d00068b8581_contact:
+  friendly_name: Secondary Back Door
 
 # Sitting Room
 sensor.aqara_wsdcgq12lm_sitting_room_humidity:
@@ -126,6 +128,8 @@ sensor.0x00158d00068b7170_humidity:
   unit_of_measurement: '%RH'
 sensor.0x00158d00068b7170_pressure:
   friendly_name: Pressure
+binary_sensor.0x00158d000693b930_contact:
+  friendly_name: Front Door
 
 # Downstairs Toilet
 sensor.0x00158d00068b92eb_temperature:
