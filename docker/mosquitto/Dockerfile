@@ -1,4 +1,4 @@
-FROM eclipse-mosquitto:1.6.13
+FROM eclipse-mosquitto:1.6.14
 
 ARG USERNAME
 ARG PASSWORD

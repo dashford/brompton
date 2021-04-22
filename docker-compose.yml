@@ -29,7 +29,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock:ro
 
   homeassistant:
-    image: homeassistant/home-assistant:2021.3.4
+    image: homeassistant/home-assistant:2021.4.6
     container_name: homeassistant
     labels:
       - "traefik.enable=true"
@@ -62,7 +62,7 @@ services:
       - acmesh-certs:/etc/acme.sh/ssl:ro
 
   influxdbha:
-    image: library/influxdb:1.8.1
+    image: library/influxdb:1.8.5
     container_name: influxdbha
     volumes:
       - influxdbha:/var/lib/influxdb
@@ -81,7 +81,7 @@ services:
     restart: always
 
   grafana:
-    image: grafana/grafana:7.5.1
+    image: grafana/grafana:7.5.4
     container_name: grafana
     labels:
       - "traefik.enable=true"
@@ -111,7 +111,7 @@ services:
     restart: always
 
   zigbee2mqtt:
-    image: koenkk/zigbee2mqtt:1.18.1
+    image: koenkk/zigbee2mqtt:1.18.2
     container_name: zigbee2mqtt
     volumes:
       - zigbee2mqtt:/app/data
