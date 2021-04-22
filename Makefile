@@ -13,6 +13,7 @@ up-homeassistant :
 
 up-mosquitto :
 	docker-compose up -d mosquitto
+	docker exec -d --env-file .env mosquitto mosquitto_passwd -c -b /mosquitto/config/passwd "${MQTT_USER}" "${MQTT_PASSWORD}"
 
 up-influxdbha :
 	docker-compose up -d influxdbha
