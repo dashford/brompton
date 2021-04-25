@@ -119,7 +119,7 @@ services:
       - TZ=Europe/Dublin
       - PIHOLE_DNS_="1.1.1.1;8.8.8.8"
       - PROXY_LOCATION="pi.hole"
-      - ServerIP="192.168.1.10"
+      - ServerIP=192.168.1.10
       - VIRTUAL_HOST="pi.hole"
       - WEBPASSWORD=${PIHOLE_PASSWORD}
     image: pihole/pihole:v5.8.1
