@@ -129,8 +129,8 @@ services:
       - 80:80
     restart: unless-stopped
     volumes:
-      - pihole/etc-pihole/:/etc/pihole/
-      - pihole/etc-dnsmasq.d/:/etc/dnsmasq.d/
+      - pihole-etc:/etc/pihole/
+      - pihole-dnsmasq:/etc/dnsmasq.d/
 
   zigbee2mqtt:
     image: koenkk/zigbee2mqtt:1.18.2
@@ -161,5 +161,7 @@ volumes:
     driver: local
   traefik:
     driver: local
-  pihole:
+  pihole-etc:
+    driver: local
+  pihole-dnsmasq:
     driver: local
