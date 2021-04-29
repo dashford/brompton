@@ -132,7 +132,7 @@ services:
     volumes:
       - pihole-etc:/etc/pihole/
       - pihole-dnsmasq:/etc/dnsmasq.d/
-      - docker/pihole/hosts:/etc/hosts:ro
+      - ./docker/pihole/hosts:/etc/hosts:ro
 
   zigbee2mqtt:
     image: koenkk/zigbee2mqtt:1.18.2
