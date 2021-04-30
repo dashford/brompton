@@ -125,7 +125,7 @@ services:
       - REV_SERVER=true
       - REV_SERVER_DOMAIN=lan
       - REV_SERVER_TARGET=192.168.1.1
-      - REV_SERVER_CIDR=192168.1.0/24
+      - REV_SERVER_CIDR=192.168.1.0/24
       - ServerIPv6=fd49:f2fc:db45:0:76d4:35ff:feaa:9d52
       - INTERFACE=enp2s0
       - DNSMASQ_LISTENING=all
