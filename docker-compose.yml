@@ -118,16 +118,24 @@ services:
       - DNSSEC=true
       - TZ=Europe/Dublin
       - PIHOLE_DNS_=1.1.1.1;8.8.8.8
-      - PROXY_LOCATION=pi.hole
       - ServerIP=192.168.1.10
-      - VIRTUAL_HOST=pi.hole
+      - VIRTUAL_HOST=192.168.1.10
       - WEBPASSWORD=${PIHOLE_PASSWORD}
       - WEB_PORT=8080
+      - REV_SERVER=true
+      - REV_SERVER_DOMAIN=lan
+      - REV_SERVER_TARGET=192.168.1.1
+      - REV_SERVER_CIDR=192168.1.0/24
+      - ServerIPv6=fd49:f2fc:db45:0:76d4:35ff:feaa:9d52
+      - INTERFACE=enp2s0
+      - DNSMASQ_LISTENING=all
     image: pihole/pihole:v5.8.1
     network_mode: host
     ports:
-      - 53:53
-      - 8080:80
+      - "53:53/tcp"
+      - "53:53/udp"
+      - "67:67/udp"
+      - "8080:80/tcp"
     restart: unless-stopped
     volumes:
       - pihole-etc:/etc/pihole/
