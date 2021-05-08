@@ -30,7 +30,7 @@ services:
     restart: unless-stopped
 
   homeassistant:
-    image: homeassistant/home-assistant:2021.4.6
+    image: homeassistant/home-assistant:2021.5.1
     container_name: homeassistant
     labels:
       - "traefik.enable=true"
@@ -112,36 +112,6 @@ services:
       - INFLUXDBHA_READ_USER_PASSWORD=${INFLUXDBHA_READ_USER_PASSWORD}
     restart: unless-stopped
 
-  pihole:
-    container_name: pihole
-    environment:
-      - DNSSEC=true
-      - TZ=Europe/Dublin
-      - PIHOLE_DNS_=1.1.1.1;8.8.8.8
-      - ServerIP=192.168.1.10
-      - VIRTUAL_HOST=192.168.1.10
-      - WEBPASSWORD=${PIHOLE_PASSWORD}
-      - WEB_PORT=8080
-      - REV_SERVER=true
-      - REV_SERVER_DOMAIN=lan
-      - REV_SERVER_TARGET=192.168.1.1
-      - REV_SERVER_CIDR=192.168.1.0/24
-      - ServerIPv6=fd49:f2fc:db45:0:76d4:35ff:feaa:9d52
-      - INTERFACE=enp2s0
-      - DNSMASQ_LISTENING=all
-    image: pihole/pihole:v5.8.1
-    network_mode: host
-    ports:
-      - "53:53/tcp"
-      - "53:53/udp"
-      - "67:67/udp"
-      - "8080:80/tcp"
-    restart: unless-stopped
-    volumes:
-      - pihole-etc:/etc/pihole/
-      - pihole-dnsmasq:/etc/dnsmasq.d/
-      - ./docker/pihole/hosts:/etc/hosts:ro
-
   zigbee2mqtt:
     image: koenkk/zigbee2mqtt:1.18.2
     container_name: zigbee2mqtt
@@ -170,8 +140,4 @@ volumes:
   zigbee2mqtt:
     driver: local
   traefik:
-    driver: local
-  pihole-etc:
-    driver: local
-  pihole-dnsmasq:
     driver: local
