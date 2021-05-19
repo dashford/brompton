@@ -89,8 +89,8 @@ person:
   - name: David
     id: person_david
     device_trackers:
-      - device_tracker.12_f6_3c_19_e3_10
-      - device_tracker.david_phone
+      - device_tracker.f8_ad_cb_2f_e2_21
+#      - device_tracker.david_phone
 
 # Track the sun
 sun:
