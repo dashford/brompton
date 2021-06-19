@@ -151,3 +151,15 @@ views:
 
   - title: Outside
     path: outside
+    cards:
+      - type: entities
+        entities:
+          - sensor.outside_temperature
+          - sensor.outside_humidity
+          - sensor.outside_pressure
+          - sensor.outside_lux
+          - sensor.outside_pm_1.0
+          - sensor.outside_pm_2.5
+          - sesnor.outside_pm_10.0
+        title: Climate
+        show_header_toggle: false

@@ -191,6 +191,41 @@ sensor:
     name: 'Bottom of Hot Water Tank Temperature'
     unit_of_measurement: '°C'
     value_template: '{{ value_json.temperature | round(2) }}'
+  - platform: mqtt
+    state_topic: 'brompton/outside/temperature'
+    name: 'Outside Temperature'
+    unit_of_measurement: '°C'
+    value_template: '{{ value_json.temperature | round(2) }}'
+  - platform: mqtt
+    state_topic: 'brompton/outside/pressure'
+    name: 'Outside Pressure'
+    unit_of_measurement: 'hPa'
+    value_template: '{{ value_json.pressure | round(2) }}'
+  - platform: mqtt
+    state_topic: 'brompton/outside/humidity'
+    name: 'Outside Humidity'
+    unit_of_measurement: '%RH'
+    value_template: '{{ value_json.humidity | round(3) }}'
+  - platform: mqtt
+    state_topic: 'brompton/outside/lux'
+    name: 'Outside Lux'
+    unit_of_measurement: 'lm'
+    value_template: '{{ value_json.lux | round(3) }}'
+  - platform: mqtt
+    state_topic: 'brompton/outside/particulate_matter/1.0'
+    name: 'Outside PM 1.0'
+    unit_of_measurement: 'μg/m³'
+    value_template: '{{ value_json.pm | round(3) }}'
+  - platform: mqtt
+    state_topic: 'brompton/outside/particulate_matter/2.5'
+    name: 'Outside PM 2.5'
+    unit_of_measurement: 'μg/m³'
+    value_template: '{{ value_json.pm | round(3) }}'
+  - platform: mqtt
+    state_topic: 'brompton/outside/particulate_matter/10.0'
+    name: 'Outside PM 10.0'
+    unit_of_measurement: 'μg/m³'
+    value_template: '{{ value_json.pm | round(3) }}'
 
 # Text to speech
 tts:
