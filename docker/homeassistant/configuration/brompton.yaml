@@ -160,6 +160,6 @@ views:
           - sensor.outside_lux
           - sensor.outside_pm_1_0
           - sensor.outside_pm_2_5
-          - sesnor.outside_pm_10_0
+          - sensor.outside_pm_10_0
         title: Climate
         show_header_toggle: false
