@@ -1,44 +1,8 @@
 version: '3.8'
 services:
-  traefik:
-    image: traefik:2.4.8
-    container_name: traefik
-    command:
-      - "--log.level=DEBUG"
-      - "--api.dashboard=false"
-      - "--api.insecure=false"
-      - "--providers.docker=true"
-      - "--providers.docker.exposedbydefault=false"
-      - "--entrypoints.web.address=:80"
-      - "--entrypoints.web.http.redirections.entryPoint.to=websecure"
-      - "--entrypoints.web.http.redirections.entryPoint.scheme=https"
-      - "--entrypoints.websecure.address=:443"
-      - "--certificatesresolvers.leresolver.acme.dnschallenge=true"
-      - "--certificatesresolvers.leresolver.acme.dnschallenge.provider=cloudflare"
-      - "--certificatesresolvers.leresolver.acme.email=david@dashford.io"
-      - "--certificatesresolvers.leresolver.acme.storage=/letsencrypt/acme.json"
-      # Below just for lets encrypt staging, remove when it's all verified
-      #- "--certificatesresolvers.leresolver.acme.caserver=https://acme-staging-v02.api.letsencrypt.org/directory"
-    ports:
-      - 443:443
-    network_mode: host
-    environment:
-      - CF_DNS_API_TOKEN=${CF_DNS_API_TOKEN}
-    volumes:
-      - traefik:/letsencrypt
-      - /var/run/docker.sock:/var/run/docker.sock:ro
-    restart: unless-stopped
-
   homeassistant:
     image: homeassistant/home-assistant:2021.5.1
     container_name: homeassistant
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.homeassistant.rule=Host(`home.dashford.io`) && Path(`/api/webhook/{id:[a-z0-9]+}`) && Method(`POST`)"
-      - "traefik.http.routers.homeassistant.entrypoints=websecure"
-      - "traefik.http.routers.homeassistant.tls=true"
-      - "traefik.http.routers.homeassistant.tls.certresolver=leresolver"
-      - "traefik.http.services.homeassitant.loadbalancer.server.port=8123"
     network_mode: host
     volumes:
       - ./docker/homeassistant/configuration:/config
@@ -85,13 +49,6 @@ services:
   grafana:
     image: grafana/grafana:7.5.4
     container_name: grafana
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.grafana.rule=Host(`grafana.dashford.io`)"
-      - "traefik.http.routers.grafana.entrypoints=websecure"
-      - "traefik.http.routers.grafana.tls=true"
-      - "traefik.http.routers.grafana.tls.certresolver=leresolver"
-      - "traefik.http.services.grafana.loadbalancer.server.port=3000"
     volumes:
       - grafana:/data
       - ./docker/grafana/configuration:/etc/grafana
@@ -138,6 +95,4 @@ volumes:
   acmesh-certs:
     driver: local
   zigbee2mqtt:
-    driver: local
-  traefik:
     driver: local
