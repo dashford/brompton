@@ -1,5 +1,28 @@
 version: '3.8'
 services:
+  wireguard:
+    image: linuxserver/wireguard:version-v1.0.20210424
+    container_name: wireguard
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Dublin
+      - SERVERURL=vpn.dashford.io
+      - SERVERPORT=51820
+      - PEERS=phone
+      - PEERDNS=auto
+    volumes:
+      - wgconfig:/config
+      - /lib/modules:/lib/modules
+    ports:
+      - 51820:51820/udp
+    sysctls:
+      - net.ipv4.conf.all.src_valid_mark=1
+    restart: unless-stopped
+
   homeassistant:
     image: homeassistant/home-assistant:2021.5.1
     container_name: homeassistant
@@ -95,4 +118,6 @@ volumes:
   acmesh-certs:
     driver: local
   zigbee2mqtt:
+    driver: local
+  wgconfig:
     driver: local
