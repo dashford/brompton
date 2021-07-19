@@ -95,6 +95,8 @@ sensor.aqara_wsdcgq12lm_sitting_room_pressure:
 sensor.aqara_wsdcgq12lm_sitting_room_battery:
   friendly_name: Battery
   icon: mdi:battery
+sensor.aqara_rtcgq11lm_sitting_room_occupancy:
+  friendly_name: Presence
 
 # Upstairs Landing
 sensor.upstairs_landing_temperature:
