@@ -64,6 +64,7 @@ views:
           - sensor.aqara_wsdcgq12lm_sitting_room_temperature
           - sensor.aqara_wsdcgq12lm_sitting_room_pressure
           - binary_sensor.0x00158d0006a15847_occupancy
+          - switch.0x000d6ffffe2a5da3
         title: Sitting Room
         show_header_toggle: false
       - type: entities
