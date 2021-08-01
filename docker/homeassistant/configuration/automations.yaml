@@ -19,22 +19,22 @@
     domain: cover
     entity_id: cover.0x680ae2fffe8c9cf8
     type: set_position
-    position: 100
+    position: 0
   - device_id: de7bc37e783453279aa5768585f25c44
     domain: cover
     entity_id: cover.0xec1bbdfffe985ebe
     type: set_position
-    position: 100
+    position: 0
   - device_id: b98ac8202850c420bc8dfaef6c557e09
     domain: cover
     entity_id: cover.0x680ae2fffe1c5c77
     type: set_position
-    position: 100
+    position: 0
   - device_id: 3d9a5c4652add742b19044a019c7142a
     domain: cover
     entity_id: cover.0x680ae2fffe1c3b8d
     type: set_position
-    position: 100
+    position: 0
   mode: single
 - id: '1613741842726'
   alias: Turn off lights at bedtime
