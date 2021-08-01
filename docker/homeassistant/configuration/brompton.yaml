@@ -12,6 +12,7 @@ views:
         entity: sensor.front_big_bedroom_temperature
         name: Test
         graph: line
+        detail: 2
         unit: '°C'
       - type: entities
         entities:
@@ -135,14 +136,11 @@ views:
         title: Hot Water
         show_header_toggle: false
 
-  - title: Downstairs
-    path: downstairs
-    cards:
-      - type: light
-        entity: light.ikea_hallway_lamp
+  - title: Kitchen
+    path: kitchen
 
-  - title: Upstairs
-    path: upstairs
+  - title: Bedrooms
+    path: bedrooms
 
 #  - title: Climate
 #    path: climate
