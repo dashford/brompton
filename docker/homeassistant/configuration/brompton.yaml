@@ -13,28 +13,28 @@ views:
           - sensor.front_big_bedroom_temperature
           - sensor.front_big_bedroom_humidity
           - sensor.front_big_bedroom_pressure
-        title: Front Big Bedroom
+        title: Ellen & David's Bedroom
         show_header_toggle: false
       - type: entities
         entities:
           - sensor.front_small_bedroom_temperature
           - sensor.front_small_bedroom_humidity
           - sensor.front_small_bedroom_pressure
-        title: Front Small Bedroom
+        title: Sam's Bedroom
         show_header_toggle: false
       - type: entities
         entities:
           - sensor.back_big_bedroom_temperature
           - sensor.back_big_bedroom_humidity
           - sensor.back_big_bedroom_pressure
-        title: Back Big Bedroom
+        title: Spare Bedroom
         show_header_toggle: false
       - type: entities
         entities:
           - sensor.back_small_bedroom_temperature
           - sensor.back_small_bedroom_humidity
           - sensor.back_small_bedroom_pressure
-        title: Back Small Bedroom
+        title: Joey's Bedroom
         show_header_toggle: false
       - type: entities
         entities:
@@ -65,6 +65,7 @@ views:
           - sensor.aqara_wsdcgq12lm_sitting_room_pressure
           - binary_sensor.0x00158d0006a15847_occupancy
           - switch.0x000d6ffffe2a5da3
+          - media_player.kodi_1769ef5133e15d4c77f0e858e7a5d2df
         title: Sitting Room
         show_header_toggle: false
       - type: entities
@@ -72,8 +73,8 @@ views:
           - sensor.upstairs_landing_temperature
           - sensor.upstairs_landing_humidity
           - sensor.upstairs_landing_pressure
-          - entity: climate.upstairs
-            name: Heating
+#          - entity: climate.upstairs
+#            name: Heating
         title: Upstairs
         show_header_toggle: false
       - type: map
@@ -99,8 +100,8 @@ views:
           - sensor.0x00158d00068b7170_humidity
           - sensor.0x00158d00068b7170_pressure
           - binary_sensor.0x00158d000693b930_contact
-          - entity: climate.downstairs
-            name: Heating
+#          - entity: climate.downstairs
+#            name: Heating
         title: Hallway
         show_header_toggle: false
       - type: entities
@@ -120,8 +121,8 @@ views:
         show_header_toggle: false
       - type: entities
         entities:
-          - entity: climate.hot_water
-            name: Heating
+#          - entity: climate.hot_water
+#            name: Heating
           - entity: sensor.top_of_hot_water_tank_temperature
             name: Top of Tank
           - entity: sensor.bottom_of_hot_water_tank_temperature
@@ -138,18 +139,18 @@ views:
   - title: Upstairs
     path: upstairs
 
-  - title: Climate
-    path: climate
-    cards:
-      - type: thermostat
-        entity: climate.downstairs
-        name: Downstairs
-      - type: thermostat
-        entity: climate.upstairs
-        name: Upstairs
-      - type: thermostat
-        entity: climate.hot_water
-        name: Hot Water
+#  - title: Climate
+#    path: climate
+#    cards:
+#      - type: thermostat
+#        entity: climate.downstairs
+#        name: Downstairs
+#      - type: thermostat
+#        entity: climate.upstairs
+#        name: Upstairs
+#      - type: thermostat
+#        entity: climate.hot_water
+#        name: Hot Water
 
   - title: Outside
     path: outside
