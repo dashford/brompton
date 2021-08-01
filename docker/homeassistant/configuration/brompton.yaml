@@ -136,8 +136,8 @@ views:
         title: Hot Water
         show_header_toggle: false
 
-  - title: Kitchen
-    path: kitchen
+  - title: Downstairs
+    path: downstairs
 
   - title: Bedrooms
     path: bedrooms
