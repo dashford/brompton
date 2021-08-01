@@ -5,6 +5,9 @@ views:
     cards:
       - type: weather-forecast
         entity: weather.home
+      - type: entities
+        entities:
+          - person.david
       - type: sensor
         entity: sensor.front_big_bedroom_temperature
         name: Test
