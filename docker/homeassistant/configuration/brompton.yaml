@@ -3,6 +3,8 @@ views:
   - path: overview
     title: Overview
     cards:
+      - type: weather-forecast
+        entity: weather.home
       - type: sensor
         entity: sensor.front_big_bedroom_temperature
         name: Test
