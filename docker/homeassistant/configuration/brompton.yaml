@@ -16,29 +16,10 @@ views:
         unit: '°C'
       - type: entities
         entities:
-          - sensor.front_big_bedroom_temperature
-          - sensor.front_big_bedroom_humidity
-        title: Ellen & David's Bedroom
-        show_header_toggle: false
-        footer:
-          type: graph
-          entity: sensor.front_big_bedroom_temperature
-          hours_to_show: 24
-          detail: 2
-      - type: entities
-        entities:
           - sensor.front_small_bedroom_temperature
           - sensor.front_small_bedroom_humidity
         title: Sam's Bedroom
         show_header_toggle: false
-        footer:
-          type: buttons
-          entities:
-            - script.launch_confetti
-            - entity: script.swirl_lights
-              icon: "mdi:track-light"
-            - entity: script.run_siren
-              icon: "mdi:alarm-light"
       - type: entities
         entities:
           - sensor.back_big_bedroom_temperature
@@ -151,6 +132,18 @@ views:
 
   - title: Bedrooms
     path: bedrooms
+    entities:
+      - type: entities
+      entities:
+        - sensor.front_big_bedroom_temperature
+        - sensor.front_big_bedroom_humidity
+      title: Ellen & David's Bedroom
+      show_header_toggle: false
+      footer:
+        type: graph
+        entity: sensor.front_big_bedroom_temperature
+        hours_to_show: 24
+        detail: 2
 
 #  - title: Climate
 #    path: climate
