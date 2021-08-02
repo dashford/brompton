@@ -52,14 +52,6 @@ views:
           - media_player.kodi_1769ef5133e15d4c77f0e858e7a5d2df
         title: Sitting Room
         show_header_toggle: false
-      - type: entities
-        entities:
-          - sensor.upstairs_landing_temperature
-          - sensor.upstairs_landing_humidity
-#          - entity: climate.upstairs
-#            name: Heating
-        title: Upstairs
-        show_header_toggle: false
       - type: map
         entities:
           - entity: person.person_david
@@ -71,18 +63,10 @@ views:
         show_header_toggle: false
       - type: entities
         entities:
-          - entity: sensor.upstairs_bathroom_temperature
-          - entity: sensor.upstairs_bathroom_humidity
-        title: Upstairs Bathroom
-        show_header_toggle: false
-      - type: entities
-        entities:
           - light.ikea_hallway_lamp
           - sensor.0x00158d00068b7170_temperature
           - sensor.0x00158d00068b7170_humidity
           - binary_sensor.0x00158d000693b930_contact
-#          - entity: climate.downstairs
-#            name: Heating
         title: Hallway
         show_header_toggle: false
       - type: entities
@@ -100,8 +84,6 @@ views:
         show_header_toggle: false
       - type: entities
         entities:
-#          - entity: climate.hot_water
-#            name: Heating
           - entity: sensor.top_of_hot_water_tank_temperature
             name: Top of Tank
           - entity: sensor.bottom_of_hot_water_tank_temperature
@@ -112,8 +94,8 @@ views:
   - title: Downstairs
     path: downstairs
 
-  - title: Bedrooms
-    path: bedrooms
+  - title: Upstairs
+    path: upstairs
     cards:
       - type: entities
         entities:
@@ -159,6 +141,18 @@ views:
           entity: sensor.back_big_bedroom_temperature
           hours_to_show: 24
           detail: 2
+      - type: entities
+        entities:
+            - entity: sensor.upstairs_bathroom_temperature
+              - entity: sensor.upstairs_bathroom_humidity
+        title: Upstairs Bathroom
+        show_header_toggle: false
+      - type: entities
+        entities:
+          - sensor.upstairs_landing_temperature
+          - sensor.upstairs_landing_humidity
+        title: Upstairs
+        show_header_toggle: false
 
   - title: Outside
     path: outside
