@@ -144,7 +144,7 @@ views:
       - type: entities
         entities:
             - entity: sensor.upstairs_bathroom_temperature
-              - entity: sensor.upstairs_bathroom_humidity
+            - entity: sensor.upstairs_bathroom_humidity
         title: Upstairs Bathroom
         show_header_toggle: false
       - type: entities
