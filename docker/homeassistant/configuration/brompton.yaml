@@ -58,15 +58,12 @@ views:
           - media_player.kitchen
           - type: section
             label: Environment
-          - sensor.0x00158d0006a03a86_humidity
           - sensor.0x00158d0006a03a86_temperature
-#          - sensor.0x00158d0006a03a86_pressure
-          - sensor.0x00158d0006a03ae5_humidity
+          - sensor.0x00158d0006a03a86_humidity
           - sensor.0x00158d0006a03ae5_temperature
-#          - sensor.0x00158d0006a03ae5_pressure
-          - sensor.0x00158d000693a944_humidity
+          - sensor.0x00158d0006a03ae5_humidity
           - sensor.0x00158d000693a944_temperature
-#          - sensor.0x00158d000693a944_pressure
+          - sensor.0x00158d000693a944_humidity
           - type: section
             label: Doors
           - binary_sensor.0x00158d000693b91b_contact
