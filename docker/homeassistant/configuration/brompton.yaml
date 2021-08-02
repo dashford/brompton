@@ -44,6 +44,8 @@ views:
         show_header_toggle: false
       - type: entities
         entities:
+          - type: section
+            label: Lights
           - light.ikea_kitchen_lamp
           - type: section
             label: Blinds
@@ -51,17 +53,22 @@ views:
           - cover.0x680ae2fffe8c9cf8
           - cover.0xec1bbdfffe985ebe
           - cover.0x680ae2fffe1c3b8d
-          - type: divider
+          - type: section
+            label: Sound
           - media_player.kitchen
+          - type: section
+            label: Environment
           - sensor.0x00158d0006a03a86_humidity
           - sensor.0x00158d0006a03a86_temperature
-          - sensor.0x00158d0006a03a86_pressure
+#          - sensor.0x00158d0006a03a86_pressure
           - sensor.0x00158d0006a03ae5_humidity
           - sensor.0x00158d0006a03ae5_temperature
-          - sensor.0x00158d0006a03ae5_pressure
+#          - sensor.0x00158d0006a03ae5_pressure
           - sensor.0x00158d000693a944_humidity
           - sensor.0x00158d000693a944_temperature
-          - sensor.0x00158d000693a944_pressure
+#          - sensor.0x00158d000693a944_pressure
+          - type: section
+            label: Doors
           - binary_sensor.0x00158d000693b91b_contact
           - binary_sensor.0x00158d00068b8581_contact
         title: Kitchen
