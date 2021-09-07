@@ -24,7 +24,7 @@ services:
     restart: unless-stopped
 
   homeassistant:
-    image: homeassistant/home-assistant:2021.7.4
+    image: homeassistant/home-assistant:2021.9.4
     container_name: homeassistant
     network_mode: host
     volumes:
@@ -70,7 +70,7 @@ services:
     restart: unless-stopped
 
   grafana:
-    image: grafana/grafana:7.5.4
+    image: grafana/grafana:8.1.2
     container_name: grafana
     volumes:
       - grafana:/data
@@ -93,7 +93,7 @@ services:
     restart: unless-stopped
 
   zigbee2mqtt:
-    image: koenkk/zigbee2mqtt:1.18.2
+    image: koenkk/zigbee2mqtt:1.21.1
     container_name: zigbee2mqtt
     volumes:
       - zigbee2mqtt:/app/data
