@@ -2,7 +2,7 @@
 homeassistant: true
 
 # allow new devices to join
-permit_join: true
+permit_join: false
 
 advanced:
   channel: 15
@@ -54,6 +54,8 @@ devices:
     friendly_name: 'aqara/rtcgq11lm/sitting-room'
   '0x000d6ffffe2a5da3':
     friendly_name: 'ikea/e1603-e1702/control-outlet'
+  '0x00158d0006a0d121':
+    friendly_name: 'aqara/rtcgq11lm/hallway-east'
 
 serial:
   # Location of CC2531 USB sniffer
