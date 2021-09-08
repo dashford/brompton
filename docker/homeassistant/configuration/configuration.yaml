@@ -235,12 +235,6 @@ tts:
 # Cloud
 cloud:
 
-# Ember
-climate:
-  - platform: ephember
-    username: !secret ephember_username
-    password: !secret ephember_password
-
 sonos:
 
 lovelace:
