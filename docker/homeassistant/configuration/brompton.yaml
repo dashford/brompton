@@ -62,15 +62,6 @@ views:
           - media_player.kodi_1769ef5133e15d4c77f0e858e7a5d2df
         title: Sitting Room
         show_header_toggle: false
-      - type: map
-        entities:
-          - entity: person.person_david
-            name: David
-          - entity: zone.home
-        title: Test Map
-        default_zoom: 16
-        hours_to_show: 48
-        show_header_toggle: false
       - type: entities
         entities:
           - light.ikea_hallway_lamp
