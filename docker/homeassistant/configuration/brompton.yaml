@@ -3,19 +3,21 @@ views:
   - path: overview
     title: Overview
     cards:
-      - type: weather-forecast
-        entity: weather.home
-      - type: glance
-        title: Outdoors
-        entities:
-          - entity: sensor.outside_temperature
-            name: Temperature
-          - entity: sensor.outside_humidity
-            name: Humidity
-          - entity: sensor.outside_pressure
-            name: Pressure
-          - entity: sensor.outside_lux
-            name: Light
+      - type: vertical-stack
+        cards:
+          - type: weather-forecast
+            entity: weather.home
+          - type: glance
+            title: Outdoors
+            entities:
+              - entity: sensor.outside_temperature
+                name: Temperature
+              - entity: sensor.outside_humidity
+                name: Humidity
+              - entity: sensor.outside_pressure
+                name: Pressure
+              - entity: sensor.outside_lux
+                name: Light
       - type: conditional
         conditions:
           - entity: person.david
