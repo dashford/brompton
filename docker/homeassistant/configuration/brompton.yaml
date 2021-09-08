@@ -94,7 +94,8 @@ views:
     cards:
       - type: entities
         entities:
-          - sensor.front_big_bedroom_temperature
+          - entity: sensor.front_big_bedroom_temperature
+            name: ""
           - sensor.front_big_bedroom_humidity
         title: Ellen & David's Bedroom
         show_header_toggle: false
