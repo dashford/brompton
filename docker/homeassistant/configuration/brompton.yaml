@@ -62,6 +62,8 @@ views:
   - title: Kitchen
     path: kitchen
     cards:
+      - type: media-control
+        entity: media_player.kitchen
       - type: entities
         entities:
           - type: section
@@ -73,9 +75,6 @@ views:
           - cover.0x680ae2fffe8c9cf8
           - cover.0xec1bbdfffe985ebe
           - cover.0x680ae2fffe1c3b8d
-          - type: section
-            label: Sound
-          - media_player.kitchen
           - type: section
             label: Environment
           - sensor.0x00158d0006a03a86_temperature
