@@ -5,9 +5,14 @@ views:
     cards:
       - type: weather-forecast
         entity: weather.home
-      - type: entities
-        entities:
-          - person.david
+      - type: conditional
+        conditions:
+          - entity: person.david
+            state: "away"
+        card:
+          type: entities
+          entities:
+            - person.david
       - type: entities
         entities:
           - type: section
