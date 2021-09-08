@@ -160,18 +160,3 @@ views:
             name: Bottom of Tank
         title: Hot Water
         show_header_toggle: false
-
-  - title: Outside
-    path: outside
-    cards:
-      - type: entities
-        entities:
-          - sensor.outside_temperature
-          - sensor.outside_humidity
-          - sensor.outside_pressure
-          - sensor.outside_lux
-          - sensor.outside_pm_1_0
-          - sensor.outside_pm_2_5
-          - sensor.outside_pm_10_0
-        title: Climate
-        show_header_toggle: false
