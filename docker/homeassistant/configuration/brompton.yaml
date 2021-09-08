@@ -6,6 +6,7 @@ views:
       - type: weather-forecast
         entity: weather.home
       - type: glance
+        title: Outdoors
         entities:
           - entity: sensor.outside_temperature
             name: Temperature
