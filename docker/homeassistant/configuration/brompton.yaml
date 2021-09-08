@@ -82,17 +82,12 @@ views:
           - binary_sensor.0x00158d00068b85c8_contact
         title: Utility Room
         show_header_toggle: false
-      - type: entities
-        entities:
-          - entity: sensor.top_of_hot_water_tank_temperature
-            name: Top of Tank
-          - entity: sensor.bottom_of_hot_water_tank_temperature
-            name: Bottom of Tank
-        title: Hot Water
-        show_header_toggle: false
 
-  - title: Downstairs
-    path: downstairs
+  - title: Kitchen
+    path: kitchen
+
+  - title: Sitting Room
+    path: sitting-room
 
   - title: Upstairs
     path: upstairs
@@ -152,6 +147,14 @@ views:
           - sensor.upstairs_landing_temperature
           - sensor.upstairs_landing_humidity
         title: Upstairs
+        show_header_toggle: false
+      - type: entities
+        entities:
+          - entity: sensor.top_of_hot_water_tank_temperature
+            name: Top of Tank
+          - entity: sensor.bottom_of_hot_water_tank_temperature
+            name: Bottom of Tank
+        title: Hot Water
         show_header_toggle: false
 
   - title: Outside
