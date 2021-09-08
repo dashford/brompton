@@ -67,6 +67,7 @@ views:
           - sensor.0x00158d00068b7170_temperature
           - sensor.0x00158d00068b7170_humidity
           - binary_sensor.0x00158d000693b930_contact
+          - binary_sensor.0x00158d0006a0d121_occupancy
         title: Hallway
         show_header_toggle: false
       - type: entities
