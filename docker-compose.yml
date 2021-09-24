@@ -10,11 +10,11 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/Dublin
-      - SERVERURL=vpn.dashford.io
+      - SERVERURL=79.97.250.243
       - SERVERPORT=51820
       - PEERS=phone
       - PEERDNS=auto
-      - ALLOWEDIPS=10.13.13.1/32,10.13.13.2/32,10.13.13.0/24,192.168.1.0/24
+      - ALLOWEDIPS=10.13.13.1/32,10.13.13.2/32
     volumes:
       - wgconfig:/config
       - /lib/modules:/lib/modules
