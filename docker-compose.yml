@@ -14,7 +14,6 @@ services:
       - SERVERPORT=51820
       - PEERS=phone
       - PEERDNS=auto
-      - ALLOWEDIPS=10.13.13.1/32,10.13.13.2/32
     volumes:
       - wgconfig:/config
       - /lib/modules:/lib/modules
