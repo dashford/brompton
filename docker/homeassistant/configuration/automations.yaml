@@ -96,7 +96,7 @@
   description: ''
   trigger:
   - platform: time
-    at: 06:50
+    at: 06:35
   condition:
   - condition: sun
     before: sunrise
