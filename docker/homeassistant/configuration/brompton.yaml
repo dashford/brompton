@@ -87,7 +87,6 @@ views:
             label: Doors
           - binary_sensor.0x00158d000693b91b_contact
           - binary_sensor.0x00158d00068b8581_contact
-        title: Kitchen
         show_header_toggle: false
 
   - title: Sitting Room
