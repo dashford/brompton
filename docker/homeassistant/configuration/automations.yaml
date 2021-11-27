@@ -97,9 +97,26 @@
   trigger:
   - platform: time
     at: 06:35
+  - platform: time
+    at: 07:30
   condition:
   - condition: sun
     before: sunrise
+  - condition: or
+    conditions:
+    - condition: time
+      after: 06:34
+      weekday:
+      - mon
+      - tue
+      - wed
+    - condition: time
+      after: 07:29
+      weekday:
+      - thu
+      - fri
+      - sat
+      - sun
   action:
   - type: turn_on
     device_id: ee04d6c564e267e69702eec44f2eb789
