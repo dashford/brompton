@@ -10,7 +10,7 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/Dublin
-      - SERVERURL=79.97.250.243
+      - SERVERURL=vpn.dashford.io
       - SERVERPORT=51820
       - PEERS=phone
       - PEERDNS=auto
