@@ -19,6 +19,8 @@ frontend:
 # Enables configuration UI
 config:
 
+energy:
+
 system_health:
 
 influxdb:
