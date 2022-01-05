@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   wireguard:
-    image: linuxserver/wireguard:version-v1.0.20210914
+    image: linuxserver/wireguard:latest
     container_name: wireguard
     cap_add:
       - NET_ADMIN
