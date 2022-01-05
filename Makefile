@@ -6,7 +6,7 @@ down : down-all
 
 
 up-wireguard :
-	docker-compose up -d wireguard
+	docker-compose up --build -d wireguard
 
 up-homeassistant :
 	docker-compose up -d homeassistant
