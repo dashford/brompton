@@ -1,7 +1,5 @@
 FROM eclipse-mosquitto:1.6.14
 
-RUN touch /mosquitto/config/passwd
-
 ARG USERNAME
 ARG PASSWORD
 
@@ -9,3 +7,4 @@ ENV USERNAME ${USERNAME}
 ENV PASSWORD ${PASSWORD}
 
 RUN mosquitto_passwd -c -b /mosquitto/config/passwd "${USERNAME}" "${PASSWORD}"
+#RUN mosquitto_passwd -b /mosquitto/config/test second_user second_pass
