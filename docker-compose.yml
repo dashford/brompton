@@ -35,12 +35,12 @@ services:
       - 8123:8123
 
   mosquitto:
-#    image: eclipse-mosquitto:1.6.14
-    build:
-      context: ./docker/mosquitto
-      args:
-        - USERNAME=${MQTT_USER}
-        - PASSWORD=${MQTT_PASSWORD}
+    image: eclipse-mosquitto:1.6.14
+#    build:
+#      context: ./docker/mosquitto
+#      args:
+#        - USERNAME=${MQTT_USER}
+#        - PASSWORD=${MQTT_PASSWORD}
     container_name: mosquitto
     environment:
       - MQTT_USER=${MQTT_USER}
