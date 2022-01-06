@@ -43,11 +43,9 @@ services:
     container_name: mosquitto
     ports:
       - 1883:1883
-      - 8883:8883
     restart: unless-stopped
     volumes:
       - ./docker/mosquitto/configuration/mosquitto.conf:/mosquitto/config/mosquitto.conf:ro
-      - acmesh-certs:/etc/acme.sh/ssl:ro
 
   influxdbha:
     image: library/influxdb:1.8.5
@@ -113,8 +111,6 @@ volumes:
   influxdbha:
     driver: local
   grafana:
-    driver: local
-  acmesh-certs:
     driver: local
   zigbee2mqtt:
     driver: local
