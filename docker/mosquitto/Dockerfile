@@ -1,5 +1,7 @@
 FROM eclipse-mosquitto:1.6.14
 
+RUN touch /mosquitto/config/passwd
+
 ARG USERNAME
 ARG PASSWORD
 
