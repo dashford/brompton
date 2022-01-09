@@ -66,6 +66,20 @@ services:
       - 8086:8086
     restart: unless-stopped
 
+  homeassistant_db:
+    image: postgres:14.1
+    container_name: homeassistant_db
+    environment:
+      - POSTGRES_PASSWORD=${HOMEASSISTANT_DB_PASSWORD}
+      - POSTGRES_DB=homeassistant
+      - POSTGRES_INITDB_ARGS="--encoding=UTF-8"
+      - TZ=Europe/Dublin
+    ports:
+      - 5432:5432
+    restart: unless-stopped
+    volumes:
+      - homeassistant_db:/var/lib/postgresql/data
+
   grafana:
     image: grafana/grafana:8.1.2
     container_name: grafana
@@ -111,6 +125,8 @@ volumes:
   influxdbha:
     driver: local
   grafana:
+    driver: local
+  homeassistant_db:
     driver: local
   zigbee2mqtt:
     driver: local
