@@ -1,7 +1,7 @@
 all : up
 
-up : up-wireguard up-mosquitto up-influxdbha up-grafana up-homeassistant up-zigbee2mqtt
-stop : stop-wireguard stop-mosquitto stop-influxdbha stop-grafana stop-homeassistant stop-zigbee2mqtt
+up : up-wireguard up-mosquitto up-influxdbha up-grafana up-homeassistant up-zigbee2mqtt up-homeassistant_db
+stop : stop-wireguard stop-mosquitto stop-influxdbha stop-grafana stop-homeassistant stop-zigbee2mqtt stop-homeassistant_db
 down : down-all
 
 
@@ -23,6 +23,9 @@ up-grafana :
 up-zigbee2mqtt :
 	docker-compose up -d zigbee2mqtt
 
+up-homeassistant_db :
+	docker-compose up -d homeassistant_db
+
 
 stop-wireguard :
 	docker stop wireguard
@@ -41,6 +44,9 @@ stop-grafana :
 
 stop-zigbee2mqtt :
 	docker stop zigbee2mqtt
+
+stop-homeassistant_db :
+	docker stop homeassistant_db
 
 
 down-all :
