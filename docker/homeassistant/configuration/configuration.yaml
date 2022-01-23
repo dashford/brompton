@@ -25,17 +25,20 @@ recorder:
   db_url: !secret recorder_db_url
   auto_purge: true
   purge_keep_days: 100
+  exclude:
+    entities:
+      - sensor.last_boot
 
 system_health:
 
-influxdb:
-  api_version: 1
-  host: 192.168.1.10
-  port: 8086
-  database: home_assistant
-  username: !secret influxdb_username
-  password: !secret influxdb_password
-  ssl: false
+#influxdb:
+#  api_version: 1
+#  host: 192.168.1.10
+#  port: 8086
+#  database: home_assistant
+#  username: !secret influxdb_username
+#  password: !secret influxdb_password
+#  ssl: false
 
 http:
   # Secrets are defined in the file secrets.yaml
