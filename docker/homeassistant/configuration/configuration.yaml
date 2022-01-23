@@ -31,15 +31,6 @@ recorder:
 
 system_health:
 
-#influxdb:
-#  api_version: 1
-#  host: 192.168.1.10
-#  port: 8086
-#  database: home_assistant
-#  username: !secret influxdb_username
-#  password: !secret influxdb_password
-#  ssl: false
-
 http:
   # Secrets are defined in the file secrets.yaml
   # api_password: !secret http_password
