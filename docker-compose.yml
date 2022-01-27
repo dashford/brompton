@@ -47,6 +47,22 @@ services:
     volumes:
       - ./docker/mosquitto/configuration/mosquitto.conf:/mosquitto/config/mosquitto.conf:ro
 
+  influxdb:
+    image: influxdb:2.1
+    container_name: influxdb
+    environment:
+      - DOCKER_INFLUXDB_INIT_USERNAME={INFLUXDB_ADMIN_USER}
+      - DOCKER_INFLUXDB_INIT_PASSWORD=${INFLUXDB_ADMIN_PASSWORD}
+      - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=${INFLUXDB_ADMIN_TOKEN}
+      - DOCKER_INFLUXDB_INIT_ORG=dashford
+      - DOCKER_INFLUXDB_INIT_BUCKET=brompton
+    ports:
+      - "8086:8086"
+    restart: unless-stopped
+    volumes:
+      - influxdb-data:/var/lib/influxdb2
+      - influxdb-config:/etc/influxdb2
+
 #  influxdbha:
 #    image: library/influxdb:1.8.5
 #    container_name: influxdbha
@@ -122,7 +138,9 @@ services:
       - ZIGBEE2MQTT_CONFIG_MQTT_PASSWORD=${MQTT_PASSWORD}
 
 volumes:
-  influxdbha:
+  influxdb-data:
+    driver: local
+  influxdb-config:
     driver: local
   grafana:
     driver: local
