@@ -32,6 +32,15 @@ recorder:
       - sensor.*_linkquality
       - sensor.*_voltage
 
+influxdb:
+  api_version: 2
+  ssl: false
+  host: "localhost"
+  port: 8086
+  token: !secret influxdb_token
+  organization: dashford
+  bucket: brompton
+
 system_health:
 
 http:
