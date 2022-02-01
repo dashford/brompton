@@ -1,15 +1,16 @@
 apiVersion: 1
 
 datasources:
-- name: InfluxDB-HA
+- name: InfluxDB
   type: influxdb
+  access: proxy
   orgId: 1
-  url: ${INFLUXDBHA_HOST}
-  user: influxdb-read
-  database: home_assistant
+  url: ${INFLUXDB_HOST}
+  user: admin
+  database: brompton
   withCredentials: true
-  isDefault: false
+  isDefault: true
   version: 1
   editable: false
   secureJsonData:
-    password: ${INFLUXDBHA_READ_USER_PASSWORD}
+    password: ${INFLUXDB_ADMIN_PASSWORD}
