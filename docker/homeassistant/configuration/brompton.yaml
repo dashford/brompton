@@ -43,6 +43,7 @@ views:
           - sensor.0x00158d00068b7170_humidity
           - binary_sensor.0x00158d000693b930_contact
           - binary_sensor.aqara_rtcgq11lm_hallway_east_occupancy
+          - binary_sensor.aqara_rtcgq11lm_hallway_west_occupancy
         title: Hallway
         show_header_toggle: false
       - type: entities

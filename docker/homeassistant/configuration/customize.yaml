@@ -136,7 +136,9 @@ sensor.0x00158d00068b7170_pressure:
 binary_sensor.0x00158d000693b930_contact:
   friendly_name: Front Door
 binary_sensor.aqara_rtcgq11lm_hallway_east_occupancy:
-  friendly_name: Presence
+  friendly_name: Presence (East)
+binary_sensor.aqara_rtcgq11lm_hallway_west_occupancy:
+  friendly_name: Presence (West)
 
 # Downstairs Toilet
 sensor.0x00158d00068b92eb_temperature:
