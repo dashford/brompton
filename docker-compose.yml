@@ -96,6 +96,7 @@ services:
       - GF_AUTH_DISABLE_LOGIN_FORM=false
       - INFLUXDB_HOST=${INFLUXDB_HOST}
       - INFLUXDB_ADMIN_PASSWORD=${INFLUXDB_ADMIN_PASSWORD}
+      - INFLUXDB_ADMIN_TOKEN=${INFLUXDB_ADMIN_TOKEN}
     restart: unless-stopped
 
   zigbee2mqtt:
