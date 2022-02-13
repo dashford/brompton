@@ -9,10 +9,14 @@ datasources:
   isDefault: true
   version: 1
   editable: false
+  withCredentials: true
+  basicAuth: true
+  basicAuthUser: ${INFLUXDB_ADMIN_USER}
   jsonData:
     version: Flux
     organization: dashford
     defaultBucket: brompton
     tlsSkipVerify: true
   secureJsonData:
+    basicAuthPassword: ${INFLUXDB_ADMIN_PASSWORD}
     token: ${INFLUXDB_ADMIN_TOKEN}
