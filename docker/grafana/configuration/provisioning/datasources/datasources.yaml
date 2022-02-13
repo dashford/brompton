@@ -4,13 +4,15 @@ datasources:
 - name: InfluxDB
   type: influxdb
   access: proxy
-  orgId: 1
   url: ${INFLUXDB_HOST}
   user: admin
-  database: brompton
-  withCredentials: true
   isDefault: true
   version: 1
   editable: false
+  jsonData:
+    version: Flux
+    organization: dashford
+    defaultBucket: brompton
+    tlsSkipVerify: true
   secureJsonData:
-    password: ${INFLUXDB_ADMIN_PASSWORD}
+    token: ${INFLUXDB_ADMIN_TOKEN}
