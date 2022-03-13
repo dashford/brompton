@@ -117,6 +117,37 @@ services:
       - ZIGBEE2MQTT_CONFIG_MQTT_USER=${MQTT_USER}
       - ZIGBEE2MQTT_CONFIG_MQTT_PASSWORD=${MQTT_PASSWORD}
 
+  teslamate:
+    image: teslamate/teslamate:1.26
+    restart: unless-stopped
+    environment:
+      - ENCRYPTION_KEY=${TESLAMATE_ENCRYPTION_KEY}
+      - DATABASE_USER=teslamate
+      - DATABASE_PASS=${TESLAMATE_DB_PASSWORD}
+      - DATABASE_NAME=teslamate
+      - DATABASE_HOST=teslamate_db
+      - DATABASE_PORT=5433
+      - MQTT_HOST=mosquitto
+      - MQTT_USERNAME=${MQTT_USER}
+      - MQTT_PASSWORD=${MQTT_PASSWORD}
+      - TZ=Europe/Dublin
+    ports:
+      - 4000:4000
+
+  teslamate_db:
+    image: postgres:14.1
+    container_name: teslamate_db
+    environment:
+      - POSTGRES_PASSWORD=${TESLAMATE_DB_PASSWORD}
+      - POSTGRES_DB=teslamate
+      - POSTGRES_INITDB_ARGS="--encoding=UTF-8"
+      - TZ=Europe/Dublin
+    ports:
+      - "5433:5432"
+    restart: unless-stopped
+    volumes:
+      - teslamate_db:/var/lib/postgresql/data
+
 volumes:
   influxdb-data:
     driver: local
@@ -129,4 +160,6 @@ volumes:
   zigbee2mqtt:
     driver: local
   wgconfig:
+    driver: local
+  teslamate_db:
     driver: local
