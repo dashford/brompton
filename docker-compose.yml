@@ -124,7 +124,7 @@ services:
       - ZIGBEE2MQTT_CONFIG_MQTT_PASSWORD=${MQTT_PASSWORD}
 
   teslamate:
-    image: teslamate/teslamate:1.26
+    image: teslamate/teslamate:1.26.1
     restart: unless-stopped
     environment:
       - ENCRYPTION_KEY=${TESLAMATE_ENCRYPTION_KEY}
