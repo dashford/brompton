@@ -83,7 +83,8 @@ services:
     volumes:
       - grafana:/data
       - ./docker/grafana/configuration:/etc/grafana
-      - ./docker/grafana/dashboards:/var/lib/grafana/dashboards
+      - ./docker/grafana/dashboards/brompton:/var/lib/grafana/dashboards/brompton
+      - ./docker/grafana/dashboards/teslamate:/var/lib/grafana/dashboards/teslamate
     network_mode: host
     ports:
       - 3000:3000

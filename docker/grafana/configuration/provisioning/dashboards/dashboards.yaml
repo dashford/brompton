@@ -10,4 +10,14 @@ providers:
     updateIntervalSeconds: 300
     allowUiUpdates: false
     options:
-      path: /var/lib/grafana/dashboards
+      path: /var/lib/grafana/dashboards/brompton
+  - name: 'teslamate'
+    orgId: 1
+    folder: 'TeslaMate'
+    type: file
+    disableDeletion: false
+    editable: true
+    updateIntervalSeconds: 300
+    allowUiUpdates: false
+    options:
+      path: /var/lib/grafana/dashboards/teslamate
