@@ -2,8 +2,8 @@ teslamateversion = 1.26.1
 
 all : up
 
-up : up-wireguard up-mosquitto up-influxdb up-grafana up-homeassistant up-zigbee2mqtt up-homeassistant_db
-stop : stop-wireguard stop-mosquitto stop-influxdb stop-grafana stop-homeassistant stop-zigbee2mqtt stop-homeassistant_db
+up : up-wireguard up-mosquitto up-influxdb up-grafana up-homeassistant up-zigbee2mqtt up-homeassistant_db up-teslamate up-teslamate_db
+stop : stop-wireguard stop-mosquitto stop-influxdb stop-grafana stop-homeassistant stop-zigbee2mqtt stop-homeassistant_db stop-teslamate stop-teslamate_db
 down : down-all
 
 
@@ -28,6 +28,12 @@ up-zigbee2mqtt :
 up-homeassistant_db :
 	docker-compose up -d homeassistant_db
 
+up-teslamate :
+	docker-compose up -d teslamate
+
+up-teslamate_db :
+	docker-compose up -d teslamate_db
+
 
 stop-wireguard :
 	docker stop wireguard
@@ -49,6 +55,12 @@ stop-zigbee2mqtt :
 
 stop-homeassistant_db :
 	docker stop homeassistant_db
+
+stop-teslamate :
+	docker stop teslamate
+
+stop-teslamate_db :
+	docker stop teslamate_db
 
 
 down-all :

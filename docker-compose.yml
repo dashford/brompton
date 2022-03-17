@@ -139,6 +139,8 @@ services:
       - TZ=Europe/Dublin
     ports:
       - 4000:4000
+    depends_on:
+      - teslamate_db
 
   teslamate_db:
     image: postgres:14.1
