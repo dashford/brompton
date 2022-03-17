@@ -1,3 +1,5 @@
+teslamateversion = 1.26.1
+
 all : up
 
 up : up-wireguard up-mosquitto up-influxdb up-grafana up-homeassistant up-zigbee2mqtt up-homeassistant_db
@@ -51,3 +53,9 @@ stop-homeassistant_db :
 
 down-all :
 	docker-compose down --remove-orphans
+
+
+update-teslamate-dashboards :
+	curl --output /tmp/teslamate.tar.gz --location https://github.com/adriankumpf/teslamate/archive/refs/tags/v$(teslamateversion).tar.gz
+	tar -zxvf /tmp/teslamate.tar.gz --directory /tmp
+	cp --recursive /tmp/teslamate-$(teslamateversion)/grafana/dashboards/* ./docker/grafana/dashboards/teslamate
