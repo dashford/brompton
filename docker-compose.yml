@@ -173,7 +173,8 @@ services:
       - TeslaMate__GeofenceId=1
       - TeslaMate__EnergyProvider=FixedPrice
       - FixedPrice__TimeZone=Europe/Dublin
-      - FixedPrice__Prices__0=00:00-00:00=0.1774
+      - FixedPrice__Prices__0=00:00-12:00=0.1774
+      - FixedPrice__Prices__1=12:00-00:00=0.1774
 
 volumes:
   influxdb-data:
