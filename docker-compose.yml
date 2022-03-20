@@ -140,7 +140,7 @@ services:
       - MQTT_PASSWORD=${MQTT_PASSWORD}
       - TZ=Europe/Dublin
     ports:
-      - 4000:4000
+      - "4000:4000"
     depends_on:
       - teslamate_db
 
