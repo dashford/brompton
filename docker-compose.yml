@@ -133,7 +133,7 @@ services:
       - DATABASE_PASS=${TESLAMATE_DB_PASSWORD}
       - DATABASE_NAME=teslamate
       - DATABASE_HOST=teslamate_db
-      - DATABASE_PORT=5433
+      - DATABASE_PORT=5432
       - MQTT_HOST=mosquitto
       - MQTT_USERNAME=${MQTT_USER}
       - MQTT_PASSWORD=${MQTT_PASSWORD}
