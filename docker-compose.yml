@@ -132,7 +132,7 @@ services:
       - DATABASE_USER=teslamate
       - DATABASE_PASS=${TESLAMATE_DB_PASSWORD}
       - DATABASE_NAME=teslamate
-      - DATABASE_HOST=teslamate_db
+      - DATABASE_HOST=192.168.1.10
       - DATABASE_PORT=5433
       - MQTT_HOST=mosquitto
       - MQTT_USERNAME=${MQTT_USER}
