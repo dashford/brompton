@@ -31,7 +31,7 @@ datasources:
   withCredentials: false
   isDefault: false
   secureJsonData:
-    password: $TESLAMATE_DB_PASSWORD
+    password: ${TESLAMATE_DB_PASSWORD}
   jsonData:
     postgresVersion: 1000
     sslmode: disable
