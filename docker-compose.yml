@@ -159,6 +159,22 @@ services:
     volumes:
       - teslamate_db:/var/lib/postgresql/data
 
+  teslamateagile:
+    image: mattjeanes/teslamateagile:v1.9.0
+    container_name: teslamateagile
+    restart: unless-stopped
+    environment:
+      - DATABASE_USER=teslamate
+      - DATABASE_PASS=${TESLAMATE_DB_PASSWORD}
+      - DATABASE_NAME=teslamate
+      - DATABASE_HOST=192.168.1.10
+      - DATABASE_PORT=5433
+      - TeslaMate__UpdateIntervalSeconds=300
+      - TeslaMate__GeofenceId=1
+      - TeslaMate__EnergyProvider=FixedPrice
+      - FixedPrice__TimeZone=Europe/Dublin
+      - FixedPrice__Prices__0=00:00-00:00=0.1774
+
 volumes:
   influxdb-data:
     driver: local
