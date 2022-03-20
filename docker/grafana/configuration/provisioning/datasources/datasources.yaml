@@ -22,7 +22,7 @@ datasources:
     token: ${INFLUXDB_ADMIN_TOKEN}
 - name: TeslaMate
   type: postgres
-  url: 192.168.1.10:5433
+  url: ${TESLAMATE_HOST}:5433
   user: ${TESLAMATE_DB_USER}
   database: ${TESLAMATE_DB_NAME}
   password: ""
