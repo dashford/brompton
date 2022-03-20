@@ -127,7 +127,6 @@ services:
     image: teslamate/teslamate:1.26.1
     container_name: teslamate
     restart: unless-stopped
-    network_mode: host
     environment:
       - ENCRYPTION_KEY=${TESLAMATE_ENCRYPTION_KEY}
       - DATABASE_USER=teslamate
