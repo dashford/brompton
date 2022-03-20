@@ -149,6 +149,7 @@ services:
     environment:
       - POSTGRES_PASSWORD=${TESLAMATE_DB_PASSWORD}
       - POSTGRES_DB=teslamate
+      - POSTGRES_USER=teslamate
       - POSTGRES_INITDB_ARGS="--encoding=UTF-8"
       - TZ=Europe/Dublin
     ports:
