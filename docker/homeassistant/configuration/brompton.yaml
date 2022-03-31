@@ -38,6 +38,11 @@ views:
         show_header_toggle: false
       - type: entities
         entities:
+          - sensor.tesla_display_name
+        title: Car
+        show_header_toggle: false
+      - type: entities
+        entities:
           - light.ikea_hallway_lamp
           - sensor.0x00158d00068b7170_temperature
           - sensor.0x00158d00068b7170_humidity

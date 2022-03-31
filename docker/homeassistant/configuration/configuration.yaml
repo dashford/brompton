@@ -239,6 +239,10 @@ sensor:
     name: 'Outside PM 10.0'
     unit_of_measurement: 'μg/m³'
     value_template: '{{ value_json.pm | round(3) }}'
+  - platform: mqtt
+    name: tesla_display_name
+    state_topic: "teslamate/cars/1/display_name"
+    icon: mdi:car
 
 # Text to speech
 tts:
