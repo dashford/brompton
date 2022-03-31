@@ -241,6 +241,7 @@ sensor:
     value_template: '{{ value_json.pm | round(3) }}'
   - platform: mqtt
     name: tesla_display_name
+    friendly_name: Name
     state_topic: "teslamate/cars/1/display_name"
     icon: mdi:car
 

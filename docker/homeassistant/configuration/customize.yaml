@@ -198,8 +198,10 @@ sensor.owm_wind_bearing:
 sensor.owm_wind_speed:
   friendly_name: Wind Speed
   icon: mdi:weather-windy
-sensor.tradfri_remote_control:
-  friendly_name: Light Remote Control
+
+# Car
+sensor.tesla_display_name:
+  firendly_name:
 
 sun.sun:
   hidden: true
