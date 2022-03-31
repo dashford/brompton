@@ -201,7 +201,7 @@ sensor.owm_wind_speed:
 
 # Car
 sensor.tesla_display_name:
-  firendly_name:
+  friendly_name: Name
 
 sun.sun:
   hidden: true
