@@ -58,6 +58,15 @@ views:
             - sensor.tesla_time_to_full_charge
             - binary_sensor.tesla_locked
             - binary_sensor.tesla_sentry_mode
+            - binary_sensor.tesla_windows_open
+            - binary_sensor.tesla_doors_open
+            - binary_sensor.tesla_boot_open
+            - binary_sensor.tesla_frunk_open
+            - binary_sensor.tesla_is_user_present
+            - binary_sensor.tesla_is_climate_on
+            - binary_sensor.tesla_is_preconditioning
+            - binary_sensor.tesla_plugged_in
+            - binary_sensor.tesla_charge_port_door_open
       - type: entities
         entities:
           - light.ikea_hallway_lamp

@@ -228,6 +228,24 @@ binary_sensor.tesla_locked:
   friendly_name: Car
 binary_sensor.tesla_sentry_mode:
   friendly_name: Sentry Mode
+binary_sensor.tesla_windows_open:
+  friendly_name: Windows
+binary_sensor.tesla_doors_open:
+  friendly_name: Doors
+binary_sensor.tesla_boot_open:
+  friendly_name: Boot
+binary_sensor.tesla_frunk_open:
+  friendly_name: Frunk
+binary_sensor.tesla_is_user_present:
+  friendly_name: Driver
+binary_sensor.tesla_is_climate_on:
+  friendly_name: Climate
+binary_sensor.tesla_is_preconditioning:
+  friendly_name: Preconditioning
+binary_sensor.tesla_plugged_in:
+  friendly_name: Plugged In
+binary_sensor.tesla_charge_port_door_open:
+  friendly_name: Charge Door Open
 
 sun.sun:
   hidden: true
