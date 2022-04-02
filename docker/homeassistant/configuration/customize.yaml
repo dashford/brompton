@@ -201,9 +201,33 @@ sensor.owm_wind_speed:
 
 # Car
 sensor.tesla_state:
-  friendly_name: Current State
+  friendly_name: State
 sensor.tesla_geofence:
-  friendly_name: ""
+  friendly_name: Location
+sensor.tesla_speed:
+  friendly_name: Speed
+sensor.tesla_power:
+  friendly_name: Power
+sensor.tesla_elevation:
+  friendly_name: Elevation
+sensor.tesla_inside_temp:
+  friendly_name: Inside
+sensor.tesla_outside_temp:
+  friendly_name: Outside
+sensor.tesla_odometer:
+  friendly_name: Odometer
+sensor.tesla_est_battery_range_km:
+  friendly_name: Range
+sensor.tesla_usable_battery_level:
+  friendly_name: Battery
+sensor.tesla_charge_energy_added:
+  friendly_name: Last Charge
+sensor.tesla_time_to_full_charge:
+  friendly_name: Time to Full Charge
+binary_sensor.tesla_locked:
+  friendly_name: Car
+binary_sensor.tesla_sentry_mode:
+  friendly_name: Sentry Mode
 
 sun.sun:
   hidden: true

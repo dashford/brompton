@@ -38,11 +38,26 @@ views:
         show_header_toggle: false
       - type: vertical-stack
         cards:
+#        - type: map
+#          entities:
+#            -
         - type: entities
           title: Car
           entities:
             - sensor.tesla_state
             - sensor.tesla_geofence
+            - sensor.tesla_speed
+            - sensor.tesla_power
+            - sensor.tesla_elevation
+            - sensor.tesla_inside_temp
+            - sensor.tesla_outside_temp
+            - sensor.tesla_odometer
+            - sensor.tesla_est_battery_range_km
+            - sensor.tesla_usable_battery_level
+            - sensor.tesla_charge_energy_added
+            - sensor.tesla_time_to_full_charge
+            - binary_sensor.tesla_locked
+            - binary_sensor.tesla_sentry_mode
       - type: entities
         entities:
           - light.ikea_hallway_lamp
