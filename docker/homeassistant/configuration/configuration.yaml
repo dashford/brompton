@@ -240,15 +240,6 @@ sensor:
     unit_of_measurement: 'μg/m³'
     value_template: '{{ value_json.pm | round(3) }}'
   - platform: mqtt
-    name: tesla_display_name
-    state_topic: "teslamate/cars/1/display_name"
-    icon: mdi:car
-  - platform: mqtt
-    name: tesla_odometer
-    state_topic: "teslamate/cars/1/odometer"
-    unit_of_measurement: km
-    icon: mdi:counter
-  - platform: mqtt
     name: tesla_state
     state_topic: "teslamate/cars/1/state"
     icon: mdi:car-connected
