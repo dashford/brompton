@@ -267,6 +267,12 @@ sensor:
     unit_of_measurement: "km/h"
     icon: mdi:speedometer
   - platform: mqtt
+    name: tesla_power
+    state_topic: "teslamate/cars/1/power"
+    device_class: power
+    unit_of_measurement: W
+    icon: mdi:flash
+  - platform: mqtt
     name: tesla_elevation
     state_topic: "teslamate/cars/1/elevation"
     unit_of_measurement: m
