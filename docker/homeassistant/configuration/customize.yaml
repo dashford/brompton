@@ -200,8 +200,10 @@ sensor.owm_wind_speed:
   icon: mdi:weather-windy
 
 # Car
-sensor.tesla_display_name:
-  friendly_name: Name
+sensor.tesla_state:
+  friendly_name: Current State
+sensor.tesla_geofence:
+  friendly_name: ""
 
 sun.sun:
   hidden: true

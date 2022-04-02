@@ -38,7 +38,8 @@ views:
         show_header_toggle: false
       - type: entities
         entities:
-          - sensor.tesla_display_name
+          - sensor.tesla_state
+          - sensor.tesla_geofence
         title: Car
         show_header_toggle: false
       - type: entities
