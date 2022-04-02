@@ -36,12 +36,13 @@ views:
           - media_player.kodi_1769ef5133e15d4c77f0e858e7a5d2df
         title: Sitting Room
         show_header_toggle: false
-      - type: entities
-        entities:
-          - sensor.tesla_state
-          - sensor.tesla_geofence
-        title: Car
-        show_header_toggle: false
+      - type: vertical-stack
+        cards:
+        - type: entities
+          title: Car
+          entities:
+            - sensor.tesla_state
+            - sensor.tesla_geofence
       - type: entities
         entities:
           - light.ikea_hallway_lamp
