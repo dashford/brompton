@@ -191,3 +191,33 @@
     entity_id: light.ikea_hallway_lamp
     domain: light
   mode: single
+- id: '1649616134986'
+  alias: Enable zappi when car is at Home
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: sensor.tesla_geofence
+    to: Home
+  condition: []
+  action:
+  - device_id: 64c9938af5d35c4d083b3c4c622b220c
+    domain: select
+    entity_id: select.myenergi_zappi_charge_mode
+    type: select_option
+    option: Eco+
+  mode: single
+- id: '1649616618263'
+  alias: Disable zappi when car leaves Home
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: sensor.tesla_geofence
+    from: Home
+  condition: []
+  action:
+  - device_id: 64c9938af5d35c4d083b3c4c622b220c
+    domain: select
+    entity_id: select.myenergi_zappi_charge_mode
+    type: select_option
+    option: Stopped
+  mode: single
