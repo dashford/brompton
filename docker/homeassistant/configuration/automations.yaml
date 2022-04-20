@@ -158,7 +158,7 @@
     position: 0
   mode: single
 - id: '1644523825156'
-  alias: Turn on Hallway Lamp when movement detected
+  alias: Toggle Hallway Lamp when movement detected
   description: ''
   trigger:
   - type: motion
@@ -180,17 +180,21 @@
   - condition: sun
     after: sunset
     before: sunrise
-  - condition: device
-    type: is_off
-    device_id: ee04d6c564e267e69702eec44f2eb789
-    entity_id: light.ikea_hallway_lamp
-    domain: light
   action:
   - type: turn_on
     device_id: ee04d6c564e267e69702eec44f2eb789
     entity_id: light.ikea_hallway_lamp
     domain: light
-  mode: single
+  - delay:
+      hours: 0
+      minutes: 5
+      seconds: 0
+      milliseconds: 0
+  - type: turn_off
+    device_id: ee04d6c564e267e69702eec44f2eb789
+    entity_id: light.ikea_hallway_lamp
+    domain: light
+  mode: restart
 - id: '1649616134986'
   alias: Enable zappi when car is at Home
   description: ''
@@ -220,4 +224,47 @@
     entity_id: select.myenergi_zappi_charge_mode
     type: select_option
     option: Stopped
+  mode: single
+- id: '1649616859626'
+  alias: Turn off Hallway Lamp when movement not detected
+  description: ''
+  trigger:
+  - type: not_opened
+    platform: device
+    device_id: 9912a42c9e699cb105d0edb11f51225d
+    entity_id: binary_sensor.0x00158d000693b930_contact
+    domain: binary_sensor
+    for:
+      hours: 0
+      minutes: 5
+      seconds: 0
+  - type: no_motion
+    platform: device
+    device_id: 38ebc198a4e836ee442c74f67e89c7e0
+    entity_id: binary_sensor.aqara_rtcgq11lm_hallway_east_occupancy
+    domain: binary_sensor
+    for:
+      hours: 0
+      minutes: 5
+      seconds: 0
+  - type: no_motion
+    platform: device
+    device_id: 88d6e788456c14204c36b155bb3bf251
+    entity_id: binary_sensor.aqara_rtcgq11lm_hallway_west_occupancy
+    domain: binary_sensor
+    for:
+      hours: 0
+      minutes: 5
+      seconds: 0
+  condition:
+  - condition: device
+    type: is_on
+    device_id: ee04d6c564e267e69702eec44f2eb789
+    entity_id: light.ikea_hallway_lamp
+    domain: light
+  action:
+  - type: turn_off
+    device_id: ee04d6c564e267e69702eec44f2eb789
+    entity_id: light.ikea_hallway_lamp
+    domain: light
   mode: single
