@@ -56,6 +56,7 @@ services:
       - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=${INFLUXDB_ADMIN_TOKEN}
       - DOCKER_INFLUXDB_INIT_ORG=dashford
       - DOCKER_INFLUXDB_INIT_BUCKET=brompton
+      - INFLUXD_LOG_LEVEL=error
     ports:
       - "8086:8086"
     restart: unless-stopped
