@@ -24,7 +24,7 @@ services:
     restart: unless-stopped
 
   homeassistant:
-    image: homeassistant/home-assistant:2022.4.0
+    image: homeassistant/home-assistant:2022.5.4
     container_name: homeassistant
     network_mode: host
     volumes:
@@ -48,7 +48,7 @@ services:
       - ./docker/mosquitto/configuration/mosquitto.conf:/mosquitto/config/mosquitto.conf:ro
 
   influxdb:
-    image: influxdb:2.1.1
+    image: influxdb:2.2.0
     container_name: influxdb
     environment:
       - DOCKER_INFLUXDB_INIT_USERNAME={INFLUXDB_ADMIN_USER}
@@ -78,7 +78,7 @@ services:
       - homeassistant_db:/var/lib/postgresql/data
 
   grafana:
-    image: grafana/grafana:8.4.7
+    image: grafana/grafana:8.5.2
     container_name: grafana
     volumes:
       - grafana:/data
@@ -107,7 +107,7 @@ services:
     restart: unless-stopped
 
   zigbee2mqtt:
-    image: koenkk/zigbee2mqtt:1.24.0
+    image: koenkk/zigbee2mqtt:1.25.1
     container_name: zigbee2mqtt
     volumes:
       - zigbee2mqtt:/app/data
@@ -123,6 +123,7 @@ services:
       - ZIGBEE2MQTT_DATA=/app/data
       - ZIGBEE2MQTT_CONFIG_MQTT_USER=${MQTT_USER}
       - ZIGBEE2MQTT_CONFIG_MQTT_PASSWORD=${MQTT_PASSWORD}
+      - ZIGBEE2MQTT_CONFIG_ADVANCED_LOG_LEVEL=warn
 
   teslamate:
     image: teslamate/teslamate:1.26.1
