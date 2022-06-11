@@ -71,7 +71,7 @@ history:
 logbook:
 
 mqtt:
-  broker: 192.168.1.10
+  broker: 10.243.0.100
   discovery: true
   port: 1883
   username: !secret mqtt_username
@@ -92,11 +92,11 @@ zone:
     radius: 150
     icon: mdi:briefcase
 
-device_tracker:
-  - platform: luci
-    host: 192.168.1.1
-    username: !secret router_username
-    password: !secret router_password
+#device_tracker:
+#  - platform: luci
+#    host: 192.168.1.1
+#    username: !secret router_username
+#    password: !secret router_password
 
 # Track the sun
 sun:
