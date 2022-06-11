@@ -135,7 +135,7 @@ services:
       - DATABASE_USER=teslamate
       - DATABASE_PASS=${TESLAMATE_DB_PASSWORD}
       - DATABASE_NAME=teslamate
-      - DATABASE_HOST=192.168.1.10
+      - DATABASE_HOST=10.243.0.100
       - DATABASE_PORT=5433
       - MQTT_HOST=mosquitto
       - MQTT_USERNAME=${MQTT_USER}
@@ -169,7 +169,7 @@ services:
       - DATABASE_USER=teslamate
       - DATABASE_PASS=${TESLAMATE_DB_PASSWORD}
       - DATABASE_NAME=teslamate
-      - DATABASE_HOST=192.168.1.10
+      - DATABASE_HOST=10.243.0.100
       - DATABASE_PORT=5433
       - TeslaMate__UpdateIntervalSeconds=300
       - TeslaMate__GeofenceId=1
