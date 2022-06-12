@@ -104,7 +104,7 @@ views:
           - type: section
             label: Blinds
           - cover.0x680ae2fffe1c5c77
-          - cover.0x680ae2fffe8c9cf8
+          - cover.ikea_kitchen_blind_centre_left
           - cover.0xec1bbdfffe985ebe
           - cover.0x680ae2fffe1c3b8d
           - type: section
