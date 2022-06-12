@@ -45,13 +45,13 @@ sensor.back_small_bedroom_pressure:
 # Kitchen
 light.ikea_kitchen_lamp:
   friendly_name: Lamp
-cover.0x680ae2fffe1c5c77:
+cover.ikea_kitchen_blind_left:
   friendly_name: Left
 cover.ikea_kitchen_blind_centre_left:
   friendly_name: Centre Left
-cover.0xec1bbdfffe985ebe:
+cover.ikea_kitchen_blind_centre_right:
   friendly_name: Centre Right
-cover.0x680ae2fffe1c3b8d:
+cover.ikea_kitchen_blind_right:
   friendly_name: Right
 media_player.kitchen:
   friendly_name: Kitchen Speaker

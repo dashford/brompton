@@ -103,10 +103,10 @@ views:
           - light.ikea_kitchen_lamp
           - type: section
             label: Blinds
-          - cover.0x680ae2fffe1c5c77
+          - cover.ikea_kitchen_blind_left
           - cover.ikea_kitchen_blind_centre_left
-          - cover.0xec1bbdfffe985ebe
-          - cover.0x680ae2fffe1c3b8d
+          - cover.ikea_kitchen_blind_centre_right
+          - cover.ikea_kitchen_blind_right
           - type: section
             label: Environment
           - sensor.0x00158d0006a03a86_temperature

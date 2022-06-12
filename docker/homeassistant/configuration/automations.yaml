@@ -17,22 +17,22 @@
     type: turn_off
   - device_id: 26d75c5aab0ee48ff0fb91c994a4f147
     domain: cover
-    entity_id: cover.0x680ae2fffe8c9cf8
+    entity_id: cover.ikea_kitchen_blind_centre_left
     type: set_position
     position: 100
   - device_id: de7bc37e783453279aa5768585f25c44
     domain: cover
-    entity_id: cover.0xec1bbdfffe985ebe
+    entity_id: cover.ikea_kitchen_blind_centre_right
     type: set_position
     position: 100
   - device_id: b98ac8202850c420bc8dfaef6c557e09
     domain: cover
-    entity_id: cover.0x680ae2fffe1c5c77
+    entity_id: cover.ikea_kitchen_blind_left
     type: set_position
     position: 100
   - device_id: 3d9a5c4652add742b19044a019c7142a
     domain: cover
-    entity_id: cover.0x680ae2fffe1c3b8d
+    entity_id: cover.ikea_kitchen_blind_right
     type: set_position
     position: 100
   mode: single
@@ -72,22 +72,22 @@
     domain: light
   - device_id: 26d75c5aab0ee48ff0fb91c994a4f147
     domain: cover
-    entity_id: cover.0x680ae2fffe8c9cf8
+    entity_id: cover.ikea_kitchen_blind_centre_left
     type: set_position
     position: 50
   - device_id: de7bc37e783453279aa5768585f25c44
     domain: cover
-    entity_id: cover.0xec1bbdfffe985ebe
+    entity_id: cover.ikea_kitchen_blind_centre_right
     type: set_position
     position: 50
   - device_id: b98ac8202850c420bc8dfaef6c557e09
     domain: cover
-    entity_id: cover.0x680ae2fffe1c5c77
+    entity_id: cover.ikea_kitchen_blind_left
     type: set_position
     position: 50
   - device_id: 3d9a5c4652add742b19044a019c7142a
     domain: cover
-    entity_id: cover.0x680ae2fffe1c3b8d
+    entity_id: cover.ikea_kitchen_blind_right
     type: set_position
     position: 50
   mode: single
@@ -138,22 +138,22 @@
   action:
   - device_id: 26d75c5aab0ee48ff0fb91c994a4f147
     domain: cover
-    entity_id: cover.0x680ae2fffe8c9cf8
+    entity_id: cover.ikea_kitchen_blind_centre_left
     type: set_position
     position: 0
   - device_id: de7bc37e783453279aa5768585f25c44
     domain: cover
-    entity_id: cover.0xec1bbdfffe985ebe
+    entity_id: cover.ikea_kitchen_blind_centre_right
     type: set_position
     position: 0
   - device_id: b98ac8202850c420bc8dfaef6c557e09
     domain: cover
-    entity_id: cover.0x680ae2fffe1c5c77
+    entity_id: cover.ikea_kitchen_blind_left
     type: set_position
     position: 0
   - device_id: 3d9a5c4652add742b19044a019c7142a
     domain: cover
-    entity_id: cover.0x680ae2fffe1c3b8d
+    entity_id: cover.ikea_kitchen_blind_right
     type: set_position
     position: 0
   mode: single
