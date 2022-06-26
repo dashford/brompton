@@ -237,6 +237,12 @@ binary_sensor.tesla_plugged_in:
 binary_sensor.tesla_charge_port_door_open:
   friendly_name: Charge Door Open
 
+# MyEnergi Devices
+sensor.myenergi_hub_grid_import_today:
+  friendly_name: Import from Grid
+sensor.myenergi_zappi_energy_used_today:
+  frinedly_name: Zappi Usage
+
 sun.sun:
   hidden: true
 
