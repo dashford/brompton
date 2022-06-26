@@ -208,7 +208,7 @@
     to: Home
   condition: []
   action:
-  - device_id: 64c9938af5d35c4d083b3c4c622b220c
+  - device_id: 2c0e9c56ea1872756bd47a69f97d47c8
     domain: select
     entity_id: select.myenergi_zappi_charge_mode
     type: select_option
@@ -223,7 +223,7 @@
     from: Home
   condition: []
   action:
-  - device_id: 64c9938af5d35c4d083b3c4c622b220c
+  - device_id: 2c0e9c56ea1872756bd47a69f97d47c8
     domain: select
     entity_id: select.myenergi_zappi_charge_mode
     type: select_option
