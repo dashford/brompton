@@ -55,30 +55,24 @@ cover.ikea_kitchen_blind_right:
   friendly_name: Right
 media_player.kitchen:
   friendly_name: Kitchen Speaker
-sensor.0x00158d0006a03a86_temperature:
+sensor.aqara_wsdcgq12lm_kitchen_extension_temperature:
   friendly_name: Extension Temperature
-sensor.0x00158d0006a03a86_humidity:
+sensor.aqara_wsdcgq12lm_kitchen_extension_humidity:
   friendly_name: Extension Humidity
   unit_of_measurement: '%RH'
-sensor.0x00158d0006a03a86_pressure:
-  friendly_name: Extension Pressure
-sensor.0x00158d0006a03ae5_temperature:
+sensor.aqara_wsdcgq12lm_kitchen_main_temperature:
   friendly_name: Main Temperature
-sensor.0x00158d0006a03ae5_humidity:
+sensor.aqara_wsdcgq12lm_kitchen_main_humidity:
   friendly_name: Main Humidity
   unit_of_measurement: '%RH'
-sensor.0x00158d0006a03ae5_pressure:
-  friendly_name: Main Pressure
-sensor.0x00158d000693a944_temperature:
+sensor.aqara_wsdcgq12lm_kitchen_snug_temperature:
   friendly_name: Snug Temperature
-sensor.0x00158d000693a944_humidity:
+sensor.aqara_wsdcgq12lm_kitchen_snug_humidity:
   friendly_name: Snug Humidity
   unit_of_measurement: '%RH'
-sensor.0x00158d000693a944_pressure:
-  friendly_name: Snug Pressure
-binary_sensor.0x00158d000693b91b_contact:
+binary_sensor.aqara_mccgq11lm_kitchen_main_back_door_contact:
   friendly_name: Main Back Door
-binary_sensor.0x00158d00068b8581_contact:
+binary_sensor.aqara_mccgq11lm_kitchen_secondary_back_door_contact:
   friendly_name: Secondary Back Door
 
 # Sitting Room
