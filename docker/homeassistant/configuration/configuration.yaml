@@ -13,6 +13,8 @@ homeassistant:
   # Customization file
   customize: !include customize.yaml
 
+weather:
+
 # Enables the frontend
 frontend:
 
