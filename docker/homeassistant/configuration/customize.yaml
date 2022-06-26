@@ -95,11 +95,11 @@ sensor.aqara_wsdcgq12lm_sitting_room_pressure:
 sensor.aqara_wsdcgq12lm_sitting_room_battery:
   friendly_name: Battery
   icon: mdi:battery
-binary_sensor.0x00158d0006a15847_occupancy:
+binary_sensor.aqara_rtcgq11lm_sitting_room_occupancy:
   friendly_name: Presence
-switch.0x000d6ffffe2a5da3:
-  friendly_name: TV Lights
-  icon: mdi:lightbulb
+#switch.0x000d6ffffe2a5da3:
+#  friendly_name: TV Lights
+#  icon: mdi:lightbulb
 
 # Upstairs Landing
 sensor.upstairs_landing_temperature:
@@ -126,14 +126,14 @@ sensor.upstairs_bathroom_pressure:
 # Hallway
 light.ikea_hallway_lamp:
   friendly_name: Lamp
-sensor.0x00158d00068b7170_temperature:
+sensor.aqara_wsdcgq12lm_hallway_temperature:
   friendly_name: Temperature
-sensor.0x00158d00068b7170_humidity:
+sensor.aqara_wsdcgq12lm_hallway_humidity:
   friendly_name: Humidity
   unit_of_measurement: '%RH'
 sensor.0x00158d00068b7170_pressure:
   friendly_name: Pressure
-binary_sensor.0x00158d000693b930_contact:
+binary_sensor.aqara_mccgq11lm_front_door_contact:
   friendly_name: Front Door
 binary_sensor.aqara_rtcgq11lm_hallway_east_occupancy:
   friendly_name: Presence (East)
@@ -141,23 +141,19 @@ binary_sensor.aqara_rtcgq11lm_hallway_west_occupancy:
   friendly_name: Presence (West)
 
 # Downstairs Toilet
-sensor.0x00158d00068b92eb_temperature:
+sensor.aqara_wsdcgq12lm_downstairs_toilet_temperature:
   friendly_name: Temperature
-sensor.0x00158d00068b92eb_humidity:
+sensor.aqara_wsdcgq12lm_downstairs_toilet_humidity:
   friendly_name: Humidity
   unit_of_measurement: '%RH'
-sensor.0x00158d00068b92eb_pressure:
-  friendly_name: Pressure
 
 # Utility Room
-sensor.0x00158d00067955d5_temperature:
+sensor.aqara_wsdcgq12lm_utility_room_temperature:
   friendly_name: Temperature
-sensor.0x00158d00067955d5_humidity:
+sensor.aqara_wsdcgq12lm_utility_room_humidity:
   friendly_name: Humidity
   unit_of_measurement: '%RH'
-sensor.0x00158d00067955d5_pressure:
-  friendly_name: Pressure
-binary_sensor.0x00158d00068b85c8_contact:
+binary_sensor.aqara_mccgq11lm_garage_door_contact:
   friendly_name: Garage Door
 
 # Outside

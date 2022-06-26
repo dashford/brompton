@@ -31,8 +31,8 @@ views:
           - media_player.living_room_tv
           - sensor.aqara_wsdcgq12lm_sitting_room_humidity
           - sensor.aqara_wsdcgq12lm_sitting_room_temperature
-          - binary_sensor.0x00158d0006a15847_occupancy
-          - switch.0x000d6ffffe2a5da3
+          - binary_sensor.aqara_rtcgq11lm_sitting_room_occupancy
+#          - switch.0x000d6ffffe2a5da3
           - media_player.kodi_1769ef5133e15d4c77f0e858e7a5d2df
         title: Sitting Room
         show_header_toggle: false
@@ -70,24 +70,24 @@ views:
       - type: entities
         entities:
           - light.ikea_hallway_lamp
-          - sensor.0x00158d00068b7170_temperature
-          - sensor.0x00158d00068b7170_humidity
-          - binary_sensor.0x00158d000693b930_contact
+          - sensor.aqara_wsdcgq12lm_hallway_temperature
+          - sensor.aqara_wsdcgq12lm_hallway_humidity
+          - binary_sensor.aqara_mccgq11lm_front_door_contact
           - binary_sensor.aqara_rtcgq11lm_hallway_east_occupancy
           - binary_sensor.aqara_rtcgq11lm_hallway_west_occupancy
         title: Hallway
         show_header_toggle: false
       - type: entities
         entities:
-          - sensor.0x00158d00068b92eb_temperature
-          - sensor.0x00158d00068b92eb_humidity
+          - sensor.aqara_wsdcgq12lm_downstairs_toilet_temperature
+          - sensor.aqara_wsdcgq12lm_downstairs_toilet_humidity
         title: Downstairs Toilet
         show_header_toggle: false
       - type: entities
         entities:
-          - sensor.0x00158d00067955d5_temperature
-          - sensor.0x00158d00067955d5_humidity
-          - binary_sensor.0x00158d00068b85c8_contact
+          - sensor.aqara_wsdcgq12lm_utility_room_temperature
+          - sensor.aqara_wsdcgq12lm_utility_room_humidity
+          - binary_sensor.aqara_mccgq11lm_garage_door_contact
         title: Utility Room
         show_header_toggle: false
 
