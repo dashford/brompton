@@ -91,6 +91,8 @@ sensor.aqara_wsdcgq12lm_sitting_room_battery:
   icon: mdi:battery
 binary_sensor.aqara_rtcgq11lm_sitting_room_occupancy:
   friendly_name: Presence
+media_player.kodi_f531f7696570fce9556ffa955ce7a3b3:
+  friendly_name: Kodi
 #switch.0x000d6ffffe2a5da3:
 #  friendly_name: TV Lights
 #  icon: mdi:lightbulb
