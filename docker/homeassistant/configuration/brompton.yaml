@@ -32,7 +32,7 @@ views:
           - sensor.aqara_wsdcgq12lm_sitting_room_humidity
           - sensor.aqara_wsdcgq12lm_sitting_room_temperature
           - binary_sensor.aqara_rtcgq11lm_sitting_room_occupancy
-          - media_player.kodi_1769ef5133e15d4c77f0e858e7a5d2df
+          - media_player.kodi_f531f7696570fce9556ffa955ce7a3b3
         title: Sitting Room
         show_header_toggle: false
       - type: vertical-stack
