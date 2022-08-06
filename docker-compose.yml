@@ -24,7 +24,7 @@ services:
     restart: unless-stopped
 
   homeassistant:
-    image: homeassistant/home-assistant:2022.5.4
+    image: homeassistant/home-assistant:2022.8.1
     container_name: homeassistant
     network_mode: host
     volumes:
@@ -48,7 +48,7 @@ services:
       - ./docker/mosquitto/configuration/mosquitto.conf:/mosquitto/config/mosquitto.conf:ro
 
   influxdb:
-    image: influxdb:2.2.0
+    image: influxdb:2.3.0
     container_name: influxdb
     environment:
       - DOCKER_INFLUXDB_INIT_USERNAME={INFLUXDB_ADMIN_USER}
@@ -79,7 +79,7 @@ services:
       - homeassistant_db:/var/lib/postgresql/data
 
   grafana:
-    image: grafana/grafana:8.5.2
+    image: grafana/grafana:8.5.9
     container_name: grafana
     volumes:
       - grafana:/data
@@ -108,7 +108,7 @@ services:
     restart: unless-stopped
 
   zigbee2mqtt:
-    image: koenkk/zigbee2mqtt:1.25.1
+    image: koenkk/zigbee2mqtt:1.27.0
     container_name: zigbee2mqtt
     volumes:
       - zigbee2mqtt:/app/data
@@ -162,7 +162,7 @@ services:
       - teslamate_db:/var/lib/postgresql/data
 
   teslamateagile:
-    image: mattjeanes/teslamateagile:v1.9.0
+    image: mattjeanes/teslamateagile:v1.9.1
     container_name: teslamateagile
     restart: unless-stopped
     environment:
