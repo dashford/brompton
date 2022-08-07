@@ -28,6 +28,7 @@ views:
             - person.david
       - type: entities
         entities:
+          - media_player.living_room_tv_2
           - media_player.living_room_tv
           - sensor.aqara_wsdcgq12lm_sitting_room_humidity
           - sensor.aqara_wsdcgq12lm_sitting_room_temperature

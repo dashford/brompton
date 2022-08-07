@@ -94,7 +94,9 @@ binary_sensor.aqara_rtcgq11lm_sitting_room_occupancy:
 media_player.kodi_f531f7696570fce9556ffa955ce7a3b3:
   friendly_name: Kodi
 media_player.living_room_tv:
-  friendly_name: Living Room Chromecast
+  friendly_name: Chromecast
+media_player.living_room_tv_2:
+  friendly_name: TV
 
 # Upstairs Landing
 sensor.upstairs_landing_temperature:
