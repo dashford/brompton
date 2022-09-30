@@ -127,7 +127,7 @@ services:
       - ZIGBEE2MQTT_CONFIG_ADVANCED_LOG_LEVEL=warn
 
   teslamate:
-    image: teslamate/teslamate:1.26.1
+    image: teslamate/teslamate:1.27.1
     container_name: teslamate
     restart: unless-stopped
     environment:
