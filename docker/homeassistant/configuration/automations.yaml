@@ -70,26 +70,31 @@
     device_id: 54a1fd0f3d5484107745440e81c74171
     entity_id: light.ikea_kitchen_lamp
     domain: light
+    enabled: true
   - device_id: 1e386b5613942db415a2d70d3d37a09b
     domain: cover
     entity_id: cover.ikea_kitchen_blind_left
     type: set_position
     position: 50
+    enabled: true
   - device_id: fd2868cfafdfa78ecf3c1cb25f925c53
     domain: cover
     entity_id: cover.ikea_kitchen_blind_centre_left
     type: set_position
     position: 50
+    enabled: true
   - device_id: b964938e4137cac9e362d8e58c46735c
     domain: cover
     entity_id: cover.ikea_kitchen_blind_centre_right
     type: set_position
     position: 50
+    enabled: true
   - device_id: 954f073b4ae1047e8c0eee6fafa2c966
     domain: cover
     entity_id: cover.ikea_kitchen_blind_right
     type: set_position
     position: 50
+    enabled: true
   mode: single
 - id: '1613742091259'
   alias: Turn on lights in the morning
