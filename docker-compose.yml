@@ -11,14 +11,14 @@ services:
       - PGID=1000
       - TZ=Europe/Dublin
       - SERVERURL=vpn.dashford.io
-      - SERVERPORT=51820
+      - SERVERPORT=52000
       - PEERS=phone
       - PEERDNS=auto
     volumes:
       - wgconfig:/config
       - /lib/modules:/lib/modules
     ports:
-      - 51820:51820/udp
+      - 52000:52000/udp
     sysctls:
       - net.ipv4.conf.all.src_valid_mark=1
     restart: unless-stopped
