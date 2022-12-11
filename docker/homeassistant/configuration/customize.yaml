@@ -1,46 +1,30 @@
 # Front Big Bedroom
-sensor.front_big_bedroom_temperature:
-  friendly_name: Temperature
-  icon: mdi:thermometer
-sensor.front_big_bedroom_humidity:
-  friendly_name: Humidity
-  icon: mdi:water-percent
-sensor.front_big_bedroom_pressure:
-  friendly_name: Pressure
-  icon: mdi:gauge
+#sensor.front_big_bedroom_temperature:
+#  friendly_name: Temperature
+#sensor.front_big_bedroom_humidity:
+#  friendly_name: Humidity
 
 # Front Small Bedroom
-sensor.front_small_bedroom_temperature:
-  friendly_name: Temperature
-  icon: mdi:thermometer
-sensor.front_small_bedroom_humidity:
-  friendly_name: Humidity
-  icon: mdi:water-percent
-sensor.front_small_bedroom_pressure:
-  friendly_name: Pressure
-  icon: mdi:gauge
+#sensor.front_small_bedroom_temperature:
+#  friendly_name: Temperature
+#sensor.front_small_bedroom_humidity:
+#  friendly_name: Humidity
 
 # Back Big Bedroom
-sensor.back_big_bedroom_temperature:
-  friendly_name: Temperature
-  icon: mdi:thermometer
-sensor.back_big_bedroom_humidity:
-  friendly_name: Humidity
-  icon: mdi:water-percent
-sensor.back_big_bedroom_pressure:
-  friendly_name: Pressure
-  icon: mdi:gauge
+#sensor.back_big_bedroom_temperature:
+#  friendly_name: Temperature
+#  icon: mdi:thermometer
+#sensor.back_big_bedroom_humidity:
+#  friendly_name: Humidity
+#  icon: mdi:water-percent
 
 # Back Small Bedroom
-sensor.back_small_bedroom_temperature:
-  friendly_name: Temperature
-  icon: mdi:thermometer
-sensor.back_small_bedroom_humidity:
-  friendly_name: Humidity
-  icon: mdi:water-percent
-sensor.back_small_bedroom_pressure:
-  friendly_name: Pressure
-  icon: mdi:gauge
+#sensor.back_small_bedroom_temperature:
+#  friendly_name: Temperature
+#  icon: mdi:thermometer
+#sensor.back_small_bedroom_humidity:
+#  friendly_name: Humidity
+#  icon: mdi:water-percent
 
 # Kitchen
 light.ikea_kitchen_lamp:
@@ -99,26 +83,20 @@ media_player.living_room_tv_2:
   friendly_name: TV
 
 # Upstairs Landing
-sensor.upstairs_landing_temperature:
-  friendly_name: Temperature
-  icon: mdi:thermometer
-sensor.upstairs_landing_humidity:
-  friendly_name: Humidity
-  icon: mdi:water-percent
-sensor.upstairs_landing_pressure:
-  friendly_name: Pressure
-  icon: mdi:gauge
+#sensor.upstairs_landing_temperature:
+#  friendly_name: Temperature
+#  icon: mdi:thermometer
+#sensor.upstairs_landing_humidity:
+#  friendly_name: Humidity
+#  icon: mdi:water-percent
 
 # Bathroom
-sensor.upstairs_bathroom_temperature:
-  friendly_name: Temperature
-  icon: mdi:thermometer
-sensor.upstairs_bathroom_humidity:
-  friendly_name: Humidity
-  icon: mdi:water-percent
-sensor.upstairs_bathroom_pressure:
-  friendly_name: Pressure
-  icon: mdi:gauge
+#sensor.upstairs_bathroom_temperature:
+#  friendly_name: Temperature
+#  icon: mdi:thermometer
+#sensor.upstairs_bathroom_humidity:
+#  friendly_name: Humidity
+#  icon: mdi:water-percent
 
 # Hallway
 light.ikea_hallway_lamp:
