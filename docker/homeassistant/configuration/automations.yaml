@@ -131,6 +131,7 @@
     device_id: 54a1fd0f3d5484107745440e81c74171
     entity_id: light.ikea_kitchen_lamp
     domain: light
+    enabled: false
   mode: single
 - id: '1614714623032'
   alias: Close blinds fully after sunset
