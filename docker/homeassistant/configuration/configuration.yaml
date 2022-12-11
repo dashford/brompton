@@ -70,62 +70,62 @@ mqtt:
   username: !secret mqtt_username
   password: !secret mqtt_password
   sensor:
-    - name: "Temperature"
+    - name: "Front Big Bedroom Temperature"
       state_topic: "brompton/front-big-bedroom/temperature"
       unit_of_measurement: "°C"
       icon: mdi:thermometer
       value_template: "{{ value_json.temperature | round(2) }}"
-    - name: "Humidity"
+    - name: "Front Big Bedroom Humidity"
       state_topic: "brompton/front-big-bedroom/humidity"
       unit_of_measurement: "%RH"
       icon: mdi:water-percent
       value_template: "{{ value_json.humidity | round(3) }}"
-    - name: "Temperature"
+    - name: "Front Small Bedroom Temperature"
       state_topic: "brompton/front-small-bedroom/temperature"
       unit_of_measurement: "°C"
       icon: mdi:thermometer
       value_template: "{{ value_json.temperature | round(2) }}"
-    - name: "Humidity"
+    - name: "Front Small Bedroom Humidity"
       state_topic: "brompton/front-small-bedroom/humidity"
       unit_of_measurement: "%RH"
       icon: mdi:water-percent
       value_template: "{{ value_json.humidity | round(3) }}"
-    - name: "Temperature"
+    - name: "Back Big Bedroom Temperature"
       state_topic: "brompton/back-big-bedroom/temperature"
       unit_of_measurement: "°C"
       icon: mdi:thermometer
       value_template: "{{ value_json.temperature | round(2) }}"
-    - name: "Humidity"
+    - name: "Back Big Bedroom Humidity"
       state_topic: "brompton/back-big-bedroom/humidity"
       unit_of_measurement: "%RH"
       icon: mdi:water-percent
       value_template: "{{ value_json.humidity | round(3) }}"
-    - name: "Temperature"
+    - name: "Back Small Bedroom Temperature"
       state_topic: "brompton/back-small-bedroom/temperature"
       unit_of_measurement: "°C"
       icon: mdi:thermometer
       value_template: "{{ value_json.temperature | round(2) }}"
-    - name: "Humidity"
+    - name: "Back Small Bedroom Humidity"
       state_topic: "brompton/back-small-bedroom/humidity"
       unit_of_measurement: "%RH"
       icon: mdi:water-percent
       value_template: "{{ value_json.humidity | round(3) }}"
-    - name: "Temperature"
+    - name: "Upstairs Landing Temperature"
       state_topic: "brompton/upstairs-landing/temperature"
       unit_of_measurement: "°C"
       icon: mdi:thermometer
       value_template: "{{ value_json.temperature | round(2) }}"
-    - name: "Humidity"
+    - name: "Upstairs Landing Humidity"
       state_topic: "brompton/upstairs-landing/humidity"
       unit_of_measurement: "%RH"
       icon: mdi:water-percent
       value_template: "{{ value_json.humidity | round(3) }}"
-    - name: "Temperature"
+    - name: "Upstairs Bathroom Temperature"
       state_topic: "brompton/upstairs-bathroom/temperature"
       unit_of_measurement: "°C"
       icon: mdi:thermometer
       value_template: "{{ value_json.temperature | round(2) }}"
-    - name: "Humidity"
+    - name: "Upstairs Bathroom Humidity"
       state_topic: "brompton/upstairs-bathroom/humidity"
       unit_of_measurement: "%RH"
       icon: mdi:water-percent
