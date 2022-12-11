@@ -94,6 +94,10 @@ views:
   - title: Kitchen
     path: kitchen
     cards:
+      - type: tile
+        entity: cover.ikea_kitchen_blind_left
+        features:
+          - type: "cover-open-close"
       - type: media-control
         entity: media_player.kitchen
       - type: entities
