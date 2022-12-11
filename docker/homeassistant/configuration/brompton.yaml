@@ -3,33 +3,33 @@ views:
   - path: overview
     title: Overview
     cards:
-      - type: vertical-stack
-        cards:
-          - type: weather-forecast
-            entity: weather.home
-          - type: glance
-            title: Outdoors
-            entities:
-              - entity: sensor.outside_temperature
-                name: Temperature
-              - entity: sensor.outside_humidity
-                name: Humidity
-              - entity: sensor.outside_pressure
-                name: Pressure
-              - entity: sensor.outside_lux
-                name: Light
-      - type: conditional
-        conditions:
-          - entity: person.david
-            state: "away"
-        card:
-          type: entities
-          entities:
-            - person.david
+#      - type: vertical-stack
+#        cards:
+#          - type: weather-forecast
+#            entity: weather.home
+#          - type: glance
+#            title: Outdoors
+#            entities:
+#              - entity: sensor.outside_temperature
+#                name: Temperature
+#              - entity: sensor.outside_humidity
+#                name: Humidity
+#              - entity: sensor.outside_pressure
+#                name: Pressure
+#              - entity: sensor.outside_lux
+#                name: Light
+#      - type: conditional
+#        conditions:
+#          - entity: person.david
+#            state: "away"
+#        card:
+#          type: entities
+#          entities:
+#            - person.david
       - type: entities
         entities:
-          - media_player.living_room_tv_2
-          - media_player.living_room_tv
+#          - media_player.living_room_tv_2
+#          - media_player.living_room_tv
           - sensor.aqara_wsdcgq12lm_sitting_room_humidity
           - sensor.aqara_wsdcgq12lm_sitting_room_temperature
           - binary_sensor.aqara_rtcgq11lm_sitting_room_occupancy
@@ -127,6 +127,8 @@ views:
   - title: Upstairs
     path: upstairs
     cards:
+      - type: title
+        entity: sensor.front_big_bedroom_temperature
       - type: entities
         entities:
           - sensor.front_big_bedroom_temperature
