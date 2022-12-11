@@ -127,7 +127,7 @@ views:
   - title: Upstairs
     path: upstairs
     cards:
-      - type: title
+      - type: tile
         entity: sensor.front_big_bedroom_temperature
       - type: entities
         entities:
