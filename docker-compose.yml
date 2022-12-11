@@ -24,7 +24,7 @@ services:
     restart: unless-stopped
 
   homeassistant:
-    image: homeassistant/home-assistant:2022.11.1
+    image: homeassistant/home-assistant:2022.12.1
     container_name: homeassistant
     network_mode: host
     volumes:
