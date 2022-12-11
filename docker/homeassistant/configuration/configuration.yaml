@@ -71,11 +71,13 @@ mqtt:
   password: !secret mqtt_password
   sensor:
     - name: "Front Big Bedroom Temperature"
+      friendly_name: "Temperature"
       state_topic: "brompton/front-big-bedroom/temperature"
       unit_of_measurement: "°C"
       icon: mdi:thermometer
       value_template: "{{ value_json.temperature | round(2) }}"
     - name: "Front Big Bedroom Humidity"
+      friendly_name: "Humidity"
       state_topic: "brompton/front-big-bedroom/humidity"
       unit_of_measurement: "%RH"
       icon: mdi:water-percent
