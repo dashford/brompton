@@ -155,14 +155,14 @@ mqtt:
       state_topic: "brompton/front-big-bedroom/temperature"
       unit_of_measurement: "°C"
       device_class: temperature
-      icon: mdi:thermometer
+#      icon: mdi:thermometer
       unique_id: "front-big-bedroom-temperature"
       value_template: "{{ value_json.temperature | round(2) }}"
     - name: "Front Big Bedroom Humidity"
       state_topic: "brompton/front-big-bedroom/humidity"
       unit_of_measurement: "%RH"
       device_class: humidity
-      icon: mdi:water-percent
+#      icon: mdi:water-percent
       unique_id: "front-big-bedroom-humidity"
       value_template: "{{ value_json.humidity | round(3) }}"
     - name: "Front Small Bedroom Temperature"
