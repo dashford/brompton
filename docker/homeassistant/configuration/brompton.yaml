@@ -133,6 +133,8 @@ views:
     cards:
       - type: tile
         entity: sensor.front_big_bedroom_temperature
+      - type: tile
+        entity: sensor.front_big_bedroom_humidity
       - type: entities
         entities:
           - sensor.front_big_bedroom_temperature

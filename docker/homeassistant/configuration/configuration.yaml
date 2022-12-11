@@ -155,86 +155,84 @@ mqtt:
       state_topic: "brompton/front-big-bedroom/temperature"
       unit_of_measurement: "°C"
       device_class: temperature
-#      icon: mdi:thermometer
       unique_id: "front-big-bedroom-temperature"
       value_template: "{{ value_json.temperature | round(2) }}"
     - name: "Front Big Bedroom Humidity"
       state_topic: "brompton/front-big-bedroom/humidity"
       unit_of_measurement: "%RH"
       device_class: humidity
-#      icon: mdi:water-percent
       unique_id: "front-big-bedroom-humidity"
       value_template: "{{ value_json.humidity | round(3) }}"
     - name: "Front Small Bedroom Temperature"
       state_topic: "brompton/front-small-bedroom/temperature"
       unit_of_measurement: "°C"
-      icon: mdi:thermometer
+      device_class: temperature
       unique_id: "front-small-bedroom-temperature"
       value_template: "{{ value_json.temperature | round(2) }}"
     - name: "Front Small Bedroom Humidity"
       state_topic: "brompton/front-small-bedroom/humidity"
       unit_of_measurement: "%RH"
-      icon: mdi:water-percent
+      device_class: humidity
       unique_id: "front-small-bedroom-humidity"
       value_template: "{{ value_json.humidity | round(3) }}"
     - name: "Back Big Bedroom Temperature"
       state_topic: "brompton/back-big-bedroom/temperature"
       unit_of_measurement: "°C"
-      icon: mdi:thermometer
+      device_class: temperature
       unique_id: "back-big-bedroom-temperature"
       value_template: "{{ value_json.temperature | round(2) }}"
     - name: "Back Big Bedroom Humidity"
       state_topic: "brompton/back-big-bedroom/humidity"
       unit_of_measurement: "%RH"
-      icon: mdi:water-percent
+      device_class: humidity
       unique_id: "back-big-bedroom-humidity"
       value_template: "{{ value_json.humidity | round(3) }}"
     - name: "Back Small Bedroom Temperature"
       state_topic: "brompton/back-small-bedroom/temperature"
       unit_of_measurement: "°C"
-      icon: mdi:thermometer
+      device_class: temperature
       unique_id: "back-small-bedroom-temperature"
       value_template: "{{ value_json.temperature | round(2) }}"
     - name: "Back Small Bedroom Humidity"
       state_topic: "brompton/back-small-bedroom/humidity"
       unit_of_measurement: "%RH"
-      icon: mdi:water-percent
+      device_class: humidity
       unique_id: "back-small-bedroom-humidity"
       value_template: "{{ value_json.humidity | round(3) }}"
     - name: "Upstairs Landing Temperature"
       state_topic: "brompton/upstairs-landing/temperature"
       unit_of_measurement: "°C"
-      icon: mdi:thermometer
+      device_class: temperature
       unique_id: "upstairs-landing-temperature"
       value_template: "{{ value_json.temperature | round(2) }}"
     - name: "Upstairs Landing Humidity"
       state_topic: "brompton/upstairs-landing/humidity"
       unit_of_measurement: "%RH"
-      icon: mdi:water-percent
+      device_class: humidity
       unique_id: "upstairs-landing-humidity"
       value_template: "{{ value_json.humidity | round(3) }}"
     - name: "Upstairs Bathroom Temperature"
       state_topic: "brompton/upstairs-bathroom/temperature"
       unit_of_measurement: "°C"
-      icon: mdi:thermometer
+      device_class: temperature
       unique_id: "upstairs-bathroom-temperature"
       value_template: "{{ value_json.temperature | round(2) }}"
     - name: "Upstairs Bathroom Humidity"
       state_topic: "brompton/upstairs-bathroom/humidity"
       unit_of_measurement: "%RH"
-      icon: mdi:water-percent
+      device_class: humidity
       unique_id: "upstairs-bathroom-humidity"
       value_template: "{{ value_json.humidity | round(3) }}"
     - name: "Top of Hot Water Tank Temperature"
       state_topic: "brompton/hot-water-tank/top/temperature"
       unit_of_measurement: "°C"
-      icon: mdi:thermometer
+      device_class: temperature
       unique_id: "hot-water-tank-top-temperature"
       value_template: "{{ value_json.temperature | round(2) }}"
     - name: "Bottom of Hot Water Tank Temperature"
       state_topic: "brompton/hot-water-tank/bottom/temperature"
       unit_of_measurement: "°C"
-      icon: mdi:thermometer
+      device_class: temperature
       unique_id: "hot-water-tank-bottom-temperature"
       value_template: "{{ value_json.temperature | round(2) }}"
     - name: tesla_state
