@@ -1,8 +1,8 @@
 # Front Big Bedroom
-#sensor.front_big_bedroom_temperature:
-#  friendly_name: Temperature
-#sensor.front_big_bedroom_humidity:
-#  friendly_name: Humidity
+sensor.front_big_bedroom_temperature:
+  friendly_name: Temperature
+sensor.front_big_bedroom_humidity:
+  friendly_name: Humidity
 
 # Front Small Bedroom
 #sensor.front_small_bedroom_temperature:
