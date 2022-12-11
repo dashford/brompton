@@ -27,12 +27,16 @@ light.ikea_kitchen_lamp:
   friendly_name: Lamp
 cover.ikea_kitchen_blind_left:
   friendly_name: Left
+  device_class: shade
 cover.ikea_kitchen_blind_centre_left:
   friendly_name: Centre Left
+  device_class: shade
 cover.ikea_kitchen_blind_centre_right:
   friendly_name: Centre Right
+  device_class: shade
 cover.ikea_kitchen_blind_right:
   friendly_name: Right
+  device_class: shade
 media_player.kitchen:
   friendly_name: Kitchen Speaker
 sensor.aqara_wsdcgq12lm_kitchen_extension_temperature:
