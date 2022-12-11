@@ -64,11 +64,6 @@ history:
 logbook:
 
 mqtt:
-  broker: 10.243.0.100
-  discovery: true
-  port: 1883
-  username: !secret mqtt_username
-  password: !secret mqtt_password
   binary_sensor:
     - name: tesla_healthy
       state_topic: "teslamate/cars/1/healthy"
