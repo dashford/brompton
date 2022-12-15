@@ -131,10 +131,13 @@ views:
   - title: Upstairs
     path: upstairs
     cards:
-      - type: tile
-        entity: sensor.front_big_bedroom_temperature
-      - type: tile
-        entity: sensor.front_big_bedroom_humidity
+      - type: grid
+        title: Ellen & David's Bedroom
+        cards:
+          - type: tile
+            entity: sensor.front_big_bedroom_temperature
+          - type: tile
+            entity: sensor.front_big_bedroom_humidity
       - type: entities
         entities:
           - sensor.front_big_bedroom_temperature
