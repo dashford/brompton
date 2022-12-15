@@ -133,9 +133,8 @@ views:
     cards:
       - type: grid
         title: Ellen & David's Bedroom
-        square: false
         cards:
-          - type: horizontal-stack
+          - type: vertical-stack
             cards:
               - type: tile
                 entity: sensor.front_big_bedroom_temperature
