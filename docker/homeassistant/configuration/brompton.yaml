@@ -133,6 +133,7 @@ views:
     cards:
       - type: grid
         title: Ellen & David's Bedroom
+        columns: 1
         cards:
           - type: vertical-stack
             cards:
