@@ -141,36 +141,17 @@ views:
                 entity: sensor.front_big_bedroom_temperature
               - type: tile
                 entity: sensor.front_big_bedroom_humidity
-              - type: statistics-graph
-                days_to_show: 1
-                chart_type: line
-                entities:
-                  - entity: sensor.front_big_bedroom_temperature
-                    name: Temperature
-                  - entity: sensor.front_big_bedroom_humidity
-                    name: Humidity
-      - type: entities
-        entities:
-          - sensor.front_big_bedroom_temperature
-          - sensor.front_big_bedroom_humidity
-        title: Ellen & David's Bedroom
-        show_header_toggle: false
-        footer:
-          type: graph
-          entity: sensor.front_big_bedroom_temperature
-          hours_to_show: 24
-          detail: 2
-      - type: entities
-        entities:
-          - sensor.front_small_bedroom_temperature
-          - sensor.front_small_bedroom_humidity
+      - type: grid
         title: Sam's Bedroom
-        show_header_toggle: false
-        footer:
-          type: graph
-          entity: sensor.front_small_bedroom_temperature
-          hours_to_show: 24
-          detail: 2
+        columns: 1
+        cards:
+          - type: vertical-stack
+            cards:
+              - type: tile
+                entity: sensor.front_small_bedroom_temperature
+              - type: tile
+                entity: sensor.front_small_bedroom_humidity
+
       - type: entities
         entities:
           - sensor.back_small_bedroom_temperature
