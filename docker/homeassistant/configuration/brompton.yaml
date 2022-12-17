@@ -140,6 +140,7 @@ views:
             cards:
               - type: tile
                 entity: sensor.front_big_bedroom_temperature
+                color: device_class
               - type: tile
                 entity: sensor.front_big_bedroom_humidity
       - type: grid
