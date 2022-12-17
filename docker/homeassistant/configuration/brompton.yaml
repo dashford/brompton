@@ -134,6 +134,7 @@ views:
       - type: grid
         title: Ellen & David's Bedroom
         columns: 1
+        square: false
         cards:
           - type: vertical-stack
             cards:
@@ -144,6 +145,7 @@ views:
       - type: grid
         title: Sam's Bedroom
         columns: 1
+        square: false
         cards:
           - type: vertical-stack
             cards:
@@ -154,6 +156,7 @@ views:
       - type: grid
         title: Joey's Bedroom
         columns: 1
+        square: false
         cards:
           - type: vertical-stack
             cards:
@@ -164,6 +167,7 @@ views:
       - type: grid
         title: Spare Bedroom
         columns: 1
+        square: false
         cards:
           - type: vertical-stack
             cards:
@@ -174,6 +178,7 @@ views:
       - type: grid
         title: Bathroom
         columns: 1
+        square: false
         cards:
           - type: vertical-stack
             cards:
@@ -184,6 +189,7 @@ views:
       - type: grid
         title: Landing
         columns: 1
+        square: false
         cards:
           - type: vertical-stack
             cards:
@@ -194,6 +200,7 @@ views:
       - type: grid
         title: Hot Water
         columns: 1
+        square: false
         cards:
           - type: vertical-stack
             cards:
