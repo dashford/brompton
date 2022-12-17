@@ -151,46 +151,55 @@ views:
                 entity: sensor.front_small_bedroom_temperature
               - type: tile
                 entity: sensor.front_small_bedroom_humidity
-
-      - type: entities
-        entities:
-          - sensor.back_small_bedroom_temperature
-          - sensor.back_small_bedroom_humidity
+      - type: grid
         title: Joey's Bedroom
-        show_header_toggle: false
-        footer:
-          type: graph
-          entity: sensor.back_small_bedroom_temperature
-          hours_to_show: 24
-          detail: 2
-      - type: entities
-        entities:
-          - sensor.back_big_bedroom_temperature
-          - sensor.back_big_bedroom_humidity
+        columns: 1
+        cards:
+          - type: vertical-stack
+            cards:
+              - type: tile
+                entity: sensor.back_small_bedroom_temperature
+              - type: tile
+                entity: sensor.back_small_bedroom_humidity
+      - type: grid
         title: Spare Bedroom
-        show_header_toggle: false
-        footer:
-          type: graph
-          entity: sensor.back_big_bedroom_temperature
-          hours_to_show: 24
-          detail: 2
-      - type: entities
-        entities:
-            - entity: sensor.upstairs_bathroom_temperature
-            - entity: sensor.upstairs_bathroom_humidity
-        title: Upstairs Bathroom
-        show_header_toggle: false
-      - type: entities
-        entities:
-          - sensor.upstairs_landing_temperature
-          - sensor.upstairs_landing_humidity
-        title: Upstairs
-        show_header_toggle: false
-      - type: entities
-        entities:
-          - entity: sensor.top_of_hot_water_tank_temperature
-            name: Top of Tank
-          - entity: sensor.bottom_of_hot_water_tank_temperature
-            name: Bottom of Tank
+        columns: 1
+        cards:
+          - type: vertical-stack
+            cards:
+              - type: tile
+                entity: sensor.back_big_bedroom_temperature
+              - type: tile
+                entity: sensor.back_big_bedroom_humidity
+      - type: grid
+        title: Bathroom
+        columns: 1
+        cards:
+          - type: vertical-stack
+            cards:
+              - type: tile
+                entity: sensor.upstairs_bathroom_temperature
+              - type: tile
+                entity: sensor.upstairs_bathroom_humidity
+      - type: grid
+        title: Landing
+        columns: 1
+        cards:
+          - type: vertical-stack
+            cards:
+              - type: tile
+                entity: sensor.upstairs_landing_temperature
+              - type: tile
+                entity: sensor.upstairs_landing_humidity
+      - type: grid
         title: Hot Water
-        show_header_toggle: false
+        columns: 1
+        cards:
+          - type: vertical-stack
+            cards:
+              - type: tile
+                entity: sensor.top_of_hot_water_tank_temperature
+                name: Top of Tank
+              - type: tile
+                entity: sensor.bottom_of_hot_water_tank_temperature
+                name: Bottom of Tank
