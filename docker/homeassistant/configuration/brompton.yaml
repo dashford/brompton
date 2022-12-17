@@ -141,6 +141,14 @@ views:
                 entity: sensor.front_big_bedroom_temperature
               - type: tile
                 entity: sensor.front_big_bedroom_humidity
+              - type: statistics-graph
+                days_to_show: 1
+                chart_type: line
+                entities:
+                  - entity: sensor.front_big_bedroom_temperature
+                    name: Temperature
+                  - entity: sensor.front_big_bedroom_humidity
+                    name: Humidity
       - type: entities
         entities:
           - sensor.front_big_bedroom_temperature
