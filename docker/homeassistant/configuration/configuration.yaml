@@ -344,12 +344,6 @@ zone:
     radius: 150
     icon: mdi:briefcase
 
-#device_tracker:
-#  - platform: luci
-#    host: 192.168.1.1
-#    username: !secret router_username
-#    password: !secret router_password
-
 # Track the sun
 sun:
 
