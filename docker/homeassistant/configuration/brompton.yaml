@@ -112,15 +112,15 @@ views:
                 features:
                   - type: "cover-open-close"
               - type: tile
-                entity: sensor.ikea_kitchen_blind_centre_left
+                entity: cover.ikea_kitchen_blind_centre_left
                 features:
                   - type: "cover-open-close"
               - type: tile
-                entity: sensor.ikea_kitchen_blind_centre_right
+                entity: cover.ikea_kitchen_blind_centre_right
                 features:
                   - type: "cover-open-close"
               - type: tile
-                entity: sensor.ikea_kitchen_blind_right
+                entity: cover.ikea_kitchen_blind_right
                 features:
                   - type: "cover-open-close"
       - type: media-control
