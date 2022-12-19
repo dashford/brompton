@@ -161,6 +161,9 @@ views:
   - title: Sitting Room
     path: sitting-room
 
+  - title: Downstairs
+    path: downstairs
+
   - title: Upstairs
     path: upstairs
     cards:
