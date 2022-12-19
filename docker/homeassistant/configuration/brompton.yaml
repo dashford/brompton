@@ -54,6 +54,12 @@ views:
             card:
               - type: tile
                 entity: sensor.tesla_time_to_full_charge
+          - type: horizontal-stack
+            cards:
+              - type: tile
+                entity: binary_sensor.tesla_locked
+              - type: tile
+                entity: binary_sensor.tesla_sentry_mode
       - type: vertical-stack
         cards:
 #        - type: map
