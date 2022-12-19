@@ -135,6 +135,35 @@ views:
       - type: media-control
         entity: media_player.kitchen
       - type: grid
+        title: Environment
+        columns: 1
+        square: false
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: tile
+                entity: sensor.aqara_wsdcgq12lm_kitchen_extension_temperature
+                name: Extension
+              - type: tile
+                entity: sensor.aqara_wsdcgq12lm_kitchen_extension_humidity
+                name: Extension
+          - type: horizontal-stack
+            cards:
+              - type: tile
+                entity: sensor.aqara_wsdcgq12lm_kitchen_main_temperature
+                name: Main
+              - type: tile
+                entity: sensor.aqara_wsdcgq12lm_kitchen_main_humidity
+                name: Main
+          - type: horizontal-stack
+            cards:
+              - type: tile
+                entity: sensor.aqara_wsdcgq12lm_kitchen_snug_temperature
+                name: Snug
+              - type: tile
+                entity: sensor.aqara_wsdcgq12lm_kitchen_snug_humidity
+                name: Snug
+      - type: grid
         title: Doors
         columns: 1
         square: false
@@ -145,17 +174,6 @@ views:
                 entity: binary_sensor.aqara_mccgq11lm_kitchen_main_back_door_contact
               - type: tile
                 entity: binary_sensor.aqara_mccgq11lm_kitchen_secondary_back_door_contact
-      - type: entities
-        entities:
-          - type: section
-            label: Environment
-          - sensor.aqara_wsdcgq12lm_kitchen_extension_temperature
-          - sensor.aqara_wsdcgq12lm_kitchen_extension_humidity
-          - sensor.aqara_wsdcgq12lm_kitchen_main_temperature
-          - sensor.aqara_wsdcgq12lm_kitchen_main_humidity
-          - sensor.aqara_wsdcgq12lm_kitchen_snug_temperature
-          - sensor.aqara_wsdcgq12lm_kitchen_snug_humidity
-        show_header_toggle: false
 
   - title: Sitting Room
     path: sitting-room
