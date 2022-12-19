@@ -123,19 +123,14 @@ views:
                 entity: cover.ikea_kitchen_blind_right
                 features:
                   - type: "cover-open-close"
+      - type: tile
+        entity: light.ikea_kitchen_lamp
+        features:
+          - type: "light-brightness"
       - type: media-control
         entity: media_player.kitchen
       - type: entities
         entities:
-          - type: section
-            label: Lights
-          - light.ikea_kitchen_lamp
-          - type: section
-            label: Blinds
-          - cover.ikea_kitchen_blind_left
-          - cover.ikea_kitchen_blind_centre_left
-          - cover.ikea_kitchen_blind_centre_right
-          - cover.ikea_kitchen_blind_right
           - type: section
             label: Environment
           - sensor.aqara_wsdcgq12lm_kitchen_extension_temperature
