@@ -123,10 +123,15 @@ views:
                 entity: cover.ikea_kitchen_blind_right
                 features:
                   - type: "cover-open-close"
-      - type: tile
-        entity: light.ikea_kitchen_lamp
-        features:
-          - type: "light-brightness"
+      - type: grid
+        title: Lights
+        columns: 1
+        square: false
+        cards:
+          - type: tile
+            entity: light.ikea_kitchen_lamp
+            features:
+              - type: "light-brightness"
       - type: media-control
         entity: media_player.kitchen
       - type: grid
