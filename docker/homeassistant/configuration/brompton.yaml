@@ -134,13 +134,6 @@ views:
   - title: Sitting Room
     path: sitting-room
     cards:
-      - type: entities
-        entities:
-          - sensor.aqara_wsdcgq12lm_sitting_room_humidity
-          - sensor.aqara_wsdcgq12lm_sitting_room_temperature
-          - binary_sensor.aqara_rtcgq11lm_sitting_room_occupancy
-        title: Sitting Room
-        show_header_toggle: false
       - type: media-control
         entity: media_player.tv
       - type: media-control
@@ -150,7 +143,7 @@ views:
       - type: tile
         entity: sensor.aqara_wsdcgq12lm_sitting_room_humidity
       - type: tile
-        entity: sensor.aqara_rtcgq11lm_sitting_room_occupancy
+        entity: binary_sensor.aqara_rtcgq11lm_sitting_room_occupancy
 
   - title: Downstairs
     path: downstairs
