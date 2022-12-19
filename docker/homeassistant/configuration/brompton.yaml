@@ -139,10 +139,12 @@ views:
           - sensor.aqara_wsdcgq12lm_sitting_room_humidity
           - sensor.aqara_wsdcgq12lm_sitting_room_temperature
           - binary_sensor.aqara_rtcgq11lm_sitting_room_occupancy
-          - media_player.kodi_f531f7696570fce9556ffa955ce7a3b3
-          - media_player.tv
         title: Sitting Room
         show_header_toggle: false
+      - type: media-control
+        entity: media_player.tv
+      - type: media-control
+        entity: media_player.kodi_f531f7696570fce9556ffa955ce7a3b3
 
   - title: Downstairs
     path: downstairs
