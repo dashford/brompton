@@ -3,10 +3,8 @@ views:
   - path: overview
     title: Overview
     cards:
-      - type: vertical-stack
-        cards:
-          - type: weather-forecast
-            entity: weather.home
+      - type: weather-forecast
+        entity: weather.home
       - type: energy-distribution
         link_dashboard: true
       - type: grid
