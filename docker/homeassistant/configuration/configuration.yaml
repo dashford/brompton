@@ -303,6 +303,7 @@ mqtt:
     - name: tesla_usable_battery_level
       state_topic: "teslamate/cars/1/usable_battery_level"
       unique_id: "teslamate-cars-1-usable-battery-level"
+      device_class: battery
       unit_of_measurement: "%"
       icon: mdi:battery-80
     - name: tesla_charge_energy_added
