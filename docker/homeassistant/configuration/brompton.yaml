@@ -41,7 +41,7 @@ views:
         columns: 2
         square: false
         cards:
-          - type: vertical-stack
+          - type: horizontal-stack
             cards:
               - type: tile
                 entity: sensor.tesla_est_battery_range_km
