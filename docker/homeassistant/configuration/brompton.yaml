@@ -29,6 +29,7 @@ views:
             card:
               type: tile
               entity: sensor.tesla_time_to_full_charge
+              icon: mdi:ev-plug-ccs2
           - type: conditional
             conditions:
               - entity: sensor.tesla_state
