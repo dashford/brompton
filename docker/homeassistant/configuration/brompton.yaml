@@ -132,8 +132,13 @@ views:
             entity: light.ikea_kitchen_lamp
             features:
               - type: "light-brightness"
-      - type: media-control
-        entity: media_player.kitchen
+      - type: grid
+        title: Media
+        columns: 1
+        square: false
+        cards:
+          - type: media-control
+            entity: media_player.kitchen
       - type: grid
         title: Environment
         columns: 1
