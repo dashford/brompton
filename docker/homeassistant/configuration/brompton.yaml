@@ -3,10 +3,10 @@ views:
   - path: overview
     title: Overview
     cards:
-#      - type: vertical-stack
-#        cards:
-#          - type: weather-forecast
-#            entity: weather.home
+      - type: vertical-stack
+        cards:
+          - type: weather-forecast
+            entity: weather.home
 #          - type: glance
 #            title: Outdoors
 #            entities:
@@ -36,6 +36,17 @@ views:
           - media_player.kodi_f531f7696570fce9556ffa955ce7a3b3
         title: Sitting Room
         show_header_toggle: false
+      - type: grid
+        title: Car
+        columns: 2
+        square: false
+        cards:
+          - type: vertical-stack
+            cards:
+              - type: tile
+                entity: sensor.tesla_est_battery_range_km
+              - type: tile
+                entity: sensor.tesla_usable_battery_level
       - type: vertical-stack
         cards:
 #        - type: map
