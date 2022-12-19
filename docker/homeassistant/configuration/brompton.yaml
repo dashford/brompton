@@ -49,8 +49,8 @@ views:
                 entity: sensor.tesla_usable_battery_level
           - type: conditional
             conditions:
-              entity: sensor.tesla_state
-              state: "charging"
+              - entity: sensor.tesla_state
+                state: "charging"
             cards:
               - type: horizontal-stack
                 cards:
