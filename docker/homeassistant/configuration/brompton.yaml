@@ -129,6 +129,17 @@ views:
           - type: "light-brightness"
       - type: media-control
         entity: media_player.kitchen
+      - type: grid
+        title: Doors
+        columns: 1
+        square: false
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: tile
+                entity: binary_sensor.aqara_mccgq11lm_kitchen_main_back_door_contact
+              - type: tile
+                entity: binary_sensor.aqara_mccgq11lm_kitchen_secondary_back_door_contact
       - type: entities
         entities:
           - type: section
@@ -139,10 +150,6 @@ views:
           - sensor.aqara_wsdcgq12lm_kitchen_main_humidity
           - sensor.aqara_wsdcgq12lm_kitchen_snug_temperature
           - sensor.aqara_wsdcgq12lm_kitchen_snug_humidity
-          - type: section
-            label: Doors
-          - binary_sensor.aqara_mccgq11lm_kitchen_main_back_door_contact
-          - binary_sensor.aqara_mccgq11lm_kitchen_secondary_back_door_contact
         show_header_toggle: false
 
   - title: Sitting Room
