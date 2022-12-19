@@ -51,7 +51,7 @@ views:
             conditions:
               - entity: sensor.tesla_state
                 state: "charging"
-            cards:
+            card:
               - type: tile
                 entity: sensor.tesla_time_to_full_charge
       - type: vertical-stack
