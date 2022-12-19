@@ -38,7 +38,7 @@ views:
         show_header_toggle: false
       - type: grid
         title: Car
-        columns: 2
+        columns: 1
         square: false
         cards:
           - type: horizontal-stack
