@@ -145,6 +145,12 @@ views:
         entity: media_player.tv
       - type: media-control
         entity: media_player.kodi_f531f7696570fce9556ffa955ce7a3b3
+      - type: tile
+        entity: sensor.aqara_wsdcgq12lm_sitting_room_temperature
+      - type: tile
+        entity: sensor.aqara_wsdcgq12lm_sitting_room_humidity
+      - type: tile
+        entity: sensor.aqara_rtcgq11lm_sitting_room_occupancy
 
   - title: Downstairs
     path: downstairs

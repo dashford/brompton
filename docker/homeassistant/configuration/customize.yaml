@@ -63,10 +63,12 @@ binary_sensor.aqara_mccgq11lm_kitchen_secondary_back_door_contact:
 sensor.aqara_wsdcgq12lm_sitting_room_humidity:
   friendly_name: Humidity
   icon: mdi:water-percent
-  unit_of_measurement: '%'
+  unit_of_measurement: '%RH'
+  device_class: humidity
 sensor.aqara_wsdcgq12lm_sitting_room_temperature:
   friendly_name: Temperature
   icon: mdi:thermometer
+  device_class: temperature
 sensor.aqara_wsdcgq12lm_sitting_room_pressure:
   friendly_name: Pressure
   icon: mdi:gauge
