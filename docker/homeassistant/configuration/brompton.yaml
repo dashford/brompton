@@ -7,6 +7,8 @@ views:
         cards:
           - type: weather-forecast
             entity: weather.home
+      - type: energy-distribution
+        link_dashboard: true
       - type: grid
         title: Car
         columns: 1
