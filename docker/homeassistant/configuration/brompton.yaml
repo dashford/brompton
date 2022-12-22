@@ -198,7 +198,7 @@ views:
         columns: 1
         square: false
         cards:
-          - type: vertical-stack
+          - type: horizontal-stack
             cards:
               - type: tile
                 entity: sensor.front_small_bedroom_temperature
@@ -209,7 +209,7 @@ views:
         columns: 1
         square: false
         cards:
-          - type: vertical-stack
+          - type: horizontal-stack
             cards:
               - type: tile
                 entity: sensor.back_small_bedroom_temperature
@@ -220,7 +220,7 @@ views:
         columns: 1
         square: false
         cards:
-          - type: vertical-stack
+          - type: horizontal-stack
             cards:
               - type: tile
                 entity: sensor.back_big_bedroom_temperature
@@ -231,7 +231,7 @@ views:
         columns: 1
         square: false
         cards:
-          - type: vertical-stack
+          - type: horizontal-stack
             cards:
               - type: tile
                 entity: sensor.upstairs_bathroom_temperature
@@ -242,7 +242,7 @@ views:
         columns: 1
         square: false
         cards:
-          - type: vertical-stack
+          - type: horizontal-stack
             cards:
               - type: tile
                 entity: sensor.upstairs_landing_temperature
@@ -253,7 +253,7 @@ views:
         columns: 1
         square: false
         cards:
-          - type: vertical-stack
+          - type: horizontal-stack
             cards:
               - type: tile
                 entity: sensor.top_of_hot_water_tank_temperature
