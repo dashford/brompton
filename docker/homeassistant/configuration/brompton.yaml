@@ -239,7 +239,7 @@ views:
         columns: 1
         square: false
         cards:
-          - type: vertical-stack
+          - type: horizontal-stack
             cards:
               - type: tile
                 entity: sensor.front_big_bedroom_temperature
