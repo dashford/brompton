@@ -12,6 +12,7 @@ homeassistant:
   time_zone: !secret time_zone
   # Customization file
   customize: !include customize.yaml
+  country: !secret country
 
 weather:
 
