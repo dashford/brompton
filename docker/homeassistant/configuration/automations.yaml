@@ -52,6 +52,10 @@
     device_id: 54a1fd0f3d5484107745440e81c74171
     entity_id: light.ikea_kitchen_lamp
     domain: light
+  - type: turn_off
+    device_id: 63146fc762ab187e5bb8f71e1597069f
+    entity_id: switch.ikea_e1603_e1702_control_outlet
+    domain: switch
   mode: single
 - id: '1613741995095'
   alias: Turn on lights and lower blinds at dusk
@@ -95,6 +99,11 @@
     type: set_position
     position: 50
     enabled: true
+  - type: turn_on
+    device_id: 63146fc762ab187e5bb8f71e1597069f
+    entity_id: switch.ikea_e1603_e1702_control_outlet
+    domain: switch
+    alias: 'Turn on Christmas Lights '
   mode: single
 - id: '1613742091259'
   alias: Turn on lights in the morning
