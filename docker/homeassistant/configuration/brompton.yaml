@@ -140,6 +140,8 @@ views:
             entity: media_player.tv
           - type: media-control
             entity: media_player.kodi_f531f7696570fce9556ffa955ce7a3b3
+          - type: media-control
+            entity: media_player.living_room
       - type: grid
         title: Environment
         columns: 1
