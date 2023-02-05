@@ -4,7 +4,7 @@
   trigger:
   - platform: sun
     event: sunrise
-    offset: +00:20:00
+    offset: +00:15:00
   condition: []
   action:
   - type: turn_off
@@ -41,7 +41,7 @@
   description: ''
   trigger:
   - platform: time
-    at: '22:30'
+    at: '22:30:00'
   condition: []
   action:
   - type: turn_off
