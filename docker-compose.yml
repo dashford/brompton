@@ -163,7 +163,7 @@ services:
       - teslamate_db:/var/lib/postgresql/data
 
   teslamateagile:
-    image: mattjeanes/teslamateagile:v1.9.1
+    image: mattjeanes/teslamateagile:v1.11.2
     container_name: teslamateagile
     restart: unless-stopped
     environment:
@@ -176,8 +176,8 @@ services:
       - TeslaMate__GeofenceId=1
       - TeslaMate__EnergyProvider=FixedPrice
       - FixedPrice__TimeZone=Europe/Dublin
-      - FixedPrice__Prices__0=00:00-12:00=0.3180345
-      - FixedPrice__Prices__1=12:00-00:00=0.3180345
+      - FixedPrice__Prices__0=00:00-12:00=0.4346
+      - FixedPrice__Prices__1=12:00-00:00=0.4346
 
 volumes:
   influxdb-data:
