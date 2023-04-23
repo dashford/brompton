@@ -2,12 +2,12 @@
 homeassistant: true
 
 # allow new devices to join
-permit_join: false
+permit_join: true
 
 advanced:
   channel: 15
   network_key: '!secret network_key'
-  log_level: error
+  log_level: debug
 
 mqtt:
   base_topic: zigbee2mqtt

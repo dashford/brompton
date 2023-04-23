@@ -31,7 +31,7 @@ cover.ikea_kitchen_blind_left:
 cover.ikea_kitchen_blind_centre_left:
   friendly_name: Centre Left
   device_class: shade
-cover.ikea_kitchen_blind_centre_right:
+cover.0x70ac08fffe84c787:
   friendly_name: Centre Right
   device_class: shade
 cover.ikea_kitchen_blind_right:
