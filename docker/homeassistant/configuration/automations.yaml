@@ -59,7 +59,7 @@
   trigger:
   - platform: sun
     event: sunset
-    offset: -00:20:00
+    offset: -00:25:00
   condition: []
   action:
   - type: turn_on
