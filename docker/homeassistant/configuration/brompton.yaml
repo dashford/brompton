@@ -64,7 +64,7 @@ views:
                 features:
                   - type: "cover-open-close"
               - type: tile
-                entity: cover.ikea_kitchen_blind_centre_right
+                entity: cover.0x70ac08fffe84c787
                 features:
                   - type: "cover-open-close"
               - type: tile
