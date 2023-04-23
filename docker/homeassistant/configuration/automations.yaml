@@ -25,9 +25,9 @@
     entity_id: cover.ikea_kitchen_blind_centre_left
     type: set_position
     position: 100
-  - device_id: b964938e4137cac9e362d8e58c46735c
+  - device_id: 4a127147cfcae838675d463b7ef57b06
     domain: cover
-    entity_id: cover.ikea_kitchen_blind_centre_right
+    entity_id: cover.0x70ac08fffe84c787
     type: set_position
     position: 100
   - device_id: 954f073b4ae1047e8c0eee6fafa2c966
@@ -83,12 +83,11 @@
     type: set_position
     position: 50
     enabled: true
-  - device_id: b964938e4137cac9e362d8e58c46735c
+  - device_id: 4a127147cfcae838675d463b7ef57b06
     domain: cover
-    entity_id: cover.ikea_kitchen_blind_centre_right
+    entity_id: cover.0x70ac08fffe84c787
     type: set_position
     position: 50
-    enabled: true
   - device_id: 954f073b4ae1047e8c0eee6fafa2c966
     domain: cover
     entity_id: cover.ikea_kitchen_blind_right
@@ -152,9 +151,9 @@
     entity_id: cover.ikea_kitchen_blind_centre_left
     type: set_position
     position: 0
-  - device_id: b964938e4137cac9e362d8e58c46735c
+  - device_id: 4a127147cfcae838675d463b7ef57b06
     domain: cover
-    entity_id: cover.ikea_kitchen_blind_centre_right
+    entity_id: cover.0x70ac08fffe84c787
     type: set_position
     position: 0
   - device_id: 954f073b4ae1047e8c0eee6fafa2c966
