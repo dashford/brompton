@@ -7,6 +7,7 @@ permit_join: false
 advanced:
   channel: 15
   network_key: '!secret network_key'
+  log_level: error
 
 mqtt:
   base_topic: zigbee2mqtt
