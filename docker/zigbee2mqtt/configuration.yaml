@@ -7,6 +7,7 @@ permit_join: false
 advanced:
   channel: 15
   network_key: '!secret network_key'
+  log_level: error
 
 mqtt:
   base_topic: zigbee2mqtt
@@ -24,7 +25,7 @@ devices:
     friendly_name: 'ikea/kitchen/signal-repeater'
   '0x680ae2fffe1c5c77':
     friendly_name: 'ikea/kitchen/blind-left'
-  '0x680ae2fffe8c9cf8':
+  '0x70ac08fffe84c787':
     friendly_name: 'ikea/kitchen/blind-centre-left'
   '0xec1bbdfffe985ebe':
     friendly_name: 'ikea/kitchen/blind-centre-right'
