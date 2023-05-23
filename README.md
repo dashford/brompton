@@ -28,3 +28,27 @@ Verify docker & docker compose is running
 docker run hello-world
 docker compose version
 ```
+
+### Set up repo
+
+Generate the deploy key:
+
+```bash
+ssh-keygen -t ed25519 -C "brompton deploy key"
+```
+
+Navigate to https://github.com/dashford/brompton/settings/keys and add the public key.
+
+Create directory for the repo:
+
+```bash
+mkdir -p ~/dashford
+```
+
+Clone the repo:
+
+```bash
+git clone git@github.com:dashford/brompton.git
+```
+
+Create a `.env` file in the root of the repo with contents from the `.env.example` file.
