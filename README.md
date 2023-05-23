@@ -4,7 +4,7 @@
 
 Assumes a running version of Ubuntu.
 
-### Install docker
+### Install docker & docker compose
 
 ```bash
 sudo apt-get update
@@ -22,8 +22,9 @@ sudo groupadd docker
 sudo usermod -aG docker $USER
 ```
 
-Verify docker is running
+Verify docker & docker compose is running
 
 ```bash
 docker run hello-world
+docker compose version
 ```
