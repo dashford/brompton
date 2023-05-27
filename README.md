@@ -68,3 +68,24 @@ git clone git@github.com:dashford/brompton.git
 ```
 
 Create a `.env` file in the root of the repo with contents from the `.env.example` file.
+
+## Configuration
+
+### Mosquitto
+
+Start the container
+
+```bash
+docker compose up mosquitto -d
+```
+
+### Teslamate
+
+Start the container
+
+```bash
+docker compose up teslamate -d
+```
+
+To run this you will need to generate API tokens, following instructions for https://github.com/adriankumpf/tesla_auth.
+You should install this on your local machine, not the server.
