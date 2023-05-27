@@ -24,7 +24,7 @@ services:
     restart: unless-stopped
 
   homeassistant:
-    image: homeassistant/home-assistant:2023.2.5
+    image: homeassistant/home-assistant:2023.5.4
     container_name: homeassistant
     network_mode: host
     volumes:
@@ -49,7 +49,7 @@ services:
       - ./docker/mosquitto/configuration/mosquitto.conf:/mosquitto/config/mosquitto.conf:ro
 
   influxdb:
-    image: influxdb:2.4.0
+    image: influxdb:2.7.1
     container_name: influxdb
     environment:
       - DOCKER_INFLUXDB_INIT_USERNAME={INFLUXDB_ADMIN_USER}
@@ -66,7 +66,7 @@ services:
       - influxdb-config:/etc/influxdb2
 
   homeassistant_db:
-    image: postgres:14.1
+    image: postgres:15.3
     container_name: homeassistant_db
     environment:
       - POSTGRES_PASSWORD=${HOMEASSISTANT_DB_PASSWORD}
@@ -80,7 +80,7 @@ services:
       - homeassistant_db:/var/lib/postgresql/data
 
   grafana:
-    image: grafana/grafana:9.4.3
+    image: grafana/grafana:9.5.2
     container_name: grafana
     volumes:
       - grafana:/data
@@ -107,7 +107,7 @@ services:
     restart: unless-stopped
 
   zigbee2mqtt:
-    image: koenkk/zigbee2mqtt:1.30.2
+    image: koenkk/zigbee2mqtt:1.30.4
     container_name: zigbee2mqtt
     volumes:
       - zigbee2mqtt:/app/data
@@ -126,7 +126,7 @@ services:
       - ZIGBEE2MQTT_CONFIG_ADVANCED_LOG_LEVEL=warn
 
   teslamate:
-    image: teslamate/teslamate:1.27.1
+    image: teslamate/teslamate:1.27.2
     container_name: teslamate
     restart: unless-stopped
     environment:
@@ -146,7 +146,7 @@ services:
       - teslamate_db
 
   teslamate_db:
-    image: postgres:14.1
+    image: postgres:15.3
     container_name: teslamate_db
     environment:
       - POSTGRES_PASSWORD=${TESLAMATE_DB_PASSWORD}
@@ -160,22 +160,22 @@ services:
     volumes:
       - teslamate_db:/var/lib/postgresql/data
 
-  teslamateagile:
-    image: mattjeanes/teslamateagile:v1.11.2
-    container_name: teslamateagile
-    restart: unless-stopped
-    environment:
-      - DATABASE_USER=teslamate
-      - DATABASE_PASS=${TESLAMATE_DB_PASSWORD}
-      - DATABASE_NAME=teslamate
-      - DATABASE_HOST=10.243.0.100
-      - DATABASE_PORT=5433
-      - TeslaMate__UpdateIntervalSeconds=300
-      - TeslaMate__GeofenceId=1
-      - TeslaMate__EnergyProvider=FixedPrice
-      - FixedPrice__TimeZone=Europe/Dublin
-      - FixedPrice__Prices__0=00:00-12:00=0.4346
-      - FixedPrice__Prices__1=12:00-00:00=0.4346
+#  teslamateagile:
+#    image: mattjeanes/teslamateagile:v1.11.2
+#    container_name: teslamateagile
+#    restart: unless-stopped
+#    environment:
+#      - DATABASE_USER=teslamate
+#      - DATABASE_PASS=${TESLAMATE_DB_PASSWORD}
+#      - DATABASE_NAME=teslamate
+#      - DATABASE_HOST=10.243.0.100
+#      - DATABASE_PORT=5433
+#      - TeslaMate__UpdateIntervalSeconds=300
+#      - TeslaMate__GeofenceId=1
+#      - TeslaMate__EnergyProvider=FixedPrice
+#      - FixedPrice__TimeZone=Europe/Dublin
+#      - FixedPrice__Prices__0=00:00-12:00=0.4346
+#      - FixedPrice__Prices__1=12:00-00:00=0.4346
 
 volumes:
   influxdb-data:
