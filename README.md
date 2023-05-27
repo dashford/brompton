@@ -37,7 +37,23 @@ Generate the deploy key:
 ssh-keygen -t ed25519 -C "brompton deploy key"
 ```
 
+_Make a note of the filename of the key._
+
 Navigate to https://github.com/dashford/brompton/settings/keys and add the public key.
+
+Create the `~/.ssh/config` file matching github.com to the new deploy key
+
+```bash
+vi ~/.ssh/config
+```
+
+Copy the below into the file:
+
+```bash
+Host github.com
+        Hostname github.com
+        IdentityFile=/home/david/.ssh/github-brompton
+```
 
 Create directory for the repo:
 
