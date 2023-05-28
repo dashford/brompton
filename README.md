@@ -79,6 +79,30 @@ Start the container
 docker compose up mosquitto -d
 ```
 
+### Grafana
+
+Start the container
+
+```bash
+docker compose up grafana -d
+```
+
+### InfluxDB
+
+Start the container
+
+```bash
+docker compose up influxdb -d
+```
+
+### Zigbee2MQTT
+
+Start the container
+
+```bash
+docker compose up zigbee2mqtt -d
+```
+
 ### Teslamate
 
 Start the container
