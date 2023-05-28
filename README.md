@@ -97,6 +97,16 @@ docker compose up influxdb -d
 
 ### Zigbee2MQTT
 
+Add the current user to the `dialout`, `tty`, and `uucp` groups:
+
+```bash
+sudo usermod -a -G uucp $USER
+sudo usermod -a -G tty $USER
+sudo usermod -a -G dialout $USER
+```
+
+Reboot the server.
+
 Start the container
 
 ```bash
