@@ -34,6 +34,10 @@ services:
     ports:
       - 8123:8123
       - 8124:8124
+    depends_on:
+      - homeassistant_db
+      - mosquitto
+      - influxdb
 
   mosquitto:
     build:
