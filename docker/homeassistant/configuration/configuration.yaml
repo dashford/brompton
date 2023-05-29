@@ -165,7 +165,7 @@ mqtt:
       value_template: "{{ value_json.temperature | round(2) }}"
     - name: "Front Big Bedroom Humidity"
       state_topic: "brompton/front-big-bedroom/humidity"
-      unit_of_measurement: "%RH"
+      unit_of_measurement: "%"
       device_class: humidity
       unique_id: "front-big-bedroom-humidity"
       value_template: "{{ value_json.humidity | round(3) }}"
@@ -177,7 +177,7 @@ mqtt:
       value_template: "{{ value_json.temperature | round(2) }}"
     - name: "Front Small Bedroom Humidity"
       state_topic: "brompton/front-small-bedroom/humidity"
-      unit_of_measurement: "%RH"
+      unit_of_measurement: "%"
       device_class: humidity
       unique_id: "front-small-bedroom-humidity"
       value_template: "{{ value_json.humidity | round(3) }}"
@@ -189,7 +189,7 @@ mqtt:
       value_template: "{{ value_json.temperature | round(2) }}"
     - name: "Back Big Bedroom Humidity"
       state_topic: "brompton/back-big-bedroom/humidity"
-      unit_of_measurement: "%RH"
+      unit_of_measurement: "%"
       device_class: humidity
       unique_id: "back-big-bedroom-humidity"
       value_template: "{{ value_json.humidity | round(3) }}"
@@ -201,7 +201,7 @@ mqtt:
       value_template: "{{ value_json.temperature | round(2) }}"
     - name: "Back Small Bedroom Humidity"
       state_topic: "brompton/back-small-bedroom/humidity"
-      unit_of_measurement: "%RH"
+      unit_of_measurement: "%"
       device_class: humidity
       unique_id: "back-small-bedroom-humidity"
       value_template: "{{ value_json.humidity | round(3) }}"
@@ -213,7 +213,7 @@ mqtt:
       value_template: "{{ value_json.temperature | round(2) }}"
     - name: "Upstairs Landing Humidity"
       state_topic: "brompton/upstairs-landing/humidity"
-      unit_of_measurement: "%RH"
+      unit_of_measurement: "%"
       device_class: humidity
       unique_id: "upstairs-landing-humidity"
       value_template: "{{ value_json.humidity | round(3) }}"
@@ -225,7 +225,7 @@ mqtt:
       value_template: "{{ value_json.temperature | round(2) }}"
     - name: "Upstairs Bathroom Humidity"
       state_topic: "brompton/upstairs-bathroom/humidity"
-      unit_of_measurement: "%RH"
+      unit_of_measurement: "%"
       device_class: humidity
       unique_id: "upstairs-bathroom-humidity"
       value_template: "{{ value_json.humidity | round(3) }}"
