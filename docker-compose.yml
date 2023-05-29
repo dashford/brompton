@@ -123,7 +123,6 @@ services:
     network_mode: host
     environment:
       - TZ=Europe/Dublin
-      - ZIGBEE2MQTT_DATA=/app/data
       - ZIGBEE2MQTT_CONFIG_HOMEASSISTANT=true
       - ZIGBEE2MQTT_CONFIG_PERMIT_JOIN=true
       - ZIGBEE2MQTT_CONFIG_MQTT_USER=${MQTT_USER}
