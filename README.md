@@ -124,6 +124,14 @@ docker compose up teslamate -d
 To run this you will need to generate API tokens, following instructions for https://github.com/adriankumpf/tesla_auth.
 You should install this on your local machine, not the server.
 
+### Home Assistant
+
+Start the container
+
+```bash
+docker compose up homeassistant -d
+```
+
 ## Zigbee Devices
 
 - `0x90fd9ffffe04be6e`: Kitchen lamp
