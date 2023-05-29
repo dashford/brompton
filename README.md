@@ -139,3 +139,4 @@ Add the following integrations through the [UI](http://10.243.0.100:8123/config/
 ## Zigbee Devices
 
 - `0x90fd9ffffe04be6e`: Kitchen lamp
+- `0x000b57fffe0d96c2`: Hallway lamp
