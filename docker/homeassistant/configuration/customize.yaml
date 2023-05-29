@@ -23,7 +23,7 @@ sensor.back_small_bedroom_humidity:
   friendly_name: Humidity
 
 # Kitchen
-light.ikea_kitchen_lamp:
+light.0x90fd9ffffe04be6e:
   friendly_name: Lamp
 cover.ikea_kitchen_blind_left:
   friendly_name: Left
