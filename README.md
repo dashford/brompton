@@ -89,6 +89,9 @@ docker compose up grafana -d
 
 ### InfluxDB
 
+For the first run the `DOCKER_INFLUXDB_INIT_MODE` environment variable needs to be set to `setup`. After the first run
+this variable can be commented out from the `docker-compose` file.
+
 Start the container
 
 ```bash
