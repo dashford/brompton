@@ -132,6 +132,10 @@ Start the container
 docker compose up homeassistant -d
 ```
 
+Add the following integrations through the [UI](http://10.243.0.100:8123/config/integrations):
+
+- MQTT
+
 ## Zigbee Devices
 
 - `0x90fd9ffffe04be6e`: Kitchen lamp
