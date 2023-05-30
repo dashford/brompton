@@ -38,6 +38,7 @@ services:
       - homeassistant_db
       - mosquitto
       - influxdb
+      - zigbee2mqtt
 
   mosquitto:
     build:
