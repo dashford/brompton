@@ -8,7 +8,7 @@ mqtt:
   server: 'mqtt://localhost'
 
 advanced:
-  log_level: error
+  log_level: debug
   channel: 25
 
 serial:
