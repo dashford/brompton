@@ -151,9 +151,9 @@
     entity_id: cover.ikea_kitchen_blind_centre_left
     type: set_position
     position: 0
-  - device_id: 4a127147cfcae838675d463b7ef57b06
+  - device_id: be1717a36a296b7fbf56912c145c6967
     domain: cover
-    entity_id: cover.0x70ac08fffe84c787
+    entity_id: cover.ikea_kitchen_blind_centre_right
     type: set_position
     position: 0
   - device_id: 954f073b4ae1047e8c0eee6fafa2c966
