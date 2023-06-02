@@ -8,11 +8,11 @@
   condition: []
   action:
   - type: turn_off
-    device_id: 64cad46a7610b5987b7ffd884ba0e07a
+    device_id: 119baa3c1c324df38ebbb62778d02b90
     entity_id: light.ikea_hallway_lamp
     domain: light
   - type: turn_off
-    device_id: 54a1fd0f3d5484107745440e81c74171
+    device_id: 78db16d7a5354c54059380ad65e6a005
     entity_id: light.ikea_kitchen_lamp
     domain: light
   - device_id: 1e386b5613942db415a2d70d3d37a09b
@@ -20,17 +20,18 @@
     entity_id: cover.ikea_kitchen_blind_left
     type: set_position
     position: 100
-  - device_id: fd2868cfafdfa78ecf3c1cb25f925c53
+    enabled: false
+  - device_id: 10dba2b49d0ac3d3d38895eadc2c04e0
     domain: cover
     entity_id: cover.ikea_kitchen_blind_centre_left
     type: set_position
     position: 100
-  - device_id: 4a127147cfcae838675d463b7ef57b06
+  - device_id: be1717a36a296b7fbf56912c145c6967
     domain: cover
-    entity_id: cover.0x70ac08fffe84c787
+    entity_id: cover.ikea_kitchen_blind_centre_right
     type: set_position
     position: 100
-  - device_id: 954f073b4ae1047e8c0eee6fafa2c966
+  - device_id: a74bab6198d89faf5200af754b44b1e0
     domain: cover
     entity_id: cover.ikea_kitchen_blind_right
     type: set_position
@@ -45,11 +46,11 @@
   condition: []
   action:
   - type: turn_off
-    device_id: 64cad46a7610b5987b7ffd884ba0e07a
+    device_id: 119baa3c1c324df38ebbb62778d02b90
     entity_id: light.ikea_hallway_lamp
     domain: light
   - type: turn_off
-    device_id: 54a1fd0f3d5484107745440e81c74171
+    device_id: 78db16d7a5354c54059380ad65e6a005
     entity_id: light.ikea_kitchen_lamp
     domain: light
   mode: single
@@ -63,37 +64,34 @@
   condition: []
   action:
   - type: turn_on
-    device_id: 64cad46a7610b5987b7ffd884ba0e07a
+    device_id: 119baa3c1c324df38ebbb62778d02b90
     entity_id: light.ikea_hallway_lamp
     domain: light
   - type: turn_on
-    device_id: 54a1fd0f3d5484107745440e81c74171
+    device_id: 78db16d7a5354c54059380ad65e6a005
     entity_id: light.ikea_kitchen_lamp
     domain: light
-    enabled: true
   - device_id: 1e386b5613942db415a2d70d3d37a09b
     domain: cover
     entity_id: cover.ikea_kitchen_blind_left
     type: set_position
     position: 50
-    enabled: true
-  - device_id: fd2868cfafdfa78ecf3c1cb25f925c53
+    enabled: false
+  - device_id: 10dba2b49d0ac3d3d38895eadc2c04e0
     domain: cover
     entity_id: cover.ikea_kitchen_blind_centre_left
     type: set_position
     position: 50
-    enabled: true
-  - device_id: 4a127147cfcae838675d463b7ef57b06
+  - device_id: be1717a36a296b7fbf56912c145c6967
     domain: cover
-    entity_id: cover.0x70ac08fffe84c787
+    entity_id: cover.ikea_kitchen_blind_centre_right
     type: set_position
     position: 50
-  - device_id: 954f073b4ae1047e8c0eee6fafa2c966
+  - device_id: a74bab6198d89faf5200af754b44b1e0
     domain: cover
     entity_id: cover.ikea_kitchen_blind_right
     type: set_position
     position: 50
-    enabled: true
   mode: single
 - id: '1613742091259'
   alias: Turn on lights in the morning
@@ -123,7 +121,7 @@
       - sun
   action:
   - type: turn_on
-    device_id: 64cad46a7610b5987b7ffd884ba0e07a
+    device_id: 119baa3c1c324df38ebbb62778d02b90
     entity_id: light.ikea_hallway_lamp
     domain: light
   - type: turn_on
@@ -193,14 +191,9 @@
     - fri
     - sat
     - sun
-  - condition: device
-    type: is_off
-    device_id: 64cad46a7610b5987b7ffd884ba0e07a
-    entity_id: light.ikea_hallway_lamp
-    domain: light
   action:
   - type: turn_on
-    device_id: 64cad46a7610b5987b7ffd884ba0e07a
+    device_id: 119baa3c1c324df38ebbb62778d02b90
     entity_id: light.ikea_hallway_lamp
     domain: light
   - delay:
@@ -209,7 +202,7 @@
       seconds: 0
       milliseconds: 0
   - type: turn_off
-    device_id: 64cad46a7610b5987b7ffd884ba0e07a
+    device_id: 119baa3c1c324df38ebbb62778d02b90
     entity_id: light.ikea_hallway_lamp
     domain: light
   mode: restart
