@@ -99,8 +99,8 @@ sensor.upstairs_bathroom_humidity:
   friendly_name: Humidity
 
 # Hallway
-#light.0x000b57fffe0d96c2:
-#  friendly_name: Lamp
+light.ikea_hallway_lamp:
+  friendly_name: Lamp
 sensor.aqara_wsdcgq12lm_hallway_temperature:
   friendly_name: Temperature
 sensor.aqara_wsdcgq12lm_hallway_humidity:

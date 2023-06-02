@@ -64,7 +64,7 @@ views:
                 features:
                   - type: "cover-open-close"
               - type: tile
-                entity: cover.0x70ac08fffe84c787
+                entity: cover.ikea_kitchen_blind_centre_right
                 features:
                   - type: "cover-open-close"
               - type: tile
@@ -77,7 +77,7 @@ views:
         square: false
         cards:
           - type: tile
-            entity: light.0x90fd9ffffe04be6e
+            entity: light.ikea_kitchen_lamp
             features:
               - type: "light-brightness"
       - type: grid
@@ -159,7 +159,7 @@ views:
     cards:
       - type: entities
         entities:
-#          - light.0x000b57fffe0d96c2
+          - light.ikea_hallway_lamp
           - sensor.aqara_wsdcgq12lm_hallway_temperature
           - sensor.aqara_wsdcgq12lm_hallway_humidity
           - binary_sensor.aqara_mccgq11lm_front_door_contact
