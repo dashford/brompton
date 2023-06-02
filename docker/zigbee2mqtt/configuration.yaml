@@ -1,3 +1,19 @@
+homeassistant: true
+permit_join: true
+frontend: false
+
+mqtt:
+  base_topic: zigbee2mqtt
+  client_id: zigbee2mqtt
+  server: 'mqtt://localhost'
+
+advanced:
+  log_level: debug
+  channel: 25
+
+serial:
+  port: /dev/ttyACM0
+
 devices:
 #  '0x00158d00054c2476':
 #    friendly_name: 'aqara/wsdcgq12lm/sitting-room'

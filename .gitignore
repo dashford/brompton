@@ -2,12 +2,10 @@
 
 .idea/
 
+docker/zigbee2mqtt/*
+!docker/zigbee2mqtt/configuration.yaml
+
 docker/homeassistant/configuration/*
-
 !docker/homeassistant/configuration/*.yaml
-
 docker/homeassistant/configuration/secrets.yaml
-
 docker/homeassistant/configuration/known_devices.yaml
-
-docker/zigbee2mqtt/secret.yaml
