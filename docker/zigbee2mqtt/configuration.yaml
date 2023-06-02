@@ -3,18 +3,18 @@ devices:
 #    friendly_name: 'aqara/wsdcgq12lm/sitting-room'
   '0x000b57fffe0d96c2':
     friendly_name: 'ikea/hallway/lamp'
-#  '0x90fd9ffffe04be6e':
-#    friendly_name: 'ikea/kitchen/lamp'
-#  '0x680ae2fffe129fac':
-#    friendly_name: 'ikea/kitchen/signal-repeater'
-#  '0x680ae2fffe1c5c77':
-#    friendly_name: 'ikea/kitchen/blind-left'
-#  '0x680ae2fffe8c9cf8':
-#    friendly_name: 'ikea/kitchen/blind-centre-left'
-#  '0x70ac08fffe84c787':
-#    friendly_name: 'ikea/kitchen/blind-centre-right'
-#  '0x680ae2fffe1c3b8d':
-#    friendly_name: 'ikea/kitchen/blind-right'
+  '0x90fd9ffffe04be6e':
+    friendly_name: 'ikea/kitchen/lamp'
+  '0x680ae2fffe129fac':
+    friendly_name: 'ikea/kitchen/signal-repeater'
+  '0x680ae2fffe1c5c77':
+    friendly_name: 'ikea/kitchen/blind-left'
+  '0x680ae2fffe8c9cf8':
+    friendly_name: 'ikea/kitchen/blind-centre-left'
+  '0x70ac08fffe84c787':
+    friendly_name: 'ikea/kitchen/blind-centre-right'
+  '0x680ae2fffe1c3b8d':
+    friendly_name: 'ikea/kitchen/blind-right'
 #  '0x00158d00068b7170':
 #    friendly_name: 'aqara/wsdcgq12lm/hallway'
 #  '0x00158d00068b92eb':
