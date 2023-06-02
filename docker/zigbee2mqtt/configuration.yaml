@@ -1,5 +1,5 @@
 homeassistant: true
-permit_join: true
+permit_join: false
 frontend: false
 
 mqtt:
@@ -8,7 +8,7 @@ mqtt:
   server: 'mqtt://localhost'
 
 advanced:
-  log_level: debug
+  log_level: error
   channel: 25
 
 serial:
@@ -23,8 +23,8 @@ devices:
     friendly_name: 'ikea/kitchen/lamp'
   '0x680ae2fffe129fac':
     friendly_name: 'ikea/kitchen/signal-repeater'
-  '0x680ae2fffe1c5c77':
-    friendly_name: 'ikea/kitchen/blind-left'
+#  '0x680ae2fffe1c5c77':
+#    friendly_name: 'ikea/kitchen/blind-left'
   '0x680ae2fffe8c9cf8':
     friendly_name: 'ikea/kitchen/blind-centre-left'
   '0x70ac08fffe84c787':
