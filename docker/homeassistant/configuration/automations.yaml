@@ -15,12 +15,11 @@
     device_id: 78db16d7a5354c54059380ad65e6a005
     entity_id: light.ikea_kitchen_lamp
     domain: light
-  - device_id: 1e386b5613942db415a2d70d3d37a09b
+  - device_id: 794cd228824b84dfb5ad688ba82fbd0f
     domain: cover
-    entity_id: cover.ikea_kitchen_blind_left
+    entity_id: cover.0xf082c0fffe9d3267
     type: set_position
     position: 100
-    enabled: false
   - device_id: 10dba2b49d0ac3d3d38895eadc2c04e0
     domain: cover
     entity_id: cover.ikea_kitchen_blind_centre_left
@@ -71,12 +70,11 @@
     device_id: 78db16d7a5354c54059380ad65e6a005
     entity_id: light.ikea_kitchen_lamp
     domain: light
-  - device_id: 1e386b5613942db415a2d70d3d37a09b
+  - device_id: 794cd228824b84dfb5ad688ba82fbd0f
     domain: cover
-    entity_id: cover.ikea_kitchen_blind_left
+    entity_id: cover.0xf082c0fffe9d3267
     type: set_position
     position: 50
-    enabled: false
   - device_id: 10dba2b49d0ac3d3d38895eadc2c04e0
     domain: cover
     entity_id: cover.ikea_kitchen_blind_centre_left
@@ -139,9 +137,9 @@
     offset: 00:20:00
   condition: []
   action:
-  - device_id: 1e386b5613942db415a2d70d3d37a09b
+  - device_id: 794cd228824b84dfb5ad688ba82fbd0f
     domain: cover
-    entity_id: cover.ikea_kitchen_blind_left
+    entity_id: cover.0xf082c0fffe9d3267
     type: set_position
     position: 0
   - device_id: fd2868cfafdfa78ecf3c1cb25f925c53
