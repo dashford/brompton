@@ -132,10 +132,6 @@ Start the container
 docker compose up homeassistant -d
 ```
 
-Add the following integrations through the [UI](http://10.243.0.100:8123/config/integrations):
-
-- MQTT
-
 #### Install HACS
 
 Connect to the running Home Assistant container:
@@ -153,3 +149,15 @@ wget -O - https://get.hacs.xyz | bash -
 Restart Home Assistant.
 
 Follow the official [configuration instructions](https://hacs.xyz/docs/configuration/basic).
+
+#### Install Integrations
+
+Add the following integrations through the [UI](http://10.243.0.100:8123/config/integrations):
+
+##### MQTT
+
+No further configuration required.
+
+##### Met Éireann
+
+No further configuration required.
