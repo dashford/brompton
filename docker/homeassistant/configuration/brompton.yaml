@@ -4,7 +4,7 @@ views:
     title: Overview
     cards:
       - type: weather-forecast
-        entity: weather.forecast_home
+        entity: weather.home
       - type: energy-distribution
         link_dashboard: true
       - type: entity
