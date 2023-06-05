@@ -161,3 +161,39 @@ No further configuration required.
 ##### Met Éireann
 
 No further configuration required.
+
+##### LG
+
+Further select LG webOS Smart TV.
+
+##### Nest Protect
+
+_Note: This should be configured through HACS_.
+
+_Notes: The authentication mechanism is broken and fix is currently in beta._
+
+Navigate to [HACS integrations](http://10.243.0.100:8123/hacs/integrations) and search for `Nest Protect`. Install and
+restart Home Assistant.
+
+After Home Assistant has restarted, navigate to the main [integrations](http://10.243.0.100:8123/config/integrations)
+page and search for `Nest` again to configure the plugin.
+
+##### myenergi
+
+_Note: This should be configured through HACS_.
+
+Navigate to [HACS integrations](http://10.243.0.100:8123/hacs/integrations) and search for `myenergi`. Install and
+restart Home Assistant.
+
+After Home Assistant has restarted, navigate to the main [integrations](http://10.243.0.100:8123/config/integrations)
+page and search for `myenergi` again to configure the plugin.
+
+Hub serial number and API key are stored in BitWarden.
+
+After installation, re-configure the integration and update the `Update interval` to `180`.
+
+#### Energy Configuration
+
+_Note: This requires `myenergi` integration to be set up first._
+
+Navigate to the [energy dashboard](http://10.243.0.100:8123/energy).
