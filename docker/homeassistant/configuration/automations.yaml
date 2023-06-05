@@ -17,7 +17,7 @@
     domain: light
   - device_id: 794cd228824b84dfb5ad688ba82fbd0f
     domain: cover
-    entity_id: cover.0xf082c0fffe9d3267
+    entity_id: cover.ikea_kitchen_blind_left
     type: set_position
     position: 100
   - device_id: 10dba2b49d0ac3d3d38895eadc2c04e0
@@ -72,7 +72,7 @@
     domain: light
   - device_id: 794cd228824b84dfb5ad688ba82fbd0f
     domain: cover
-    entity_id: cover.0xf082c0fffe9d3267
+    entity_id: cover.ikea_kitchen_blind_left
     type: set_position
     position: 50
   - device_id: 10dba2b49d0ac3d3d38895eadc2c04e0
@@ -139,7 +139,7 @@
   action:
   - device_id: 794cd228824b84dfb5ad688ba82fbd0f
     domain: cover
-    entity_id: cover.0xf082c0fffe9d3267
+    entity_id: cover.ikea_kitchen_blind_left
     type: set_position
     position: 0
   - device_id: fd2868cfafdfa78ecf3c1cb25f925c53
