@@ -192,6 +192,11 @@ Hub serial number and API key are stored in BitWarden.
 
 After installation, re-configure the integration and update the `Update interval` to `180`.
 
+##### Google
+
+Navigate to the main [integrations](http://10.243.0.100:8123/config/integrations) page and search for `Google`. In the
+submenus, select `Google Cast` and follow further instructions.
+
 #### Energy Configuration
 
 _Note: This requires `myenergi` integration to be set up first._
