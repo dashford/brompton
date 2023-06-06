@@ -24,6 +24,16 @@ config:
 
 energy:
 
+utility_meter:
+  daily_electricity:
+    source: sensor.myenergi_hub_grid_import_today
+    name: Daily
+    cycle: daily
+    tariffs:
+      - fixed_price
+      - free
+    
+
 climate:
   - platform: ephember
     username: !secret ephember_username
