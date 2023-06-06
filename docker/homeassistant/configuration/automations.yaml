@@ -234,3 +234,37 @@
     type: select_option
     option: Stopped
   mode: single
+- id: '1686078325150'
+  alias: Set electricity metering to free
+  description: ''
+  trigger:
+  - platform: time
+    at: 08:00:00
+  condition:
+  - condition: time
+    weekday:
+    - sun
+  action:
+  - service: select.select_option
+    data:
+      option: free
+    target:
+      entity_id: select.daily_electricity
+  mode: single
+- id: '1686078384701'
+  alias: Set electricity metering to fixed price
+  description: ''
+  trigger:
+  - platform: time
+    at: '23:00:00'
+  condition:
+  - condition: time
+    weekday:
+    - sun
+  action:
+  - service: select.select_option
+    data:
+      option: fixed_price
+    target:
+      entity_id: select.daily_electricity
+  mode: single
