@@ -27,6 +27,7 @@ energy:
 utility_meter:
   daily_electricity:
     source: sensor.myenergi_hub_grid_import_today
+    unique_id: daily_electricity
     name: Daily
     cycle: daily
     tariffs:
