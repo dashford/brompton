@@ -19,6 +19,8 @@ weather:
 # Enables the frontend
 frontend:
 
+default_config:
+
 # Enables configuration UI
 config:
 
