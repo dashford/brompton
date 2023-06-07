@@ -250,6 +250,11 @@
       option: free
     target:
       entity_id: select.daily_electricity
+  - service: select.select_option
+    data:
+      option: free
+    target:
+      entity_id: select.monthly_electricity
   mode: single
 - id: '1686078384701'
   alias: Set electricity metering to fixed price
@@ -267,4 +272,9 @@
       option: fixed_price
     target:
       entity_id: select.daily_electricity
+  - service: select.select_option
+    data:
+      option: fixed_price
+    target:
+      entity_id: select.monthly_electricity
   mode: single
