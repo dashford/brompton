@@ -43,7 +43,15 @@ utility_meter:
     tariffs:
       - fixed_price
       - free
-    
+input_text:
+  electricity_fixed_price_tariff:
+    name: Electricity Price per kWh (fixed)
+    icon: mdi:cash
+    initial: 0.43
+  electricity_free_tariff:
+    name: Electricity Price per kWh (free)
+    icon: mdi:cash
+    initial: 0
 
 climate:
   - platform: ephember
