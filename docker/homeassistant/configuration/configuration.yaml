@@ -53,6 +53,12 @@ input_text:
     icon: mdi:cash
     initial: 0
 
+template:
+  - sensor:
+      - name: "Daily Electricity Cost"
+        unit_of_measurement: "Eur"
+        state: "{{ (states('input_text.electricity_fixed_price_tariff')|float) * (states('sensor.daily_electricity_fixed_price')|float) + (states('input_text.electricity_free_tariff')|float) * (states('sensor.daily_electricity_free')|float) }}"
+
 climate:
   - platform: ephember
     username: !secret ephember_username
