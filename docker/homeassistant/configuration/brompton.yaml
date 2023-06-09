@@ -11,6 +11,12 @@ views:
         entity: alarm_control_panel.8124_b17_zone_1_alarm
         name: Alarm
         state_color: true
+      - type: statistic
+        entity: sensor.daily_electricity_cost
+        period:
+          calendar:
+            period: day
+        stat_type: max
       - type: grid
         title: Car
         columns: 1
