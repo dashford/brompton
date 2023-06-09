@@ -57,6 +57,8 @@ template:
   - sensor:
       - name: "Daily Electricity Cost"
         unit_of_measurement: "Eur"
+        icon: mdi:cash
+        device_class: monetary
         state: "{{ (states('input_text.electricity_fixed_price_tariff')|float) * (states('sensor.daily_electricity_fixed_price')|float) + (states('input_text.electricity_free_tariff')|float) * (states('sensor.daily_electricity_free')|float) }}"
 
 climate:
