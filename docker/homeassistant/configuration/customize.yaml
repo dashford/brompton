@@ -233,3 +233,7 @@ sun.sun:
 
 light.tradfri_group:
   hidden: true
+
+# SIA Alarm
+alarm_control_panel.8124_b17_zone_1_alarm:
+  friendly_name: Alarm Panel

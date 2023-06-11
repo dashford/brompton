@@ -197,6 +197,12 @@ After installation, re-configure the integration and update the `Update interval
 Navigate to the main [integrations](http://10.243.0.100:8123/config/integrations) page and search for `Google`. In the
 submenus, select `Google Cast` and follow further instructions.
 
+##### SIA Alarm Systems
+
+[Documentation](https://www.home-assistant.io/integrations/sia/).
+
+Select `8124` as the port and `B17` as the account ID. Get the encryption key from BitWarden and leave the rest as default.
+
 #### Energy Configuration
 
 _Note: This requires `myenergi` integration to be set up first._
