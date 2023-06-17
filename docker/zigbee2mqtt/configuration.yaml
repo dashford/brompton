@@ -43,14 +43,14 @@ devices:
 #    friendly_name: 'aqara/wsdcgq12lm/kitchen-main'
 #  '0x00158d000693a944':
 #    friendly_name: 'aqara/wsdcgq12lm/kitchen-snug'
-#  '0x00158d000693b91b':
-#    friendly_name: 'aqara/mccgq11lm/kitchen-main-back-door'
-#  '0x00158d00068b8581':
-#    friendly_name: 'aqara/mccgq11lm/kitchen-secondary-back-door'
-#  '0x00158d00068b85c8':
-#    friendly_name: 'aqara/mccgq11lm/garage-door'
-#  '0x00158d000693b930':
-#    friendly_name: 'aqara/mccgq11lm/front-door'
+  '0x00158d000693b91b':
+    friendly_name: 'aqara/mccgq11lm/kitchen-main-back-door'
+  '0x00158d00068b8581':
+    friendly_name: 'aqara/mccgq11lm/kitchen-secondary-back-door'
+  '0x00158d00068b85c8':
+    friendly_name: 'aqara/mccgq11lm/garage-door'
+  '0x00158d000693b930':
+    friendly_name: 'aqara/mccgq11lm/front-door'
 #  '0x00158d0006a15847':
 #    friendly_name: 'aqara/rtcgq11lm/sitting-room'
 #  '0x000d6ffffe2a5da3':
