@@ -11,8 +11,17 @@ views:
         entity: alarm_control_panel.8124_b17_zone_1_alarm
         name: Alarm
         state_color: true
-      - type: entity
-        entity: sensor.daily_electricity_cost
+      - type: grid
+        title: Electricity Cost
+        columns: 1
+        square: false
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: tile
+                entity: sensor.daily_electricity_cost
+              - type: tile
+                entity: sensor.monthly_electricity_cost
       - type: grid
         title: Car
         columns: 1
