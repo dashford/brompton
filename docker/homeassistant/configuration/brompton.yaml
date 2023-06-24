@@ -20,8 +20,10 @@ views:
             cards:
               - type: tile
                 entity: sensor.daily_electricity_cost
+                name: Today
               - type: tile
                 entity: sensor.monthly_electricity_cost
+                name: This Month
       - type: grid
         title: Car
         columns: 1
