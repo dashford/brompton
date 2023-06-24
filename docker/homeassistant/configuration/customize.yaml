@@ -54,7 +54,7 @@ sensor.aqara_wsdcgq12lm_kitchen_snug_temperature:
 sensor.aqara_wsdcgq12lm_kitchen_snug_humidity:
   friendly_name: Snug Humidity
   unit_of_measurement: '%'
-binary_sensor.aqara_mccgq11lm_kitchen_main_back_door_contact:
+binary_sensor.0x00158d000693b91b_contact:
   friendly_name: Main Back Door
 binary_sensor.aqara_mccgq11lm_kitchen_secondary_back_door_contact:
   friendly_name: Secondary Back Door
