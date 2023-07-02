@@ -203,6 +203,15 @@ submenus, select `Google Cast` and follow further instructions.
 
 Select `8124` as the port and `B17` as the account ID. Get the encryption key from BitWarden and leave the rest as default.
 
+##### Ubiquiti
+
+Navigate to the main [integrations](http://10.243.0.100:8123/config/integrations) page and search for `Ubiquiti`. Select
+`UniFi Network` when the following menu is presented.
+
+Choose `10.243.0.1` as the `Host`; `homeassistant` as the `User`; select the password from the vault; leave `Port` as is.
+
+Navigate to the `Entities` configuration for `UniFi` and enable the devices you wish to track.
+
 #### Energy Configuration
 
 _Note: This requires `myenergi` integration to be set up first._
