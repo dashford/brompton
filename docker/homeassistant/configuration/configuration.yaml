@@ -72,7 +72,7 @@ template:
       unit_of_measurement: "Eur"
       icon: mdi:cash
       device_class: monetary
-      state: "{{ ((states('input_text.electricity_fixed_price_tariff')|float) * (states('sensor.monthly_electricity_fixed_price')|float)) + ((states('input_text.electricity_free_tariff')|float) * (states('sensor.monthly_electricity_free')|float)) }}"
+      state: "{{ ((states('input_text.electricity_daily_standing_charge')|float) * now().day) + ((states('input_text.electricity_fixed_price_tariff')|float) * (states('sensor.monthly_electricity_fixed_price')|float)) + ((states('input_text.electricity_free_tariff')|float) * (states('sensor.monthly_electricity_free')|float)) }}"
 
 climate:
   - platform: ephember
