@@ -124,6 +124,8 @@ docker compose up teslamate -d
 To run this you will need to generate API tokens, following instructions for https://github.com/adriankumpf/tesla_auth.
 You should install this on your local machine, not the server.
 
+### Wireguard
+
 ### Home Assistant
 
 Start the container
