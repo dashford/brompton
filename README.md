@@ -126,6 +126,19 @@ You should install this on your local machine, not the server.
 
 ### Wireguard
 
+Start the container
+
+```bash
+docker compose up wireguard -d
+```
+
+When the container starts on first run, a QR code will be generated. This can be used to quickly populate the wireguard
+configuration on your client device. Perform the following changes:
+
+- Remove `DNS servers` from the `Interface`.
+- Change the `Endpoint` address to `79.97.250.243:52000`.
+- Update the `Allowed IPs` to `10.0.0.0/8`.
+
 ### Home Assistant
 
 Start the container
