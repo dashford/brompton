@@ -227,6 +227,19 @@ Choose `10.243.0.1` as the `Host`; `homeassistant` as the `User`; select the pas
 
 Navigate to the `Entities` configuration for `UniFi` and enable the devices you wish to track.
 
+##### WLED
+
+*Note: This integration will likely be auto-dsicovered.*
+
+Navigate to the main [integrations](http://10.243.0.100:8123/config/integrations) page and search for `WLED`. Follow the
+instructions to configure.
+
+##### Kodi
+
+*Note: This integration will likely be auto-dsicovered.*
+
+Navigate to the main [integrations](http://10.243.0.100:8123/config/integrations) page and search for `Kodi`.
+
 #### Energy Configuration
 
 _Note: This requires `myenergi` integration to be set up first._

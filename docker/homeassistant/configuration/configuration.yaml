@@ -56,10 +56,6 @@ input_text:
     name: Electricity Standing Charge
     icon: mdi:cash
     initial: 0.7614
-  electricity_vat_rate:
-    name: Electricity VAT Rate
-    icon: mdi:cash
-    initial: 9
 
 template:
   - sensor:
