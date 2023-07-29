@@ -162,6 +162,8 @@ views:
         cards:
           - type: tile
             entity: light.wled
+            features:
+              - type: "light-brightness"
       - type: grid
         title: Environment
         columns: 1
