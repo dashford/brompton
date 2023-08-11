@@ -4,6 +4,64 @@
 
 Assumes a running version of Ubuntu.
 
+### Configure HDDs
+
+Create mount points:
+
+```bash
+mkdir -p /home/david/europa
+mkdir -p /home/david/io
+mkdir -p /home/david/callisto
+mkdir -p /home/david/ganymede
+```
+
+Run `sudo vi /etc/fstab` and add the following:
+
+```bash
+UUID=4b9478a9-937d-4e20-b930-f6f0e6d73447	/home/david/europa	ext4	defaults	0	0
+UUID=73a146b5-a720-4189-afdf-98ad7ffb949e	/home/david/ganymede	ext4	defaults	0	0
+UUID=b2ca9bb2-f454-4de4-b2c5-5796604709d3	/home/david/callisto	ext4	defaults	0	0
+UUID=cb9a0754-37ce-4506-a85b-e97f265d6bfe	/home/david/io	ext4	defaults	0	0
+```
+
+### Configure NFS
+
+```bash
+sudo apt install nfs-kernel-server
+sudo chown -R nobody:nogroup /home/david/europa/ /home/david/callisto/ /home/david/ganymede/ /home/david/io/
+sudo chmod 777 /home/david/europa/ /home/david/callisto/ /home/david/ganymede/ /home/david/io/
+```
+
+Run `sudo vi /etc/exports` and add the following:
+
+```bash
+/home/david/europa      10.243.0.0/16(rw,sync,no_subtree_check)
+/home/david/callisto      10.243.0.0/16(rw,sync,no_subtree_check)
+/home/david/ganymede      10.243.0.0/16(rw,sync,no_subtree_check)
+/home/david/io      10.243.0.0/16(rw,sync,no_subtree_check)
+```
+
+Run:
+
+```bash
+sudo exportfs -a
+sudo systemctl restart nfs-kernel-server
+```
+
+Configure firewall:
+
+```bash
+sudo ufw allow from 10.243.0.0/16 to any port nfs
+sudo ufw enable
+```
+
+On client machine run `sudo vi /etc/fstab` and add the following:
+
+```bash
+10.243.0.100:/home/david/io  /home/david/jupiter/io  nfs     auto,nofail,noatime,nolock,intr,tcp,actimeo=1800        0       0
+10.243.0.100:/home/david/europa      /home/david/jupiter/europa      nfs     auto,nofail,noatime,nolock,intr,tcp,actimeo=1800        0       0
+```
+
 ### Install docker & docker compose
 
 ```bash
