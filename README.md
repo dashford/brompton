@@ -62,6 +62,37 @@ On client machine run `sudo vi /etc/fstab` and add the following:
 10.243.0.100:/home/david/europa      /home/david/jupiter/europa      nfs     auto,nofail,noatime,nolock,intr,tcp,actimeo=1800        0       0
 ```
 
+### Set up `restic`
+
+Download the latest release:
+
+```bash
+curl -L https://github.com/restic/restic/releases/download/v0.16.0/restic_0.16.0_linux_amd64.bz2 --output restic.bz2
+bzip2 -d restic.bz2
+chmod +x restic
+sudo mv restic /usr/local/bin/restic-0.16.0
+sudo ln -s /usr/local/bin/restic-0.16.0 /usr/local/bin/restic
+```
+
+#### Initialise the restic repo (Scaleway S3 backend)
+
+Access keys stored in Vault.
+
+```bash
+export AWS_ACCESS_KEY_ID=SCW...
+export AWS_SECRET_ACCESS_KEY=ds7ysdh-...
+
+restic -r s3:https://s3.fr-par.scw.cloud/dashford-backup init
+restic -r s3:https://s3.fr-par.scw.cloud/dashford-backup backup -o s3.storage-class=ONEZONE_IA /home/david/europa/dashford-backup/
+```
+
+#### Initialise the restic repo (Local backend)
+
+```bash
+restic init --repo /home/david/ganymede/dashford-backup
+restic -r /home/david/ganymede/dashford-backup --verbose backup /home/david/europa/dashford-backup
+```
+
 ### Install docker & docker compose
 
 ```bash
