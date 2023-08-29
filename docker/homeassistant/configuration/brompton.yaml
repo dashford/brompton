@@ -85,10 +85,9 @@ views:
                   - type: "cover-open-close"
               - type: entity-filter
                 show_empty: false
-                card:
-                  type: tile
                 entities:
-                  - sensor.ikea_kitchen_blind_centre_left_battery
+                  - entity: sensor.ikea_kitchen_blind_centre_left_battery
+                    name: Battery
                 state_filter:
                   - operator: "<="
                     value: 20
