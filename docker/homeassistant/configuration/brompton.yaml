@@ -72,6 +72,12 @@ views:
                 entity: cover.ikea_kitchen_blind_left
                 features:
                   - type: "cover-open-close"
+              - type: entity-filter
+                entities:
+                  - sensor.ikea_kitchen_blind_left_battery
+                state_filter:
+                  - operator: "<="
+                    value: 20
               - type: tile
                 entity: cover.ikea_kitchen_blind_centre_left
                 features:
