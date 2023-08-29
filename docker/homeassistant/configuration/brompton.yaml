@@ -196,19 +196,26 @@ views:
             entity: binary_sensor.aqara_rtcgq11lm_hallway_east_occupancy
           - type: tile
             entity: binary_sensor.aqara_rtcgq11lm_hallway_west_occupancy
-      - type: entities
-        entities:
-          - sensor.aqara_wsdcgq12lm_downstairs_toilet_temperature
-          - sensor.aqara_wsdcgq12lm_downstairs_toilet_humidity
+      - type: grid
         title: Downstairs Toilet
-        show_header_toggle: false
-      - type: entities
-        entities:
-          - sensor.aqara_wsdcgq12lm_utility_room_temperature
-          - sensor.aqara_wsdcgq12lm_utility_room_humidity
-          - binary_sensor.aqara_mccgq11lm_garage_door_contact
+        columns: 1
+        square: false
+        cards:
+          - type: tile
+            entity: sensor.aqara_wsdcgq12lm_downstairs_toilet_temperature
+          - type: tile
+            entity: sensor.aqara_wsdcgq12lm_downstairs_toilet_humidity
+      - type: grid
         title: Utility Room
-        show_header_toggle: false
+        columns: 1
+        square: false
+        cards:
+          - type: tile
+            entity: sensor.aqara_wsdcgq12lm_utility_room_temperature
+          - type: tile
+            entity: sensor.aqara_wsdcgq12lm_utility_room_humidity
+          - type: tile
+            entity: binary_sensor.aqara_mccgq11lm_garage_door_contact
 
   - title: Upstairs
     path: upstairs
