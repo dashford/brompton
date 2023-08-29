@@ -179,16 +179,23 @@ views:
   - title: Downstairs
     path: downstairs
     cards:
-      - type: entities
-        entities:
-          - light.ikea_hallway_lamp
-          - sensor.aqara_wsdcgq12lm_hallway_temperature
-          - sensor.aqara_wsdcgq12lm_hallway_humidity
-          - binary_sensor.aqara_mccgq11lm_front_door_contact
-          - binary_sensor.aqara_rtcgq11lm_hallway_east_occupancy
-          - binary_sensor.aqara_rtcgq11lm_hallway_west_occupancy
+      - type: grid
         title: Hallway
-        show_header_toggle: false
+        columns: 1
+        square: false
+        cards:
+          - type: tile
+            entity: light.ikea_hallway_lamp
+          - type: tile
+            entity: sensor.aqara_wsdcgq12lm_hallway_temperature
+          - type: tile
+            entity: sensor.aqara_wsdcgq12lm_hallway_humidity
+          - type: tile
+            entity: binary_sensor.aqara_mccgq11lm_front_door_contact
+          - type: tile
+            entity: binary_sensor.aqara_rtcgq11lm_hallway_east_occupancy
+          - type: tile
+            entity: binary_sensor.aqara_rtcgq11lm_hallway_west_occupancy
       - type: entities
         entities:
           - sensor.aqara_wsdcgq12lm_downstairs_toilet_temperature
