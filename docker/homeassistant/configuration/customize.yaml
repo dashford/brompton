@@ -85,8 +85,6 @@ media_player.tv:
   friendly_name: TV
 media_player.living_room:
   friendly_name: Soundbar
-media_player.kodi_c0e5293681c653991dcefb9c58bf1ff3:
-  friendly_name: Kodi
 
 # Upstairs Landing
 sensor.upstairs_landing_temperature:
