@@ -75,7 +75,8 @@ views:
               - type: entity-filter
                 show_empty: false
                 entities:
-                  - sensor.ikea_kitchen_blind_left_battery
+                  - entity: sensor.ikea_kitchen_blind_left_battery
+                    name: Battery
                 state_filter:
                   - operator: "<="
                     value: 20
@@ -95,10 +96,26 @@ views:
                 entity: cover.ikea_kitchen_blind_centre_right
                 features:
                   - type: "cover-open-close"
+              - type: entity-filter
+                show_empty: false
+                entities:
+                  - entity: sensor.ikea_kitchen_blind_centre_right_battery
+                    name: Battery
+                state_filter:
+                  - operator: "<="
+                    value: 20
               - type: tile
                 entity: cover.ikea_kitchen_blind_right
                 features:
                   - type: "cover-open-close"
+              - type: entity-filter
+                show_empty: false
+                entities:
+                  - entity: sensor.ikea_kitchen_blind_right_battery
+                    name: Battery
+                state_filter:
+                  - operator: "<="
+                    value: 20
       - type: grid
         title: Lights
         columns: 1
