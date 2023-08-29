@@ -73,6 +73,7 @@ views:
                 features:
                   - type: "cover-open-close"
               - type: entity-filter
+                show_empty: false
                 entities:
                   - sensor.ikea_kitchen_blind_left_battery
                 state_filter:
@@ -83,6 +84,7 @@ views:
                 features:
                   - type: "cover-open-close"
               - type: entity-filter
+                show_empty: false
                 entities:
                   - sensor.ikea_kitchen_blind_centre_left_battery
                 state_filter:
