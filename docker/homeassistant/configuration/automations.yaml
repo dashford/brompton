@@ -278,3 +278,171 @@
     target:
       entity_id: select.monthly_electricity
   mode: single
+- id: '1693318905655'
+  alias: Set TV Lights when Living Room TV starts playing
+  description: ''
+  trigger:
+  - platform: device
+    device_id: fbae520090d5b6aaad23951edb0a3272
+    domain: media_player
+    entity_id: 847b01da89d04eef8cb082c9b4811038
+    type: playing
+  - platform: device
+    device_id: fbae520090d5b6aaad23951edb0a3272
+    domain: media_player
+    entity_id: 847b01da89d04eef8cb082c9b4811038
+    type: paused
+  - platform: device
+    device_id: fbae520090d5b6aaad23951edb0a3272
+    domain: media_player
+    entity_id: 847b01da89d04eef8cb082c9b4811038
+    type: turned_off
+  - platform: device
+    device_id: 55baabe3ec51b83808de81b2f6bfbf78
+    domain: media_player
+    entity_id: 88b4ad6fd627b7b4993254745ce54225
+    type: turned_on
+  condition:
+  - condition: device
+    device_id: 55baabe3ec51b83808de81b2f6bfbf78
+    domain: media_player
+    entity_id: 88b4ad6fd627b7b4993254745ce54225
+    type: is_on
+  action:
+  - if:
+    - condition: state
+      entity_id: media_player.living_room_tv
+      attribute: app_name
+      state: Disney+
+    - condition: device
+      device_id: fbae520090d5b6aaad23951edb0a3272
+      domain: media_player
+      entity_id: 847b01da89d04eef8cb082c9b4811038
+      type: is_playing
+    then:
+    - service: light.turn_on
+      data: {}
+      target:
+        entity_id: light.wled
+    - service: select.select_option
+      data:
+        option: Disney+
+      target:
+        entity_id: select.wled_preset
+    alias: Set Lights to Disney+ Preset When Playing
+  - if:
+    - condition: device
+      device_id: fbae520090d5b6aaad23951edb0a3272
+      domain: media_player
+      entity_id: 847b01da89d04eef8cb082c9b4811038
+      type: is_paused
+    then:
+    - service: light.turn_on
+      data: {}
+      target:
+        entity_id: light.wled
+      alias: Turn On TV Lights
+    - service: select.select_option
+      data:
+        option: Paused
+      target:
+        entity_id: select.wled_preset
+      alias: Select "Paused" Preset
+    alias: Set Lights to Paused Preset
+  - if:
+    - condition: device
+      device_id: fbae520090d5b6aaad23951edb0a3272
+      domain: media_player
+      entity_id: 847b01da89d04eef8cb082c9b4811038
+      type: is_off
+    then:
+    - service: light.turn_on
+      data: {}
+      target:
+        entity_id: light.wled
+    - service: select.select_option
+      data:
+        option: Idle
+      target:
+        entity_id: select.wled_preset
+    alias: Select 'Idle' Preset
+  - if:
+    - condition: state
+      entity_id: media_player.living_room_tv
+      attribute: app_name
+      state: Paramount+
+    - condition: device
+      device_id: fbae520090d5b6aaad23951edb0a3272
+      domain: media_player
+      entity_id: 847b01da89d04eef8cb082c9b4811038
+      type: is_playing
+    then:
+    - service: light.turn_on
+      data: {}
+      target:
+        entity_id: light.wled
+    - service: select.select_option
+      data:
+        option: Paramount+
+      target:
+        entity_id: select.wled_preset
+    alias: Set Lights to Paramount+ Preset When Playing
+  - if:
+    - condition: state
+      entity_id: media_player.living_room_tv
+      attribute: app_name
+      state: AppleTV
+    - condition: device
+      device_id: fbae520090d5b6aaad23951edb0a3272
+      domain: media_player
+      entity_id: 847b01da89d04eef8cb082c9b4811038
+      type: is_playing
+    then:
+    - service: light.turn_on
+      data: {}
+      target:
+        entity_id: light.wled
+    - service: select.select_option
+      data:
+        option: AppleTV
+      target:
+        entity_id: select.wled_preset
+    alias: Set Lights to AppleTV Preset When Playing
+  - if:
+    - condition: state
+      entity_id: media_player.living_room_tv
+      attribute: app_name
+      state: Kodi
+    - condition: device
+      device_id: fbae520090d5b6aaad23951edb0a3272
+      domain: media_player
+      entity_id: 847b01da89d04eef8cb082c9b4811038
+      type: is_playing
+    then:
+    - service: light.turn_on
+      data: {}
+      target:
+        entity_id: light.wled
+    - service: select.select_option
+      data:
+        option: Kodi
+      target:
+        entity_id: select.wled_preset
+    alias: Set Lights to Kodi Preset When Playing
+  mode: single
+- id: '1693320967684'
+  alias: Turn off TV lights when TV is turned off
+  description: ''
+  trigger:
+  - platform: device
+    device_id: 55baabe3ec51b83808de81b2f6bfbf78
+    domain: media_player
+    entity_id: 88b4ad6fd627b7b4993254745ce54225
+    type: turned_off
+  condition: []
+  action:
+  - service: light.turn_off
+    data: {}
+    target:
+      entity_id: light.wled
+  mode: single
