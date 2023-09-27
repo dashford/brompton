@@ -284,6 +284,12 @@ mqtt:
       device_class: temperature
       unique_id: "hot-water-tank-bottom-temperature"
       value_template: "{{ value_json.temperature | round(2) }}"
+    - name: shellies_flood_1_battery
+      state_topic: "shellies/flood/1/sensor/battery"
+      unique_id: "shellies-flood-1-battery"
+      device_class: battery
+      unit_of_measurement: "%"
+      icon: mdi:battery-80
     - name: tesla_state
       state_topic: "teslamate/cars/1/state"
       unique_id: "teslamate-cars-1-state"
