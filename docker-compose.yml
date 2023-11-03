@@ -23,7 +23,8 @@ services:
     restart: unless-stopped
 
   homeassistant:
-    image: homeassistant/home-assistant:2023.10.2
+    build:
+      context: ./docker/homeassistant
     container_name: homeassistant
     network_mode: host
     volumes:
