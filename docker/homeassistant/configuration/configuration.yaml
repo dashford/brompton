@@ -47,7 +47,7 @@ input_text:
   electricity_fixed_price_tariff:
     name: Electricity Price per kWh (fixed)
     icon: mdi:cash
-    initial: 0.398757
+    initial: 0.358863
   electricity_free_tariff:
     name: Electricity Price per kWh (free)
     icon: mdi:cash
@@ -55,7 +55,7 @@ input_text:
   electricity_daily_standing_charge:
     name: Electricity Standing Charge
     icon: mdi:cash
-    initial: 0.7614
+    initial: 0.6852
 
 template:
   - sensor:
