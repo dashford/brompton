@@ -25,7 +25,7 @@ views:
                 entity: sensor.monthly_electricity_cost
                 name: This Month
       - type: grid
-        title: Blinds
+        title: Climate
         columns: 1
         square: false
         cards:
@@ -37,21 +37,21 @@ views:
                   - type: "climate-hvac-modes"
                     hvac_modes:
                       - auto
-                      - off
+                      - "off"
               - type: tile
                 entity: climate.upstairs
                 features:
                   - type: "climate-hvac-modes"
                     hvac_modes:
                       - auto
-                      - off
+                      - "off"
               - type: tile
                 entity: climate.hot_water
                 features:
                   - type: "climate-hvac-modes"
                     hvac_modes:
                       - auto
-                      - off
+                      - "off"
       - type: grid
         title: Car
         columns: 1
