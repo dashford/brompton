@@ -29,7 +29,7 @@ views:
         columns: 1
         square: false
         cards:
-          - type: vertical-stack
+          - type: horizontal-stack
             cards:
               - type: tile
                 entity: climate.downstairs
@@ -39,12 +39,20 @@ views:
                       - auto
                       - "off"
               - type: tile
+                entity: climate.downstairs
+                features:
+                  - type: "target-temperature"
+          - type: horizontal-stack
+            cards:
+              - type: tile
                 entity: climate.upstairs
                 features:
                   - type: "climate-hvac-modes"
                     hvac_modes:
                       - auto
                       - "off"
+          - type: horizontal-stack
+            cards:
               - type: tile
                 entity: climate.hot_water
                 features:
