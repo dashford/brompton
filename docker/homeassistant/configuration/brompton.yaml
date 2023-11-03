@@ -51,6 +51,10 @@ views:
                     hvac_modes:
                       - auto
                       - "off"
+              - type: tile
+                entity: climate.upstairs
+                features:
+                  - type: "target-temperature"
           - type: horizontal-stack
             cards:
               - type: tile
@@ -60,6 +64,10 @@ views:
                     hvac_modes:
                       - auto
                       - "off"
+              - type: tile
+                entity: climate.hot_water
+                features:
+                  - type: "target-temperature"
       - type: grid
         title: Car
         columns: 1
