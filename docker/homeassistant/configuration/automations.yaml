@@ -123,7 +123,7 @@
     entity_id: light.ikea_hallway_lamp
     domain: light
   - type: turn_on
-    device_id: 54a1fd0f3d5484107745440e81c74171
+    device_id: 78db16d7a5354c54059380ad65e6a005
     entity_id: light.ikea_kitchen_lamp
     domain: light
     enabled: false
@@ -142,7 +142,7 @@
     entity_id: cover.ikea_kitchen_blind_left
     type: set_position
     position: 0
-  - device_id: fd2868cfafdfa78ecf3c1cb25f925c53
+  - device_id: 10dba2b49d0ac3d3d38895eadc2c04e0
     domain: cover
     entity_id: cover.ikea_kitchen_blind_centre_left
     type: set_position
@@ -152,7 +152,7 @@
     entity_id: cover.ikea_kitchen_blind_centre_right
     type: set_position
     position: 0
-  - device_id: 954f073b4ae1047e8c0eee6fafa2c966
+  - device_id: a74bab6198d89faf5200af754b44b1e0
     domain: cover
     entity_id: cover.ikea_kitchen_blind_right
     type: set_position
@@ -164,17 +164,17 @@
   trigger:
   - type: opened
     platform: device
-    device_id: 5febaf7b28ca8fb29b2060f86befeeba
+    device_id: 4338933d0d6029f116c96d9efcdd435f
     entity_id: binary_sensor.aqara_mccgq11lm_front_door_contact
     domain: binary_sensor
   - type: motion
     platform: device
-    device_id: 69ba0943a34913840f6ef4c6a74e6747
+    device_id: 5b9399d7bb2213ace4609ea745288184
     entity_id: binary_sensor.aqara_rtcgq11lm_hallway_east_occupancy
     domain: binary_sensor
   - type: motion
     platform: device
-    device_id: 7a44ce780b6a4d7c22eb945c1ffdaade
+    device_id: bb473e18a2c6ea6b011a0f012d8b5f6d
     entity_id: binary_sensor.aqara_rtcgq11lm_hallway_west_occupancy
     domain: binary_sensor
   condition:
@@ -213,7 +213,7 @@
     to: Home
   condition: []
   action:
-  - device_id: 2c0e9c56ea1872756bd47a69f97d47c8
+  - device_id: c86fcb9ca4a7bbc2d0adf158b54ac53c
     domain: select
     entity_id: select.myenergi_zappi_charge_mode
     type: select_option
@@ -228,7 +228,7 @@
     from: Home
   condition: []
   action:
-  - device_id: 2c0e9c56ea1872756bd47a69f97d47c8
+  - device_id: c86fcb9ca4a7bbc2d0adf158b54ac53c
     domain: select
     entity_id: select.myenergi_zappi_charge_mode
     type: select_option
