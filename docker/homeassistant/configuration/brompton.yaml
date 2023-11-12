@@ -226,7 +226,7 @@ views:
         square: false
         cards:
           - type: media-control
-            entity: media_player.tv
+            entity: media_player.lg_webos_smart_tv
           - type: media-control
             entity: media_player.living_room_tv
           - type: media-control

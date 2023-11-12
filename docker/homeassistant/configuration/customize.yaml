@@ -81,7 +81,7 @@ media_player.kodi_f531f7696570fce9556ffa955ce7a3b3:
   friendly_name: Kodi
 media_player.living_room_tv:
   friendly_name: Chromecast
-media_player.tv:
+media_player.lg_webos_smart_tv:
   friendly_name: TV
 media_player.living_room:
   friendly_name: Soundbar
