@@ -37,6 +37,7 @@ views:
                   - type: "climate-hvac-modes"
                     hvac_modes:
                       - auto
+                      - heat
                       - "off"
           - type: horizontal-stack
             cards:
@@ -46,6 +47,7 @@ views:
                   - type: "climate-hvac-modes"
                     hvac_modes:
                       - auto
+                      - heat
                       - "off"
           - type: horizontal-stack
             cards:
@@ -55,6 +57,7 @@ views:
                   - type: "climate-hvac-modes"
                     hvac_modes:
                       - auto
+                      - heat
                       - "off"
       - type: grid
         title: Car
