@@ -85,14 +85,6 @@
               {
                 "color": "semi-dark-green",
                 "value": 20
-              },
-              {
-                "color": "semi-dark-yellow",
-                "value": 81
-              },
-              {
-                "color": "light-red",
-                "value": 91
               }
             ]
           },
@@ -234,7 +226,7 @@
           },
           "decimals": 0,
           "mappings": [],
-          "max": 250,
+          "max": 170,
           "min": 0,
           "thresholds": {
             "mode": "absolute",
@@ -367,8 +359,8 @@
       "links": [
         {
           "targetBlank": true,
-          "title": "Charge Level",
-          "url": "/d/WopVO_mgz"
+          "title": "Drive details",
+          "url": "/d/zm7wN6Zgz/drive-details?orgId=1"
         }
       ],
       "options": {
@@ -770,7 +762,7 @@
         {
           "targetBlank": true,
           "title": "Updates",
-          "url": "/d/IiC07mgWz/updates"
+          "url": "/d/IiC07mgWz/updates?orgId=1"
         }
       ],
       "maxDataPoints": 100,
@@ -882,7 +874,7 @@
         {
           "targetBlank": true,
           "title": "Mileage",
-          "url": "/d/NjtMTFggz/mileage"
+          "url": "/d/NjtMTFggz/mileage?orgId=1"
         }
       ],
       "maxDataPoints": 100,
@@ -1094,7 +1086,7 @@
         {
           "targetBlank": true,
           "title": "Charging Details",
-          "url": "/d/BHhxFeZRz/charge-details"
+          "url": "/d/BHhxFeZRz/charge-details?orgId=1"
         }
       ],
       "options": {
@@ -1700,8 +1692,8 @@
     ]
   },
   "timezone": "",
-  "title": "Overview",
-  "uid": "kOuP_Fggz",
+  "title": "Overview - LFP",
+  "uid": "EVzVGnwSq",
   "version": 1,
   "weekStart": ""
 }

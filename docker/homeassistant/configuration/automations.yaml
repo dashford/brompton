@@ -52,6 +52,11 @@
     device_id: 78db16d7a5354c54059380ad65e6a005
     entity_id: light.ikea_kitchen_lamp
     domain: light
+  - service: switch.turn_off
+    data: {}
+    target:
+      entity_id: switch.ikea_e1603_e1702_control_outlet
+    alias: Turn off Christmas Lights
   mode: single
 - id: '1613741995095'
   alias: Turn on lights and lower blinds at dusk
@@ -90,6 +95,11 @@
     entity_id: cover.ikea_kitchen_blind_right
     type: set_position
     position: 50
+  - service: switch.turn_on
+    data: {}
+    target:
+      entity_id: switch.ikea_e1603_e1702_control_outlet
+    alias: Turn on Christmas Lights
   mode: single
 - id: '1613742091259'
   alias: Turn on lights in the morning
@@ -250,11 +260,19 @@
       option: free
     target:
       entity_id: select.daily_electricity
+    alias: Set daily electricity option to free
   - service: select.select_option
     data:
       option: free
     target:
       entity_id: select.monthly_electricity
+    alias: Set monthly electricity option to free
+  - service: input_number.set_value
+    data:
+      value: 0
+    target:
+      entity_id: input_number.current_electricity_unit_price
+    alias: Set current electricity price to 0
   mode: single
 - id: '1686078384701'
   alias: Set electricity metering to fixed price
@@ -272,11 +290,19 @@
       option: fixed_price
     target:
       entity_id: select.daily_electricity
+    alias: Set daily electricity meter to fixed
   - service: select.select_option
     data:
       option: fixed_price
     target:
       entity_id: select.monthly_electricity
+    alias: Set monthly electricity meter to fixed
+  - service: input_number.set_value
+    data:
+      value: 0.359
+    target:
+      entity_id: input_number.current_electricity_unit_price
+    alias: Set current electricity price to 0.359
   mode: single
 - id: '1693318905655'
   alias: Set TV Lights when Living Room TV starts playing
@@ -445,4 +471,24 @@
     data: {}
     target:
       entity_id: light.wled
+  mode: single
+- id: '1701599131231'
+  alias: Test temperature things
+  description: ''
+  trigger:
+  - platform: numeric_state
+    entity_id:
+    - sensor.front_small_bedroom_temperature
+    for:
+      hours: 0
+      minutes: 2
+      seconds: 0
+    below: 17
+  condition: []
+  action:
+  - service: tts.google_say
+    data:
+      cache: false
+      entity_id: media_player.kitchen
+      message: Sam's bedroom is below 17 degrees
   mode: single
