@@ -1,4 +1,4 @@
-teslamateversion = 1.27.1
+teslamateversion = 1.28.2
 
 all : up
 
