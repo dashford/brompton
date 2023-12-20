@@ -56,6 +56,13 @@ input_text:
     name: Electricity Standing Charge
     icon: mdi:cash
     initial: 0.6852
+input_number:
+  current_electricity_unit_price:
+    name: Current Electricity Price per kWh
+    initial: 0.358863
+    icon: mdi:cash
+    min: 0
+    max: 1.00
 
 template:
   - sensor:

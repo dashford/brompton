@@ -164,18 +164,23 @@ services:
     volumes:
       - teslamate_db:/var/lib/postgresql/data
 
-#  teslamateagile:
-#    image: mattjeanes/teslamateagile:v1.11.2
-#    container_name: teslamateagile
-#    restart: unless-stopped
-#    environment:
-#      - DATABASE_USER=teslamate
-#      - DATABASE_PASS=${TESLAMATE_DB_PASSWORD}
-#      - DATABASE_NAME=teslamate
-#      - DATABASE_HOST=10.243.0.100
-#      - DATABASE_PORT=5433
-#      - TeslaMate__UpdateIntervalSeconds=300
-#      - TeslaMate__GeofenceId=1
+  teslamateagile:
+    image: mattjeanes/teslamateagile:v1.12.1
+    container_name: teslamateagile
+    restart: unless-stopped
+    environment:
+      - DATABASE_USER=teslamate
+      - DATABASE_PASS=${TESLAMATE_DB_PASSWORD}
+      - DATABASE_NAME=teslamate
+      - DATABASE_HOST=10.243.0.100
+      - DATABASE_PORT=5433
+      - TeslaMate__UpdateIntervalSeconds=300
+      - TeslaMate__GeofenceId=1
+      - TeslaMate__EnergyProvider=HomeAssistant
+      - TeslaMate__LookbackDays=7
+      - HomeAssistant__BaseUrl=homeassistant:8123
+      - HomeAssistant__AccessToken=${TESLAMATE_AGILE_HOMEASSISTANT_TOKEN}
+      - HomeAssistant__EntityId=input_number.current_electricity_unit_price
 #      - TeslaMate__EnergyProvider=FixedPrice
 #      - FixedPrice__TimeZone=Europe/Dublin
 #      - FixedPrice__Prices__0=00:00-12:00=0.4346
