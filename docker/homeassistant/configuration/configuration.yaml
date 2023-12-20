@@ -206,6 +206,12 @@ mqtt:
       payload_on: "true"
       payload_off: "false"
       icon: mdi:ev-plug-ccs2
+    - name: shellies_flood_1_flood
+      state_topic: "shellies/shellyflood-4C752506DC4A/sensor/flood"
+      unique_id: "shellies-shellyflood-4C752506DC4A-flood"
+      payload_on: "true"
+      payload_off: "false"
+      icon: mdi:home-flood
   sensor:
     - name: "Front Big Bedroom Temperature"
       state_topic: "brompton/front-big-bedroom/temperature"
@@ -297,6 +303,12 @@ mqtt:
       device_class: battery
       unit_of_measurement: "%"
       icon: mdi:battery-80
+    - name: shellies_flood_1_temperature
+      state_topic: "shellies/shellyflood-4C752506DC4A/sensor/temperature"
+      unique_id: "shellies-shellyflood-4C752506DC4A-temperature"
+      device_class: temperature
+      unit_of_measurement: °C
+      icon: mdi:thermometer-lines
     - name: tesla_state
       state_topic: "teslamate/cars/1/state"
       unique_id: "teslamate-cars-1-state"
