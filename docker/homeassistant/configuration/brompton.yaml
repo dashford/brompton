@@ -92,6 +92,19 @@ views:
                 entity: binary_sensor.tesla_locked
               - type: tile
                 entity: binary_sensor.tesla_sentry_mode
+      - type: grid
+        title: Notifications
+        columns: 1
+        square: false
+        cards:
+          - type: conditional
+            conditions:
+              - entity: binary_sensor.shellies_flood_1_flood
+                state: "on"
+            card:
+              type: markdown
+              content: >
+                <ha-alert alert-type="error">Flooding in downstairs bathroom detected</ha-alert>
 
   - title: Kitchen
     path: kitchen
