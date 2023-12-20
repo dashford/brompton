@@ -292,8 +292,8 @@ mqtt:
       unique_id: "hot-water-tank-bottom-temperature"
       value_template: "{{ value_json.temperature | round(2) }}"
     - name: shellies_flood_1_battery
-      state_topic: "shellies/flood/1/sensor/battery"
-      unique_id: "shellies-flood-1-battery"
+      state_topic: "shellies/shellyflood-4C752506DC4A/sensor/battery"
+      unique_id: "shellies-shellyflood-4C752506DC4A-battery"
       device_class: battery
       unit_of_measurement: "%"
       icon: mdi:battery-80
