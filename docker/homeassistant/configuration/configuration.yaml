@@ -59,6 +59,7 @@ input_text:
 input_number:
   current_electricity_unit_price:
     name: Current Electricity Price per kWh
+    unit_of_measurement: EUR/kWh
     initial: 0.358863
     icon: mdi:cash
     min: 0
