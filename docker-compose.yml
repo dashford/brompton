@@ -130,7 +130,7 @@ services:
       - ZIGBEE2MQTT_CONFIG_ADVANCED_NETWORK_KEY=${ZIGBEE2MQTT_NETWORK_KEY}
 
   teslamate:
-    image: myteslamate/teslamate:1.27.4
+    image: teslamate/teslamate:1.28.2
     container_name: teslamate
     restart: unless-stopped
     environment:
