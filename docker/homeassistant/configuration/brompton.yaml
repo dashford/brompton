@@ -285,6 +285,8 @@ views:
             entity: sensor.aqara_wsdcgq12lm_downstairs_toilet_temperature
           - type: tile
             entity: sensor.aqara_wsdcgq12lm_downstairs_toilet_humidity
+          - type: tile
+            entity: binary_sensor.shellies_flood_1_flood
       - type: grid
         title: Utility Room
         columns: 1
