@@ -492,3 +492,20 @@
       entity_id: media_player.kitchen
       message: Sam's bedroom is below 17 degrees
   mode: single
+- id: '1703075760479'
+  alias: Trigger actions if flood detected
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - binary_sensor.shellies_flood_1_flood
+    from: 'off'
+    to: 'on'
+  condition: []
+  action:
+  - service: tts.google_say
+    data:
+      cache: false
+      entity_id: media_player.kitchen
+      message: Flooding in the downstairs bathroom
+  mode: single
