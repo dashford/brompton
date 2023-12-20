@@ -26,23 +26,23 @@ config:
 
 energy:
 
-#utility_meter:
-#  daily_electricity:
-#    source: sensor.myenergi_hub_grid_import_today_2
-#    unique_id: daily_electricity
-#    name: Daily
-#    cycle: daily
-#    tariffs:
-#      - fixed_price
-#      - free
-#  monthly_electricity:
-#    source: sensor.myenergi_hub_grid_import_today_2
-#    unique_id: monthly_electricity
-#    name: Monthly
-#    cycle: monthly
-#    tariffs:
-#      - fixed_price
-#      - free
+utility_meter:
+  daily_electricity:
+    source: sensor.myenergi_hub_grid_import_today_2
+    unique_id: daily_electricity
+    name: Daily
+    cycle: daily
+    tariffs:
+      - fixed_price
+      - free
+  monthly_electricity:
+    source: sensor.myenergi_hub_grid_import_today_2
+    unique_id: monthly_electricity
+    name: Monthly
+    cycle: monthly
+    tariffs:
+      - fixed_price
+      - free
 input_text:
   electricity_fixed_price_tariff:
     name: Electricity Price per kWh (fixed)
