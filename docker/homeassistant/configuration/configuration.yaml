@@ -68,11 +68,13 @@ input_number:
 template:
   - sensor:
     - name: "Daily Electricity Cost"
+      unique_id: daily_electricity_cost
       unit_of_measurement: "Eur"
       icon: mdi:cash
       device_class: monetary
       state: "{{ (states('input_text.electricity_daily_standing_charge')|float) + ((states('input_text.electricity_fixed_price_tariff')|float) * (states('sensor.daily_electricity_fixed_price')|float)) + ((states('input_text.electricity_free_tariff')|float) * (states('sensor.daily_electricity_free')|float)) }}"
     - name: "Monthly Electricity Cost"
+      unique_id: monthly_electricity_cost
       unit_of_measurement: "Eur"
       icon: mdi:cash
       device_class: monetary
