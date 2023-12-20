@@ -97,6 +97,9 @@ sensor.upstairs_bathroom_temperature:
   friendly_name: Temperature
 sensor.upstairs_bathroom_humidity:
   friendly_name: Humidity
+binary_sensor.shellies_flood_1_flood:
+  friendly_name: Flood
+  device_class: moisture
 
 # Hallway
 light.ikea_hallway_lamp:
