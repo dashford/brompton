@@ -1,3 +1,3 @@
-FROM homeassistant/home-assistant:2023.12.3
+FROM homeassistant/home-assistant:2024.1.0
 
 COPY custom_components/ /config/custom_components/
