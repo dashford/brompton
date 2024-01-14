@@ -57,6 +57,7 @@
     target:
       entity_id: switch.ikea_e1603_e1702_control_outlet
     alias: Turn off Christmas Lights
+    enabled: false
   mode: single
 - id: '1613741995095'
   alias: Turn on lights and lower blinds at dusk
@@ -100,6 +101,7 @@
     target:
       entity_id: switch.ikea_e1603_e1702_control_outlet
     alias: Turn on Christmas Lights
+    enabled: false
   mode: single
 - id: '1613742091259'
   alias: Turn on lights in the morning
