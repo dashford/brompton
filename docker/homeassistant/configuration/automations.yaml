@@ -457,6 +457,27 @@
       target:
         entity_id: select.wled_preset
     alias: Set Lights to Kodi Preset When Playing
+  - alias: Set Lights to Netflix Preset When Playing
+    if:
+    - condition: state
+      entity_id: media_player.living_room_tv
+      attribute: app_name
+      state: Netflix
+    - condition: device
+      device_id: fbae520090d5b6aaad23951edb0a3272
+      domain: media_player
+      entity_id: 847b01da89d04eef8cb082c9b4811038
+      type: is_playing
+    then:
+    - service: light.turn_on
+      data: {}
+      target:
+        entity_id: light.wled
+    - service: select.select_option
+      data:
+        option: Netflix
+      target:
+        entity_id: select.wled_preset
   mode: single
 - id: '1693320967684'
   alias: Turn off TV lights when TV is turned off
