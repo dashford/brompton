@@ -403,9 +403,6 @@ mqtt:
       device_class: duration
       icon: mdi:clock-outline
 
-# Enables a map showing the location of tracked devices
-map:
-
 zone:
   - name: Home
     latitude: !secret zone_home_latitude
