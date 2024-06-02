@@ -86,7 +86,7 @@ services:
       - homeassistant_db:/var/lib/postgresql/data
 
   grafana:
-    image: grafana/grafana:10.3.5
+    image: grafana/grafana:11.0.0
     container_name: grafana
     volumes:
       - grafana:/data
@@ -130,7 +130,7 @@ services:
       - ZIGBEE2MQTT_CONFIG_ADVANCED_NETWORK_KEY=${ZIGBEE2MQTT_NETWORK_KEY}
 
   teslamate:
-    image: teslamate/teslamate:1.28.5
+    image: teslamate/teslamate:1.29.1
     container_name: teslamate
     restart: unless-stopped
     environment:
