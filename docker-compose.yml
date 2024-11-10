@@ -53,24 +53,6 @@ services:
     volumes:
       - ./docker/mosquitto/configuration/mosquitto.conf:/mosquitto/config/mosquitto.conf:ro
 
-  influxdb:
-    image: influxdb:2.7.1
-    container_name: influxdb
-    environment:
-      - DOCKER_INFLUXDB_INIT_MODE=setup
-      - DOCKER_INFLUXDB_INIT_USERNAME={INFLUXDB_ADMIN_USER}
-      - DOCKER_INFLUXDB_INIT_PASSWORD=${INFLUXDB_ADMIN_PASSWORD}
-      - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=${INFLUXDB_ADMIN_TOKEN}
-      - DOCKER_INFLUXDB_INIT_ORG=dashford
-      - DOCKER_INFLUXDB_INIT_BUCKET=brompton
-      - INFLUXD_LOG_LEVEL=error
-    ports:
-      - "8086:8086"
-    restart: unless-stopped
-    volumes:
-      - influxdb-data:/var/lib/influxdb2
-      - influxdb-config:/etc/influxdb2
-
   homeassistant_db:
     image: postgres:15.3
     container_name: homeassistant_db
