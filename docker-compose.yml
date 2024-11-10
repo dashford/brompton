@@ -164,10 +164,6 @@ services:
       - HomeAssistant__EntityId=input_number.current_electricity_unit_price
 
 volumes:
-  influxdb-data:
-    driver: local
-  influxdb-config:
-    driver: local
   grafana:
     driver: local
   homeassistant_db:
