@@ -311,15 +311,9 @@ mqtt:
       state_topic: "teslamate/cars/1/geofence"
       unique_id: "teslamate-cars-1-geofence"
       icon: mdi:earth
-    - name: tesla_latitude
-      state_topic: "teslamate/cars/1/latitude"
-      unique_id: "teslamate-cars-1-latitude"
-      unit_of_measurement: °
-      icon: mdi:crosshairs-gps
-    - name: tesla_longitude
-      state_topic: "teslamate/cars/1/longitude"
-      unique_id: "teslamate-cars-1-longitude"
-      unit_of_measurement: °
+    - name: tesla_location
+      state_topic: "teslamate/cars/1/location"
+      unique_id: "teslamate-cars-1-location"
       icon: mdi:crosshairs-gps
     - name: tesla_shift_state
       state_topic: "teslamate/cars/1/shift_state"
