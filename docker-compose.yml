@@ -24,8 +24,6 @@ services:
 
   homeassistant:
     image: homeassistant/home-assistant:2024.11.1
-#    build:
-#      context: ./docker/homeassistant
     container_name: homeassistant
     network_mode: host
     volumes:
