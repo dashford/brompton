@@ -94,7 +94,7 @@ services:
     restart: unless-stopped
 
   zigbee2mqtt:
-    image: koenkk/zigbee2mqtt:1.36.0
+    image: koenkk/zigbee2mqtt:1.41.0
     container_name: zigbee2mqtt
     volumes:
       - ./docker/zigbee2mqtt:/app/data
