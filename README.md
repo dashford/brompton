@@ -230,6 +230,20 @@ configuration on your client device. Perform the following changes:
 
 ### Home Assistant
 
+#### Restoring from backup
+
+First un-tar the backup file to a directory of your choice.
+
+```bash
+tar -xOf <backup>.tar "homeassistant.tar.gz" | tar --strip-components=1 -zxf - -C <restore directory>
+```
+
+Next the un-tarred directory needs to be mounted as a volume for the docker container e.g.
+
+```bash
+docker run --expose 8123 --network host --volume <resore directory>:/config homeassistant/home-assistant:2024.4.4
+```
+
 Start the container
 
 ```bash
