@@ -146,7 +146,7 @@ services:
       - teslamate_db:/var/lib/postgresql/data
 
   teslamateagile:
-    image: mattjeanes/teslamateagile:v1.13.0
+    image: mattjeanes/teslamateagile:v1.16.0
     container_name: teslamateagile
     restart: unless-stopped
     environment:
