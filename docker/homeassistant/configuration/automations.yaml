@@ -39,11 +39,11 @@
 - id: '1613741842726'
   alias: Turn off lights at bedtime
   description: ''
-  trigger:
-  - platform: time
-    at: '22:30:00'
-  condition: []
-  action:
+  triggers:
+  - at: '22:30:00'
+    trigger: time
+  conditions: []
+  actions:
   - type: turn_off
     device_id: 119baa3c1c324df38ebbb62778d02b90
     entity_id: light.ikea_hallway_lamp
@@ -52,22 +52,22 @@
     device_id: 78db16d7a5354c54059380ad65e6a005
     entity_id: light.ikea_kitchen_lamp
     domain: light
-  - service: switch.turn_off
-    data: {}
+  - data: {}
     target:
       entity_id: switch.ikea_e1603_e1702_control_outlet
     alias: Turn off Christmas Lights
-    enabled: false
+    enabled: true
+    action: switch.turn_off
   mode: single
 - id: '1613741995095'
   alias: Turn on lights and lower blinds at dusk
   description: ''
-  trigger:
-  - platform: sun
-    event: sunset
+  triggers:
+  - event: sunset
     offset: -00:25:00
-  condition: []
-  action:
+    trigger: sun
+  conditions: []
+  actions:
   - type: turn_on
     device_id: 119baa3c1c324df38ebbb62778d02b90
     entity_id: light.ikea_hallway_lamp
@@ -96,12 +96,12 @@
     entity_id: cover.ikea_kitchen_blind_right
     type: set_position
     position: 50
-  - service: switch.turn_on
-    data: {}
+  - data: {}
     target:
       entity_id: switch.ikea_e1603_e1702_control_outlet
     alias: Turn on Christmas Lights
-    enabled: false
+    enabled: true
+    action: switch.turn_on
   mode: single
 - id: '1613742091259'
   alias: Turn on lights in the morning
