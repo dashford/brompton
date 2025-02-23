@@ -56,7 +56,7 @@
     target:
       entity_id: switch.ikea_e1603_e1702_control_outlet
     alias: Turn off Christmas Lights
-    enabled: true
+    enabled: false
     action: switch.turn_off
   mode: single
 - id: '1613741995095'
@@ -100,7 +100,7 @@
     target:
       entity_id: switch.ikea_e1603_e1702_control_outlet
     alias: Turn on Christmas Lights
-    enabled: true
+    enabled: false
     action: switch.turn_on
   mode: single
 - id: '1613742091259'
