@@ -34,7 +34,7 @@ utility_meter:
     cycle: daily
     tariffs:
       - fixed_price
-      - free
+      - boost
   monthly_electricity:
     source: sensor.myenergi_hub_grid_import_today_2
     unique_id: monthly_electricity
@@ -42,25 +42,25 @@ utility_meter:
     cycle: monthly
     tariffs:
       - fixed_price
-      - free
+      - boost
 input_text:
   electricity_fixed_price_tariff:
     name: Electricity Price per kWh (fixed)
     icon: mdi:cash
-    initial: 0.330132
-  electricity_free_tariff:
-    name: Electricity Price per kWh (free)
+    initial: 0.3386
+  electricity_boost_tariff:
+    name: Electricity Price per kWh (boost)
     icon: mdi:cash
-    initial: 0.00
+    initial: 0.0754
   electricity_daily_standing_charge:
     name: Electricity Standing Charge
     icon: mdi:cash
-    initial: 0.6303
+    initial: 0.64827
 input_number:
   current_electricity_unit_price:
     name: Current Electricity Price per kWh
     unit_of_measurement: EUR/kWh
-    initial: 0.330132
+    initial: 0.3386
     icon: mdi:cash
     min: 0
     max: 1.00
@@ -72,13 +72,13 @@ template:
       unit_of_measurement: "Eur"
       icon: mdi:cash
       device_class: monetary
-      state: "{{ (states('input_text.electricity_daily_standing_charge')|float) + ((states('input_text.electricity_fixed_price_tariff')|float) * (states('sensor.daily_electricity_fixed_price')|float)) + ((states('input_text.electricity_free_tariff')|float) * (states('sensor.daily_electricity_free')|float)) }}"
+      state: "{{ (states('input_text.electricity_daily_standing_charge')|float) + ((states('input_text.electricity_fixed_price_tariff')|float) * (states('sensor.daily_electricity_fixed_price')|float)) + ((states('input_text.electricity_boost_tariff')|float) * (states('sensor.daily_electricity_boost')|float)) }}"
     - name: "Monthly Electricity Cost"
       unique_id: monthly_electricity_cost
       unit_of_measurement: "Eur"
       icon: mdi:cash
       device_class: monetary
-      state: "{{ ((states('input_text.electricity_daily_standing_charge')|float) * now().day) + ((states('input_text.electricity_fixed_price_tariff')|float) * (states('sensor.monthly_electricity_fixed_price')|float)) + ((states('input_text.electricity_free_tariff')|float) * (states('sensor.monthly_electricity_free')|float)) }}"
+      state: "{{ ((states('input_text.electricity_daily_standing_charge')|float) * now().day) + ((states('input_text.electricity_fixed_price_tariff')|float) * (states('sensor.monthly_electricity_fixed_price')|float)) + ((states('input_text.electricity_boost_tariff')|float) * (states('sensor.monthly_electricity_boost')|float)) }}"
 
 #climate:
 #  - platform: ephember
