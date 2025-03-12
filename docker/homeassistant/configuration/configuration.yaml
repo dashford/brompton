@@ -13,6 +13,7 @@ homeassistant:
   # Customization file
   customize: !include customize.yaml
   country: !secret country
+  packages: !include_dir_named packages
 
 weather:
 
