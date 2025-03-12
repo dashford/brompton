@@ -5,8 +5,9 @@
 docker/zigbee2mqtt/*
 !docker/zigbee2mqtt/configuration.yaml
 
-docker/homeassistant/configuration/*
-!docker/homeassistant/configuration/*.yaml
-!docker/homeassistant/configuration/packages/*.yaml
 docker/homeassistant/configuration/secrets.yaml
 docker/homeassistant/configuration/known_devices.yaml
+docker/homeassistant/configuration/.HA_VERSION
+docker/homeassistant/configuration/.storage/
+docker/homeassistant/configuration/home-assistant.log
+docker/homeassistant/configuration/home-assistant_v2.db
