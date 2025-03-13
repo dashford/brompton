@@ -77,7 +77,7 @@ template:
       unit_of_measurement: "Eur"
       icon: mdi:cash
       device_class: monetary
-      state: "{{ (states('input_text.electricity_daily_standing_charge')|float) + ((states('input_text.electricity_fixed_price_tariff')|float) * (states('sensor.daily_electricity_fixed_price')|float)) + ((states('input_text.electricity_boost_tariff')|float) * (states('sensor.daily_electricity_boost')|float)) - (sensor.sigen_daily_grid_energy_export * states('input_text.electricity_feed_in_tariff')|float) }}"
+      state: "{{ (states('input_text.electricity_daily_standing_charge')|float) + ((states('input_text.electricity_fixed_price_tariff')|float) * (states('sensor.daily_electricity_fixed_price')|float)) + ((states('input_text.electricity_boost_tariff')|float) * (states('sensor.daily_electricity_boost')|float)) - (states('sensor.sigen_daily_grid_energy_export')|float * states('input_text.electricity_feed_in_tariff')|float) }}"
     - name: "Monthly Electricity Cost"
       unique_id: monthly_electricity_cost
       unit_of_measurement: "Eur"
