@@ -11,3 +11,9 @@ docker/homeassistant/configuration/.HA_VERSION
 docker/homeassistant/configuration/.storage/
 docker/homeassistant/configuration/home-assistant.log
 docker/homeassistant/configuration/home-assistant_v2.db
+docker/homeassistant/configuration/backups/
+docker/homeassistant/configuration/blueprints/
+docker/homeassistant/configuration/custom_components/
+docker/homeassistant/configuration/home-assistant.log.1
+docker/homeassistant/configuration/home-assistant.log.fault
+docker/homeassistant/configuration/tts/
