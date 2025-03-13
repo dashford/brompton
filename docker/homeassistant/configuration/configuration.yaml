@@ -29,7 +29,7 @@ energy:
 
 utility_meter:
   daily_electricity:
-    source: sensor.myenergi_hub_grid_import_today_2
+    source: sensor.sigen_daily_grid_energy_import
     unique_id: daily_electricity
     name: Daily
     cycle: daily
@@ -37,7 +37,7 @@ utility_meter:
       - fixed_price
       - boost
   monthly_electricity:
-    source: sensor.myenergi_hub_grid_import_today_2
+    source: sensor.sigen_daily_grid_energy_import
     unique_id: monthly_electricity
     name: Monthly
     cycle: monthly
@@ -53,6 +53,10 @@ input_text:
     name: Electricity Price per kWh (boost)
     icon: mdi:cash
     initial: 0.0754
+  electricity_feed_in_tariff:
+    name: Electricity Feed In Price per kWh
+    icon: mdi:cash
+    initial: 0.2000
   electricity_daily_standing_charge:
     name: Electricity Standing Charge
     icon: mdi:cash
@@ -73,7 +77,7 @@ template:
       unit_of_measurement: "Eur"
       icon: mdi:cash
       device_class: monetary
-      state: "{{ (states('input_text.electricity_daily_standing_charge')|float) + ((states('input_text.electricity_fixed_price_tariff')|float) * (states('sensor.daily_electricity_fixed_price')|float)) + ((states('input_text.electricity_boost_tariff')|float) * (states('sensor.daily_electricity_boost')|float)) }}"
+      state: "{{ (states('input_text.electricity_daily_standing_charge')|float) + ((states('input_text.electricity_fixed_price_tariff')|float) * (states('sensor.daily_electricity_fixed_price')|float)) + ((states('input_text.electricity_boost_tariff')|float) * (states('sensor.daily_electricity_boost')|float)) - (sensor.sigen_daily_grid_energy_export * states('input_text.electricity_feed_in_tariff')|float) }}"
     - name: "Monthly Electricity Cost"
       unique_id: monthly_electricity_cost
       unit_of_measurement: "Eur"
