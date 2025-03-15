@@ -44,6 +44,11 @@ utility_meter:
     tariffs:
       - fixed_price
       - boost
+  monthly_electricity_export:
+    source: sensor.sigen_daily_grid_energy_export
+    unique_id: monthly_electricity_export
+    name: Monthly Export
+    cycle: monthly
 input_text:
   electricity_fixed_price_tariff:
     name: Electricity Price per kWh (fixed)
