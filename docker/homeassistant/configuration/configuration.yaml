@@ -88,7 +88,7 @@ template:
       unit_of_measurement: "Eur"
       icon: mdi:cash
       device_class: monetary
-      state: "{{ ((states('input_text.electricity_daily_standing_charge')|float) * now().day) + ((states('input_text.electricity_fixed_price_tariff')|float) * (states('sensor.monthly_electricity_fixed_price')|float)) + ((states('input_text.electricity_boost_tariff')|float) * (states('sensor.monthly_electricity_boost')|float)) }}"
+      state: "{{ ((states('input_text.electricity_daily_standing_charge')|float) * now().day) + ((states('input_text.electricity_fixed_price_tariff')|float) * (states('sensor.monthly_electricity_fixed_price')|float)) + ((states('input_text.electricity_boost_tariff')|float) * (states('sensor.monthly_electricity_boost')|float)) - (states('sensor.monthly_export')|float * states('input_text.electricity_feed_in_tariff')|float) }}"
 
 #climate:
 #  - platform: ephember
