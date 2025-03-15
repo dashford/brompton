@@ -17,3 +17,4 @@ docker/homeassistant/configuration/custom_components/
 docker/homeassistant/configuration/home-assistant.log.1
 docker/homeassistant/configuration/home-assistant.log.fault
 docker/homeassistant/configuration/tts/
+docker/homeassistant/configuration/www/
