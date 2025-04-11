@@ -249,54 +249,69 @@
 - id: '1686078325150'
   alias: Set electricity metering to boost
   description: ''
-  trigger:
-  - platform: time
-    at: 02:00:00
-  action:
-  - service: select.select_option
-    data:
+  triggers:
+  - at: 02:00:00
+    trigger: time
+  actions:
+  - data:
       option: boost
     target:
       entity_id: select.daily_electricity
     alias: Set daily electricity option to boost
-  - service: select.select_option
-    data:
+    action: select.select_option
+    enabled: false
+  - data:
       option: boost
     target:
       entity_id: select.monthly_electricity
     alias: Set monthly electricity option to boost
-  - service: input_number.set_value
+    action: select.select_option
+    enabled: false
+  - alias: Set electricity meter's to boost
     data:
+      option: boost
+    target:
+      entity_id:
+      - select.monthly_electricity
+      - select.yearly_electricity
+      - select.daily_electricity
+    action: select.select_option
+  - data:
       value: 0.0754
     target:
       entity_id: input_number.current_electricity_unit_price
     alias: Set current electricity price to boost pricing
+    action: input_number.set_value
   mode: single
 - id: '1686078384701'
   alias: Set electricity metering to fixed price
   description: ''
-  trigger:
-  - platform: time
-    at: '06:00:00'
-  action:
-  - service: select.select_option
+  triggers:
+  - at: 06:00:00
+    trigger: time
+  actions:
+  - alias: Set electricity meter's to fixed
     data:
       option: fixed_price
     target:
-      entity_id: select.daily_electricity
-    alias: Set daily electricity meter to fixed
-  - service: select.select_option
-    data:
+      entity_id:
+      - select.daily_electricity
+      - select.monthly_electricity
+      - select.yearly_electricity
+    action: select.select_option
+  - data:
       option: fixed_price
     target:
       entity_id: select.monthly_electricity
     alias: Set monthly electricity meter to fixed
-  - service: input_number.set_value
-    data:
+    action: select.select_option
+    enabled: false
+  - data:
       value: 0.3386
     target:
       entity_id: input_number.current_electricity_unit_price
     alias: Set current electricity price to 0.3386
+    action: input_number.set_value
   mode: single
 - id: '1693318905655'
   alias: Set TV Lights when Living Room TV starts playing
