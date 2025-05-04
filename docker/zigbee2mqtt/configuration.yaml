@@ -66,5 +66,5 @@ devices:
     friendly_name: 'aqara/rtcgq11lm/hallway-east'
   '0x00158d0007e1086c':
     friendly_name: 'aqara/rtcgq11lm/hallway-west'
-  0x30fb10fffe2890ec:
+  '0x30fb10fffe2890ec':
     friendly_name: ikea/sitting-room/vindstyrka
