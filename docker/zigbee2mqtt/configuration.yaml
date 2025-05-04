@@ -10,9 +10,16 @@ mqtt:
 advanced:
   log_level: info
   channel: 25
+  homeassistant_legacy_entity_attributes: false
+  homeassistant_legacy_triggers: false
+  legacy_api: false
+  legacy_availability_payload: false
 
 serial:
   port: /dev/ttyACM0
+
+device_options:
+  legacy: false
 
 devices:
   '0x00158d00054c2476':
