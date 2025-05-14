@@ -68,3 +68,5 @@ devices:
     friendly_name: 'aqara/rtcgq11lm/hallway-west'
   '0x30fb10fffe2890ec':
     friendly_name: ikea/sitting-room/vindstyrka
+  '0xf84477fffef86a0f':
+    friendly_name: ikea/utility-room/inspelning/washing-machine
