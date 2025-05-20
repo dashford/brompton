@@ -70,3 +70,5 @@ devices:
     friendly_name: ikea/sitting-room/vindstyrka
   '0xf84477fffef86a0f':
     friendly_name: ikea/utility-room/inspelning/washing-machine
+  '0xf84477fffee98d56':
+    friendly_name: ikea/kitchen/inspelning/dishwasher
